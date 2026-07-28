@@ -1,0 +1,79 @@
+{%- comment -%}
+  RINGANI – Insights
+  Intro copy + metric cards (score + progress bar). Demo/illustrative data,
+  clearly labelled as such via the disclaimer setting.
+{%- endcomment -%}
+<section class="ringani ringani-section ringani-insights" style="{% render 'ringani-section-vars', s: section %}">
+  <div class="ringani-inner">
+    <div class="ringani-reveal ringani-insights__intro">
+      {%- if section.settings.heading != blank -%}<h2 class="ringani-h2">{{ section.settings.heading }}</h2>{%- endif -%}
+      {%- if section.settings.body != blank -%}<p class="ringani-lead ringani-insights__body">{{ section.settings.body }}</p>{%- endif -%}
+    </div>
+    <div class="ringani-reveal ringani-insights__grid">
+      {%- for block in section.blocks -%}
+        <div class="ringani-insights__card" {{ block.shopify_attributes }}>
+          <div class="ringani-insights__card-head">
+            <span class="ringani-insights__label">{{ block.settings.label }}</span>
+            <span class="ringani-insights__trend">{{ block.settings.trend }}</span>
+          </div>
+          <div class="ringani-insights__score">{{ block.settings.score }}</div>
+          <div class="ringani-insights__bar"><div class="ringani-insights__bar-fill" style="width:{{ block.settings.bar | at_most: 100 | at_least: 0 }}%"></div></div>
+          {%- if block.settings.body != blank -%}<p class="ringani-insights__desc">{{ block.settings.body }}</p>{%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+    {%- if section.settings.disclaimer != blank -%}
+      <p class="ringani-reveal ringani-insights__disclaimer">{{ section.settings.disclaimer }}</p>
+    {%- endif -%}
+  </div>
+</section>
+
+{% stylesheet %}
+.ringani-insights__intro{max-width:48ch}
+.ringani-insights__body{margin-top:18px}
+.ringani-insights__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(14px,2vw,22px);margin-top:clamp(36px,4vw,60px)}
+.ringani-insights__card{border:1px solid #DDE7F4;border-radius:8px;padding:clamp(22px,2.6vw,34px);background:linear-gradient(175deg,#FFFFFF 0%,#F3F8FF 100%)}
+.ringani-insights__card-head{display:flex;justify-content:space-between;align-items:baseline}
+.ringani-insights__label{font-family:var(--ringani-mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#8A867E}
+.ringani-insights__trend{font-size:12px;color:#1B6FD4}
+.ringani-insights__score{font-size:clamp(52px,7vw,76px);line-height:1;letter-spacing:-.05em;font-weight:400;margin-top:26px}
+.ringani-insights__bar{height:3px;border-radius:2px;background:#E3EAF4;margin-top:20px;overflow:hidden}
+.ringani-insights__bar-fill{height:100%;background:linear-gradient(90deg,#1B6FD4,#4EA8F5)}
+.ringani-insights__desc{font-size:14px;line-height:1.6;color:#5F5C55;margin-top:18px}
+.ringani-insights__disclaimer{font-family:var(--ringani-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#A5A099;margin-top:20px}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "RINGANI – Insights",
+  "tag": "section",
+  "max_blocks": 6,
+  "settings": [
+    { "type": "header", "content": "Inhalt" },
+    { "type": "inline_richtext", "id": "heading", "label": "Überschrift", "default": "Aus Daten werden Entscheidungen." },
+    { "type": "textarea", "id": "body", "label": "Text", "default": "Jeden Morgen fasst RINGANI die Nacht und den Vortag in drei verständlichen Werten zusammen – damit du weißt, worauf du heute achten solltest." },
+    { "type": "text", "id": "disclaimer", "label": "Hinweis", "default": "Beispielhafte Darstellung der App-Oberfläche" },
+    { "type": "header", "content": "Abstände" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Oben (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Unten (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Oben (Mobil)", "default": 72 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Unten (Mobil)", "default": 72 }
+  ],
+  "blocks": [
+    { "type": "insight", "name": "Insight-Karte", "settings": [
+      { "type": "text", "id": "label", "label": "Label", "default": "Schlaf" },
+      { "type": "text", "id": "trend", "label": "Trend", "default": "+4 vs. Woche" },
+      { "type": "text", "id": "score", "label": "Wert", "default": "86" },
+      { "type": "range", "id": "bar", "min": 0, "max": 100, "step": 1, "unit": "%", "label": "Balken", "default": 86 },
+      { "type": "textarea", "id": "body", "label": "Text", "default": "Deine Nacht war länger und ruhiger als im Wochenmittel." }
+    ] }
+  ],
+  "presets": [
+    { "name": "RINGANI – Insights", "blocks": [
+      { "type": "insight", "settings": { "label": "Schlaf", "trend": "+4 vs. Woche", "score": "86", "bar": 86, "body": "Deine Nacht war länger und ruhiger als im Wochenmittel." } },
+      { "type": "insight", "settings": { "label": "Erholung", "trend": "stabil", "score": "72", "bar": 72, "body": "Dein Körper liegt im gewohnten Bereich – moderate Belastung ist heute gut machbar." } },
+      { "type": "insight", "settings": { "label": "Aktivität", "trend": "−6 vs. Woche", "score": "64", "bar": 64, "body": "Etwas weniger Bewegung als üblich. Ein Spaziergang reicht, um wieder aufzuschließen." } }
+    ] }
+  ]
+}
+{% endschema %}

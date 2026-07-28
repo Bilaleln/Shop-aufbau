@@ -1,0 +1,84 @@
+{%- comment -%}
+  RINGANI – FAQ
+  Accordion of question/answer blocks. Optional FAQ schema.org JSON-LD.
+{%- endcomment -%}
+<section id="{{ section.settings.anchor | default: 'faq' }}" class="ringani ringani-section ringani-faq" style="{% render 'ringani-section-vars', s: section %}">
+  <div class="ringani-inner ringani-inner--narrow">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="ringani-h2 ringani-reveal">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+    <ringani-accordion class="ringani-acc ringani-reveal ringani-faq__acc">
+      {%- for block in section.blocks -%}
+        <div class="ringani-acc__item" {{ block.shopify_attributes }}>
+          <button type="button" class="ringani-acc__head" aria-expanded="false" aria-controls="ringani-faq-{{ section.id }}-{{ block.id }}">
+            <span>{{ block.settings.question }}</span>
+            <span class="ringani-acc__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="ringani-acc__panel" id="ringani-faq-{{ section.id }}-{{ block.id }}" hidden>
+            <div class="ringani-acc__panel-inner">{{ block.settings.answer }}</div>
+          </div>
+        </div>
+      {%- endfor -%}
+    </ringani-accordion>
+  </div>
+</section>
+
+{%- if section.settings.enable_schema and section.blocks.size > 0 -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {%- for block in section.blocks -%}
+      {
+        "@type": "Question",
+        "name": {{ block.settings.question | strip_html | json }},
+        "acceptedAnswer": { "@type": "Answer", "text": {{ block.settings.answer | strip_html | json }} }
+      }{%- unless forloop.last -%},{%- endunless -%}
+      {%- endfor -%}
+    ]
+  }
+  </script>
+{%- endif -%}
+
+{% stylesheet %}
+.ringani-faq{background:linear-gradient(180deg,#EDF3FB 0%,#F6F9FD 100%)}
+.ringani-faq__acc{display:block;margin-top:clamp(32px,4vw,56px);border-top:1px solid #DEDBD4}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "RINGANI – FAQ",
+  "tag": "section",
+  "max_blocks": 20,
+  "settings": [
+    { "type": "header", "content": "Inhalt" },
+    { "type": "inline_richtext", "id": "heading", "label": "Überschrift", "default": "Häufige Fragen" },
+    { "type": "text", "id": "anchor", "label": "Anker-ID", "default": "faq" },
+    { "type": "checkbox", "id": "enable_schema", "label": "FAQ-Rich-Snippet (SEO) ausgeben", "default": true },
+    { "type": "header", "content": "Abstände" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Oben (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Unten (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Oben (Mobil)", "default": 72 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Unten (Mobil)", "default": 72 }
+  ],
+  "blocks": [
+    { "type": "faq", "name": "Frage", "settings": [
+      { "type": "text", "id": "question", "label": "Frage", "default": "Was misst der RINGANI Smart Ring?" },
+      { "type": "richtext", "id": "answer", "label": "Antwort", "default": "<p>Der Ring erfasst die in den technischen Daten aufgeführten Messwerte. RINGANI ist ein Wellness-Produkt und kein Medizinprodukt.</p>" }
+    ] }
+  ],
+  "presets": [
+    { "name": "RINGANI – FAQ", "blocks": [
+      { "type": "faq", "settings": { "question": "Was misst der RINGANI Smart Ring?", "answer": "<p>Der Ring erfasst die in den technischen Daten aufgeführten Messwerte, darunter Schlafdaten, Herzfrequenz und Aktivität. Die vollständige Liste findest du im Abschnitt „Technische Daten\". RINGANI ist ein Wellness-Produkt und kein Medizinprodukt.</p>" } },
+      { "type": "faq", "settings": { "question": "Wie finde ich die richtige Ringgröße?", "answer": "<p>Nutze den Größenrechner über „Welche Größe brauche ich?\" oder miss den Innendurchmesser eines gut sitzenden Rings. Bei Unsicherheit kannst du im Bestellprozess ein kostenloses Sizing-Kit hinzufügen.</p>" } },
+      { "type": "faq", "settings": { "question": "Kann ich RINGANI beim Schlafen tragen?", "answer": "<p>Ja. Der Ring ist flach, leicht und ohne Display gestaltet – genau dafür, Tag und Nacht getragen zu werden.</p>" } },
+      { "type": "faq", "settings": { "question": "Wie lange hält der Akku?", "answer": "<p>Bis zu 7 Tage je nach Nutzung. Das Ladecase liefert zusätzliche Ladungen für unterwegs.</p>" } },
+      { "type": "faq", "settings": { "question": "Funktioniert RINGANI mit iPhone und Android?", "answer": "<p>Die RINGANI App ist für iOS und Android verfügbar. Die unterstützten Mindestversionen findest du in den technischen Daten.</p>" } },
+      { "type": "faq", "settings": { "question": "Brauche ich ein Abonnement?", "answer": "<p>Nein. Alle Funktionen der App sind ohne monatliche Gebühren enthalten.</p>" } },
+      { "type": "faq", "settings": { "question": "Ist der Ring wasserfest?", "answer": "<p>Die Schutzklasse beträgt 10 ATM. Für Tauchgänge ist der Ring nicht vorgesehen.</p>" } },
+      { "type": "faq", "settings": { "question": "Wie funktioniert die Rückgabe?", "answer": "<p>Du hast 30 Tage Rückgaberecht ab Erhalt. Melde dich beim Support, du erhältst ein Rücksendelabel und nach Prüfung die Erstattung.</p>" } }
+    ] }
+  ]
+}
+{% endschema %}

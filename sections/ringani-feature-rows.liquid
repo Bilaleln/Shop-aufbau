@@ -1,0 +1,84 @@
+{%- comment -%}
+  RINGANI – Feature-Reihen
+  Alternating image + text storytelling rows (Schlaf / Erholung / Aktivität).
+  Each row is a reorderable block.
+{%- endcomment -%}
+<section id="{{ section.settings.anchor | default: 'technologie' }}" class="ringani ringani-section ringani-features" style="{% render 'ringani-section-vars', s: section %}">
+  <div class="ringani-inner ringani-features__wrap">
+    {%- for block in section.blocks -%}
+      {%- liquid
+        assign pos = block.settings.image_position
+        if pos == 'auto'
+          assign idx = forloop.index0 | modulo: 2
+          if idx == 0
+            assign pos = 'left'
+          else
+            assign pos = 'right'
+          endif
+        endif
+        assign points = block.settings.points | newline_to_br | strip_newlines | split: '<br />'
+      -%}
+      <div class="ringani-reveal ringani-features__row" {{ block.shopify_attributes }}>
+        <div class="ringani-media ringani-features__media" style="order:{% if pos == 'left' %}1{% else %}2{% endif %}">
+          {%- render 'ringani-image', image: block.settings.image, image_mobile: block.settings.image_mobile, alt: block.settings.title, sizes: '(min-width: 750px) 50vw, 100vw', placeholder: 'lifestyle-1' -%}
+        </div>
+        <div class="ringani-features__text" style="order:{% if pos == 'left' %}2{% else %}1{% endif %}">
+          {%- if block.settings.label != blank -%}<div class="ringani-eyebrow">{{ block.settings.label }}</div>{%- endif -%}
+          <h2 class="ringani-features__h">{{ block.settings.title }}</h2>
+          {%- if block.settings.body != blank -%}<p class="ringani-lead ringani-features__body">{{ block.settings.body }}</p>{%- endif -%}
+          {%- if points.size > 0 and block.settings.points != blank -%}
+            <div class="ringani-features__points">
+              {%- for p in points -%}<div class="ringani-features__point"><span>—</span><span>{{ p | strip }}</span></div>{%- endfor -%}
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% stylesheet %}
+.ringani-features__wrap{max-width:1280px;margin:0 auto;display:grid;gap:clamp(64px,8vw,132px)}
+.ringani-features__row{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(28px,4vw,72px);align-items:center}
+.ringani-features__media{width:100%;aspect-ratio:4/3;border-radius:6px}
+.ringani-features__text{max-width:44ch}
+.ringani-features__h{font-size:clamp(28px,3.8vw,46px);line-height:1.06;letter-spacing:-.03em;font-weight:500;margin-top:18px}
+.ringani-features__body{margin-top:16px}
+.ringani-features__points{margin-top:22px;display:grid;gap:9px}
+.ringani-features__point{display:flex;gap:11px;font-size:14px;color:#3A3833;line-height:1.5}
+.ringani-features__point span:first-child{color:#1B6FD4}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "RINGANI – Feature-Reihen",
+  "tag": "section",
+  "max_blocks": 8,
+  "settings": [
+    { "type": "text", "id": "anchor", "label": "Anker-ID (für Navigation)", "default": "technologie" },
+    { "type": "header", "content": "Abstände" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Oben (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Unten (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Oben (Mobil)", "default": 72 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Unten (Mobil)", "default": 72 }
+  ],
+  "blocks": [
+    { "type": "feature", "name": "Feature", "settings": [
+      { "type": "text", "id": "label", "label": "Label", "default": "Schlaf" },
+      { "type": "text", "id": "title", "label": "Titel", "default": "Verstehe deinen Schlaf." },
+      { "type": "textarea", "id": "body", "label": "Text", "default": "RINGANI erfasst deine Nacht ohne Display und ohne Störung. Am Morgen siehst du Schlafdauer, Schlafphasen und Ruhepuls in einem klaren Bild." },
+      { "type": "textarea", "id": "points", "label": "Punkte (eine Zeile pro Punkt)", "default": "Schlafdauer und Schlafphasen\nRuhepuls über Nacht\nPersönliche Wochen- und Monatstrends" },
+      { "type": "image_picker", "id": "image", "label": "Bild (Desktop)" },
+      { "type": "image_picker", "id": "image_mobile", "label": "Bild (Mobil, optional)" },
+      { "type": "select", "id": "image_position", "label": "Bildposition", "options": [ { "value": "auto", "label": "Automatisch abwechselnd" }, { "value": "left", "label": "Links" }, { "value": "right", "label": "Rechts" } ], "default": "auto" }
+    ] }
+  ],
+  "presets": [
+    { "name": "RINGANI – Feature-Reihen", "blocks": [
+      { "type": "feature", "settings": { "label": "Schlaf", "title": "Verstehe deinen Schlaf.", "body": "RINGANI erfasst deine Nacht ohne Display und ohne Störung. Am Morgen siehst du Schlafdauer, Schlafphasen und Ruhepuls in einem klaren Bild – und erkennst, was deine Nächte wirklich beeinflusst.", "points": "Schlafdauer und Schlafphasen\nRuhepuls über Nacht\nPersönliche Wochen- und Monatstrends", "image_position": "auto" } },
+      { "type": "feature", "settings": { "label": "Erholung", "title": "Wisse, wann dein Körper bereit ist.", "body": "Aus deinen nächtlichen Werten entsteht ein täglicher Erholungswert. So erkennst du, ob heute ein Tag für Belastung oder für Ruhe ist – ohne dich durch Rohdaten arbeiten zu müssen.", "points": "Täglicher Erholungswert\nVergleich mit deinem persönlichen Normalbereich\nHinweise zu Belastung und Ruhe", "image_position": "auto" } },
+      { "type": "feature", "settings": { "label": "Aktivität", "title": "Bewegung, die sichtbar wird.", "body": "Schritte, aktive Minuten und Alltagsbewegung werden automatisch erfasst – ohne dass du eine Aktivität starten musst. Über Wochen entsteht ein ehrliches Bild deiner Gewohnheiten.", "points": "Automatische Aktivitätserfassung\nSchritte und aktive Minuten\nLangfristige Verlaufsanalyse", "image_position": "auto" } }
+    ] }
+  ]
+}
+{% endschema %}

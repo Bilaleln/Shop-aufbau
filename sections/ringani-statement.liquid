@@ -1,0 +1,69 @@
+{%- comment -%}
+  RINGANI – Statement
+  Centered eyebrow + heading + lead, with an optional wide media below.
+  Reused for the dark "Gesundheit beginnt mit Verständnis" hero and the light
+  "Kein Abo" statement.
+{%- endcomment -%}
+{%- assign theme_dark = section.settings.color_scheme == 'dark' -%}
+<section class="ringani ringani-section ringani-statement{% if theme_dark %} ringani-on-dark ringani-statement--dark{% endif %}"
+  style="{% render 'ringani-section-vars', s: section %}">
+  <div class="ringani-inner ringani-inner--prose ringani-statement__inner">
+    {%- if section.settings.eyebrow != blank -%}
+      <div class="ringani-eyebrow ringani-reveal">{{ section.settings.eyebrow }}</div>
+    {%- endif -%}
+    {%- if section.settings.heading != blank -%}
+      <h2 class="ringani-statement__h ringani-reveal">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+    {%- if section.settings.body != blank -%}
+      <p class="ringani-lead ringani-statement__body ringani-reveal">{{ section.settings.body }}</p>
+    {%- endif -%}
+  </div>
+  {%- if section.settings.show_media -%}
+    <div class="ringani-inner ringani-statement__media-wrap ringani-reveal">
+      <div class="ringani-media{% if theme_dark %} ringani-media--dark{% endif %} ringani-statement__media" style="aspect-ratio:{{ section.settings.media_ratio }}">
+        {%- render 'ringani-image', image: section.settings.image, image_mobile: section.settings.image_mobile, alt: section.settings.heading, sizes: '(min-width: 820px) 820px, 100vw', placeholder: 'hero-apparel' -%}
+      </div>
+    </div>
+  {%- endif -%}
+</section>
+
+{% stylesheet %}
+.ringani-statement--dark{background:linear-gradient(180deg,#071B33 0%,#0C2E56 52%,#050F1C 100%)}
+.ringani-statement__inner{text-align:center}
+.ringani-statement__h{font-size:clamp(32px,5.4vw,64px);line-height:1.03;letter-spacing:-.035em;font-weight:400;margin-top:22px}
+.ringani-statement--dark .ringani-statement__h{font-weight:400}
+.ringani-statement__body{margin:22px auto 0;max-width:56ch}
+.ringani-statement__media-wrap{margin-top:clamp(44px,6vw,80px)}
+.ringani-statement__media{width:100%;border-radius:8px}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "RINGANI – Statement",
+  "tag": "section",
+  "settings": [
+    { "type": "header", "content": "Inhalt" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "RINGANI Smart Ring" },
+    { "type": "inline_richtext", "id": "heading", "label": "Überschrift", "default": "Gesundheit beginnt<br>mit Verständnis." },
+    { "type": "textarea", "id": "body", "label": "Text", "default": "RINGANI begleitet dich Tag und Nacht und macht die Signale deines Körpers verständlich – direkt auf deinem Smartphone." },
+    { "type": "select", "id": "color_scheme", "label": "Farbschema", "options": [ { "value": "light", "label": "Hell" }, { "value": "dark", "label": "Dunkel" } ], "default": "dark" },
+    { "type": "header", "content": "Medien (optional)" },
+    { "type": "checkbox", "id": "show_media", "label": "Bild anzeigen", "default": true },
+    { "type": "image_picker", "id": "image", "label": "Bild (Desktop)" },
+    { "type": "image_picker", "id": "image_mobile", "label": "Bild (Mobil, optional)" },
+    { "type": "select", "id": "media_ratio", "label": "Seitenverhältnis", "options": [ { "value": "16/9", "label": "16:9" }, { "value": "3/2", "label": "3:2" }, { "value": "4/3", "label": "4:3" }, { "value": "1/1", "label": "1:1" } ], "default": "16/9" },
+    { "type": "header", "content": "Farben (optional, überschreibt Standard)" },
+    { "type": "color", "id": "bg_color", "label": "Hintergrund" },
+    { "type": "color", "id": "text_color", "label": "Text" },
+    { "type": "header", "content": "Abstände" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Oben (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Unten (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Oben (Mobil)", "default": 72 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Unten (Mobil)", "default": 72 }
+  ],
+  "presets": [
+    { "name": "RINGANI – Statement (Hero, dunkel)", "settings": { "color_scheme": "dark", "show_media": true } },
+    { "name": "RINGANI – Statement (Text, hell)", "settings": { "eyebrow": "Kein Abo", "heading": "Deine Daten. Ohne monatliche Gebühren.", "body": "Einmal kaufen. Dauerhaft nutzen. Alle Funktionen der RINGANI App sind ohne Abonnement enthalten.", "color_scheme": "light", "show_media": false, "padding_top": 120, "padding_bottom": 120 } }
+  ]
+}
+{% endschema %}

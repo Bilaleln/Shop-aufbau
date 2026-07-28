@@ -1,0 +1,31 @@
+{%- comment -%}
+  Renders a product media object (image / video / external_video / model).
+  Params:
+    media   {media}  required
+    loading {bool}   true => eager + high fetchpriority (LCP), else lazy
+    sizes   {string} responsive sizes attribute (images only)
+    class   {string} extra class on the media element
+{%- endcomment -%}
+{%- liquid
+  assign r_loading = 'lazy'
+  assign r_fetch = 'auto'
+  if loading
+    assign r_loading = 'eager'
+    assign r_fetch = 'high'
+  endif
+  assign r_sizes = sizes | default: '(min-width: 750px) 50vw, 100vw'
+-%}
+{%- case media.media_type -%}
+  {%- when 'image' -%}
+    {{ media | image_url: width: 1600 | image_tag:
+        loading: r_loading, fetchpriority: r_fetch, sizes: r_sizes,
+        widths: '360, 540, 720, 960, 1200, 1600', class: class, alt: media.alt | escape }}
+  {%- when 'video' -%}
+    {{ media | video_tag: image_size: '1200x', loop: false, controls: true, muted: false, class: class }}
+  {%- when 'external_video' -%}
+    {{ media | external_video_tag: class: class }}
+  {%- when 'model' -%}
+    {{ media | model_viewer_tag: class: class }}
+  {%- else -%}
+    {{ media | image_url: width: 1600 | image_tag: loading: r_loading, sizes: r_sizes, class: class, alt: media.alt | escape }}
+{%- endcase -%}

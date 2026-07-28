@@ -1,0 +1,50 @@
+{%- comment -%}
+  RINGANI – Service-Zusagen
+  Grid of trust/service items (title + text) as reorderable blocks.
+{%- endcomment -%}
+<section class="ringani ringani-section ringani-services" style="{% render 'ringani-section-vars', s: section %}">
+  <div class="ringani-inner ringani-reveal ringani-services__grid">
+    {%- for block in section.blocks -%}
+      <div class="ringani-services__item" {{ block.shopify_attributes }}>
+        <h3 class="ringani-services__title">{{ block.settings.title }}</h3>
+        {%- if block.settings.body != blank -%}<p class="ringani-services__body">{{ block.settings.body }}</p>{%- endif -%}
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% stylesheet %}
+.ringani-services__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:clamp(20px,3vw,40px)}
+.ringani-services__item{border-top:1px solid #DEDBD4;padding-top:22px}
+.ringani-services__title{font-size:17px;font-weight:500;letter-spacing:-.01em}
+.ringani-services__body{font-size:14.5px;line-height:1.65;color:#5F5C55;margin-top:10px}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "RINGANI – Service-Zusagen",
+  "tag": "section",
+  "max_blocks": 8,
+  "settings": [
+    { "type": "header", "content": "Abstände" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Oben (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Unten (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Oben (Mobil)", "default": 72 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Unten (Mobil)", "default": 72 }
+  ],
+  "blocks": [
+    { "type": "service", "name": "Zusage", "settings": [
+      { "type": "text", "id": "title", "label": "Titel", "default": "Kostenloser Versand" },
+      { "type": "textarea", "id": "body", "label": "Text", "default": "Versandkostenfrei innerhalb Deutschlands, Zustellung in der Regel in 2–4 Werktagen." }
+    ] }
+  ],
+  "presets": [
+    { "name": "RINGANI – Service-Zusagen", "blocks": [
+      { "type": "service", "settings": { "title": "Kostenloser Versand", "body": "Versandkostenfrei innerhalb Deutschlands, Zustellung in der Regel in 2–4 Werktagen." } },
+      { "type": "service", "settings": { "title": "30 Tage Rückgaberecht", "body": "Nicht überzeugt? Innerhalb von 30 Tagen unkompliziert zurücksenden." } },
+      { "type": "service", "settings": { "title": "2 Jahre Gewährleistung", "body": "Gesetzliche Gewährleistung auf Material- und Verarbeitungsfehler." } },
+      { "type": "service", "settings": { "title": "Deutscher Support", "body": "Persönliche Beratung per E-Mail – Antwort in der Regel innerhalb eines Werktags." } }
+    ] }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,83 @@
+{%- comment -%}
+  RINGANI – Text & Bild (mit Kennzahlen)
+  Two-column text + image with optional stat blocks. Used for the battery
+  section; reusable for any single text/image storytelling block.
+{%- endcomment -%}
+{%- assign theme_dark = section.settings.color_scheme == 'dark' -%}
+<section class="ringani ringani-section ringani-split{% if theme_dark %} ringani-on-dark ringani-split--dark{% endif %}"
+  style="{% render 'ringani-section-vars', s: section %}">
+  <div class="ringani-inner ringani-split__grid">
+    <div class="ringani-reveal ringani-split__text" style="order:{% if section.settings.image_position == 'left' %}2{% else %}1{% endif %}">
+      {%- if section.settings.eyebrow != blank -%}<div class="ringani-eyebrow">{{ section.settings.eyebrow }}</div>{%- endif -%}
+      {%- if section.settings.heading != blank -%}<h2 class="ringani-split__h">{{ section.settings.heading }}</h2>{%- endif -%}
+      {%- if section.settings.body != blank -%}<div class="ringani-lead ringani-split__body">{{ section.settings.body }}</div>{%- endif -%}
+      {%- if section.blocks.size > 0 -%}
+        <div class="ringani-split__stats">
+          {%- for block in section.blocks -%}
+            <div class="ringani-split__stat" {{ block.shopify_attributes }}>
+              <div class="ringani-split__stat-val">{{ block.settings.value }}</div>
+              <div class="ringani-split__stat-label">{{ block.settings.label }}</div>
+            </div>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    </div>
+    <div class="ringani-reveal ringani-split__media-col" style="order:{% if section.settings.image_position == 'left' %}1{% else %}2{% endif %}">
+      <div class="ringani-media{% if theme_dark %} ringani-media--dark{% endif %} ringani-split__media" style="aspect-ratio:{{ section.settings.media_ratio }}">
+        {%- render 'ringani-image', image: section.settings.image, image_mobile: section.settings.image_mobile, alt: section.settings.heading, sizes: '(min-width: 750px) 50vw, 100vw', placeholder: 'product-2' -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+.ringani-split--dark{background:linear-gradient(145deg,#0C2C50 0%,#061726 68%)}
+.ringani-split__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(32px,5vw,80px);align-items:center}
+.ringani-split__h{font-size:clamp(30px,4.4vw,54px);line-height:1.05;letter-spacing:-.03em;font-weight:400;margin-top:20px}
+.ringani-split__body{margin-top:20px;max-width:46ch}
+.ringani-split--dark .ringani-split__body{color:var(--ringani-on-dark-soft)}
+.ringani-split__stats{display:flex;gap:clamp(20px,3vw,48px);margin-top:34px;flex-wrap:wrap}
+.ringani-split__stat-val{font-size:clamp(30px,3.6vw,44px);letter-spacing:-.03em}
+.ringani-split__stat-label{font-family:var(--ringani-mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#8F8A80;margin-top:6px}
+.ringani-split__media{width:100%;border-radius:6px}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "RINGANI – Text & Bild",
+  "tag": "section",
+  "settings": [
+    { "type": "header", "content": "Inhalt" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Akku" },
+    { "type": "inline_richtext", "id": "heading", "label": "Überschrift", "default": "Weniger laden.<br>Mehr verstehen." },
+    { "type": "richtext", "id": "body", "label": "Text", "default": "<p>Lange Akkulaufzeit im Ring – das Ladecase liefert zusätzliche Ladungen für unterwegs.</p>" },
+    { "type": "header", "content": "Medien" },
+    { "type": "image_picker", "id": "image", "label": "Bild (Desktop)" },
+    { "type": "image_picker", "id": "image_mobile", "label": "Bild (Mobil, optional)" },
+    { "type": "select", "id": "image_position", "label": "Bildposition (Desktop)", "options": [ { "value": "left", "label": "Links" }, { "value": "right", "label": "Rechts" } ], "default": "right" },
+    { "type": "select", "id": "media_ratio", "label": "Seitenverhältnis", "options": [ { "value": "1/1", "label": "1:1" }, { "value": "4/3", "label": "4:3" }, { "value": "3/2", "label": "3:2" }, { "value": "16/9", "label": "16:9" } ], "default": "1/1" },
+    { "type": "select", "id": "color_scheme", "label": "Farbschema", "options": [ { "value": "light", "label": "Hell" }, { "value": "dark", "label": "Dunkel" } ], "default": "dark" },
+    { "type": "header", "content": "Farben (optional)" },
+    { "type": "color", "id": "bg_color", "label": "Hintergrund" },
+    { "type": "color", "id": "text_color", "label": "Text" },
+    { "type": "header", "content": "Abstände" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Oben (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Unten (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Oben (Mobil)", "default": 72 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Unten (Mobil)", "default": 72 }
+  ],
+  "blocks": [
+    { "type": "stat", "name": "Kennzahl", "settings": [
+      { "type": "text", "id": "value", "label": "Wert", "default": "7" },
+      { "type": "text", "id": "label", "label": "Bezeichnung", "default": "Tage Laufzeit" }
+    ] }
+  ],
+  "presets": [
+    { "name": "RINGANI – Text & Bild (Akku)", "blocks": [
+      { "type": "stat", "settings": { "value": "7", "label": "Tage Laufzeit" } },
+      { "type": "stat", "settings": { "value": "90 min", "label": "Ladezeit" } },
+      { "type": "stat", "settings": { "value": "5", "label": "Ladungen im Case" } }
+    ] }
+  ]
+}
+{% endschema %}

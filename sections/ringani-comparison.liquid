@@ -1,0 +1,86 @@
+{%- comment -%}
+  RINGANI – Vergleich
+  Comparison table: three columns (RINGANI highlighted vs two competitors),
+  reorderable rows as blocks. Horizontally scrollable on small screens.
+{%- endcomment -%}
+<section class="ringani ringani-section ringani-compare" style="{% render 'ringani-section-vars', s: section %}">
+  <div class="ringani-inner ringani-inner--mid">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="ringani-h2 ringani-reveal ringani-compare__h">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+    <div class="ringani-reveal ringani-compare__scroll">
+      <div class="ringani-compare__table" role="table">
+        <div class="ringani-compare__row ringani-compare__row--head" role="row">
+          <div class="ringani-compare__cell ringani-compare__cell--label" role="columnheader"></div>
+          <div class="ringani-compare__cell ringani-compare__col-a ringani-compare__col-a--head" role="columnheader">{{ section.settings.col_a }}</div>
+          <div class="ringani-compare__cell ringani-compare__cell--head" role="columnheader">{{ section.settings.col_b }}</div>
+          <div class="ringani-compare__cell ringani-compare__cell--head" role="columnheader">{{ section.settings.col_c }}</div>
+        </div>
+        {%- for block in section.blocks -%}
+          <div class="ringani-compare__row" role="row" {{ block.shopify_attributes }}>
+            <div class="ringani-compare__cell ringani-compare__cell--label" role="cell">{{ block.settings.label }}</div>
+            <div class="ringani-compare__cell ringani-compare__col-a" role="cell">{{ block.settings.a }}</div>
+            <div class="ringani-compare__cell ringani-compare__cell--muted" role="cell">{{ block.settings.b }}</div>
+            <div class="ringani-compare__cell ringani-compare__cell--muted" role="cell">{{ block.settings.c }}</div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+    {%- if section.settings.note != blank -%}<p class="ringani-reveal ringani-compare__note">{{ section.settings.note }}</p>{%- endif -%}
+  </div>
+</section>
+
+{% stylesheet %}
+.ringani-compare__h{text-align:center}
+.ringani-compare__scroll{margin-top:clamp(36px,4vw,64px);overflow-x:auto}
+.ringani-compare__table{min-width:620px}
+.ringani-compare__row{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;align-items:center;border-bottom:1px solid #EFEDE8}
+.ringani-compare__row--head{align-items:end;padding-bottom:16px;border-bottom:1px solid #DEDBD4}
+.ringani-compare__cell{text-align:center;font-size:14px;color:#0E0E0E;padding:18px 6px}
+.ringani-compare__cell--label{text-align:left;font-size:14.5px;color:#3A3833;padding:18px 12px 18px 0}
+.ringani-compare__cell--head{font-size:13.5px;color:#6E6B64;padding:12px 6px}
+.ringani-compare__cell--muted{color:#8A867E}
+.ringani-compare__col-a{background:linear-gradient(180deg,#F1F7FF,#E7F0FC)}
+.ringani-compare__col-a--head{background:linear-gradient(180deg,#1B6FD4,#0C3E7E);color:#FFFFFF;border-radius:4px 4px 0 0;font-size:14px;letter-spacing:.02em}
+.ringani-compare__note{font-size:12px;color:#A5A099;margin-top:16px}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "RINGANI – Vergleich",
+  "tag": "section",
+  "max_blocks": 12,
+  "settings": [
+    { "type": "header", "content": "Inhalt" },
+    { "type": "inline_richtext", "id": "heading", "label": "Überschrift", "default": "Warum RINGANI?" },
+    { "type": "text", "id": "col_a", "label": "Spalte A (hervorgehoben)", "default": "RINGANI" },
+    { "type": "text", "id": "col_b", "label": "Spalte B", "default": "Smartwatch" },
+    { "type": "text", "id": "col_c", "label": "Spalte C", "default": "Fitness-Tracker" },
+    { "type": "text", "id": "note", "label": "Hinweis", "default": "Vergleich typischer Geräteklassen. Werte einzelner Modelle können abweichen." },
+    { "type": "header", "content": "Abstände" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Oben (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Unten (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Oben (Mobil)", "default": 72 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Unten (Mobil)", "default": 72 }
+  ],
+  "blocks": [
+    { "type": "row", "name": "Vergleichszeile", "settings": [
+      { "type": "text", "id": "label", "label": "Merkmal", "default": "24/7 tragbar" },
+      { "type": "text", "id": "a", "label": "RINGANI", "default": "Ja" },
+      { "type": "text", "id": "b", "label": "Smartwatch", "default": "Eingeschränkt" },
+      { "type": "text", "id": "c", "label": "Fitness-Tracker", "default": "Eingeschränkt" }
+    ] }
+  ],
+  "presets": [
+    { "name": "RINGANI – Vergleich", "blocks": [
+      { "type": "row", "settings": { "label": "24/7 tragbar", "a": "Ja", "b": "Eingeschränkt", "c": "Eingeschränkt" } },
+      { "type": "row", "settings": { "label": "Schlafkomfort", "a": "Hoch", "b": "Gering", "c": "Mittel" } },
+      { "type": "row", "settings": { "label": "Diskretes Design", "a": "Ja", "b": "Nein", "c": "Teilweise" } },
+      { "type": "row", "settings": { "label": "Akkulaufzeit", "a": "bis 7 Tage", "b": "1–2 Tage", "c": "5–7 Tage" } },
+      { "type": "row", "settings": { "label": "App-Auswertung", "a": "Ausführlich", "b": "Ausführlich", "c": "Basis" } },
+      { "type": "row", "settings": { "label": "Abo erforderlich", "a": "Nein", "b": "Teilweise", "c": "Teilweise" } },
+      { "type": "row", "settings": { "label": "Gewicht", "a": "3 g", "b": "30–60 g", "c": "20–30 g" } }
+    ] }
+  ]
+}
+{% endschema %}

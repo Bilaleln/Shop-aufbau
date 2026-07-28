@@ -1,0 +1,78 @@
+{%- comment -%}
+  RINGANI – Bild-Banner
+  Full-bleed lifestyle image with an overlaid heading, text and optional stats.
+  Used for the "Gemacht, um ihn zu vergessen." comfort section.
+{%- endcomment -%}
+<section class="ringani ringani-banner" data-ringani-banner style="--ringani-banner-h:{{ section.settings.height }}px">
+  <div class="ringani-banner__media ringani-media ringani-media--dark">
+    {%- render 'ringani-image', image: section.settings.image, image_mobile: section.settings.image_mobile, alt: section.settings.heading, sizes: '100vw', placeholder: 'lifestyle-2' -%}
+  </div>
+  <div class="ringani-banner__scrim ringani-banner__scrim--{{ section.settings.text_position }}"></div>
+  <div class="ringani-banner__content ringani-banner__content--{{ section.settings.text_position }}">
+    <div class="ringani-reveal ringani-banner__inner">
+      {%- if section.settings.heading != blank -%}<h2 class="ringani-banner__h">{{ section.settings.heading }}</h2>{%- endif -%}
+      {%- if section.settings.body != blank -%}<p class="ringani-banner__body">{{ section.settings.body }}</p>{%- endif -%}
+      {%- if section.blocks.size > 0 -%}
+        <div class="ringani-banner__stats">
+          {%- for block in section.blocks -%}
+            <div class="ringani-banner__stat" {{ block.shopify_attributes }}>
+              <div class="ringani-banner__stat-val">{{ block.settings.value }}</div>
+              <div class="ringani-banner__stat-label">{{ block.settings.label }}</div>
+            </div>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+.ringani-banner{position:relative;width:100%;height:var(--ringani-banner-h,clamp(420px,68vw,760px));background:#191917;overflow:hidden}
+.ringani-banner__media{position:absolute;inset:0}
+.ringani-banner__scrim{position:absolute;inset:0;pointer-events:none}
+.ringani-banner__scrim--left{background:linear-gradient(90deg,rgba(4,17,33,.74) 0%,rgba(6,26,48,.22) 60%,rgba(6,26,48,0) 100%)}
+.ringani-banner__scrim--right{background:linear-gradient(270deg,rgba(4,17,33,.74) 0%,rgba(6,26,48,.22) 60%,rgba(6,26,48,0) 100%)}
+.ringani-banner__scrim--center{background:linear-gradient(180deg,rgba(4,17,33,.55),rgba(4,17,33,.55))}
+.ringani-banner__content{position:absolute;inset:0;display:flex;align-items:center;padding:clamp(24px,6vw,96px)}
+.ringani-banner__content--right{justify-content:flex-end;text-align:right}
+.ringani-banner__content--center{justify-content:center;text-align:center}
+.ringani-banner__inner{max-width:38ch;color:#F5F3EF}
+.ringani-banner__h{font-size:clamp(30px,4.6vw,56px);line-height:1.05;letter-spacing:-.03em;font-weight:400}
+.ringani-banner__body{font-size:clamp(15px,1.3vw,17px);line-height:1.7;color:#D8D4CC;margin-top:18px}
+.ringani-banner__stats{display:flex;gap:clamp(20px,3vw,44px);margin-top:30px;flex-wrap:wrap}
+.ringani-banner__content--right .ringani-banner__stats,.ringani-banner__content--center .ringani-banner__stats{justify-content:flex-end}
+.ringani-banner__content--center .ringani-banner__stats{justify-content:center}
+.ringani-banner__stat-val{font-size:clamp(22px,2.4vw,30px);letter-spacing:-.02em}
+.ringani-banner__stat-label{font-family:var(--ringani-mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#A5A099;margin-top:6px}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "RINGANI – Bild-Banner",
+  "tag": "section",
+  "max_blocks": 4,
+  "settings": [
+    { "type": "header", "content": "Medien" },
+    { "type": "image_picker", "id": "image", "label": "Bild (Desktop)" },
+    { "type": "image_picker", "id": "image_mobile", "label": "Bild (Mobil, optional)" },
+    { "type": "range", "id": "height", "min": 320, "max": 900, "step": 10, "unit": "px", "label": "Höhe", "default": 640 },
+    { "type": "header", "content": "Inhalt" },
+    { "type": "inline_richtext", "id": "heading", "label": "Überschrift", "default": "Gemacht, um ihn zu vergessen." },
+    { "type": "textarea", "id": "body", "label": "Text", "default": "Leicht, glatt und flach genug, um Tag und Nacht getragen zu werden – ohne Display, ohne Ablenkung, ohne dass du daran denkst." },
+    { "type": "select", "id": "text_position", "label": "Textposition", "options": [ { "value": "left", "label": "Links" }, { "value": "right", "label": "Rechts" }, { "value": "center", "label": "Mitte" } ], "default": "left" }
+  ],
+  "blocks": [
+    { "type": "stat", "name": "Kennzahl", "settings": [
+      { "type": "text", "id": "value", "label": "Wert", "default": "3 g" },
+      { "type": "text", "id": "label", "label": "Bezeichnung", "default": "Gewicht" }
+    ] }
+  ],
+  "presets": [
+    { "name": "RINGANI – Bild-Banner (Komfort)", "blocks": [
+      { "type": "stat", "settings": { "value": "3 g", "label": "Gewicht" } },
+      { "type": "stat", "settings": { "value": "2,6 mm", "label": "Stärke" } },
+      { "type": "stat", "settings": { "value": "Titan", "label": "Material" } }
+    ] }
+  ]
+}
+{% endschema %}

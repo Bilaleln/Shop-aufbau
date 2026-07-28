@@ -1,0 +1,230 @@
+/* ============================================================================
+   RINGANI — Shared design tokens & component styles
+   Loaded once by the RINGANI product template (ringani-product-main).
+   All custom classes are namespaced `ringani-*` to avoid theme conflicts.
+   The visual language is taken 1:1 from the supplied HTML design.
+   ========================================================================== */
+
+:root {
+  --ringani-page-width: 1280px;
+  --ringani-page-width-wide: 1360px;
+
+  /* Neutrals / text */
+  --ringani-text: #0E0E0E;
+  --ringani-text-soft: #3A3833;
+  --ringani-muted: #5F5C55;
+  --ringani-faint: #8A867E;
+  --ringani-faint-2: #A5A099;
+  --ringani-line: #E8E5DF;
+  --ringani-line-2: #DEDBD4;
+  --ringani-line-3: #EFEDE8;
+  --ringani-surface: #FBFAF8;
+
+  /* Accent (blue) */
+  --ringani-accent: #1B6FD4;
+  --ringani-accent-soft: #C9DDF5;
+  --ringani-accent-tint: #F1F7FF;
+  --ringani-btn-from: #2C86EC;
+  --ringani-btn-to: #1257B4;
+  --ringani-btn-from-hover: #3B93F5;
+  --ringani-btn-to-hover: #1763C6;
+
+  /* Dark navy surfaces */
+  --ringani-navy-1: #061726;
+  --ringani-navy-2: #071B33;
+  --ringani-navy-3: #0C2A4D;
+  --ringani-on-dark: #F5F3EF;
+  --ringani-on-dark-soft: #A5A099;
+  --ringani-on-dark-blue: #9DB6D2;
+
+  /* Shape */
+  --ringani-radius-xs: 3px;
+  --ringani-radius-sm: 4px;
+  --ringani-radius-md: 6px;
+  --ringani-radius-lg: 8px;
+  --ringani-radius-panel: 14px;
+  --ringani-radius-pill: 999px;
+
+  /* Type */
+  --ringani-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --ringani-mono: "DM Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Motion */
+  --ringani-ease: cubic-bezier(.22, .61, .36, 1);
+}
+
+/* ---- Reset-ish, scoped to the RINGANI template body ---------------------- */
+.ringani * { box-sizing: border-box; }
+.ringani { color: var(--ringani-text); font-family: var(--ringani-font); -webkit-font-smoothing: antialiased; }
+.ringani h1, .ringani h2, .ringani h3, .ringani p { margin: 0; text-wrap: pretty; }
+.ringani ::selection { background: #D6E7FA; }
+
+/* ---- Section wrapper: spacing + optional full-width --------------------- */
+.ringani-section {
+  padding-top: var(--ringani-pt, clamp(64px, 9vw, 150px));
+  padding-bottom: var(--ringani-pb, clamp(64px, 9vw, 150px));
+  padding-left: clamp(20px, 5vw, 64px);
+  padding-right: clamp(20px, 5vw, 64px);
+}
+@media (max-width: 749px) {
+  .ringani-section {
+    padding-top: var(--ringani-pt-m, var(--ringani-pt, clamp(48px, 12vw, 96px)));
+    padding-bottom: var(--ringani-pb-m, var(--ringani-pb, clamp(48px, 12vw, 96px)));
+  }
+}
+.ringani-section--flush { padding-left: 0; padding-right: 0; }
+.ringani-inner { max-width: var(--ringani-page-width); margin: 0 auto; }
+.ringani-inner--narrow { max-width: 900px; }
+.ringani-inner--mid { max-width: 1080px; }
+.ringani-inner--prose { max-width: 820px; }
+
+/* ---- Shared type helpers ------------------------------------------------- */
+.ringani-eyebrow {
+  font-family: var(--ringani-mono);
+  font-size: 10.5px;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: var(--ringani-faint);
+}
+.ringani-h2 {
+  font-size: clamp(30px, 4.4vw, 54px);
+  line-height: 1.05;
+  letter-spacing: -.03em;
+  font-weight: 500;
+}
+.ringani-lead {
+  font-size: clamp(15px, 1.3vw, 17px);
+  line-height: 1.7;
+  color: var(--ringani-muted);
+}
+.ringani-on-dark { color: var(--ringani-on-dark); }
+.ringani-on-dark .ringani-eyebrow { color: #8F8A80; }
+.ringani-on-dark .ringani-lead { color: var(--ringani-on-dark-soft); }
+
+/* ---- Buttons ------------------------------------------------------------- */
+.ringani-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: var(--ringani-radius-sm);
+  background: linear-gradient(180deg, var(--ringani-btn-from) 0%, var(--ringani-btn-to) 100%);
+  color: #FFFFFF;
+  font-family: var(--ringani-mono);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background .3s ease, transform .2s ease, box-shadow .3s ease;
+}
+.ringani-btn:hover {
+  background: linear-gradient(180deg, var(--ringani-btn-from-hover) 0%, var(--ringani-btn-to-hover) 100%);
+}
+.ringani-btn:disabled { opacity: .55; cursor: not-allowed; }
+.ringani-btn--light {
+  background: var(--ringani-surface);
+  color: var(--ringani-text);
+}
+.ringani-btn--light:hover { background: #DCEBFB; color: #0B2748; }
+
+/* ---- Reveal-on-scroll (JS toggles .is-visible) --------------------------- */
+.ringani-reveal { opacity: 0; transform: translateY(22px); }
+.ringani-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+  transition: opacity .9s var(--ringani-ease), transform .9s var(--ringani-ease);
+}
+@media (prefers-reduced-motion: reduce) {
+  .ringani-reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
+
+/* ---- Media frame --------------------------------------------------------- */
+.ringani-media {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(160deg, #EEF3F9, #E2EAF4);
+}
+.ringani-media--dark { background: #191917; }
+.ringani-media img,
+.ringani-media video,
+.ringani-media svg,
+.ringani-media model-viewer,
+.ringani-media iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.ringani-media__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ringani-media__placeholder svg { width: 40%; height: 40%; opacity: .35; }
+
+/* ---- Payment / trust chips ---------------------------------------------- */
+.ringani-chip {
+  border: 1px solid var(--ringani-line);
+  border-radius: var(--ringani-radius-xs);
+  padding: 6px 10px;
+  font-family: var(--ringani-mono);
+  font-size: 9.5px;
+  letter-spacing: .1em;
+  color: var(--ringani-faint);
+}
+
+/* ---- Accordion (shared) -------------------------------------------------- */
+.ringani-acc__item { border-bottom: 1px solid var(--ringani-line-2); }
+.ringani-acc__head {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 22px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+  font-size: clamp(15.5px, 1.5vw, 18px);
+  color: var(--ringani-text);
+}
+.ringani-acc__icon {
+  font-size: 20px;
+  color: var(--ringani-faint);
+  transition: transform .3s ease;
+  flex: 0 0 auto;
+  line-height: 1;
+}
+.ringani-acc__head[aria-expanded="true"] .ringani-acc__icon { transform: rotate(45deg); }
+.ringani-acc__panel {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height .5s var(--ringani-ease);
+}
+@media (prefers-reduced-motion: reduce) { .ringani-acc__panel { transition: none; } }
+.ringani-acc__panel-inner { padding-bottom: 22px; }
+.ringani-acc__panel p { font-size: 15px; line-height: 1.7; color: var(--ringani-muted); max-width: 62ch; }
+
+/* Focus visibility for keyboard users */
+.ringani :focus-visible { outline: 2px solid var(--ringani-accent); outline-offset: 2px; border-radius: 2px; }
+
+/* ---- Toast (fallback add-to-cart confirmation) -------------------------- */
+.ringani-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translate(-50%, 12px);
+  z-index: 130;
+  background: var(--ringani-navy-1);
+  color: var(--ringani-on-dark);
+  font-size: 13.5px;
+  padding: 12px 20px;
+  border-radius: var(--ringani-radius-sm);
+  box-shadow: 0 12px 32px rgba(6, 23, 38, .28);
+  opacity: 0;
+  transition: opacity .3s ease, transform .3s var(--ringani-ease);
+  pointer-events: none;
+  max-width: calc(100vw - 32px);
+}
+.ringani-toast[data-show="true"] { opacity: 1; transform: translate(-50%, 0); }

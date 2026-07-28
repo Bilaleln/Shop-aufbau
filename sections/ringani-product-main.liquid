@@ -1,0 +1,533 @@
+{%- comment -%}
+  RINGANI – Produkt (Hauptbereich)
+  The commerce core. Uses real Shopify product / variant data:
+  media gallery, price, compare-at, colour swatches + size picker generated
+  from the product's own options, a native cart form, a synchronised sticky
+  add-to-cart bar and a size-guide modal.
+
+  Colour + size selectors are mapped to the product's options by NAME
+  (section settings), so no variant is hard-coded.
+{%- endcomment -%}
+
+{{ 'ringani.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'ringani-product.js' | asset_url }}" defer="defer"></script>
+
+{%- liquid
+  assign color_name = section.settings.color_option_name | downcase | strip
+  assign size_name  = section.settings.size_option_name  | downcase | strip
+  assign color_pos = 0
+  assign size_pos = 0
+  for opt in product.options_with_values
+    assign on = opt.name | downcase | strip
+    if on == color_name
+      assign color_pos = opt.position
+    endif
+    if on == size_name
+      assign size_pos = opt.position
+    endif
+  endfor
+
+  assign color_idx = color_pos | minus: 1
+  assign size_idx = size_pos | minus: 1
+  assign current = product.selected_or_first_available_variant
+  assign featured_id = current.featured_media.id
+  assign has_compare = false
+  if current.compare_at_price and current.compare_at_price > current.price
+    assign has_compare = true
+  endif
+-%}
+
+<section
+  class="ringani ringani-section ringani-pm"
+  id="ringani-produkt"
+  style="--ringani-pt:{{ section.settings.padding_top }}px;--ringani-pb:{{ section.settings.padding_bottom }}px;--ringani-pt-m:{{ section.settings.padding_top_mobile }}px;--ringani-pb-m:{{ section.settings.padding_bottom_mobile }}px;">
+  <ringani-product
+    class="ringani-inner ringani-pm__grid"
+    data-section-id="{{ section.id }}"
+    data-color-position="{{ color_pos }}"
+    data-size-position="{{ size_pos }}"
+    data-option-count="{{ product.options.size }}"
+    data-cart-add-url="{{ routes.cart_add_url }}"
+    data-cart-url="{{ routes.cart_url }}"
+    data-product-url="{{ product.url }}"
+    data-on-add="{{ section.settings.on_add }}"
+    data-label-add="{{ section.settings.label_add | escape }}"
+    data-label-soldout="{{ section.settings.label_soldout | escape }}"
+    data-label-choose="{{ section.settings.label_choose | escape }}"
+    data-save-template="{{ section.settings.save_template | escape }}"
+    data-scroll-anchor="ringani-produkt"
+    data-added-msg="{{ 'Zum Warenkorb hinzugefügt' }}">
+
+    {%- comment -%} ---------- Variant data for the controller ---------- {%- endcomment -%}
+    <script type="application/json" data-ringani-variants>
+      [
+        {%- for v in product.variants -%}
+          {
+            "id": {{ v.id }},
+            "available": {{ v.available }},
+            "options": {{ v.options | json }},
+            "price": {{ v.price | money | json }},
+            "price_raw": {{ v.price }},
+            "compare_at_price": {{ v.compare_at_price | money | json }},
+            "compare_at_price_raw": {{ v.compare_at_price | default: 0 }},
+            "savings": {{ v.compare_at_price | minus: v.price | at_least: 0 | money | json }},
+            "featured_media_id": {% if v.featured_media %}{{ v.featured_media.id }}{% else %}null{% endif %}
+          }{%- unless forloop.last -%},{%- endunless -%}
+        {%- endfor -%}
+      ]
+    </script>
+
+    {%- comment -%} ================= GALLERY ================= {%- endcomment -%}
+    <div class="ringani-pm__gallery-col">
+      <div class="ringani-pm__stage ringani-media" data-ringani-gallery>
+        {%- if product.media.size > 0 -%}
+          {%- for media in product.media -%}
+            {%- assign is_active = false -%}
+            {%- if featured_id and media.id == featured_id -%}{%- assign is_active = true -%}
+            {%- elsif featured_id == blank and forloop.first -%}{%- assign is_active = true -%}{%- endif -%}
+            <div class="ringani-pm__slide" data-media-id="{{ media.id }}" style="opacity:{% if is_active %}1{% else %}0{% endif %};pointer-events:{% if is_active %}auto{% else %}none{% endif %}">
+              {%- render 'ringani-media', media: media, loading: forloop.first, sizes: '(min-width: 750px) 46vw, 100vw' -%}
+            </div>
+          {%- endfor -%}
+        {%- else -%}
+          <div class="ringani-pm__slide" data-media-id="0" style="opacity:1">
+            {{ 'product-1' | placeholder_svg_tag: 'ringani-media__placeholder' }}
+          </div>
+        {%- endif -%}
+      </div>
+
+      {%- if product.media.size > 1 -%}
+        <div class="ringani-pm__thumbs">
+          {%- for media in product.media -%}
+            <button type="button" class="ringani-pm__thumb" data-ringani-thumb data-media-id="{{ media.id }}"
+              aria-current="{% if featured_id and media.id == featured_id %}true{% elsif featured_id == blank and forloop.first %}true{% else %}false{% endif %}"
+              aria-label="{{ media.alt | default: product.title | escape }}">
+              {{ media.preview_image | image_url: width: 200 | image_tag: loading: 'lazy', alt: media.alt | escape, widths: '96, 192' }}
+            </button>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    </div>
+
+    {%- comment -%} ================= INFO / PURCHASE ================= {%- endcomment -%}
+    <div class="ringani-pm__info">
+
+      {%- if section.settings.rating_show -%}
+        <div class="ringani-pm__rating">
+          <span class="ringani-pm__stars" aria-hidden="true">★★★★★</span>
+          <span>{{ section.settings.rating_text }}</span>
+        </div>
+      {%- endif -%}
+
+      <h1 class="ringani-pm__title">{{ product.title | escape }}</h1>
+
+      {%- if section.settings.subheading != blank -%}
+        <p class="ringani-pm__sub">{{ section.settings.subheading }}</p>
+      {%- endif -%}
+
+      <div class="ringani-pm__price-row">
+        <span class="ringani-pm__price" data-ringani-price>{{ current.price | money }}</span>
+        <span class="ringani-pm__compare" data-ringani-compare {% unless has_compare %}hidden{% endunless %}>{{ current.compare_at_price | money }}</span>
+        {%- if section.settings.show_savings -%}
+          <span class="ringani-pm__save" data-ringani-save {% unless has_compare %}hidden{% endunless %}>
+            {{ section.settings.save_template | replace: '{amount}', current.compare_at_price | minus: current.price | at_least: 0 | money }}
+          </span>
+        {%- endif -%}
+      </div>
+      {%- if section.settings.tax_note != blank -%}
+        <p class="ringani-pm__tax">{{ section.settings.tax_note }}</p>
+      {%- endif -%}
+
+      {%- if section.blocks.size > 0 -%}
+        {%- assign benefit_blocks = section.blocks | where: 'type', 'benefit' -%}
+        {%- if benefit_blocks.size > 0 -%}
+          <ul class="ringani-pm__benefits">
+            {%- for block in benefit_blocks -%}
+              <li {{ block.shopify_attributes }}>
+                <span class="ringani-pm__check">✓</span>
+                <span>{{ block.settings.text }}</span>
+              </li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+      {%- endif -%}
+
+      {%- comment -%} ---------- Colour swatches ---------- {%- endcomment -%}
+      {%- if color_pos > 0 -%}
+        {%- assign color_option = product.options_with_values[color_idx] -%}
+        {%- assign current_color = current.options[color_idx] -%}
+        <div class="ringani-pm__group">
+          <div class="ringani-pm__group-head">
+            <span class="ringani-eyebrow">{{ color_option.name }}</span>
+            <span class="ringani-pm__group-val" data-ringani-color-name>{{ current_color }}</span>
+          </div>
+          <div class="ringani-pm__swatches">
+            {%- for value in color_option.values -%}
+              {%- liquid
+                assign vname = value.name | default: value
+                assign swatch_bg = ''
+                assign swatch_img = ''
+                if value.swatch.image
+                  assign swatch_img = value.swatch.image | image_url: width: 100
+                elsif value.swatch.color
+                  assign swatch_bg = value.swatch.color
+                endif
+                assign key = vname | downcase | strip
+                if swatch_bg == '' and swatch_img == blank
+                  case key
+                    when 'schwarz','black','anthrazit','graphit'
+                      assign swatch_bg = 'linear-gradient(145deg,#3A3A38,#131312)'
+                    when 'silber','silver','grau','gray','platin'
+                      assign swatch_bg = 'linear-gradient(145deg,#EDEDEA,#B7B7B1)'
+                    when 'gold','roségold','rosegold','rose gold'
+                      assign swatch_bg = 'linear-gradient(145deg,#E3CBA1,#B4915F)'
+                    when 'blau','blue','navy'
+                      assign swatch_bg = 'linear-gradient(145deg,#3E6FA8,#183A63)'
+                    else
+                      assign swatch_bg = '#C7C4BD'
+                  endcase
+                endif
+              -%}
+              <button type="button" class="ringani-pm__swatch" data-ringani-swatch data-value="{{ vname | escape }}"
+                aria-pressed="{% if current_color == vname %}true{% else %}false{% endif %}"
+                aria-label="{{ color_option.name }}: {{ vname | escape }}">
+                <span class="ringani-pm__swatch-dot" style="background:{% if swatch_img %}center/cover url({{ swatch_img }}){% else %}{{ swatch_bg }}{% endif %}"></span>
+              </button>
+            {%- endfor -%}
+          </div>
+        </div>
+      {%- endif -%}
+
+      {%- comment -%} ---------- Size picker (dark panel) ---------- {%- endcomment -%}
+      {%- if size_pos > 0 -%}
+        {%- assign size_option = product.options_with_values[size_idx] -%}
+        <div class="ringani-pm__sizepanel">
+          <div class="ringani-pm__sizepanel-head">
+            <div>
+              <div class="ringani-pm__sizepanel-title">{{ section.settings.size_panel_heading }}</div>
+              <div class="ringani-pm__sizepanel-sub">{{ section.settings.size_panel_sub }}</div>
+            </div>
+            <span class="ringani-pm__sizebadge" data-ringani-size-badge data-active="false" aria-hidden="true">✓</span>
+          </div>
+          <div class="ringani-pm__sizes">
+            {%- for value in size_option.values -%}
+              {%- assign vname = value.name | default: value -%}
+              <button type="button" class="ringani-pm__size" data-ringani-size data-value="{{ vname | escape }}"
+                aria-pressed="false" aria-label="{{ size_option.name }}: {{ vname | escape }}">{{ vname }}</button>
+            {%- endfor -%}
+          </div>
+          <div class="ringani-pm__sizepanel-foot">
+            <span data-ringani-size-hint data-default="{{ section.settings.size_hint_default | escape }}" data-chosen-prefix="Größe">{{ section.settings.size_hint_default }}</span>
+            <button type="button" class="ringani-pm__sizeguide-link" data-ringani-sizeguide-open>{{ section.settings.sizeguide_link }}</button>
+          </div>
+        </div>
+      {%- endif -%}
+
+      {%- comment -%} ---------- Other options (fallback selects) ---------- {%- endcomment -%}
+      {%- for opt in product.options_with_values -%}
+        {%- if opt.position != color_pos and opt.position != size_pos -%}
+          {%- assign opt_idx = opt.position | minus: 1 -%}
+          {%- assign current_opt = current.options[opt_idx] -%}
+          <div class="ringani-pm__group">
+            <label class="ringani-eyebrow" for="ringani-opt-{{ section.id }}-{{ opt.position }}">{{ opt.name }}</label>
+            <select id="ringani-opt-{{ section.id }}-{{ opt.position }}" class="ringani-pm__select" data-ringani-option-select data-position="{{ opt.position }}">
+              {%- for value in opt.values -%}
+                {%- assign vname = value.name | default: value -%}
+                <option value="{{ vname | escape }}" {% if current_opt == vname %}selected{% endif %}>{{ vname }}</option>
+              {%- endfor -%}
+            </select>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+
+      {%- comment -%} ---------- Quantity + Add to cart ---------- {%- endcomment -%}
+      <form data-ringani-form action="{{ routes.cart_add_url }}" method="post" enctype="multipart/form-data" class="ringani-pm__buy">
+        <input type="hidden" name="id" value="{{ current.id }}">
+        <input type="hidden" name="quantity" value="1">
+        <div class="ringani-pm__qty">
+          <button type="button" class="ringani-pm__qty-btn" data-ringani-dec aria-label="Menge verringern">−</button>
+          <span class="ringani-pm__qty-val" data-ringani-qty>1</span>
+          <button type="button" class="ringani-pm__qty-btn" data-ringani-inc aria-label="Menge erhöhen">+</button>
+        </div>
+        <button type="submit" class="ringani-btn ringani-pm__cta" data-ringani-submit>
+          <span data-ringani-cta-label>{% if size_pos > 0 %}{{ section.settings.label_choose }}{% else %}{{ section.settings.label_add }}{% endif %}</span>
+        </button>
+      </form>
+
+      {%- assign trust = section.settings.trust_items | newline_to_br | strip_newlines | split: '<br />' -%}
+      {%- if trust.size > 0 and section.settings.trust_items != blank -%}
+        <div class="ringani-pm__trust">
+          {%- for item in trust -%}
+            <div class="ringani-pm__trust-item"><span class="ringani-pm__check">✓</span><span>{{ item | strip }}</span></div>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+
+      {%- assign payments = section.settings.payments | newline_to_br | strip_newlines | split: '<br />' -%}
+      {%- if payments.size > 0 and section.settings.payments != blank -%}
+        <div class="ringani-pm__payments">
+          {%- for p in payments -%}<span class="ringani-chip">{{ p | strip }}</span>{%- endfor -%}
+        </div>
+      {%- endif -%}
+
+      {%- comment -%} ---------- Panel accordions ---------- {%- endcomment -%}
+      {%- assign panels = section.blocks | where: 'type', 'panel' -%}
+      {%- if panels.size > 0 -%}
+        <ringani-accordion class="ringani-pm__panels ringani-acc">
+          {%- for block in panels -%}
+            <div class="ringani-acc__item" {{ block.shopify_attributes }}>
+              <button type="button" class="ringani-acc__head ringani-acc__head--sm" aria-expanded="false" aria-controls="ringani-panel-{{ section.id }}-{{ forloop.index }}">
+                <span>{{ block.settings.title }}</span>
+                <span class="ringani-acc__icon" aria-hidden="true">+</span>
+              </button>
+              <div class="ringani-acc__panel" id="ringani-panel-{{ section.id }}-{{ forloop.index }}" hidden>
+                <div class="ringani-acc__panel-inner">{{ block.settings.body }}</div>
+              </div>
+            </div>
+          {%- endfor -%}
+        </ringani-accordion>
+      {%- endif -%}
+    </div>
+
+    {%- comment -%} ================= STICKY ADD-TO-CART ================= {%- endcomment -%}
+    {%- if section.settings.sticky_enable -%}
+      <div class="ringani-pm__sticky" data-ringani-sticky data-visible="false" data-anchor="#ringani-produkt">
+        <div class="ringani-inner ringani-pm__sticky-inner">
+          <div class="ringani-pm__sticky-thumb">
+            {%- if product.featured_media -%}
+              {{ product.featured_media | image_url: width: 120 | image_tag: loading: 'lazy', alt: product.title | escape }}
+            {%- endif -%}
+          </div>
+          <div class="ringani-pm__sticky-text">
+            <div class="ringani-pm__sticky-title">{{ product.title | escape }}</div>
+            <div class="ringani-pm__sticky-summary" data-ringani-sticky-summary></div>
+          </div>
+          <form data-ringani-form action="{{ routes.cart_add_url }}" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="{{ current.id }}">
+            <input type="hidden" name="quantity" value="1">
+            <button type="submit" class="ringani-btn ringani-pm__sticky-cta" data-ringani-submit>
+              <span data-ringani-cta-label>{% if size_pos > 0 %}{{ section.settings.label_choose }}{% else %}{{ section.settings.label_add }}{% endif %}</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} ================= SIZE-GUIDE MODAL ================= {%- endcomment -%}
+    {%- assign size_rows = section.blocks | where: 'type', 'size_row' -%}
+    {%- if size_rows.size > 0 -%}
+      <div class="ringani-pm__overlay" id="ringani-overlay-{{ section.id }}" data-open="false" data-ringani-overlay></div>
+      <div class="ringani-pm__modal" id="ringani-sizeguide-{{ section.id }}" data-open="false" role="dialog" aria-modal="true" aria-label="{{ section.settings.sizeguide_heading | escape }}">
+        <div class="ringani-pm__modal-head">
+          <h3>{{ section.settings.sizeguide_heading }}</h3>
+          <button type="button" class="ringani-pm__modal-close" data-ringani-sizeguide-close aria-label="Schließen">×</button>
+        </div>
+        {%- if section.settings.sizeguide_intro != blank -%}<p class="ringani-pm__modal-intro">{{ section.settings.sizeguide_intro }}</p>{%- endif -%}
+        <div class="ringani-pm__sizetable">
+          <div class="ringani-pm__sizetable-head">
+            <span>{{ section.settings.sizeguide_col1 }}</span>
+            <span>{{ section.settings.sizeguide_col2 }}</span>
+            <span>{{ section.settings.sizeguide_col3 }}</span>
+          </div>
+          {%- for block in size_rows -%}
+            <div class="ringani-pm__sizetable-row" {{ block.shopify_attributes }}>
+              <span>{{ block.settings.size }}</span>
+              <span>{{ block.settings.diameter }}</span>
+              <span>{{ block.settings.circumference }}</span>
+            </div>
+          {%- endfor -%}
+        </div>
+        {%- if section.settings.sizeguide_note != blank -%}<p class="ringani-pm__modal-note">{{ section.settings.sizeguide_note }}</p>{%- endif -%}
+      </div>
+    {%- endif -%}
+  </ringani-product>
+</section>
+
+{% stylesheet %}
+.ringani-pm__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:clamp(28px,4vw,72px);align-items:start}
+.ringani-pm__gallery-col{position:sticky;top:88px}
+@media (max-width:900px){.ringani-pm__gallery-col{position:static}}
+.ringani-pm__stage{width:100%;aspect-ratio:1/1;border-radius:6px}
+.ringani-pm__slide{position:absolute;inset:0;transition:opacity .55s cubic-bezier(.22,.61,.36,1)}
+.ringani-pm__thumbs{display:flex;gap:8px;margin-top:10px;overflow-x:auto;padding-bottom:4px}
+.ringani-pm__thumb{flex:0 0 auto;width:96px;height:70px;border-radius:4px;border:1px solid #E4E1DB;background:#F2F0EC;padding:0;overflow:hidden;transition:border-color .3s ease}
+.ringani-pm__thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.ringani-pm__thumb[aria-current="true"]{border-color:#0E0E0E}
+.ringani-pm__info{padding-top:clamp(8px,2vw,32px)}
+.ringani-pm__rating{display:flex;align-items:center;gap:10px;font-size:12.5px;color:#6E6B64}
+.ringani-pm__stars{color:#0E0E0E;letter-spacing:.12em}
+.ringani-pm__title{font-size:clamp(34px,4.6vw,52px);line-height:1.02;letter-spacing:-.03em;font-weight:500;margin-top:18px}
+.ringani-pm__sub{font-size:clamp(16px,1.5vw,19px);line-height:1.55;color:#5F5C55;margin-top:14px;max-width:44ch}
+.ringani-pm__price-row{display:flex;align-items:baseline;gap:14px;margin-top:26px;flex-wrap:wrap}
+.ringani-pm__price{font-size:30px;letter-spacing:-.02em}
+.ringani-pm__compare{font-size:16px;color:#9A968E;text-decoration:line-through}
+.ringani-pm__save{font-family:var(--ringani-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#1B6FD4;border:1px solid #C9DDF5;background:#F1F7FF;border-radius:999px;padding:5px 10px}
+.ringani-pm__tax{font-size:12.5px;color:#8A867E;margin-top:8px}
+.ringani-pm__benefits{list-style:none;margin:30px 0 0;padding:22px 0;border-top:1px solid #E8E5DF;border-bottom:1px solid #E8E5DF;display:grid;gap:11px}
+.ringani-pm__benefits li{display:flex;gap:12px;align-items:flex-start;font-size:15px;line-height:1.45;color:#3A3833}
+.ringani-pm__check{color:#1B6FD4;font-size:13px;line-height:1.6}
+.ringani-pm__group{margin-top:30px}
+.ringani-pm__group-head{display:flex;justify-content:space-between;align-items:baseline}
+.ringani-pm__group-val{font-size:13.5px;color:#0E0E0E}
+.ringani-pm__swatches{display:flex;gap:12px;margin-top:14px}
+.ringani-pm__swatch{width:52px;height:52px;border-radius:999px;border:1px solid #E4E1DB;background:#FBFAF8;padding:5px;transition:border-color .3s ease}
+.ringani-pm__swatch[aria-pressed="true"]{border-color:#0E0E0E}
+.ringani-pm__swatch-dot{display:block;width:100%;height:100%;border-radius:999px;box-shadow:inset 0 1px 3px rgba(255,255,255,.4)}
+.ringani-pm__select{margin-top:12px;width:100%;height:52px;border:1px solid #DEDBD4;border-radius:4px;background:#fff;padding:0 14px;font-size:15px;color:#0E0E0E}
+.ringani-pm__sizepanel{margin-top:28px;border-radius:14px;padding:clamp(20px,2.4vw,28px);background:linear-gradient(165deg,#0C2A4D 0%,#071B33 100%);border:1px solid rgba(120,180,255,.22);color:#EAF2FB}
+.ringani-pm__sizepanel-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.ringani-pm__sizepanel-title{font-size:19px;letter-spacing:-.01em;font-weight:500}
+.ringani-pm__sizepanel-sub{font-size:14px;color:#9DB6D2;margin-top:4px}
+.ringani-pm__sizebadge{width:32px;height:32px;flex:0 0 auto;border-radius:999px;background:rgba(148,187,232,.22);color:#062038;display:flex;align-items:center;justify-content:center;font-size:15px;transition:background .3s ease}
+.ringani-pm__sizebadge[data-active="true"]{background:#3FA0F5}
+.ringani-pm__sizes{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(8px,1.4vw,14px);margin-top:22px}
+.ringani-pm__size{position:relative;aspect-ratio:1/1;border-radius:999px;border:1.5px solid rgba(148,187,232,.32);background:rgba(255,255,255,.02);color:#EAF2FB;font-size:clamp(13px,1.5vw,17px);font-weight:500;letter-spacing:-.01em;display:flex;align-items:center;justify-content:center;transition:border-color .28s ease,background .28s ease,box-shadow .28s ease}
+.ringani-pm__size[aria-pressed="true"]{border-color:#3FA0F5;background:rgba(63,160,245,.14);box-shadow:0 0 0 4px rgba(63,160,245,.14)}
+.ringani-pm__size[disabled]{border-color:rgba(148,187,232,.16);color:rgba(157,182,210,.45);opacity:.55;cursor:not-allowed}
+.ringani-pm__sizepanel-foot{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-top:20px;padding-top:16px;border-top:1px solid rgba(148,187,232,.18)}
+.ringani-pm__sizepanel-foot span{font-size:13px;color:#9DB6D2}
+.ringani-pm__sizeguide-link{background:none;border:none;padding:0;font-size:13px;color:#6FB4F7;text-decoration:underline;text-underline-offset:3px}
+.ringani-pm__buy{margin-top:30px;display:flex;gap:10px;align-items:stretch}
+.ringani-pm__qty{display:flex;align-items:center;border:1px solid #DEDBD4;border-radius:4px;overflow:hidden}
+.ringani-pm__qty-btn{width:46px;height:58px;background:none;border:none;font-size:17px;color:#3A3833}
+.ringani-pm__qty-val{width:34px;text-align:center;font-size:15px}
+.ringani-pm__cta{flex:1;height:58px;font-size:12px;box-shadow:0 10px 26px rgba(20,90,180,.24)}
+.ringani-pm__cta[data-loading="true"]{opacity:.7;pointer-events:none}
+.ringani-pm__trust{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px}
+.ringani-pm__trust-item{font-size:12px;color:#5F5C55;display:flex;gap:7px;align-items:flex-start;line-height:1.35}
+.ringani-pm__payments{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;align-items:center}
+.ringani-pm__panels{display:block;margin-top:26px;border-top:1px solid #E8E5DF}
+.ringani-pm__panels .ringani-acc__item{border-bottom:1px solid #E8E5DF}
+.ringani-acc__head--sm{padding:18px 0;font-size:14.5px}
+.ringani-acc__head--sm .ringani-acc__icon{font-size:18px}
+.ringani-pm__panels .ringani-acc__panel p,.ringani-pm__panels .ringani-acc__panel-inner{font-size:14px;line-height:1.65;color:#5F5C55;max-width:56ch}
+/* Sticky bar */
+.ringani-pm__sticky{position:fixed;left:0;right:0;bottom:0;z-index:70;background:linear-gradient(180deg,rgba(246,250,254,.95),rgba(240,246,253,.95));backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-top:1px solid #E4E1DB;transform:translateY(110%);transition:transform .45s cubic-bezier(.22,.61,.36,1)}
+.ringani-pm__sticky[data-visible="true"]{transform:translateY(0)}
+.ringani-pm__sticky-inner{padding:12px clamp(16px,4vw,48px);display:flex;align-items:center;gap:16px}
+.ringani-pm__sticky-thumb{width:52px;height:52px;border-radius:4px;overflow:hidden;background:#F2F0EC;flex:0 0 auto}
+.ringani-pm__sticky-thumb img{width:100%;height:100%;object-fit:cover}
+@media (max-width:600px){.ringani-pm__sticky-thumb{display:none}}
+.ringani-pm__sticky-text{min-width:0;flex:1}
+.ringani-pm__sticky-title{font-size:14.5px;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ringani-pm__sticky-summary{font-size:12.5px;color:#8A867E;margin-top:2px}
+.ringani-pm__sticky-cta{flex:0 0 auto;height:50px;padding:0 clamp(20px,4vw,44px);font-size:11px;letter-spacing:.18em;box-shadow:0 8px 20px rgba(20,90,180,.24)}
+/* Modal */
+.ringani-pm__overlay{position:fixed;inset:0;z-index:100;background:rgba(14,14,14,.42);opacity:0;pointer-events:none;transition:opacity .35s ease}
+.ringani-pm__overlay[data-open="true"]{opacity:1;pointer-events:auto}
+.ringani-pm__modal{position:fixed;left:50%;top:50%;z-index:120;width:min(560px,calc(100vw - 32px));max-height:82vh;overflow-y:auto;background:#FBFAF8;border-radius:8px;padding:clamp(24px,4vw,40px);transform:translate(-50%,-50%) scale(.96);opacity:0;pointer-events:none;transition:opacity .3s ease,transform .3s cubic-bezier(.22,.61,.36,1);box-shadow:0 40px 90px rgba(14,14,14,.18)}
+.ringani-pm__modal[data-open="true"]{opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1)}
+.ringani-pm__modal-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.ringani-pm__modal-head h3{font-size:24px;letter-spacing:-.02em;font-weight:500}
+.ringani-pm__modal-close{background:none;border:none;font-size:22px;line-height:1;padding:2px}
+.ringani-pm__modal-intro{font-size:14.5px;line-height:1.65;color:#5F5C55;margin-top:14px}
+.ringani-pm__sizetable{margin-top:22px;border-top:1px solid #E8E5DF}
+.ringani-pm__sizetable-head{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #E8E5DF;font-family:var(--ringani-mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#8A867E}
+.ringani-pm__sizetable-row{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #EFEDE8;font-size:14px}
+.ringani-pm__sizetable-head span,.ringani-pm__sizetable-row span{flex:1}
+.ringani-pm__sizetable-row span:nth-child(2){text-align:center;color:#5F5C55}
+.ringani-pm__sizetable-row span:nth-child(3){text-align:right;color:#5F5C55}
+.ringani-pm__modal-note{font-size:12.5px;line-height:1.6;color:#8A867E;margin-top:18px}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "RINGANI – Produkt",
+  "tag": "section",
+  "class": "ringani-section-wrapper",
+  "settings": [
+    { "type": "header", "content": "Inhalt" },
+    { "type": "checkbox", "id": "rating_show", "label": "Bewertungs-Zeile anzeigen", "default": true },
+    { "type": "text", "id": "rating_text", "label": "Bewertungstext", "default": "4,8/5 basierend auf Kundenbewertungen" },
+    { "type": "text", "id": "subheading", "label": "Unterüberschrift", "default": "Deine Gesundheit. Direkt an deinem Finger." },
+    { "type": "text", "id": "tax_note", "label": "Preis-Hinweis", "default": "inkl. MwSt. · Kostenloser Versand" },
+    { "type": "header", "content": "Preis & Ersparnis" },
+    { "type": "checkbox", "id": "show_savings", "label": "Ersparnis-Badge anzeigen (wenn Vergleichspreis gesetzt)", "default": true },
+    { "type": "text", "id": "save_template", "label": "Ersparnis-Text", "info": "{amount} wird durch den berechneten Betrag ersetzt.", "default": "Du sparst {amount}" },
+    { "type": "header", "content": "Varianten-Zuordnung" },
+    { "type": "paragraph", "content": "Diese Namen müssen exakt den Produkt-Optionen entsprechen, damit Farbfelder und Größen-Buttons erzeugt werden." },
+    { "type": "text", "id": "color_option_name", "label": "Name der Farb-Option", "default": "Farbe" },
+    { "type": "text", "id": "size_option_name", "label": "Name der Größen-Option", "default": "Größe" },
+    { "type": "header", "content": "Größen-Panel" },
+    { "type": "text", "id": "size_panel_heading", "label": "Überschrift", "default": "Ich kenne meine Größe" },
+    { "type": "text", "id": "size_panel_sub", "label": "Unterzeile", "default": "Wähle jetzt deine Ringgröße" },
+    { "type": "text", "id": "size_hint_default", "label": "Standard-Hinweis", "default": "Ausgegraute Größen sind derzeit ausverkauft." },
+    { "type": "text", "id": "sizeguide_link", "label": "Größenberater-Link", "default": "Welche Größe brauche ich?" },
+    { "type": "header", "content": "Add-to-Cart Beschriftungen" },
+    { "type": "text", "id": "label_add", "label": "Verfügbar", "default": "In den Warenkorb" },
+    { "type": "text", "id": "label_soldout", "label": "Ausverkauft", "default": "Ausverkauft" },
+    { "type": "text", "id": "label_choose", "label": "Keine Größe gewählt", "default": "Größe wählen" },
+    { "type": "select", "id": "on_add", "label": "Nach dem Hinzufügen", "options": [
+      { "value": "drawer", "label": "Warenkorb-Drawer des Themes öffnen (falls vorhanden)" },
+      { "value": "cart", "label": "Zur Warenkorb-Seite gehen" },
+      { "value": "stay", "label": "Auf der Seite bleiben (nur Hinweis)" }
+    ], "default": "drawer" },
+    { "type": "header", "content": "Vertrauen & Zahlung" },
+    { "type": "textarea", "id": "trust_items", "label": "Trust-Punkte (eine Zeile pro Punkt)", "default": "Kostenloser Versand\nSichere Zahlung\n30 Tage Rückgaberecht" },
+    { "type": "textarea", "id": "payments", "label": "Zahlungsarten (eine Zeile pro Eintrag)", "default": "Visa\nMastercard\nPayPal\nKlarna\nApple Pay\nGoogle Pay" },
+    { "type": "header", "content": "Sticky Add-to-Cart" },
+    { "type": "checkbox", "id": "sticky_enable", "label": "Sticky-Kaufleiste aktivieren", "default": true },
+    { "type": "header", "content": "Größenberater (Modal)" },
+    { "type": "text", "id": "sizeguide_heading", "label": "Überschrift", "default": "Ringgröße finden" },
+    { "type": "textarea", "id": "sizeguide_intro", "label": "Einleitung", "default": "Miss den Innendurchmesser eines gut sitzenden Rings oder den Fingerumfang mit einem Maßband. Miss abends – Finger sind morgens schmaler." },
+    { "type": "text", "id": "sizeguide_col1", "label": "Spalte 1", "default": "Größe" },
+    { "type": "text", "id": "sizeguide_col2", "label": "Spalte 2", "default": "Innendurchmesser" },
+    { "type": "text", "id": "sizeguide_col3", "label": "Spalte 3", "default": "Umfang" },
+    { "type": "textarea", "id": "sizeguide_note", "label": "Hinweis unten", "default": "Unsicher? Unser kostenloses Sizing-Kit lässt sich im Bestellprozess hinzufügen." },
+    { "type": "header", "content": "Abstände" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 120, "step": 2, "unit": "px", "label": "Oben (Desktop)", "default": 36 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 160, "step": 2, "unit": "px", "label": "Unten (Desktop)", "default": 80 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 100, "step": 2, "unit": "px", "label": "Oben (Mobil)", "default": 20 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 120, "step": 2, "unit": "px", "label": "Unten (Mobil)", "default": 56 }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Vorteil",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Text", "default": "Vorteil beschreiben" }
+      ]
+    },
+    {
+      "type": "panel",
+      "name": "Info-Panel (Akkordeon)",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Titel", "default": "Versand & Lieferzeit" },
+        { "type": "richtext", "id": "body", "label": "Text", "default": "<p>Beschreibung hier eintragen.</p>" }
+      ]
+    },
+    {
+      "type": "size_row",
+      "name": "Größentabelle: Zeile",
+      "settings": [
+        { "type": "text", "id": "size", "label": "Größe", "default": "Größe 7" },
+        { "type": "text", "id": "diameter", "label": "Innendurchmesser", "default": "17,3 mm" },
+        { "type": "text", "id": "circumference", "label": "Umfang", "default": "54,3 mm" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "RINGANI – Produkt (Hauptbereich)",
+      "blocks": [
+        { "type": "benefit", "settings": { "text": "Schlaf & Erholung Nacht für Nacht verstehen" } },
+        { "type": "benefit", "settings": { "text": "Herzfrequenz und Trends im Blick behalten" } },
+        { "type": "benefit", "settings": { "text": "Aktivität und Schritte automatisch erfassen" } },
+        { "type": "benefit", "settings": { "text": "Lange Akkulaufzeit" } },
+        { "type": "benefit", "settings": { "text": "Keine monatlichen Gebühren – kein Abo" } },
+        { "type": "panel", "settings": { "title": "Versand & Lieferzeit", "body": "<p>Kostenloser Versand innerhalb Deutschlands. Zustellung in der Regel innerhalb von 2–4 Werktagen. Sendungsverfolgung per E-Mail.</p>" } },
+        { "type": "panel", "settings": { "title": "Rückgabe & Gewährleistung", "body": "<p>30 Tage Rückgaberecht ab Erhalt. 2 Jahre gesetzliche Gewährleistung.</p>" } },
+        { "type": "panel", "settings": { "title": "Kompatibilität", "body": "<p>Die RINGANI App ist für iOS und Android verfügbar.</p>" } },
+        { "type": "size_row", "settings": { "size": "Größe 6", "diameter": "16,5 mm", "circumference": "51,8 mm" } },
+        { "type": "size_row", "settings": { "size": "Größe 7", "diameter": "17,3 mm", "circumference": "54,3 mm" } },
+        { "type": "size_row", "settings": { "size": "Größe 8", "diameter": "18,1 mm", "circumference": "56,9 mm" } },
+        { "type": "size_row", "settings": { "size": "Größe 9", "diameter": "18,9 mm", "circumference": "59,4 mm" } },
+        { "type": "size_row", "settings": { "size": "Größe 10", "diameter": "19,8 mm", "circumference": "62,2 mm" } },
+        { "type": "size_row", "settings": { "size": "Größe 11", "diameter": "20,6 mm", "circumference": "64,7 mm" } },
+        { "type": "size_row", "settings": { "size": "Größe 12", "diameter": "21,4 mm", "circumference": "67,2 mm" } },
+        { "type": "size_row", "settings": { "size": "Größe 13", "diameter": "22,2 mm", "circumference": "69,7 mm" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

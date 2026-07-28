@@ -1,0 +1,9 @@
+{%- comment -%}
+  Outputs the spacing CSS custom properties for a section wrapper.
+  Usage: <section class="ringani ringani-section" style="{% render 'ringani-section-vars', s: section %}">
+  Expects the section to define range settings: padding_top, padding_bottom,
+  padding_top_mobile, padding_bottom_mobile.
+{%- endcomment -%}
+--ringani-pt:{{ s.settings.padding_top | default: 96 }}px;--ringani-pb:{{ s.settings.padding_bottom | default: 96 }}px;--ringani-pt-m:{{ s.settings.padding_top_mobile | default: 64 }}px;--ringani-pb-m:{{ s.settings.padding_bottom_mobile | default: 64 }}px;
+{%- if s.settings.bg_color != blank and s.settings.bg_color != 'rgba(0,0,0,0)' -%}background:{{ s.settings.bg_color }};{%- endif -%}
+{%- if s.settings.text_color != blank -%}color:{{ s.settings.text_color }};{%- endif -%}

@@ -1,0 +1,105 @@
+{%- comment -%}
+  RINGANI – Bewertungen
+  Heading + rating summary + review cards. Supports review-app blocks (@app):
+  if you install a review app, add its block here to render real reviews.
+  The built-in cards are clearly labelled as demo content via the disclaimer.
+{%- endcomment -%}
+<section id="{{ section.settings.anchor | default: 'bewertungen' }}" class="ringani ringani-section ringani-reviews" style="{% render 'ringani-section-vars', s: section %}">
+  <div class="ringani-inner">
+    <div class="ringani-reveal ringani-reviews__head">
+      {%- if section.settings.heading != blank -%}<h2 class="ringani-h2 ringani-reviews__h">{{ section.settings.heading }}</h2>{%- endif -%}
+      {%- if section.settings.show_summary -%}
+        <div class="ringani-reviews__summary">
+          <div class="ringani-reviews__score">{{ section.settings.rating_value }}</div>
+          <div class="ringani-reviews__stars" aria-hidden="true">★★★★★</div>
+          <div class="ringani-reviews__count">{{ section.settings.rating_count }}</div>
+        </div>
+      {%- endif -%}
+    </div>
+
+    {%- assign card_blocks = section.blocks | where: 'type', 'review' -%}
+    {%- if card_blocks.size > 0 -%}
+      <div class="ringani-reveal ringani-reviews__grid">
+        {%- for block in card_blocks -%}
+          <div class="ringani-reviews__card" {{ block.shopify_attributes }}>
+            <div class="ringani-reviews__card-stars">{{ block.settings.stars }}</div>
+            <h3 class="ringani-reviews__card-title">{{ block.settings.title }}</h3>
+            <p class="ringani-reviews__card-body">{{ block.settings.body }}</p>
+            <div class="ringani-reviews__card-foot">
+              <span>{{ block.settings.name }}</span>
+              {%- if block.settings.verified_label != blank -%}<span class="ringani-reviews__verified">{{ block.settings.verified_label }}</span>{%- endif -%}
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} Review-app blocks render here {%- endcomment -%}
+    {%- for block in section.blocks -%}
+      {%- if block.type == '@app' -%}
+        <div class="ringani-reveal ringani-reviews__app" {{ block.shopify_attributes }}>{% render block %}</div>
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- if section.settings.disclaimer != blank -%}
+      <p class="ringani-reveal ringani-reviews__disclaimer">{{ section.settings.disclaimer }}</p>
+    {%- endif -%}
+  </div>
+</section>
+
+{% stylesheet %}
+.ringani-reviews__head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.ringani-reviews__h{max-width:16ch}
+.ringani-reviews__summary{text-align:right}
+.ringani-reviews__score{font-size:40px;letter-spacing:-.03em}
+.ringani-reviews__stars{letter-spacing:.14em;font-size:13px;margin-top:4px}
+.ringani-reviews__count{font-size:12.5px;color:#8A867E;margin-top:6px}
+.ringani-reviews__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(14px,2vw,20px);margin-top:clamp(36px,4vw,60px)}
+.ringani-reviews__card{border:1px solid #DDE7F4;border-radius:8px;padding:26px;background:linear-gradient(175deg,#FFFFFF 0%,#F5F9FF 100%);display:flex;flex-direction:column;gap:14px}
+.ringani-reviews__card-stars{letter-spacing:.14em;font-size:12px}
+.ringani-reviews__card-title{font-size:16px;font-weight:500;letter-spacing:-.01em}
+.ringani-reviews__card-body{font-size:14.5px;line-height:1.65;color:#5F5C55}
+.ringani-reviews__card-foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:12px;border-top:1px solid #F0EEE9;font-size:13px;color:#3A3833}
+.ringani-reviews__verified{font-family:var(--ringani-mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#1B6FD4}
+.ringani-reviews__app{margin-top:clamp(36px,4vw,60px)}
+.ringani-reviews__disclaimer{font-family:var(--ringani-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#A5A099;margin-top:20px}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "RINGANI – Bewertungen",
+  "tag": "section",
+  "settings": [
+    { "type": "header", "content": "Inhalt" },
+    { "type": "inline_richtext", "id": "heading", "label": "Überschrift", "default": "Was RINGANI Nutzer sagen." },
+    { "type": "text", "id": "anchor", "label": "Anker-ID", "default": "bewertungen" },
+    { "type": "checkbox", "id": "show_summary", "label": "Bewertungs-Zusammenfassung anzeigen", "default": true },
+    { "type": "text", "id": "rating_value", "label": "Bewertung", "default": "4,8" },
+    { "type": "text", "id": "rating_count", "label": "Anzahl", "default": "1.284 verifizierte Bewertungen" },
+    { "type": "text", "id": "disclaimer", "label": "Hinweis", "info": "Wenn du echte Bewertungen aus einer App einbindest, kannst du diesen Hinweis leeren.", "default": "Demo-Inhalte – vor dem Launch durch echte Bewertungen ersetzen" },
+    { "type": "header", "content": "Abstände" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Oben (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Unten (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Oben (Mobil)", "default": 72 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Unten (Mobil)", "default": 72 }
+  ],
+  "blocks": [
+    { "type": "@app" },
+    { "type": "review", "name": "Bewertung", "settings": [
+      { "type": "text", "id": "stars", "label": "Sterne", "default": "★★★★★" },
+      { "type": "text", "id": "title", "label": "Titel", "default": "Endlich Schlaf verstanden" },
+      { "type": "textarea", "id": "body", "label": "Text", "default": "Ich trage ihn seit acht Wochen und vergesse ihn komplett. Die Auswertung am Morgen ist verständlich." },
+      { "type": "text", "id": "name", "label": "Name", "default": "Marie K." },
+      { "type": "text", "id": "verified_label", "label": "Badge", "default": "Verifizierter Kauf" }
+    ] }
+  ],
+  "presets": [
+    { "name": "RINGANI – Bewertungen", "blocks": [
+      { "type": "review", "settings": { "stars": "★★★★★", "title": "Endlich Schlaf verstanden", "body": "Ich trage ihn seit acht Wochen und vergesse ihn komplett. Die Auswertung am Morgen ist verständlich, ohne mich mit Zahlen zu erschlagen.", "name": "Marie K." } },
+      { "type": "review", "settings": { "stars": "★★★★★", "title": "Angenehmer als eine Uhr", "body": "Nachts hat mich meine Smartwatch immer gestört. Der Ring fällt mir gar nicht mehr auf – und die App ist deutlich aufgeräumter.", "name": "Julian B." } },
+      { "type": "review", "settings": { "stars": "★★★★☆", "title": "Sehr gute Verarbeitung", "body": "Wirkt hochwertig und sitzt perfekt. Ich hätte mir nur etwas mehr Erklärung zu einzelnen Werten gewünscht.", "name": "Sandra L." } },
+      { "type": "review", "settings": { "stars": "★★★★★", "title": "Kein Abo – großer Pluspunkt", "body": "Dass alle Funktionen ohne monatliche Kosten dabei sind, war für mich der ausschlaggebende Punkt.", "name": "Tobias M." } }
+    ] }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,66 @@
+{%- comment -%}
+  RINGANI – App-Showcase
+  Intro copy + a responsive grid of app screenshots (phone frames).
+{%- endcomment -%}
+<section class="ringani ringani-section ringani-app" style="{% render 'ringani-section-vars', s: section %}">
+  <div class="ringani-inner">
+    <div class="ringani-reveal ringani-app__intro">
+      {%- if section.settings.eyebrow != blank -%}<div class="ringani-eyebrow">{{ section.settings.eyebrow }}</div>{%- endif -%}
+      {%- if section.settings.heading != blank -%}<h2 class="ringani-h2 ringani-app__h">{{ section.settings.heading }}</h2>{%- endif -%}
+      {%- if section.settings.body != blank -%}<p class="ringani-lead ringani-app__body">{{ section.settings.body }}</p>{%- endif -%}
+    </div>
+    <div class="ringani-reveal ringani-app__grid">
+      {%- for block in section.blocks -%}
+        <div class="ringani-app__item" {{ block.shopify_attributes }}>
+          <div class="ringani-media ringani-media--dark ringani-app__screen">
+            {%- render 'ringani-image', image: block.settings.image, alt: block.settings.label, sizes: '(min-width: 750px) 22vw, 45vw', placeholder: 'product-3' -%}
+          </div>
+          {%- if block.settings.label != blank -%}<div class="ringani-app__label">{{ block.settings.label }}</div>{%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+.ringani-app{background:linear-gradient(180deg,#F5F8FD 0%,#E6EFFA 100%)}
+.ringani-app__intro{max-width:52ch}
+.ringani-app__h{font-size:clamp(30px,4.4vw,54px);margin-top:20px}
+.ringani-app__body{margin-top:18px}
+.ringani-app__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:clamp(16px,2vw,28px);margin-top:clamp(40px,5vw,72px)}
+.ringani-app__screen{width:100%;aspect-ratio:9/19;border-radius:28px;border:1px solid #DEDBD4}
+.ringani-app__label{font-family:var(--ringani-mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#8A867E;margin-top:14px}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "RINGANI – App-Showcase",
+  "tag": "section",
+  "max_blocks": 8,
+  "settings": [
+    { "type": "header", "content": "Inhalt" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "RINGANI App" },
+    { "type": "inline_richtext", "id": "heading", "label": "Überschrift", "default": "Alles, was dein Körper dir sagt. An einem Ort." },
+    { "type": "textarea", "id": "body", "label": "Text", "default": "Schlaf, Aktivität, Erholung, Herzfrequenz und Trends – übersichtlich zusammengeführt in einer App, die dich nicht mit Zahlen überfordert." },
+    { "type": "header", "content": "Abstände" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Oben (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Unten (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Oben (Mobil)", "default": 72 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Unten (Mobil)", "default": 72 }
+  ],
+  "blocks": [
+    { "type": "screen", "name": "App-Screen", "settings": [
+      { "type": "image_picker", "id": "image", "label": "Screenshot" },
+      { "type": "text", "id": "label", "label": "Label", "default": "Schlaf" }
+    ] }
+  ],
+  "presets": [
+    { "name": "RINGANI – App-Showcase", "blocks": [
+      { "type": "screen", "settings": { "label": "Schlaf" } },
+      { "type": "screen", "settings": { "label": "Erholung" } },
+      { "type": "screen", "settings": { "label": "Aktivität" } },
+      { "type": "screen", "settings": { "label": "Trends" } }
+    ] }
+  ]
+}
+{% endschema %}

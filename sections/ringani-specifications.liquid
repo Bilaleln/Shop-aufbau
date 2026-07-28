@@ -1,0 +1,96 @@
+{%- comment -%}
+  RINGANI – Technische Daten
+  Accordion of spec groups. Two block types:
+    group  → starts a new accordion item (heading)
+    row    → a key/value line added under the current group
+  Reorder / add / remove freely in the Theme Editor.
+{%- endcomment -%}
+<section id="{{ section.settings.anchor | default: 'technologie' }}" class="ringani ringani-section ringani-spec" style="{% render 'ringani-section-vars', s: section %}">
+  <div class="ringani-inner ringani-inner--narrow">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="ringani-h2 ringani-reveal">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+    <ringani-accordion class="ringani-acc ringani-reveal ringani-spec__acc">
+      {%- assign open = false -%}
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'group' -%}
+          {%- if open -%}</div></div></div></div>{%- endif -%}
+          <div class="ringani-acc__item" {{ block.shopify_attributes }}>
+            <button type="button" class="ringani-acc__head" aria-expanded="false" aria-controls="ringani-spec-{{ section.id }}-{{ block.id }}">
+              <span>{{ block.settings.title }}</span>
+              <span class="ringani-acc__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="ringani-acc__panel" id="ringani-spec-{{ section.id }}-{{ block.id }}" hidden><div class="ringani-acc__panel-inner"><div class="ringani-spec__rows">
+          {%- assign open = true -%}
+        {%- elsif block.type == 'row' and open -%}
+          <div class="ringani-spec__row" {{ block.shopify_attributes }}>
+            <span class="ringani-spec__k">{{ block.settings.key }}</span>
+            <span class="ringani-spec__v">{{ block.settings.value }}</span>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+      {%- if open -%}</div></div></div></div>{%- endif -%}
+    </ringani-accordion>
+  </div>
+</section>
+
+{% stylesheet %}
+.ringani-spec__acc{display:block;margin-top:clamp(32px,4vw,56px);border-top:1px solid #DEDBD4}
+.ringani-spec__rows{display:grid;gap:10px}
+.ringani-spec__row{display:flex;justify-content:space-between;gap:24px;font-size:14.5px;line-height:1.5}
+.ringani-spec__k{color:#6E6B64}
+.ringani-spec__v{color:#0E0E0E;text-align:right}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "RINGANI – Technische Daten",
+  "tag": "section",
+  "max_blocks": 50,
+  "settings": [
+    { "type": "header", "content": "Inhalt" },
+    { "type": "inline_richtext", "id": "heading", "label": "Überschrift", "default": "Technische Daten" },
+    { "type": "text", "id": "anchor", "label": "Anker-ID (für Navigation)", "default": "daten" },
+    { "type": "header", "content": "Abstände" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Oben (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Unten (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Oben (Mobil)", "default": 72 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Unten (Mobil)", "default": 72 }
+  ],
+  "blocks": [
+    { "type": "group", "name": "Gruppe (Überschrift)", "settings": [
+      { "type": "text", "id": "title", "label": "Titel", "default": "Design & Material" }
+    ] },
+    { "type": "row", "name": "Zeile (Merkmal/Wert)", "settings": [
+      { "type": "text", "id": "key", "label": "Merkmal", "default": "Material" },
+      { "type": "text", "id": "value", "label": "Wert", "default": "Titan" }
+    ] }
+  ],
+  "presets": [
+    { "name": "RINGANI – Technische Daten", "blocks": [
+      { "type": "group", "settings": { "title": "Design & Material" } },
+      { "type": "row", "settings": { "key": "Material", "value": "Titan" } },
+      { "type": "row", "settings": { "key": "Gewicht", "value": "3 g" } },
+      { "type": "row", "settings": { "key": "Stärke", "value": "2,6 mm" } },
+      { "type": "row", "settings": { "key": "Breite", "value": "7,8 mm" } },
+      { "type": "group", "settings": { "title": "Akku & Laden" } },
+      { "type": "row", "settings": { "key": "Akkulaufzeit", "value": "bis zu 7 Tage" } },
+      { "type": "row", "settings": { "key": "Ladezeit", "value": "90 min" } },
+      { "type": "row", "settings": { "key": "Ladungen im Case", "value": "5" } },
+      { "type": "group", "settings": { "title": "Sensoren & Messwerte" } },
+      { "type": "row", "settings": { "key": "Sensoren", "value": "Herzfrequenz, Temperatur, Bewegung" } },
+      { "type": "row", "settings": { "key": "Messwerte", "value": "Schlaf, Ruhepuls, Aktivität" } },
+      { "type": "group", "settings": { "title": "Wasserbeständigkeit" } },
+      { "type": "row", "settings": { "key": "Schutzklasse", "value": "10 ATM" } },
+      { "type": "row", "settings": { "key": "Hinweis", "value": "Nicht für Tauchgänge geeignet" } },
+      { "type": "group", "settings": { "title": "Verbindung & App" } },
+      { "type": "row", "settings": { "key": "Bluetooth", "value": "5.0" } },
+      { "type": "row", "settings": { "key": "iOS", "value": "ab iOS 14" } },
+      { "type": "row", "settings": { "key": "Android", "value": "ab Android 8" } },
+      { "type": "group", "settings": { "title": "Lieferumfang" } },
+      { "type": "row", "settings": { "key": "Enthalten", "value": "Ring, Ladecase, USB-C-Kabel, Kurzanleitung" } },
+      { "type": "row", "settings": { "key": "Gewährleistung", "value": "2 Jahre" } }
+    ] }
+  ]
+}
+{% endschema %}

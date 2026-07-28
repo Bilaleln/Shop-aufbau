@@ -1,0 +1,51 @@
+{%- comment -%}
+  RINGANI – Finaler CTA
+  Full-bleed image with overlaid heading, text and a button.
+{%- endcomment -%}
+<section class="ringani ringani-final" data-ringani-final style="--ringani-final-h:{{ section.settings.height }}px">
+  <div class="ringani-final__media ringani-media ringani-media--dark">
+    {%- render 'ringani-image', image: section.settings.image, image_mobile: section.settings.image_mobile, alt: section.settings.heading, sizes: '100vw', placeholder: 'lifestyle-2' -%}
+  </div>
+  <div class="ringani-final__scrim"></div>
+  <div class="ringani-final__content">
+    <div class="ringani-reveal ringani-final__inner">
+      {%- if section.settings.heading != blank -%}<h2 class="ringani-final__h">{{ section.settings.heading }}</h2>{%- endif -%}
+      {%- if section.settings.body != blank -%}<p class="ringani-final__body">{{ section.settings.body }}</p>{%- endif -%}
+      {%- if section.settings.button_label != blank -%}
+        <a href="{{ section.settings.button_link | default: '#ringani-produkt' }}" class="ringani-btn ringani-btn--light ringani-final__btn">{{ section.settings.button_label }}</a>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+.ringani-final{position:relative;width:100%;min-height:var(--ringani-final-h,clamp(520px,72vw,820px));display:flex;align-items:flex-end;background:linear-gradient(180deg,#061726,#0B2A4E);overflow:hidden}
+.ringani-final__media{position:absolute;inset:0}
+.ringani-final__scrim{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(5,18,34,.12) 0%,rgba(5,20,38,.8) 78%)}
+.ringani-final__content{position:relative;padding:clamp(32px,6vw,96px);max-width:52ch}
+.ringani-final__inner{color:#F5F3EF}
+.ringani-final__h{font-size:clamp(30px,5vw,60px);line-height:1.04;letter-spacing:-.035em;font-weight:400}
+.ringani-final__body{font-size:clamp(15px,1.4vw,18px);line-height:1.7;color:#D8D4CC;margin-top:18px}
+.ringani-final__btn{margin-top:32px;height:56px;padding:0 38px;font-size:11.5px;letter-spacing:.2em}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "RINGANI – Finaler CTA",
+  "tag": "section",
+  "settings": [
+    { "type": "header", "content": "Medien" },
+    { "type": "image_picker", "id": "image", "label": "Bild (Desktop)" },
+    { "type": "image_picker", "id": "image_mobile", "label": "Bild (Mobil, optional)" },
+    { "type": "range", "id": "height", "min": 360, "max": 960, "step": 10, "unit": "px", "label": "Mindesthöhe", "default": 700 },
+    { "type": "header", "content": "Inhalt" },
+    { "type": "inline_richtext", "id": "heading", "label": "Überschrift", "default": "Lerne deinen Körper besser kennen." },
+    { "type": "textarea", "id": "body", "label": "Text", "default": "Mit RINGANI wird aus täglichen Daten ein klareres Bild deiner Gesundheit und Gewohnheiten." },
+    { "type": "text", "id": "button_label", "label": "Button-Text", "default": "RINGANI entdecken" },
+    { "type": "url", "id": "button_link", "label": "Button-Link", "info": "Standard: springt zum Produktbereich (#ringani-produkt)." }
+  ],
+  "presets": [
+    { "name": "RINGANI – Finaler CTA" }
+  ]
+}
+{% endschema %}

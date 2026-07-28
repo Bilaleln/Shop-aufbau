@@ -1,0 +1,60 @@
+{%- comment -%}
+  RINGANI – Alltag / Wasserbeständigkeit
+  Intro copy + a grid of labelled lifestyle tiles.
+{%- endcomment -%}
+<section class="ringani ringani-section ringani-everyday" style="{% render 'ringani-section-vars', s: section %}">
+  <div class="ringani-inner">
+    <div class="ringani-reveal ringani-everyday__intro">
+      {%- if section.settings.heading != blank -%}<h2 class="ringani-h2">{{ section.settings.heading }}</h2>{%- endif -%}
+      {%- if section.settings.body != blank -%}<p class="ringani-lead ringani-everyday__body">{{ section.settings.body }}</p>{%- endif -%}
+    </div>
+    <div class="ringani-reveal ringani-everyday__grid">
+      {%- for block in section.blocks -%}
+        <div class="ringani-media ringani-everyday__tile" {{ block.shopify_attributes }}>
+          {%- render 'ringani-image', image: block.settings.image, alt: block.settings.label, sizes: '(min-width: 750px) 22vw, 45vw', placeholder: 'lifestyle-1' -%}
+          {%- if block.settings.label != blank -%}<div class="ringani-everyday__label">{{ block.settings.label }}</div>{%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+.ringani-everyday__intro{max-width:46ch}
+.ringani-everyday__body{margin-top:18px}
+.ringani-everyday__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:clamp(32px,4vw,56px)}
+.ringani-everyday__tile{position:relative;aspect-ratio:3/4;border-radius:6px}
+.ringani-everyday__label{position:absolute;left:0;right:0;top:0;padding:16px;pointer-events:none;font-family:var(--ringani-mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#FFFFFF;text-shadow:0 1px 6px rgba(0,0,0,.5)}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "RINGANI – Alltag",
+  "tag": "section",
+  "max_blocks": 8,
+  "settings": [
+    { "type": "header", "content": "Inhalt" },
+    { "type": "inline_richtext", "id": "heading", "label": "Überschrift", "default": "Bereit für deinen Alltag." },
+    { "type": "textarea", "id": "body", "label": "Text", "default": "Wasserbeständigkeit: 10 ATM. Vom Training über die Dusche bis zur Nacht – RINGANI bleibt am Finger." },
+    { "type": "header", "content": "Abstände" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Oben (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Unten (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Oben (Mobil)", "default": 72 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Unten (Mobil)", "default": 72 }
+  ],
+  "blocks": [
+    { "type": "tile", "name": "Kachel", "settings": [
+      { "type": "image_picker", "id": "image", "label": "Bild" },
+      { "type": "text", "id": "label", "label": "Label", "default": "Training" }
+    ] }
+  ],
+  "presets": [
+    { "name": "RINGANI – Alltag", "blocks": [
+      { "type": "tile", "settings": { "label": "Training" } },
+      { "type": "tile", "settings": { "label": "Dusche" } },
+      { "type": "tile", "settings": { "label": "Alltag" } },
+      { "type": "tile", "settings": { "label": "Nacht" } }
+    ] }
+  ]
+}
+{% endschema %}

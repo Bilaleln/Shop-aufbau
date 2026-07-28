@@ -1,0 +1,67 @@
+{%- comment -%}
+  RINGANI – So funktioniert's
+  Dark section: heading + numbered steps (image + title + body) as blocks.
+{%- endcomment -%}
+<section id="{{ section.settings.anchor | default: 'funktion' }}" class="ringani ringani-section ringani-on-dark ringani-steps" style="{% render 'ringani-section-vars', s: section %}">
+  <div class="ringani-inner">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="ringani-h2 ringani-reveal ringani-steps__h">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+    <div class="ringani-reveal ringani-steps__grid">
+      {%- for block in section.blocks -%}
+        <div class="ringani-steps__item" {{ block.shopify_attributes }}>
+          <div class="ringani-steps__num">{{ block.settings.num | default: forloop.index | prepend: '0' }}</div>
+          <div class="ringani-media ringani-media--dark ringani-steps__media">
+            {%- render 'ringani-image', image: block.settings.image, alt: block.settings.title, sizes: '(min-width: 750px) 30vw, 100vw', placeholder: 'product-2' -%}
+          </div>
+          <h3 class="ringani-steps__title">{{ block.settings.title }}</h3>
+          {%- if block.settings.body != blank -%}<p class="ringani-steps__body">{{ block.settings.body }}</p>{%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+.ringani-steps{background:linear-gradient(200deg,#050F1C 0%,#0C2C50 100%)}
+.ringani-steps__h{font-weight:400;max-width:20ch}
+.ringani-steps__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(20px,3vw,44px);margin-top:clamp(40px,5vw,72px)}
+.ringani-steps__item{border-top:1px solid #2C2C29;padding-top:24px}
+.ringani-steps__num{font-family:var(--ringani-mono);font-size:11px;letter-spacing:.2em;color:#8F8A80}
+.ringani-steps__media{width:100%;aspect-ratio:5/4;border-radius:6px;margin-top:22px}
+.ringani-steps__title{font-size:22px;letter-spacing:-.02em;font-weight:500;margin-top:22px}
+.ringani-steps__body{font-size:15px;line-height:1.65;color:#A5A099;margin-top:10px}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "RINGANI – So funktioniert's",
+  "tag": "section",
+  "max_blocks": 6,
+  "settings": [
+    { "type": "header", "content": "Inhalt" },
+    { "type": "inline_richtext", "id": "heading", "label": "Überschrift", "default": "So einfach funktioniert RINGANI." },
+    { "type": "text", "id": "anchor", "label": "Anker-ID (für Navigation)", "default": "funktion" },
+    { "type": "header", "content": "Abstände" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Oben (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Unten (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Oben (Mobil)", "default": 72 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Unten (Mobil)", "default": 72 }
+  ],
+  "blocks": [
+    { "type": "step", "name": "Schritt", "settings": [
+      { "type": "text", "id": "num", "label": "Nummer", "default": "01" },
+      { "type": "image_picker", "id": "image", "label": "Bild" },
+      { "type": "text", "id": "title", "label": "Titel", "default": "Ring tragen" },
+      { "type": "textarea", "id": "body", "label": "Text", "default": "Trage deinen RINGANI Smart Ring bequem durch deinen Alltag – Tag und Nacht." }
+    ] }
+  ],
+  "presets": [
+    { "name": "RINGANI – So funktioniert's", "blocks": [
+      { "type": "step", "settings": { "num": "01", "title": "Ring tragen", "body": "Trage deinen RINGANI Smart Ring bequem durch deinen Alltag – Tag und Nacht." } },
+      { "type": "step", "settings": { "num": "02", "title": "Daten sammeln", "body": "Die integrierten Sensoren erfassen die unterstützten Messwerte automatisch im Hintergrund." } },
+      { "type": "step", "settings": { "num": "03", "title": "Insights verstehen", "body": "Öffne die App und entdecke deine persönlichen Trends – klar aufbereitet statt roher Zahlen." } }
+    ] }
+  ]
+}
+{% endschema %}
