@@ -351,6 +351,11 @@
       if (!this._matched || !this._matched.available) { e.preventDefault(); return; }
       e.preventDefault();
 
+      // Prefer the theme's native cart pipeline when available (Horizon):
+      // dispatching the standard event lets the theme's own cart drawer,
+      // header count and quantity sync react exactly as for its own forms.
+      if (this.horizonAdd(form)) return;
+
       var self = this;
       var body = new FormData(form);
       body.set('quantity', String(this.qty));
@@ -375,6 +380,79 @@
           // Network fallback: let the browser do a real form POST.
           form.submit();
         });
+    };
+
+    // ---- Horizon (Shopify reference theme) native cart integration --------
+    // Replicates product-form-component's add flow: dispatch a real
+    // CartLinesUpdateEvent (resolved from the theme importmap by the module
+    // bridge in the section) so the theme's cart-drawer-component auto-opens
+    // and header count / quantity sync update. Returns false when the theme
+    // is not Horizon (or the events module is unavailable), so the caller
+    // falls back to the generic path.
+    C.prototype.horizonAdd = function (form) {
+      var EV = window.__ringaniEvents;
+      var CLU = EV && EV.CartLinesUpdateEvent;
+      if (!CLU || typeof CLU.createPromise !== 'function') return false;
+      var self = this;
+      var body = new FormData(form);
+      body.set('quantity', String(this.qty));
+      var ids = [];
+      document.querySelectorAll('cart-items-component').forEach(function (ci) {
+        if (ci.dataset && ci.dataset.sectionId) ids.push(ci.dataset.sectionId);
+      });
+      if (ids.length) body.set('sections', ids.join(','));
+      var id = body.get('id');
+      var itemCount = this.qty;
+      var deferred = CLU.createPromise();
+      try {
+        this.dispatchEvent(new CLU({
+          action: 'add',
+          context: 'product',
+          lines: [{ merchandiseId: String(id), quantity: itemCount }],
+          promise: deferred.promise
+        }));
+      } catch (err) { return false; }
+
+      this.querySelectorAll('[data-ringani-submit]').forEach(function (b) { b.setAttribute('data-loading', 'true'); });
+      fetch(this.cartAddUrl, {
+        method: 'POST',
+        headers: { 'Accept': 'text/html', 'X-Requested-With': 'XMLHttpRequest' },
+        body: body
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (resp) {
+          self.querySelectorAll('[data-ringani-submit]').forEach(function (b) { b.removeAttribute('data-loading'); });
+          self.refreshCartHorizon()
+            .then(function (ajax) {
+              var cart = CLU.createCartFromAjaxResponse ? CLU.createCartFromAjaxResponse(ajax) : ajax;
+              deferred.resolve({
+                cart: cart,
+                detail: {
+                  items: ajax && ajax.items,
+                  source: 'ringani-product',
+                  itemCount: itemCount,
+                  sections: resp.sections,
+                  didError: !!resp.status
+                }
+              });
+            })
+            .catch(function () { try { deferred.resolve({ detail: {} }); } catch (e) {} });
+          if (resp.status) self.cartError(resp.description || resp.message);
+        })
+        .catch(function (err) {
+          self.querySelectorAll('[data-ringani-submit]').forEach(function (b) { b.removeAttribute('data-loading'); });
+          try { deferred.reject(err); } catch (e) {}
+          form.submit();
+        });
+      return true;
+    };
+
+    C.prototype.refreshCartHorizon = function () {
+      var ci = document.querySelector('cart-items-component');
+      if (ci && typeof ci.fetchCartData === 'function') {
+        return customElements.whenDefined('cart-items-component').then(function () { return ci.fetchCartData(); });
+      }
+      return fetch(this.cartUrl + '.js', { headers: { 'Accept': 'application/json' } }).then(function (r) { return r.json(); });
     };
 
     // Section ids the theme's cart UI needs re-rendered (Dawn conventions).

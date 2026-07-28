@@ -11,6 +11,18 @@
 
 {{ 'ringani.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'ringani-product.js' | asset_url }}" defer="defer"></script>
+{%- comment -%}
+  Bridge: expose the theme's standard cart events module (Horizon and other
+  themes that ship it via an import map) so the add-to-cart can trigger the
+  theme's own cart drawer / header sync. Fails silently on themes without it,
+  in which case ringani-product.js uses its generic cart path.
+{%- endcomment -%}
+<script type="module">
+  try {
+    const m = await import('@shopify/events');
+    window.__ringaniEvents = m;
+  } catch (e) { /* theme has no standard events module — generic cart path used */ }
+</script>
 
 {%- liquid
   assign color_name = section.settings.color_option_name | downcase | strip
