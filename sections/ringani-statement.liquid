@@ -4,7 +4,12 @@
   Reused for the dark "Gesundheit beginnt mit Verständnis" hero and the light
   "Kein Abo" statement.
 {%- endcomment -%}
-{%- assign theme_dark = section.settings.color_scheme == 'dark' -%}
+{%- liquid
+  assign theme_dark = false
+  if section.settings.color_scheme == 'dark'
+    assign theme_dark = true
+  endif
+-%}
 <section class="ringani ringani-section ringani-statement{% if theme_dark %} ringani-on-dark ringani-statement--dark{% endif %}"
   style="{% render 'ringani-section-vars', s: section %}">
   <div class="ringani-inner ringani-inner--prose ringani-statement__inner">
@@ -44,7 +49,7 @@
   "settings": [
     { "type": "header", "content": "Inhalt" },
     { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "RINGANI Smart Ring" },
-    { "type": "inline_richtext", "id": "heading", "label": "Überschrift", "default": "Gesundheit beginnt<br>mit Verständnis." },
+    { "type": "inline_richtext", "id": "heading", "label": "Überschrift", "default": "Gesundheit beginnt mit Verständnis." },
     { "type": "textarea", "id": "body", "label": "Text", "default": "RINGANI begleitet dich Tag und Nacht und macht die Signale deines Körpers verständlich – direkt auf deinem Smartphone." },
     { "type": "select", "id": "color_scheme", "label": "Farbschema", "options": [ { "value": "light", "label": "Hell" }, { "value": "dark", "label": "Dunkel" } ], "default": "dark" },
     { "type": "header", "content": "Medien (optional)" },

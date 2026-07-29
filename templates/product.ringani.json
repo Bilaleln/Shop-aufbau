@@ -36,7 +36,7 @@
       "type": "ringani-statement",
       "settings": {
         "eyebrow": "RINGANI Smart Ring",
-        "heading": "Gesundheit beginnt<br>mit Verständnis.",
+        "heading": "Gesundheit beginnt mit Verständnis.",
         "body": "RINGANI begleitet dich Tag und Nacht und macht die Signale deines Körpers verständlich – direkt auf deinem Smartphone.",
         "color_scheme": "dark",
         "show_media": true,
@@ -99,7 +99,7 @@
       "block_order": ["bat1","bat2","bat3"],
       "settings": {
         "eyebrow": "Akku",
-        "heading": "Weniger laden.<br>Mehr verstehen.",
+        "heading": "Weniger laden. Mehr verstehen.",
         "body": "<p>Bis zu 7 Tage Akkulaufzeit im Ring – das Ladecase liefert zusätzliche Ladungen für unterwegs.</p>",
         "image_position": "right",
         "media_ratio": "1/1",

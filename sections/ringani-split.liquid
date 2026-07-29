@@ -3,7 +3,12 @@
   Two-column text + image with optional stat blocks. Used for the battery
   section; reusable for any single text/image storytelling block.
 {%- endcomment -%}
-{%- assign theme_dark = section.settings.color_scheme == 'dark' -%}
+{%- liquid
+  assign theme_dark = false
+  if section.settings.color_scheme == 'dark'
+    assign theme_dark = true
+  endif
+-%}
 <section class="ringani ringani-section ringani-split{% if theme_dark %} ringani-on-dark ringani-split--dark{% endif %}"
   style="{% render 'ringani-section-vars', s: section %}">
   <div class="ringani-inner ringani-split__grid">
@@ -49,7 +54,7 @@
   "settings": [
     { "type": "header", "content": "Inhalt" },
     { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Akku" },
-    { "type": "inline_richtext", "id": "heading", "label": "Überschrift", "default": "Weniger laden.<br>Mehr verstehen." },
+    { "type": "inline_richtext", "id": "heading", "label": "Überschrift", "default": "Weniger laden. Mehr verstehen." },
     { "type": "richtext", "id": "body", "label": "Text", "default": "<p>Lange Akkulaufzeit im Ring – das Ladecase liefert zusätzliche Ladungen für unterwegs.</p>" },
     { "type": "header", "content": "Medien" },
     { "type": "image_picker", "id": "image", "label": "Bild (Desktop)" },
