@@ -1,0 +1,265 @@
+{
+  "sections": {
+    "main": {
+      "type": "ringani-product-main",
+      "blocks": {
+        "b1": { "type": "benefit", "settings": { "text": "Schlaf & Erholung Nacht für Nacht verstehen" } },
+        "b2": { "type": "benefit", "settings": { "text": "Herzfrequenz und Trends im Blick behalten" } },
+        "b3": { "type": "benefit", "settings": { "text": "Aktivität und Schritte automatisch erfassen" } },
+        "b4": { "type": "benefit", "settings": { "text": "Lange Akkulaufzeit" } },
+        "b5": { "type": "benefit", "settings": { "text": "Keine monatlichen Gebühren – kein Abo" } },
+        "p1": { "type": "panel", "settings": { "title": "Versand & Lieferzeit", "body": "<p>Kostenloser Versand innerhalb Deutschlands. Versand aus dem EU-Lager, Zustellung in der Regel innerhalb von 2–4 Werktagen. Sendungsverfolgung per E-Mail.</p>" } },
+        "p2": { "type": "panel", "settings": { "title": "Rückgabe & Gewährleistung", "body": "<p>30 Tage Rückgaberecht ab Erhalt. 2 Jahre gesetzliche Gewährleistung. Die Rücksendung ist unkompliziert über unseren Support möglich.</p>" } },
+        "p3": { "type": "panel", "settings": { "title": "Kompatibilität", "body": "<p>Die RINGANI App ist für iOS und Android verfügbar. Die konkreten Mindestversionen findest du in den technischen Daten.</p>" } },
+        "s1": { "type": "size_row", "settings": { "size": "Größe 6", "diameter": "16,5 mm", "circumference": "51,8 mm" } },
+        "s2": { "type": "size_row", "settings": { "size": "Größe 7", "diameter": "17,3 mm", "circumference": "54,3 mm" } },
+        "s3": { "type": "size_row", "settings": { "size": "Größe 8", "diameter": "18,1 mm", "circumference": "56,9 mm" } },
+        "s4": { "type": "size_row", "settings": { "size": "Größe 9", "diameter": "18,9 mm", "circumference": "59,4 mm" } },
+        "s5": { "type": "size_row", "settings": { "size": "Größe 10", "diameter": "19,8 mm", "circumference": "62,2 mm" } },
+        "s6": { "type": "size_row", "settings": { "size": "Größe 11", "diameter": "20,6 mm", "circumference": "64,7 mm" } },
+        "s7": { "type": "size_row", "settings": { "size": "Größe 12", "diameter": "21,4 mm", "circumference": "67,2 mm" } },
+        "s8": { "type": "size_row", "settings": { "size": "Größe 13", "diameter": "22,2 mm", "circumference": "69,7 mm" } }
+      },
+      "block_order": ["b1","b2","b3","b4","b5","p1","p2","p3","s1","s2","s3","s4","s5","s6","s7","s8"],
+      "settings": {
+        "rating_show": true,
+        "subheading": "Deine Gesundheit. Direkt an deinem Finger.",
+        "show_savings": true,
+        "save_template": "Du sparst {amount}",
+        "color_option_name": "Farbe",
+        "size_option_name": "Größe",
+        "sticky_enable": true,
+        "on_add": "drawer"
+      }
+    },
+    "statement_hero": {
+      "type": "ringani-statement",
+      "settings": {
+        "eyebrow": "RINGANI Smart Ring",
+        "heading": "Gesundheit beginnt mit Verständnis.",
+        "body": "RINGANI begleitet dich Tag und Nacht und macht die Signale deines Körpers verständlich – direkt auf deinem Smartphone.",
+        "color_scheme": "dark",
+        "show_media": true,
+        "media_ratio": "16/9"
+      }
+    },
+    "features": {
+      "type": "ringani-feature-rows",
+      "blocks": {
+        "f1": { "type": "feature", "settings": { "label": "Schlaf", "title": "Verstehe deinen Schlaf.", "body": "RINGANI erfasst deine Nacht ohne Display und ohne Störung. Am Morgen siehst du Schlafdauer, Schlafphasen und Ruhepuls in einem klaren Bild – und erkennst, was deine Nächte wirklich beeinflusst.", "points": "Schlafdauer und Schlafphasen\nRuhepuls über Nacht\nPersönliche Wochen- und Monatstrends", "image_position": "auto" } },
+        "f2": { "type": "feature", "settings": { "label": "Erholung", "title": "Wisse, wann dein Körper bereit ist.", "body": "Aus deinen nächtlichen Werten entsteht ein täglicher Erholungswert. So erkennst du, ob heute ein Tag für Belastung oder für Ruhe ist – ohne dich durch Rohdaten arbeiten zu müssen.", "points": "Täglicher Erholungswert\nVergleich mit deinem persönlichen Normalbereich\nHinweise zu Belastung und Ruhe", "image_position": "auto" } },
+        "f3": { "type": "feature", "settings": { "label": "Aktivität", "title": "Bewegung, die sichtbar wird.", "body": "Schritte, aktive Minuten und Alltagsbewegung werden automatisch erfasst – ohne dass du eine Aktivität starten musst. Über Wochen entsteht ein ehrliches Bild deiner Gewohnheiten.", "points": "Automatische Aktivitätserfassung\nSchritte und aktive Minuten\nLangfristige Verlaufsanalyse", "image_position": "auto" } }
+      },
+      "block_order": ["f1","f2","f3"],
+      "settings": { "anchor": "technologie" }
+    },
+    "app": {
+      "type": "ringani-app-showcase",
+      "blocks": {
+        "a1": { "type": "screen", "settings": { "label": "Schlaf" } },
+        "a2": { "type": "screen", "settings": { "label": "Erholung" } },
+        "a3": { "type": "screen", "settings": { "label": "Aktivität" } },
+        "a4": { "type": "screen", "settings": { "label": "Trends" } }
+      },
+      "block_order": ["a1","a2","a3","a4"],
+      "settings": {}
+    },
+    "insights": {
+      "type": "ringani-insights",
+      "blocks": {
+        "i1": { "type": "insight", "settings": { "label": "Schlaf", "trend": "+4 vs. Woche", "score": "86", "bar": 86, "body": "Deine Nacht war länger und ruhiger als im Wochenmittel." } },
+        "i2": { "type": "insight", "settings": { "label": "Erholung", "trend": "stabil", "score": "72", "bar": 72, "body": "Dein Körper liegt im gewohnten Bereich – moderate Belastung ist heute gut machbar." } },
+        "i3": { "type": "insight", "settings": { "label": "Aktivität", "trend": "−6 vs. Woche", "score": "64", "bar": 64, "body": "Etwas weniger Bewegung als üblich. Ein Spaziergang reicht, um wieder aufzuschließen." } }
+      },
+      "block_order": ["i1","i2","i3"],
+      "settings": {}
+    },
+    "comfort": {
+      "type": "ringani-image-banner",
+      "blocks": {
+        "c1": { "type": "stat", "settings": { "value": "3 g", "label": "Gewicht" } },
+        "c2": { "type": "stat", "settings": { "value": "2,6 mm", "label": "Stärke" } },
+        "c3": { "type": "stat", "settings": { "value": "Titan", "label": "Material" } }
+      },
+      "block_order": ["c1","c2","c3"],
+      "settings": {
+        "heading": "Gemacht, um ihn zu vergessen.",
+        "body": "Leicht, glatt und flach genug, um Tag und Nacht getragen zu werden – ohne Display, ohne Ablenkung, ohne dass du daran denkst.",
+        "text_position": "left",
+        "height": 640
+      }
+    },
+    "battery": {
+      "type": "ringani-split",
+      "blocks": {
+        "bat1": { "type": "stat", "settings": { "value": "7", "label": "Tage Laufzeit" } },
+        "bat2": { "type": "stat", "settings": { "value": "90 min", "label": "Ladezeit" } },
+        "bat3": { "type": "stat", "settings": { "value": "5", "label": "Ladungen im Case" } }
+      },
+      "block_order": ["bat1","bat2","bat3"],
+      "settings": {
+        "eyebrow": "Akku",
+        "heading": "Weniger laden. Mehr verstehen.",
+        "body": "<p>Bis zu 7 Tage Akkulaufzeit im Ring – das Ladecase liefert zusätzliche Ladungen für unterwegs.</p>",
+        "image_position": "right",
+        "media_ratio": "1/1",
+        "color_scheme": "dark"
+      }
+    },
+    "everyday": {
+      "type": "ringani-everyday",
+      "blocks": {
+        "e1": { "type": "tile", "settings": { "label": "Training" } },
+        "e2": { "type": "tile", "settings": { "label": "Dusche" } },
+        "e3": { "type": "tile", "settings": { "label": "Alltag" } },
+        "e4": { "type": "tile", "settings": { "label": "Nacht" } }
+      },
+      "block_order": ["e1","e2","e3","e4"],
+      "settings": {
+        "heading": "Bereit für deinen Alltag.",
+        "body": "Wasserbeständigkeit: 10 ATM. Vom Training über die Dusche bis zur Nacht – RINGANI bleibt am Finger."
+      }
+    },
+    "no_subscription": {
+      "type": "ringani-statement",
+      "settings": {
+        "eyebrow": "Kein Abo",
+        "heading": "Deine Daten. Ohne monatliche Gebühren.",
+        "body": "Einmal kaufen. Dauerhaft nutzen. Alle Funktionen der RINGANI App sind ohne Abonnement enthalten.",
+        "color_scheme": "light",
+        "show_media": false,
+        "padding_top": 120,
+        "padding_bottom": 120
+      }
+    },
+    "comparison": {
+      "type": "ringani-comparison",
+      "blocks": {
+        "r1": { "type": "row", "settings": { "label": "24/7 tragbar", "a": "Ja", "b": "Eingeschränkt", "c": "Eingeschränkt" } },
+        "r2": { "type": "row", "settings": { "label": "Schlafkomfort", "a": "Hoch", "b": "Gering", "c": "Mittel" } },
+        "r3": { "type": "row", "settings": { "label": "Diskretes Design", "a": "Ja", "b": "Nein", "c": "Teilweise" } },
+        "r4": { "type": "row", "settings": { "label": "Akkulaufzeit", "a": "bis 7 Tage", "b": "1–2 Tage", "c": "5–7 Tage" } },
+        "r5": { "type": "row", "settings": { "label": "App-Auswertung", "a": "Ausführlich", "b": "Ausführlich", "c": "Basis" } },
+        "r6": { "type": "row", "settings": { "label": "Abo erforderlich", "a": "Nein", "b": "Teilweise", "c": "Teilweise" } },
+        "r7": { "type": "row", "settings": { "label": "Gewicht", "a": "3 g", "b": "30–60 g", "c": "20–30 g" } }
+      },
+      "block_order": ["r1","r2","r3","r4","r5","r6","r7"],
+      "settings": { "heading": "Warum RINGANI?", "col_a": "RINGANI", "col_b": "Smartwatch", "col_c": "Fitness-Tracker" }
+    },
+    "steps": {
+      "type": "ringani-steps",
+      "blocks": {
+        "st1": { "type": "step", "settings": { "num": "01", "title": "Ring tragen", "body": "Trage deinen RINGANI Smart Ring bequem durch deinen Alltag – Tag und Nacht." } },
+        "st2": { "type": "step", "settings": { "num": "02", "title": "Daten sammeln", "body": "Die integrierten Sensoren erfassen die unterstützten Messwerte automatisch im Hintergrund." } },
+        "st3": { "type": "step", "settings": { "num": "03", "title": "Insights verstehen", "body": "Öffne die App und entdecke deine persönlichen Trends – klar aufbereitet statt roher Zahlen." } }
+      },
+      "block_order": ["st1","st2","st3"],
+      "settings": { "heading": "So einfach funktioniert RINGANI.", "anchor": "funktion" }
+    },
+    "in_the_box": {
+      "type": "ringani-in-the-box",
+      "blocks": {
+        "box1": { "type": "item", "settings": { "name": "RINGANI Smart Ring", "note": "in deiner gewählten Farbe & Größe" } },
+        "box2": { "type": "item", "settings": { "name": "Ladecase", "note": "mit integriertem Akku" } },
+        "box3": { "type": "item", "settings": { "name": "USB-C-Ladekabel", "note": "" } },
+        "box4": { "type": "item", "settings": { "name": "Kurzanleitung", "note": "auf Deutsch" } }
+      },
+      "block_order": ["box1","box2","box3","box4"],
+      "settings": { "eyebrow": "Lieferumfang", "heading": "Alles, was du brauchst.", "image_position": "left" }
+    },
+    "specifications": {
+      "type": "ringani-specifications",
+      "blocks": {
+        "g1": { "type": "group", "settings": { "title": "Design & Material" } },
+        "g1r1": { "type": "row", "settings": { "key": "Material", "value": "Titan" } },
+        "g1r2": { "type": "row", "settings": { "key": "Gewicht", "value": "3 g" } },
+        "g1r3": { "type": "row", "settings": { "key": "Stärke", "value": "2,6 mm" } },
+        "g1r4": { "type": "row", "settings": { "key": "Breite", "value": "7,8 mm" } },
+        "g2": { "type": "group", "settings": { "title": "Akku & Laden" } },
+        "g2r1": { "type": "row", "settings": { "key": "Akkulaufzeit", "value": "bis zu 7 Tage" } },
+        "g2r2": { "type": "row", "settings": { "key": "Ladezeit", "value": "90 min" } },
+        "g2r3": { "type": "row", "settings": { "key": "Ladungen im Case", "value": "5" } },
+        "g3": { "type": "group", "settings": { "title": "Sensoren & Messwerte" } },
+        "g3r1": { "type": "row", "settings": { "key": "Sensoren", "value": "Herzfrequenz, Temperatur, Bewegung" } },
+        "g3r2": { "type": "row", "settings": { "key": "Messwerte", "value": "Schlaf, Ruhepuls, Aktivität" } },
+        "g4": { "type": "group", "settings": { "title": "Wasserbeständigkeit" } },
+        "g4r1": { "type": "row", "settings": { "key": "Schutzklasse", "value": "10 ATM" } },
+        "g4r2": { "type": "row", "settings": { "key": "Hinweis", "value": "Nicht für Tauchgänge geeignet" } },
+        "g5": { "type": "group", "settings": { "title": "Verbindung & App" } },
+        "g5r1": { "type": "row", "settings": { "key": "Bluetooth", "value": "5.0" } },
+        "g5r2": { "type": "row", "settings": { "key": "iOS", "value": "ab iOS 14" } },
+        "g5r3": { "type": "row", "settings": { "key": "Android", "value": "ab Android 8" } },
+        "g6": { "type": "group", "settings": { "title": "Lieferumfang" } },
+        "g6r1": { "type": "row", "settings": { "key": "Enthalten", "value": "Ring, Ladecase, USB-C-Kabel, Kurzanleitung" } },
+        "g6r2": { "type": "row", "settings": { "key": "Gewährleistung", "value": "2 Jahre" } }
+      },
+      "block_order": ["g1","g1r1","g1r2","g1r3","g1r4","g2","g2r1","g2r2","g2r3","g3","g3r1","g3r2","g4","g4r1","g4r2","g5","g5r1","g5r2","g5r3","g6","g6r1","g6r2"],
+      "settings": { "heading": "Technische Daten", "anchor": "daten" }
+    },
+    "reviews": {
+      "type": "ringani-reviews",
+      "blocks": {
+        "rev1": { "type": "review", "settings": { "stars": "★★★★★", "title": "Endlich Schlaf verstanden", "body": "Ich trage ihn seit acht Wochen und vergesse ihn komplett. Die Auswertung am Morgen ist verständlich, ohne mich mit Zahlen zu erschlagen.", "name": "Marie K.", "verified_label": "Verifizierter Kauf" } },
+        "rev2": { "type": "review", "settings": { "stars": "★★★★★", "title": "Angenehmer als eine Uhr", "body": "Nachts hat mich meine Smartwatch immer gestört. Der Ring fällt mir gar nicht mehr auf – und die App ist deutlich aufgeräumter.", "name": "Julian B.", "verified_label": "Verifizierter Kauf" } },
+        "rev3": { "type": "review", "settings": { "stars": "★★★★☆", "title": "Sehr gute Verarbeitung", "body": "Wirkt hochwertig und sitzt perfekt. Ich hätte mir nur etwas mehr Erklärung zu einzelnen Werten gewünscht.", "name": "Sandra L.", "verified_label": "Verifizierter Kauf" } },
+        "rev4": { "type": "review", "settings": { "stars": "★★★★★", "title": "Kein Abo – großer Pluspunkt", "body": "Dass alle Funktionen ohne monatliche Kosten dabei sind, war für mich der ausschlaggebende Punkt.", "name": "Tobias M.", "verified_label": "Verifizierter Kauf" } }
+      },
+      "block_order": ["rev1","rev2","rev3","rev4"],
+      "settings": { "heading": "Was RINGANI Nutzer sagen.", "show_summary": true, "rating_value": "4,8", "rating_count": "1.284 verifizierte Bewertungen", "disclaimer": "Demo-Inhalte – vor dem Launch durch echte Bewertungen ersetzen" }
+    },
+    "faq": {
+      "type": "ringani-faq",
+      "blocks": {
+        "q1": { "type": "faq", "settings": { "question": "Was misst der RINGANI Smart Ring?", "answer": "<p>Der Ring erfasst die in den technischen Daten aufgeführten Messwerte, darunter Schlafdaten, Herzfrequenz und Aktivität. Die vollständige Liste findest du im Abschnitt „Technische Daten\". RINGANI ist ein Wellness-Produkt und kein Medizinprodukt.</p>" } },
+        "q2": { "type": "faq", "settings": { "question": "Wie finde ich die richtige Ringgröße?", "answer": "<p>Nutze den Größenrechner über „Welche Größe brauche ich?\" oder miss den Innendurchmesser eines gut sitzenden Rings. Bei Unsicherheit kannst du im Bestellprozess ein kostenloses Sizing-Kit hinzufügen.</p>" } },
+        "q3": { "type": "faq", "settings": { "question": "Kann ich RINGANI beim Schlafen tragen?", "answer": "<p>Ja. Der Ring ist flach, leicht und ohne Display gestaltet – genau dafür, Tag und Nacht getragen zu werden.</p>" } },
+        "q4": { "type": "faq", "settings": { "question": "Wie lange hält der Akku?", "answer": "<p>Bis zu 7 Tage je nach Nutzung. Das Ladecase liefert zusätzliche Ladungen für unterwegs.</p>" } },
+        "q5": { "type": "faq", "settings": { "question": "Funktioniert RINGANI mit iPhone und Android?", "answer": "<p>Die RINGANI App ist für iOS und Android verfügbar. Die unterstützten Mindestversionen findest du in den technischen Daten.</p>" } },
+        "q6": { "type": "faq", "settings": { "question": "Brauche ich ein Abonnement?", "answer": "<p>Nein. Alle Funktionen der App sind ohne monatliche Gebühren enthalten.</p>" } },
+        "q7": { "type": "faq", "settings": { "question": "Ist der Ring wasserfest?", "answer": "<p>Die Schutzklasse beträgt 10 ATM. Für Tauchgänge ist der Ring nicht vorgesehen.</p>" } },
+        "q8": { "type": "faq", "settings": { "question": "Wie funktioniert die Rückgabe?", "answer": "<p>Du hast 30 Tage Rückgaberecht ab Erhalt. Melde dich beim Support, du erhältst ein Rücksendelabel und nach Prüfung die Erstattung auf dein Zahlungsmittel.</p>" } }
+      },
+      "block_order": ["q1","q2","q3","q4","q5","q6","q7","q8"],
+      "settings": { "heading": "Häufige Fragen", "anchor": "faq", "enable_schema": true }
+    },
+    "services": {
+      "type": "ringani-services",
+      "blocks": {
+        "sv1": { "type": "service", "settings": { "title": "Kostenloser Versand", "body": "Versandkostenfrei innerhalb Deutschlands, Zustellung in der Regel in 2–4 Werktagen." } },
+        "sv2": { "type": "service", "settings": { "title": "30 Tage Rückgaberecht", "body": "Nicht überzeugt? Innerhalb von 30 Tagen unkompliziert zurücksenden." } },
+        "sv3": { "type": "service", "settings": { "title": "2 Jahre Gewährleistung", "body": "Gesetzliche Gewährleistung auf Material- und Verarbeitungsfehler." } },
+        "sv4": { "type": "service", "settings": { "title": "Deutscher Support", "body": "Persönliche Beratung per E-Mail – Antwort in der Regel innerhalb eines Werktags." } }
+      },
+      "block_order": ["sv1","sv2","sv3","sv4"],
+      "settings": {}
+    },
+    "final_cta": {
+      "type": "ringani-final-cta",
+      "settings": {
+        "heading": "Lerne deinen Körper besser kennen.",
+        "body": "Mit RINGANI wird aus täglichen Daten ein klareres Bild deiner Gesundheit und Gewohnheiten.",
+        "button_label": "RINGANI entdecken",
+        "height": 700
+      }
+    }
+  },
+  "order": [
+    "main",
+    "statement_hero",
+    "features",
+    "app",
+    "insights",
+    "comfort",
+    "battery",
+    "everyday",
+    "no_subscription",
+    "comparison",
+    "steps",
+    "in_the_box",
+    "specifications",
+    "reviews",
+    "faq",
+    "services",
+    "final_cta"
+  ]
+}
