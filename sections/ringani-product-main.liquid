@@ -165,51 +165,66 @@
         {%- endif -%}
       {%- endif -%}
 
-      {%- comment -%} ---------- Colour swatches ---------- {%- endcomment -%}
-      {%- if color_pos > 0 -%}
-        {%- assign color_option = product.options_with_values[color_idx] -%}
-        {%- assign current_color = current.options[color_idx] -%}
-        <div class="ringani-pm__group">
-          <div class="ringani-pm__group-head">
-            <span class="ringani-eyebrow">{{ color_option.name }}</span>
-            <span class="ringani-pm__group-val" data-ringani-color-name>{{ current_color }}</span>
-          </div>
-          <div class="ringani-pm__swatches">
-            {%- for value in color_option.values -%}
-              {%- liquid
-                assign vname = value.name | default: value
-                assign swatch_bg = ''
-                assign swatch_img = ''
-                if value.swatch.image
-                  assign swatch_img = value.swatch.image | image_url: width: 100
-                elsif value.swatch.color
-                  assign swatch_bg = value.swatch.color
-                endif
-                assign key = vname | downcase | strip
-                if swatch_bg == '' and swatch_img == blank
+      {%- comment -%}
+        ---------- Farb-/Ausführungs-Swatches ----------
+        Jede Produkt-Option (außer der Größen-Option) wird als sichtbare
+        Farbfeld-Auswahl gerendert – so sieht der Kunde bei jeder Kollektion
+        die passende Farbe. Die Farbe kommt (in dieser Reihenfolge) aus einem
+        kuratierten Farbverlauf für bekannte Ausführungen, sonst aus dem in
+        Shopify hinterlegten Swatch (Bild oder Farbe), sonst neutral.
+      {%- endcomment -%}
+      {%- for color_option in product.options_with_values -%}
+        {%- if color_option.position != size_pos -%}
+          {%- assign copt_idx = color_option.position | minus: 1 -%}
+          {%- assign current_color = current.options[copt_idx] -%}
+          <div class="ringani-pm__group">
+            <div class="ringani-pm__group-head">
+              <span class="ringani-eyebrow">{{ color_option.name }}</span>
+              <span class="ringani-pm__group-val" data-ringani-option-name data-position="{{ color_option.position }}">{{ current_color }}</span>
+            </div>
+            <div class="ringani-pm__swatches">
+              {%- for value in color_option.values -%}
+                {%- liquid
+                  assign vname = value.name | default: value
+                  assign swatch_bg = ''
+                  assign swatch_img = ''
+                  assign key = vname | downcase | strip
                   case key
                     when 'schwarz','black','anthrazit','graphit'
                       assign swatch_bg = 'linear-gradient(145deg,#3A3A38,#131312)'
                     when 'silber','silver','grau','gray','platin'
                       assign swatch_bg = 'linear-gradient(145deg,#EDEDEA,#B7B7B1)'
-                    when 'gold','roségold','rosegold','rose gold'
-                      assign swatch_bg = 'linear-gradient(145deg,#E3CBA1,#B4915F)'
+                    when 'gold'
+                      assign swatch_bg = 'linear-gradient(145deg,#F0D89B,#B4915F)'
+                    when 'roségold','rosegold','rose gold','rosé gold'
+                      assign swatch_bg = 'linear-gradient(145deg,#F3D2C4,#C98F76)'
                     when 'blau','blue','navy'
                       assign swatch_bg = 'linear-gradient(145deg,#3E6FA8,#183A63)'
+                    when 'weiß','weiss','white','keramik weiß','keramik weiss'
+                      assign swatch_bg = 'linear-gradient(145deg,#FFFFFF,#E4E0D7)'
+                    when 'pink','rosa','keramik pink'
+                      assign swatch_bg = 'linear-gradient(145deg,#F4B9CC,#DE8AA6)'
+                  endcase
+                  if swatch_bg == ''
+                    if value.swatch.image
+                      assign swatch_img = value.swatch.image | image_url: width: 100
+                    elsif value.swatch.color
+                      assign swatch_bg = value.swatch.color
                     else
                       assign swatch_bg = '#C7C4BD'
-                  endcase
-                endif
-              -%}
-              <button type="button" class="ringani-pm__swatch" data-ringani-swatch data-value="{{ vname | escape }}"
-                aria-pressed="{% if current_color == vname %}true{% else %}false{% endif %}"
-                aria-label="{{ color_option.name }}: {{ vname | escape }}">
-                <span class="ringani-pm__swatch-dot" style="background:{% if swatch_img %}center/cover url({{ swatch_img }}){% else %}{{ swatch_bg }}{% endif %}"></span>
-              </button>
-            {%- endfor -%}
+                    endif
+                  endif
+                -%}
+                <button type="button" class="ringani-pm__swatch" data-ringani-swatch data-position="{{ color_option.position }}" data-value="{{ vname | escape }}"
+                  aria-pressed="{% if current_color == vname %}true{% else %}false{% endif %}"
+                  aria-label="{{ color_option.name }}: {{ vname | escape }}">
+                  <span class="ringani-pm__swatch-dot" style="background:{% if swatch_img %}center/cover url({{ swatch_img }}){% else %}{{ swatch_bg }}{% endif %}"></span>
+                </button>
+              {%- endfor -%}
+            </div>
           </div>
-        </div>
-      {%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
 
       {%- comment -%} ---------- Size picker (dark panel) ---------- {%- endcomment -%}
       {%- if size_pos > 0 -%}
@@ -235,23 +250,6 @@
           </div>
         </div>
       {%- endif -%}
-
-      {%- comment -%} ---------- Other options (fallback selects) ---------- {%- endcomment -%}
-      {%- for opt in product.options_with_values -%}
-        {%- if opt.position != color_pos and opt.position != size_pos -%}
-          {%- assign opt_idx = opt.position | minus: 1 -%}
-          {%- assign current_opt = current.options[opt_idx] -%}
-          <div class="ringani-pm__group">
-            <label class="ringani-eyebrow" for="ringani-opt-{{ section.id }}-{{ opt.position }}">{{ opt.name }}</label>
-            <select id="ringani-opt-{{ section.id }}-{{ opt.position }}" class="ringani-pm__select" data-ringani-option-select data-position="{{ opt.position }}">
-              {%- for value in opt.values -%}
-                {%- assign vname = value.name | default: value -%}
-                <option value="{{ vname | escape }}" {% if current_opt == vname %}selected{% endif %}>{{ vname }}</option>
-              {%- endfor -%}
-            </select>
-          </div>
-        {%- endif -%}
-      {%- endfor -%}
 
       {%- comment -%} ---------- Quantity + Add to cart ---------- {%- endcomment -%}
       <form data-ringani-form action="{{ routes.cart_add_url }}" method="post" enctype="multipart/form-data" class="ringani-pm__buy">
@@ -384,8 +382,8 @@
     { "type": "checkbox", "id": "show_savings", "label": "Ersparnis-Badge anzeigen (wenn Vergleichspreis gesetzt)", "default": true },
     { "type": "text", "id": "save_template", "label": "Ersparnis-Text", "info": "{amount} wird durch den berechneten Betrag ersetzt.", "default": "Du sparst {amount}" },
     { "type": "header", "content": "Varianten-Zuordnung" },
-    { "type": "paragraph", "content": "Diese Namen müssen exakt den Produkt-Optionen entsprechen, damit Farbfelder und Größen-Buttons erzeugt werden." },
-    { "type": "text", "id": "color_option_name", "label": "Name der Farb-Option", "default": "Farbe" },
+    { "type": "paragraph", "content": "Jede Produkt-Option wird automatisch als Farbfeld-Auswahl angezeigt. Trage hier nur den exakten Namen der Größen-Option ein, damit diese stattdessen als Größen-Panel erscheint." },
+    { "type": "text", "id": "color_option_name", "label": "Name der Haupt-Farb-Option (für die Sticky-Leiste)", "default": "Klassisch" },
     { "type": "text", "id": "size_option_name", "label": "Name der Größen-Option", "default": "Größe" },
     { "type": "header", "content": "Größen-Panel" },
     { "type": "text", "id": "size_panel_heading", "label": "Überschrift", "default": "Ich kenne meine Größe" },

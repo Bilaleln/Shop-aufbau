@@ -26,7 +26,7 @@
         "subheading": "Deine Gesundheit. Direkt an deinem Finger.",
         "show_savings": true,
         "save_template": "Du sparst {amount}",
-        "color_option_name": "Farbe",
+        "color_option_name": "Klassisch",
         "size_option_name": "Größe",
         "sticky_enable": true,
         "on_add": "drawer"

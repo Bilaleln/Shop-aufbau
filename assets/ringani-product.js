@@ -132,7 +132,10 @@
       var self = this;
       this.addEventListener('click', function (e) {
         var swatch = e.target.closest('[data-ringani-swatch]');
-        if (swatch) { self.pick(self.colorPos, swatch.getAttribute('data-value')); return; }
+        if (swatch) {
+          var swatchPos = parseInt(swatch.getAttribute('data-position'), 10) || self.colorPos;
+          self.pick(swatchPos, swatch.getAttribute('data-value')); return;
+        }
         var size = e.target.closest('[data-ringani-size]');
         if (size) {
           if (size.hasAttribute('disabled') || size.getAttribute('aria-disabled') === 'true') return;
@@ -208,13 +211,17 @@
 
     C.prototype.refresh = function () {
       var self = this;
-      // Colour swatches selected state
+      // Colour / finish swatches selected state (one group per option)
       this.querySelectorAll('[data-ringani-swatch]').forEach(function (el) {
-        var on = self.colorPos && el.getAttribute('data-value') === self.selected[self.colorPos - 1];
+        var pos = parseInt(el.getAttribute('data-position'), 10) || self.colorPos;
+        var on = pos && el.getAttribute('data-value') === self.selected[pos - 1];
         el.setAttribute('aria-pressed', on ? 'true' : 'false');
       });
-      var colorLabel = this.querySelector('[data-ringani-color-name]');
-      if (colorLabel && self.colorPos) colorLabel.textContent = self.selected[self.colorPos - 1] || '';
+      // Selected-value label above each swatch group.
+      this.querySelectorAll('[data-ringani-option-name]').forEach(function (el) {
+        var pos = parseInt(el.getAttribute('data-position'), 10);
+        if (pos) el.textContent = self.selected[pos - 1] || '';
+      });
 
       // Size buttons: availability depends on the chosen colour.
       this.querySelectorAll('[data-ringani-size]').forEach(function (el) {
@@ -265,7 +272,10 @@
       if (summary) {
         var parts = [];
         if (self.sizePos) parts.push(self.selected[self.sizePos - 1] ? 'Größe ' + self.selected[self.sizePos - 1] : self.labelChoose);
-        if (self.colorPos && self.selected[self.colorPos - 1]) parts.push(self.selected[self.colorPos - 1]);
+        self.selected.forEach(function (val, i) {
+          if (self.sizePos && i === self.sizePos - 1) return;
+          if (val) parts.push(val);
+        });
         if (display) parts.push(display.price);
         summary.textContent = parts.join(' · ');
       }
