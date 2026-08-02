@@ -276,8 +276,19 @@
         </div>
       {%- endif -%}
 
-      {%- comment -%} ---------- Echte Zahlungs-Icons (aus den aktivierten Zahlungsarten) ---------- {%- endcomment -%}
-      {%- if section.settings.payment_icons_show and shop.enabled_payment_types.size > 0 -%}
+      {%- comment -%} ---------- Zahlungs-Leiste: eigenes Bild bevorzugt, sonst echte Icons ---------- {%- endcomment -%}
+      {%- if section.settings.payment_image != blank -%}
+        {%- assign pay_alt = section.settings.payment_image.alt | default: 'Akzeptierte Zahlungsarten' | escape -%}
+        <div class="ringani-pm__payimg" style="margin-top:18px">
+          <img
+            src="{{ section.settings.payment_image | image_url: width: 900 }}"
+            srcset="{{ section.settings.payment_image | image_url: width: 450 }} 450w, {{ section.settings.payment_image | image_url: width: 900 }} 900w"
+            sizes="(min-width: 750px) 440px, 92vw"
+            alt="{{ pay_alt }}"
+            loading="lazy"
+            style="display:block;width:100%;max-width:{{ section.settings.payment_image_width }}px;height:auto">
+        </div>
+      {%- elsif section.settings.payment_icons_show and shop.enabled_payment_types.size > 0 -%}
         <div class="ringani-pm__payicons" style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:18px">
           {%- for type in shop.enabled_payment_types -%}
             <span style="display:inline-flex;align-items:center;justify-content:center;width:42px;height:27px;padding:2px;border:1px solid #E4E1DA;border-radius:5px;background:#fff">
@@ -403,7 +414,9 @@
     ], "default": "drawer" },
     { "type": "header", "content": "Vertrauen & Zahlung" },
     { "type": "textarea", "id": "trust_items", "label": "Trust-Punkte (eine Zeile pro Punkt)", "default": "Kostenloser Versand\nSichere Zahlung\n30 Tage Rückgaberecht" },
-    { "type": "checkbox", "id": "payment_icons_show", "label": "Echte Zahlungssymbole anzeigen", "info": "Zeigt automatisch die Logos deiner aktivierten Zahlungsarten (Einstellungen → Zahlungen).", "default": true },
+    { "type": "image_picker", "id": "payment_image", "label": "Zahlungs-Bild (Logo-Leiste)", "info": "Lade hier deine eigene Zahlungsarten-Grafik hoch (z. B. PayPal, Klarna, Visa …). Wird bevorzugt vor den automatischen Icons angezeigt." },
+    { "type": "range", "id": "payment_image_width", "min": 160, "max": 600, "step": 10, "unit": "px", "label": "Max. Breite Zahlungs-Bild", "default": 440 },
+    { "type": "checkbox", "id": "payment_icons_show", "label": "Echte Zahlungssymbole anzeigen", "info": "Fallback: zeigt automatisch die Logos deiner aktivierten Zahlungsarten (Einstellungen → Zahlungen), wenn kein Zahlungs-Bild gesetzt ist.", "default": true },
     { "type": "checkbox", "id": "payment_text_show", "label": "Zahlungsarten als Text-Chips anzeigen", "default": false },
     { "type": "textarea", "id": "payments", "label": "Zahlungsarten als Text (eine Zeile pro Eintrag)", "info": "Nur relevant, wenn Text-Chips oben aktiviert sind.", "default": "Visa\nMastercard\nPayPal\nKlarna\nApple Pay\nGoogle Pay" },
     { "type": "header", "content": "Sticky Add-to-Cart" },
