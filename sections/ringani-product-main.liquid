@@ -276,7 +276,7 @@
         </div>
       {%- endif -%}
 
-      {%- comment -%} ---------- Zahlungs-Leiste: eigenes Bild bevorzugt, sonst echte Icons ---------- {%- endcomment -%}
+      {%- comment -%} ---------- Zahlungs-Leiste: eigenes Bild, sonst DACH-Badges ---------- {%- endcomment -%}
       {%- if section.settings.payment_image != blank -%}
         {%- assign pay_alt = section.settings.payment_image.alt | default: 'Akzeptierte Zahlungsarten' | escape -%}
         <div class="ringani-pm__payimg" style="margin-top:18px">
@@ -288,14 +288,36 @@
             loading="lazy"
             style="display:block;width:100%;max-width:{{ section.settings.payment_image_width }}px;height:auto">
         </div>
-      {%- elsif section.settings.payment_icons_show and shop.enabled_payment_types.size > 0 -%}
-        <div class="ringani-pm__payicons" style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:18px">
-          {%- for type in shop.enabled_payment_types -%}
-            <span style="display:inline-flex;align-items:center;justify-content:center;width:42px;height:27px;padding:2px;border:1px solid #E4E1DA;border-radius:5px;background:#fff">
-              {{ type | payment_type_svg_tag }}
-            </span>
-          {%- endfor -%}
-        </div>
+      {%- elsif section.settings.payment_icons_show -%}
+        {%- assign badge_src = section.settings.payment_badges | default: '' -%}
+        {%- assign badge_list = badge_src | newline_to_br | strip_newlines | split: '<br />' -%}
+        {%- if badge_list.size > 0 and badge_src != '' -%}
+          <div class="ringani-pm__payicons" style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:18px">
+            {%- for badge_raw in badge_list -%}
+              {%- assign badge = badge_raw | strip | downcase -%}
+              {%- assign svg_key = '' -%}
+              {%- case badge -%}
+                {%- when 'paypal' -%}{%- assign svg_key = 'paypal' -%}
+                {%- when 'klarna' -%}{%- assign svg_key = 'klarna' -%}
+                {%- when 'visa' -%}{%- assign svg_key = 'visa' -%}
+                {%- when 'mastercard' -%}{%- assign svg_key = 'master' -%}
+                {%- when 'maestro' -%}{%- assign svg_key = 'maestro' -%}
+                {%- when 'apple pay' -%}{%- assign svg_key = 'apple_pay' -%}
+                {%- when 'google pay', 'g pay' -%}{%- assign svg_key = 'google_pay' -%}
+                {%- when 'american express', 'amex' -%}{%- assign svg_key = 'american_express' -%}
+              {%- endcase -%}
+              {%- if svg_key != '' -%}
+                <span style="display:inline-flex;align-items:center;justify-content:center;width:42px;height:27px;padding:2px;border:1px solid #E4E1DA;border-radius:5px;background:#fff">
+                  {{ svg_key | payment_type_svg_tag }}
+                </span>
+              {%- elsif badge == 'rechnung' -%}
+                <span style="display:inline-flex;align-items:center;justify-content:center;min-width:42px;height:27px;padding:2px 6px;border:1px solid #E4E1DA;border-radius:5px;background:#fff">
+                  <span style="font-size:9px;font-weight:600;letter-spacing:.02em;color:#1A1A1A;white-space:nowrap">Rechnung</span>
+                </span>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
       {%- endif -%}
 
       {%- assign payments = section.settings.payments | newline_to_br | strip_newlines | split: '<br />' -%}
@@ -416,7 +438,8 @@
     { "type": "textarea", "id": "trust_items", "label": "Trust-Punkte (eine Zeile pro Punkt)", "default": "Kostenloser Versand\nSichere Zahlung\n30 Tage Rückgaberecht" },
     { "type": "image_picker", "id": "payment_image", "label": "Zahlungs-Bild (Logo-Leiste)", "info": "Lade hier deine eigene Zahlungsarten-Grafik hoch (z. B. PayPal, Klarna, Visa …). Wird bevorzugt vor den automatischen Icons angezeigt." },
     { "type": "range", "id": "payment_image_width", "min": 160, "max": 600, "step": 10, "unit": "px", "label": "Max. Breite Zahlungs-Bild", "default": 440 },
-    { "type": "checkbox", "id": "payment_icons_show", "label": "Echte Zahlungssymbole anzeigen", "info": "Fallback: zeigt automatisch die Logos deiner aktivierten Zahlungsarten (Einstellungen → Zahlungen), wenn kein Zahlungs-Bild gesetzt ist.", "default": true },
+    { "type": "checkbox", "id": "payment_icons_show", "label": "Zahlungs-Badges anzeigen", "info": "Zeigt die Badges aus der Liste unten als gestylte Icons an (Fallback wenn kein Zahlungs-Bild gesetzt).", "default": true },
+    { "type": "textarea", "id": "payment_badges", "label": "Zahlungs-Badges (eine pro Zeile)", "info": "Reihenfolge und Auswahl der Icons. Unterstützt: PayPal, Klarna, Rechnung, Visa, Mastercard, Maestro, Apple Pay, Google Pay, G Pay, American Express, AMEX", "default": "PayPal\nKlarna\nRechnung\nVisa\nMastercard\nMaestro\nApple Pay\nGoogle Pay\nAmerican Express" },
     { "type": "checkbox", "id": "payment_text_show", "label": "Zahlungsarten als Text-Chips anzeigen", "default": false },
     { "type": "textarea", "id": "payments", "label": "Zahlungsarten als Text (eine Zeile pro Eintrag)", "info": "Nur relevant, wenn Text-Chips oben aktiviert sind.", "default": "Visa\nMastercard\nPayPal\nKlarna\nApple Pay\nGoogle Pay" },
     { "type": "header", "content": "Sticky Add-to-Cart" },
