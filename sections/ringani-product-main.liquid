@@ -276,8 +276,19 @@
         </div>
       {%- endif -%}
 
+      {%- comment -%} ---------- Echte Zahlungs-Icons (aus den aktivierten Zahlungsarten) ---------- {%- endcomment -%}
+      {%- if section.settings.payment_icons_show and shop.enabled_payment_types.size > 0 -%}
+        <div class="ringani-pm__payicons" style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:18px">
+          {%- for type in shop.enabled_payment_types -%}
+            <span style="display:inline-flex;align-items:center;justify-content:center;width:42px;height:27px;padding:2px;border:1px solid #E4E1DA;border-radius:5px;background:#fff">
+              {{ type | payment_type_svg_tag }}
+            </span>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+
       {%- assign payments = section.settings.payments | newline_to_br | strip_newlines | split: '<br />' -%}
-      {%- if payments.size > 0 and section.settings.payments != blank -%}
+      {%- if section.settings.payment_text_show and payments.size > 0 and section.settings.payments != blank -%}
         <div class="ringani-pm__payments">
           {%- for p in payments -%}<span class="ringani-chip">{{ p | strip }}</span>{%- endfor -%}
         </div>
@@ -392,7 +403,9 @@
     ], "default": "drawer" },
     { "type": "header", "content": "Vertrauen & Zahlung" },
     { "type": "textarea", "id": "trust_items", "label": "Trust-Punkte (eine Zeile pro Punkt)", "default": "Kostenloser Versand\nSichere Zahlung\n30 Tage Rückgaberecht" },
-    { "type": "textarea", "id": "payments", "label": "Zahlungsarten (eine Zeile pro Eintrag)", "default": "Visa\nMastercard\nPayPal\nKlarna\nApple Pay\nGoogle Pay" },
+    { "type": "checkbox", "id": "payment_icons_show", "label": "Echte Zahlungssymbole anzeigen", "info": "Zeigt automatisch die Logos deiner aktivierten Zahlungsarten (Einstellungen → Zahlungen).", "default": true },
+    { "type": "checkbox", "id": "payment_text_show", "label": "Zahlungsarten als Text-Chips anzeigen", "default": false },
+    { "type": "textarea", "id": "payments", "label": "Zahlungsarten als Text (eine Zeile pro Eintrag)", "info": "Nur relevant, wenn Text-Chips oben aktiviert sind.", "default": "Visa\nMastercard\nPayPal\nKlarna\nApple Pay\nGoogle Pay" },
     { "type": "header", "content": "Sticky Add-to-Cart" },
     { "type": "checkbox", "id": "sticky_enable", "label": "Sticky-Kaufleiste aktivieren", "default": true },
     { "type": "header", "content": "Größenberater (Modal)" },
