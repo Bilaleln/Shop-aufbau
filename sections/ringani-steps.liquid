@@ -31,6 +31,11 @@
 .ringani-steps__media{width:100%;aspect-ratio:5/4;border-radius:6px;margin-top:22px}
 .ringani-steps__title{font-size:22px;letter-spacing:-.02em;font-weight:500;margin-top:22px}
 .ringani-steps__body{font-size:15px;line-height:1.65;color:#A5A099;margin-top:10px}
+@media (max-width:749px){
+  .ringani-steps__grid{grid-template-columns:1fr;gap:32px}
+  .ringani-steps__media{aspect-ratio:4/3}
+  .ringani-steps__h{font-size:clamp(24px,6.5vw,32px)}
+}
 {% endstylesheet %}
 
 {% schema %}

@@ -18,6 +18,11 @@
 .ringani-services__item{border-top:1px solid #DEDBD4;padding-top:22px}
 .ringani-services__title{font-size:17px;font-weight:500;letter-spacing:-.01em}
 .ringani-services__body{font-size:14.5px;line-height:1.65;color:#5F5C55;margin-top:10px}
+@media (max-width:749px){
+  .ringani-services__grid{grid-template-columns:repeat(2,1fr);gap:16px}
+  .ringani-services__title{font-size:15.5px}
+  .ringani-services__body{font-size:13.5px}
+}
 {% endstylesheet %}
 
 {% schema %}

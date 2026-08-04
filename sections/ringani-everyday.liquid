@@ -25,6 +25,11 @@
 .ringani-everyday__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:clamp(32px,4vw,56px)}
 .ringani-everyday__tile{position:relative;aspect-ratio:3/4;border-radius:6px}
 .ringani-everyday__label{position:absolute;left:0;right:0;top:0;padding:16px;pointer-events:none;font-family:var(--ringani-mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#FFFFFF;text-shadow:0 1px 6px rgba(0,0,0,.5)}
+@media (max-width:749px){
+  .ringani-everyday__grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .ringani-everyday__tile{aspect-ratio:4/5}
+  .ringani-everyday__intro{max-width:none}
+}
 {% endstylesheet %}
 
 {% schema %}

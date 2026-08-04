@@ -30,6 +30,11 @@
 .ringani-app__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:clamp(16px,2vw,28px);margin-top:clamp(40px,5vw,72px)}
 .ringani-app__screen{width:100%;aspect-ratio:9/19;border-radius:28px;border:1px solid #DEDBD4}
 .ringani-app__label{font-family:var(--ringani-mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#8A867E;margin-top:14px}
+@media (max-width:749px){
+  .ringani-app__grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .ringani-app__h{font-size:clamp(26px,7vw,34px)}
+  .ringani-app__label{white-space:nowrap}
+}
 {% endstylesheet %}
 
 {% schema %}

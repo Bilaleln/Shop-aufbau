@@ -30,6 +30,12 @@
 .ringani-box__item{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid #E8E5DF}
 .ringani-box__name{font-size:15.5px;color:#0E0E0E}
 .ringani-box__note{font-size:13.5px;color:#8A867E;text-align:right}
+@media (max-width:749px){
+  .ringani-box__grid{grid-template-columns:1fr;gap:24px}
+  .ringani-box__media{order:-1 !important;aspect-ratio:4/3}
+  .ringani-box__text{order:2 !important}
+  .ringani-box__h{font-size:clamp(26px,7vw,34px)}
+}
 {% endstylesheet %}
 
 {% schema %}

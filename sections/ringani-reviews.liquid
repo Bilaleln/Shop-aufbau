@@ -63,6 +63,13 @@
 .ringani-reviews__verified{font-family:var(--ringani-mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#1B6FD4}
 .ringani-reviews__app{margin-top:clamp(36px,4vw,60px)}
 .ringani-reviews__disclaimer{font-family:var(--ringani-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#A5A099;margin-top:20px}
+@media (max-width:749px){
+  .ringani-reviews__grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;gap:12px;padding-bottom:8px}
+  .ringani-reviews__card{flex:0 0 85vw;scroll-snap-align:start}
+  .ringani-reviews__h{font-size:clamp(24px,6.5vw,32px)}
+  .ringani-reviews__head{flex-direction:column;align-items:flex-start;gap:12px}
+  .ringani-reviews__summary{text-align:left}
+}
 {% endstylesheet %}
 
 {% schema %}

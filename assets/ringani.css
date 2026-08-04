@@ -70,7 +70,14 @@
   .ringani-section {
     padding-top: var(--ringani-pt-m, var(--ringani-pt, clamp(48px, 12vw, 96px)));
     padding-bottom: var(--ringani-pb-m, var(--ringani-pb, clamp(48px, 12vw, 96px)));
+    padding-left: 20px;
+    padding-right: 20px;
   }
+  .ringani h1,.ringani h2,.ringani h3,.ringani p,.ringani span,.ringani div{overflow-wrap:break-word;word-break:break-word}
+  .ringani-h2{font-size:clamp(26px,7vw,36px)}
+  .ringani-lead{font-size:15px}
+  .ringani-acc__head{min-height:44px;padding:14px 0}
+  .ringani-btn{min-height:44px}
 }
 .ringani-section--flush { padding-left: 0; padding-right: 0; }
 .ringani-inner { max-width: var(--ringani-page-width); margin: 0 auto; }
@@ -319,3 +326,28 @@
 .ringani-pm__sizetable-row span:nth-child(2){text-align:center;color:#5F5C55}
 .ringani-pm__sizetable-row span:nth-child(3){text-align:right;color:#5F5C55}
 .ringani-pm__modal-note{font-size:12.5px;line-height:1.6;color:#8A867E;margin-top:18px}
+
+/* ---- Product-main mobile overrides ---------------------------------------- */
+@media (max-width:749px){
+  .ringani-pm__grid{grid-template-columns:1fr;gap:24px}
+  .ringani-pm__stage{aspect-ratio:1/1}
+  .ringani-pm__thumbs{gap:6px;margin-top:8px}
+  .ringani-pm__thumb{width:56px;height:56px;border-radius:4px}
+  .ringani-pm__title{font-size:clamp(28px,7vw,36px)}
+  .ringani-pm__sub{font-size:16px}
+  .ringani-pm__select{height:48px;min-height:48px}
+  .ringani-pm__size{min-height:44px}
+  .ringani-pm__buy{flex-direction:column}
+  .ringani-pm__qty{width:100%;justify-content:center}
+  .ringani-pm__cta{width:100%;height:52px}
+  .ringani-pm__trust{grid-template-columns:1fr 1fr;gap:8px}
+  .ringani-pm__trust-item{font-size:11.5px}
+  .ringani-pm__payicons{justify-content:center}
+  .ringani-pm__payicons span{height:24px}
+  .ringani-pm__payicons span img,.ringani-pm__payicons span svg{max-height:18px;width:auto}
+  .ringani-pm__payments{justify-content:center}
+  .ringani-pm__sticky-inner{padding:10px 16px;padding-bottom:calc(10px + env(safe-area-inset-bottom,0px))}
+  .ringani-pm__sticky-cta{height:44px;padding:0 20px;font-size:10px}
+  .ringani-pm__acc__head--sm,.ringani-acc__head--sm{min-height:44px}
+  .ringani-pm__modal{width:calc(100vw - 24px);max-height:88vh;padding:20px}
+}

@@ -47,6 +47,12 @@
 .ringani-features__points{margin-top:22px;display:grid;gap:9px}
 .ringani-features__point{display:flex;gap:11px;font-size:14px;color:#3A3833;line-height:1.5}
 .ringani-features__point span:first-child{color:#1B6FD4}
+@media (max-width:749px){
+  .ringani-features__row{grid-template-columns:1fr;gap:20px}
+  .ringani-features__media{order:-1 !important;aspect-ratio:4/3}
+  .ringani-features__text{order:2 !important;max-width:none}
+  .ringani-features__h{font-size:clamp(24px,6.5vw,32px)}
+}
 {% endstylesheet %}
 
 {% schema %}
