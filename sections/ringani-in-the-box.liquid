@@ -1,5 +1,5 @@
 {%- comment -%}
-  RINGANI – Lieferumfang
+  RINGANI – What's in the Box
   Image + list of included items (reorderable blocks with name + note).
 {%- endcomment -%}
 <section class="ringani ringani-section ringani-box" style="{% render 'ringani-section-vars', s: section %}">
@@ -40,35 +40,35 @@
 
 {% schema %}
 {
-  "name": "RINGANI – Lieferumfang",
+  "name": "RINGANI – What's in the Box",
   "tag": "section",
   "max_blocks": 10,
   "settings": [
-    { "type": "header", "content": "Inhalt" },
-    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Lieferumfang" },
-    { "type": "inline_richtext", "id": "heading", "label": "Überschrift", "default": "Alles, was du brauchst." },
-    { "type": "header", "content": "Medien" },
-    { "type": "image_picker", "id": "image", "label": "Bild (Desktop)" },
-    { "type": "image_picker", "id": "image_mobile", "label": "Bild (Mobil, optional)" },
-    { "type": "select", "id": "image_position", "label": "Bildposition", "options": [ { "value": "left", "label": "Links" }, { "value": "right", "label": "Rechts" } ], "default": "left" },
-    { "type": "header", "content": "Abstände" },
-    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Oben (Desktop)", "default": 120 },
-    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Unten (Desktop)", "default": 120 },
-    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Oben (Mobil)", "default": 72 },
-    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Unten (Mobil)", "default": 72 }
+    { "type": "header", "content": "Content" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "What's Included" },
+    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "Everything you need." },
+    { "type": "header", "content": "Media" },
+    { "type": "image_picker", "id": "image", "label": "Image (Desktop)" },
+    { "type": "image_picker", "id": "image_mobile", "label": "Image (Mobile, optional)" },
+    { "type": "select", "id": "image_position", "label": "Image position", "options": [ { "value": "left", "label": "Left" }, { "value": "right", "label": "Right" } ], "default": "left" },
+    { "type": "header", "content": "Spacing" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Top (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Bottom (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Top (Mobile)", "default": 72 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Bottom (Mobile)", "default": 72 }
   ],
   "blocks": [
-    { "type": "item", "name": "Position", "settings": [
-      { "type": "text", "id": "name", "label": "Bezeichnung", "default": "RINGANI Smart Ring" },
-      { "type": "text", "id": "note", "label": "Zusatz", "default": "in deiner gewählten Farbe & Größe" }
+    { "type": "item", "name": "Item", "settings": [
+      { "type": "text", "id": "name", "label": "Name", "default": "RINGANI Smart Ring" },
+      { "type": "text", "id": "note", "label": "Note", "default": "in your chosen color & size" }
     ] }
   ],
   "presets": [
-    { "name": "RINGANI – Lieferumfang", "blocks": [
-      { "type": "item", "settings": { "name": "RINGANI Smart Ring", "note": "in deiner gewählten Farbe & Größe" } },
-      { "type": "item", "settings": { "name": "Ladecase", "note": "mit integriertem Akku" } },
-      { "type": "item", "settings": { "name": "USB-C-Ladekabel", "note": "" } },
-      { "type": "item", "settings": { "name": "Kurzanleitung", "note": "auf Deutsch" } }
+    { "name": "RINGANI – What's in the Box", "blocks": [
+      { "type": "item", "settings": { "name": "RINGANI Smart Ring", "note": "in your chosen color & size" } },
+      { "type": "item", "settings": { "name": "Charging Case", "note": "with integrated battery" } },
+      { "type": "item", "settings": { "name": "USB-C charging cable", "note": "" } },
+      { "type": "item", "settings": { "name": "Quick Start Guide", "note": "" } }
     ] }
   ]
 }

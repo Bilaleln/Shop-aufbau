@@ -1,5 +1,5 @@
 {%- comment -%}
-  RINGANI – Service-Zusagen
+  RINGANI – Service Promises
   Grid of trust/service items (title + text) as reorderable blocks.
 {%- endcomment -%}
 <section class="ringani ringani-section ringani-services" style="{% render 'ringani-section-vars', s: section %}">
@@ -27,28 +27,28 @@
 
 {% schema %}
 {
-  "name": "RINGANI – Service-Zusagen",
+  "name": "RINGANI – Service Promises",
   "tag": "section",
   "max_blocks": 8,
   "settings": [
-    { "type": "header", "content": "Abstände" },
-    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Oben (Desktop)", "default": 120 },
-    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Unten (Desktop)", "default": 120 },
-    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Oben (Mobil)", "default": 72 },
-    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Unten (Mobil)", "default": 72 }
+    { "type": "header", "content": "Spacing" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Top (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Bottom (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Top (Mobile)", "default": 72 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Bottom (Mobile)", "default": 72 }
   ],
   "blocks": [
-    { "type": "service", "name": "Zusage", "settings": [
-      { "type": "text", "id": "title", "label": "Titel", "default": "Kostenloser Versand" },
-      { "type": "textarea", "id": "body", "label": "Text", "default": "Versandkostenfrei innerhalb Deutschlands, Zustellung in der Regel in 2–4 Werktagen." }
+    { "type": "service", "name": "Promise", "settings": [
+      { "type": "text", "id": "title", "label": "Title", "default": "Free Shipping" },
+      { "type": "textarea", "id": "body", "label": "Text", "default": "Free shipping within the US, delivery typically in 3–5 business days." }
     ] }
   ],
   "presets": [
-    { "name": "RINGANI – Service-Zusagen", "blocks": [
-      { "type": "service", "settings": { "title": "Kostenloser Versand", "body": "Versandkostenfrei innerhalb Deutschlands, Zustellung in der Regel in 2–4 Werktagen." } },
-      { "type": "service", "settings": { "title": "30 Tage Rückgaberecht", "body": "Nicht überzeugt? Innerhalb von 30 Tagen unkompliziert zurücksenden." } },
-      { "type": "service", "settings": { "title": "2 Jahre Gewährleistung", "body": "Gesetzliche Gewährleistung auf Material- und Verarbeitungsfehler." } },
-      { "type": "service", "settings": { "title": "Deutscher Support", "body": "Persönliche Beratung per E-Mail – Antwort in der Regel innerhalb eines Werktags." } }
+    { "name": "RINGANI – Service Promises", "blocks": [
+      { "type": "service", "settings": { "title": "Free Shipping", "body": "Free shipping within the US, delivery typically in 3–5 business days." } },
+      { "type": "service", "settings": { "title": "30-Day Returns", "body": "Not convinced? Return hassle-free within 30 days." } },
+      { "type": "service", "settings": { "title": "2-Year Warranty", "body": "Warranty on material and manufacturing defects." } },
+      { "type": "service", "settings": { "title": "Customer Support", "body": "Personal support via email – response typically within one business day." } }
     ] }
   ]
 }

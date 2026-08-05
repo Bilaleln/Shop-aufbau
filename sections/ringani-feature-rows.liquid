@@ -1,6 +1,6 @@
 {%- comment -%}
-  RINGANI – Feature-Reihen
-  Alternating image + text storytelling rows (Schlaf / Erholung / Aktivität).
+  RINGANI – Feature Rows
+  Alternating image + text storytelling rows (Sleep / Recovery / Activity).
   Each row is a reorderable block.
 {%- endcomment -%}
 <section id="{{ section.settings.anchor | default: 'technologie' }}" class="ringani ringani-section ringani-features" style="{% render 'ringani-section-vars', s: section %}">
@@ -57,33 +57,33 @@
 
 {% schema %}
 {
-  "name": "RINGANI – Feature-Reihen",
+  "name": "RINGANI – Feature Rows",
   "tag": "section",
   "max_blocks": 8,
   "settings": [
-    { "type": "text", "id": "anchor", "label": "Anker-ID (für Navigation)", "default": "technologie" },
-    { "type": "header", "content": "Abstände" },
-    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Oben (Desktop)", "default": 120 },
-    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Unten (Desktop)", "default": 120 },
-    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Oben (Mobil)", "default": 72 },
-    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Unten (Mobil)", "default": 72 }
+    { "type": "text", "id": "anchor", "label": "Anchor ID (for navigation)", "default": "technologie" },
+    { "type": "header", "content": "Spacing" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Top (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Bottom (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Top (Mobile)", "default": 72 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Bottom (Mobile)", "default": 72 }
   ],
   "blocks": [
     { "type": "feature", "name": "Feature", "settings": [
-      { "type": "text", "id": "label", "label": "Label", "default": "Schlaf" },
-      { "type": "text", "id": "title", "label": "Titel", "default": "Verstehe deinen Schlaf." },
-      { "type": "textarea", "id": "body", "label": "Text", "default": "RINGANI erfasst deine Nacht ohne Display und ohne Störung. Am Morgen siehst du Schlafdauer, Schlafphasen und Ruhepuls in einem klaren Bild." },
-      { "type": "textarea", "id": "points", "label": "Punkte (eine Zeile pro Punkt)", "default": "Schlafdauer und Schlafphasen\nRuhepuls über Nacht\nPersönliche Wochen- und Monatstrends" },
-      { "type": "image_picker", "id": "image", "label": "Bild (Desktop)" },
-      { "type": "image_picker", "id": "image_mobile", "label": "Bild (Mobil, optional)" },
-      { "type": "select", "id": "image_position", "label": "Bildposition", "options": [ { "value": "auto", "label": "Automatisch abwechselnd" }, { "value": "left", "label": "Links" }, { "value": "right", "label": "Rechts" } ], "default": "auto" }
+      { "type": "text", "id": "label", "label": "Label", "default": "Sleep" },
+      { "type": "text", "id": "title", "label": "Title", "default": "Understand your sleep." },
+      { "type": "textarea", "id": "body", "label": "Text", "default": "RINGANI captures your night without a display and without disturbance. In the morning, you see sleep duration, sleep stages, and resting heart rate in one clear picture." },
+      { "type": "textarea", "id": "points", "label": "Points (one per line)", "default": "Sleep duration and sleep stages\nResting heart rate overnight\nPersonal weekly and monthly trends" },
+      { "type": "image_picker", "id": "image", "label": "Image (Desktop)" },
+      { "type": "image_picker", "id": "image_mobile", "label": "Image (Mobile, optional)" },
+      { "type": "select", "id": "image_position", "label": "Image position", "options": [ { "value": "auto", "label": "Auto alternating" }, { "value": "left", "label": "Left" }, { "value": "right", "label": "Right" } ], "default": "auto" }
     ] }
   ],
   "presets": [
-    { "name": "RINGANI – Feature-Reihen", "blocks": [
-      { "type": "feature", "settings": { "label": "Schlaf", "title": "Verstehe deinen Schlaf.", "body": "RINGANI erfasst deine Nacht ohne Display und ohne Störung. Am Morgen siehst du Schlafdauer, Schlafphasen und Ruhepuls in einem klaren Bild – und erkennst, was deine Nächte wirklich beeinflusst.", "points": "Schlafdauer und Schlafphasen\nRuhepuls über Nacht\nPersönliche Wochen- und Monatstrends", "image_position": "auto" } },
-      { "type": "feature", "settings": { "label": "Erholung", "title": "Wisse, wann dein Körper bereit ist.", "body": "Aus deinen nächtlichen Werten entsteht ein täglicher Erholungswert. So erkennst du, ob heute ein Tag für Belastung oder für Ruhe ist – ohne dich durch Rohdaten arbeiten zu müssen.", "points": "Täglicher Erholungswert\nVergleich mit deinem persönlichen Normalbereich\nHinweise zu Belastung und Ruhe", "image_position": "auto" } },
-      { "type": "feature", "settings": { "label": "Aktivität", "title": "Bewegung, die sichtbar wird.", "body": "Schritte, aktive Minuten und Alltagsbewegung werden automatisch erfasst – ohne dass du eine Aktivität starten musst. Über Wochen entsteht ein ehrliches Bild deiner Gewohnheiten.", "points": "Automatische Aktivitätserfassung\nSchritte und aktive Minuten\nLangfristige Verlaufsanalyse", "image_position": "auto" } }
+    { "name": "RINGANI – Feature Rows", "blocks": [
+      { "type": "feature", "settings": { "label": "Sleep", "title": "Understand your sleep.", "body": "RINGANI captures your night without a display and without disturbance. In the morning, you see sleep duration, sleep stages, and resting heart rate in one clear picture – and discover what truly influences your nights.", "points": "Sleep duration and sleep stages\nResting heart rate overnight\nPersonal weekly and monthly trends", "image_position": "auto" } },
+      { "type": "feature", "settings": { "label": "Recovery", "title": "Know when your body is ready.", "body": "Your nightly data creates a daily recovery score. It helps you decide whether today is a day for intensity or rest – without having to work through raw data.", "points": "Daily recovery score\nComparison with your personal baseline\nGuidance on exertion and rest", "image_position": "auto" } },
+      { "type": "feature", "settings": { "label": "Activity", "title": "Movement that becomes visible.", "body": "Steps, active minutes, and daily movement are automatically tracked – without having to start an activity. Over weeks, an honest picture of your habits emerges.", "points": "Automatic activity tracking\nSteps and active minutes\nLong-term trend analysis", "image_position": "auto" } }
     ] }
   ]
 }

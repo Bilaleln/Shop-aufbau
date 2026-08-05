@@ -1,5 +1,5 @@
 {%- comment -%}
-  RINGANI – Text & Bild (mit Kennzahlen)
+  RINGANI – Text & Image (with Stats)
   Two-column text + image with optional stat blocks. Used for the battery
   section; reusable for any single text/image storytelling block.
 {%- endcomment -%}
@@ -57,39 +57,39 @@
 
 {% schema %}
 {
-  "name": "RINGANI – Text & Bild",
+  "name": "RINGANI – Text & Image",
   "tag": "section",
   "settings": [
-    { "type": "header", "content": "Inhalt" },
-    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Akku" },
-    { "type": "inline_richtext", "id": "heading", "label": "Überschrift", "default": "Weniger laden. Mehr verstehen." },
-    { "type": "richtext", "id": "body", "label": "Text", "default": "<p>Lange Akkulaufzeit im Ring – das Ladecase liefert zusätzliche Ladungen für unterwegs.</p>" },
-    { "type": "header", "content": "Medien" },
-    { "type": "image_picker", "id": "image", "label": "Bild (Desktop)" },
-    { "type": "image_picker", "id": "image_mobile", "label": "Bild (Mobil, optional)" },
-    { "type": "select", "id": "image_position", "label": "Bildposition (Desktop)", "options": [ { "value": "left", "label": "Links" }, { "value": "right", "label": "Rechts" } ], "default": "right" },
-    { "type": "select", "id": "media_ratio", "label": "Seitenverhältnis", "options": [ { "value": "1/1", "label": "1:1" }, { "value": "4/3", "label": "4:3" }, { "value": "3/2", "label": "3:2" }, { "value": "16/9", "label": "16:9" } ], "default": "1/1" },
-    { "type": "select", "id": "color_scheme", "label": "Farbschema", "options": [ { "value": "light", "label": "Hell" }, { "value": "dark", "label": "Dunkel" } ], "default": "dark" },
-    { "type": "header", "content": "Farben (optional)" },
-    { "type": "color", "id": "bg_color", "label": "Hintergrund" },
+    { "type": "header", "content": "Content" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Battery" },
+    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "Charge less. Understand more." },
+    { "type": "richtext", "id": "body", "label": "Text", "default": "<p>Long battery life in the ring – the charging case delivers additional charges on the go.</p>" },
+    { "type": "header", "content": "Media" },
+    { "type": "image_picker", "id": "image", "label": "Image (Desktop)" },
+    { "type": "image_picker", "id": "image_mobile", "label": "Image (Mobile, optional)" },
+    { "type": "select", "id": "image_position", "label": "Image position (Desktop)", "options": [ { "value": "left", "label": "Left" }, { "value": "right", "label": "Right" } ], "default": "right" },
+    { "type": "select", "id": "media_ratio", "label": "Aspect ratio", "options": [ { "value": "1/1", "label": "1:1" }, { "value": "4/3", "label": "4:3" }, { "value": "3/2", "label": "3:2" }, { "value": "16/9", "label": "16:9" } ], "default": "1/1" },
+    { "type": "select", "id": "color_scheme", "label": "Color scheme", "options": [ { "value": "light", "label": "Light" }, { "value": "dark", "label": "Dark" } ], "default": "dark" },
+    { "type": "header", "content": "Colors (optional)" },
+    { "type": "color", "id": "bg_color", "label": "Background" },
     { "type": "color", "id": "text_color", "label": "Text" },
-    { "type": "header", "content": "Abstände" },
-    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Oben (Desktop)", "default": 120 },
-    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Unten (Desktop)", "default": 120 },
-    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Oben (Mobil)", "default": 72 },
-    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Unten (Mobil)", "default": 72 }
+    { "type": "header", "content": "Spacing" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Top (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Bottom (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Top (Mobile)", "default": 72 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Bottom (Mobile)", "default": 72 }
   ],
   "blocks": [
-    { "type": "stat", "name": "Kennzahl", "settings": [
-      { "type": "text", "id": "value", "label": "Wert", "default": "7" },
-      { "type": "text", "id": "label", "label": "Bezeichnung", "default": "Tage Laufzeit" }
+    { "type": "stat", "name": "Stat", "settings": [
+      { "type": "text", "id": "value", "label": "Value", "default": "7" },
+      { "type": "text", "id": "label", "label": "Label", "default": "Days battery life" }
     ] }
   ],
   "presets": [
-    { "name": "RINGANI – Text & Bild (Akku)", "blocks": [
-      { "type": "stat", "settings": { "value": "7", "label": "Tage Laufzeit" } },
-      { "type": "stat", "settings": { "value": "90 min", "label": "Ladezeit" } },
-      { "type": "stat", "settings": { "value": "5", "label": "Ladungen im Case" } }
+    { "name": "RINGANI – Text & Image (Battery)", "blocks": [
+      { "type": "stat", "settings": { "value": "7", "label": "Days battery life" } },
+      { "type": "stat", "settings": { "value": "90 min", "label": "Charge time" } },
+      { "type": "stat", "settings": { "value": "5", "label": "Charges in case" } }
     ] }
   ]
 }

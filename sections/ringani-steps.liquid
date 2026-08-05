@@ -1,8 +1,8 @@
 {%- comment -%}
-  RINGANI – So funktioniert's
+  RINGANI – How It Works
   Dark section: heading + numbered steps (image + title + body) as blocks.
 {%- endcomment -%}
-<section id="{{ section.settings.anchor | default: 'funktion' }}" class="ringani ringani-section ringani-on-dark ringani-steps" style="{% render 'ringani-section-vars', s: section %}">
+<section id="{{ section.settings.anchor | default: 'how-it-works' }}" class="ringani ringani-section ringani-on-dark ringani-steps" style="{% render 'ringani-section-vars', s: section %}">
   <div class="ringani-inner">
     {%- if section.settings.heading != blank -%}
       <h2 class="ringani-h2 ringani-reveal ringani-steps__h">{{ section.settings.heading }}</h2>
@@ -40,32 +40,32 @@
 
 {% schema %}
 {
-  "name": "RINGANI – So geht's",
+  "name": "RINGANI – How It Works",
   "tag": "section",
   "max_blocks": 6,
   "settings": [
-    { "type": "header", "content": "Inhalt" },
-    { "type": "inline_richtext", "id": "heading", "label": "Überschrift", "default": "So einfach funktioniert RINGANI." },
-    { "type": "text", "id": "anchor", "label": "Anker-ID (für Navigation)", "default": "funktion" },
-    { "type": "header", "content": "Abstände" },
-    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Oben (Desktop)", "default": 120 },
-    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Unten (Desktop)", "default": 120 },
-    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Oben (Mobil)", "default": 72 },
-    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Unten (Mobil)", "default": 72 }
+    { "type": "header", "content": "Content" },
+    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "How RINGANI works. It's that simple." },
+    { "type": "text", "id": "anchor", "label": "Anchor ID (for navigation)", "default": "how-it-works" },
+    { "type": "header", "content": "Spacing" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Top (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Bottom (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Top (Mobile)", "default": 72 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Bottom (Mobile)", "default": 72 }
   ],
   "blocks": [
-    { "type": "step", "name": "Schritt", "settings": [
-      { "type": "text", "id": "num", "label": "Nummer", "default": "01" },
-      { "type": "image_picker", "id": "image", "label": "Bild" },
-      { "type": "text", "id": "title", "label": "Titel", "default": "Ring tragen" },
-      { "type": "textarea", "id": "body", "label": "Text", "default": "Trage deinen RINGANI Smart Ring bequem durch deinen Alltag – Tag und Nacht." }
+    { "type": "step", "name": "Step", "settings": [
+      { "type": "text", "id": "num", "label": "Number", "default": "01" },
+      { "type": "image_picker", "id": "image", "label": "Image" },
+      { "type": "text", "id": "title", "label": "Title", "default": "Wear the ring" },
+      { "type": "textarea", "id": "body", "label": "Text", "default": "Wear your RINGANI Smart Ring comfortably throughout your day – day and night." }
     ] }
   ],
   "presets": [
-    { "name": "RINGANI – So geht's", "blocks": [
-      { "type": "step", "settings": { "num": "01", "title": "Ring tragen", "body": "Trage deinen RINGANI Smart Ring bequem durch deinen Alltag – Tag und Nacht." } },
-      { "type": "step", "settings": { "num": "02", "title": "Daten sammeln", "body": "Die integrierten Sensoren erfassen die unterstützten Messwerte automatisch im Hintergrund." } },
-      { "type": "step", "settings": { "num": "03", "title": "Insights verstehen", "body": "Öffne die App und entdecke deine persönlichen Trends – klar aufbereitet statt roher Zahlen." } }
+    { "name": "RINGANI – How It Works", "blocks": [
+      { "type": "step", "settings": { "num": "01", "title": "Wear the ring", "body": "Wear your RINGANI Smart Ring comfortably throughout your day – day and night." } },
+      { "type": "step", "settings": { "num": "02", "title": "Collect data", "body": "The integrated sensors automatically capture supported metrics in the background." } },
+      { "type": "step", "settings": { "num": "03", "title": "Understand insights", "body": "Open the app and discover your personal trends – clearly presented instead of raw numbers." } }
     ] }
   ]
 }

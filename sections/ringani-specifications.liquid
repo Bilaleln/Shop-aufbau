@@ -1,11 +1,11 @@
 {%- comment -%}
-  RINGANI – Technische Daten
+  RINGANI – Specifications
   Accordion of spec groups. Two block types:
     group  → starts a new accordion item (heading)
     row    → a key/value line added under the current group
   Reorder / add / remove freely in the Theme Editor.
 {%- endcomment -%}
-<section id="{{ section.settings.anchor | default: 'technologie' }}" class="ringani ringani-section ringani-spec" style="{% render 'ringani-section-vars', s: section %}">
+<section id="{{ section.settings.anchor | default: 'specs' }}" class="ringani ringani-section ringani-spec" style="{% render 'ringani-section-vars', s: section %}">
   <div class="ringani-inner ringani-inner--narrow">
     {%- if section.settings.heading != blank -%}
       <h2 class="ringani-h2 ringani-reveal">{{ section.settings.heading }}</h2>
@@ -49,52 +49,52 @@
 
 {% schema %}
 {
-  "name": "RINGANI – Technik",
+  "name": "RINGANI – Specifications",
   "tag": "section",
   "max_blocks": 50,
   "settings": [
-    { "type": "header", "content": "Inhalt" },
-    { "type": "inline_richtext", "id": "heading", "label": "Überschrift", "default": "Technische Daten" },
-    { "type": "text", "id": "anchor", "label": "Anker-ID (für Navigation)", "default": "daten" },
-    { "type": "header", "content": "Abstände" },
-    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Oben (Desktop)", "default": 120 },
-    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Unten (Desktop)", "default": 120 },
-    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Oben (Mobil)", "default": 72 },
-    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Unten (Mobil)", "default": 72 }
+    { "type": "header", "content": "Content" },
+    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "Specifications" },
+    { "type": "text", "id": "anchor", "label": "Anchor ID (for navigation)", "default": "specs" },
+    { "type": "header", "content": "Spacing" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Top (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Bottom (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Top (Mobile)", "default": 72 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Bottom (Mobile)", "default": 72 }
   ],
   "blocks": [
-    { "type": "group", "name": "Gruppe (Überschrift)", "settings": [
-      { "type": "text", "id": "title", "label": "Titel", "default": "Design & Material" }
+    { "type": "group", "name": "Group (Heading)", "settings": [
+      { "type": "text", "id": "title", "label": "Title", "default": "Design & Material" }
     ] },
-    { "type": "row", "name": "Zeile (Merkmal/Wert)", "settings": [
-      { "type": "text", "id": "key", "label": "Merkmal", "default": "Material" },
-      { "type": "text", "id": "value", "label": "Wert", "default": "Titan" }
+    { "type": "row", "name": "Row (Feature/Value)", "settings": [
+      { "type": "text", "id": "key", "label": "Feature", "default": "Material" },
+      { "type": "text", "id": "value", "label": "Value", "default": "Titanium" }
     ] }
   ],
   "presets": [
-    { "name": "RINGANI – Technik", "blocks": [
+    { "name": "RINGANI – Specifications", "blocks": [
       { "type": "group", "settings": { "title": "Design & Material" } },
-      { "type": "row", "settings": { "key": "Material", "value": "Titan" } },
-      { "type": "row", "settings": { "key": "Gewicht", "value": "3 g" } },
-      { "type": "row", "settings": { "key": "Stärke", "value": "2,6 mm" } },
-      { "type": "row", "settings": { "key": "Breite", "value": "7,8 mm" } },
-      { "type": "group", "settings": { "title": "Akku & Laden" } },
-      { "type": "row", "settings": { "key": "Akkulaufzeit", "value": "bis zu 7 Tage" } },
-      { "type": "row", "settings": { "key": "Ladezeit", "value": "90 min" } },
-      { "type": "row", "settings": { "key": "Ladungen im Case", "value": "5" } },
-      { "type": "group", "settings": { "title": "Sensoren & Messwerte" } },
-      { "type": "row", "settings": { "key": "Sensoren", "value": "Herzfrequenz, Temperatur, Bewegung" } },
-      { "type": "row", "settings": { "key": "Messwerte", "value": "Schlaf, Ruhepuls, Aktivität" } },
-      { "type": "group", "settings": { "title": "Wasserbeständigkeit" } },
-      { "type": "row", "settings": { "key": "Schutzklasse", "value": "10 ATM" } },
-      { "type": "row", "settings": { "key": "Hinweis", "value": "Nicht für Tauchgänge geeignet" } },
-      { "type": "group", "settings": { "title": "Verbindung & App" } },
+      { "type": "row", "settings": { "key": "Material", "value": "Titanium" } },
+      { "type": "row", "settings": { "key": "Weight", "value": "3 g" } },
+      { "type": "row", "settings": { "key": "Thickness", "value": "2.6 mm" } },
+      { "type": "row", "settings": { "key": "Width", "value": "7.8 mm" } },
+      { "type": "group", "settings": { "title": "Battery & Charging" } },
+      { "type": "row", "settings": { "key": "Battery life", "value": "up to 7 days" } },
+      { "type": "row", "settings": { "key": "Charge time", "value": "90 min" } },
+      { "type": "row", "settings": { "key": "Charges in case", "value": "5" } },
+      { "type": "group", "settings": { "title": "Sensors & Metrics" } },
+      { "type": "row", "settings": { "key": "Sensors", "value": "Heart rate, temperature, motion" } },
+      { "type": "row", "settings": { "key": "Metrics", "value": "Sleep, resting heart rate, activity" } },
+      { "type": "group", "settings": { "title": "Water Resistance" } },
+      { "type": "row", "settings": { "key": "Protection rating", "value": "10 ATM" } },
+      { "type": "row", "settings": { "key": "Note", "value": "Not suitable for diving" } },
+      { "type": "group", "settings": { "title": "Connectivity & App" } },
       { "type": "row", "settings": { "key": "Bluetooth", "value": "5.0" } },
-      { "type": "row", "settings": { "key": "iOS", "value": "ab iOS 14" } },
-      { "type": "row", "settings": { "key": "Android", "value": "ab Android 8" } },
-      { "type": "group", "settings": { "title": "Lieferumfang" } },
-      { "type": "row", "settings": { "key": "Enthalten", "value": "Ring, Ladecase, USB-C-Kabel, Kurzanleitung" } },
-      { "type": "row", "settings": { "key": "Gewährleistung", "value": "2 Jahre" } }
+      { "type": "row", "settings": { "key": "iOS", "value": "iOS 14+" } },
+      { "type": "row", "settings": { "key": "Android", "value": "Android 8+" } },
+      { "type": "group", "settings": { "title": "What's Included" } },
+      { "type": "row", "settings": { "key": "Included", "value": "Ring, charging case, USB-C cable, quick start guide" } },
+      { "type": "row", "settings": { "key": "Warranty", "value": "2 years" } }
     ] }
   ]
 }

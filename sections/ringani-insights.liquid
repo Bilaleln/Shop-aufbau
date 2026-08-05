@@ -1,7 +1,7 @@
 {%- comment -%}
   RINGANI – Insights
   Intro copy + metric cards (score + progress bar). Demo/illustrative data,
-  clearly labelled as such via the disclaimer setting.
+  clearly labeled as such via the disclaimer setting.
 {%- endcomment -%}
 <section class="ringani ringani-section ringani-insights" style="{% render 'ringani-section-vars', s: section %}">
   <div class="ringani-inner">
@@ -54,30 +54,30 @@
   "tag": "section",
   "max_blocks": 6,
   "settings": [
-    { "type": "header", "content": "Inhalt" },
-    { "type": "inline_richtext", "id": "heading", "label": "Überschrift", "default": "Aus Daten werden Entscheidungen." },
-    { "type": "textarea", "id": "body", "label": "Text", "default": "Jeden Morgen fasst RINGANI die Nacht und den Vortag in drei verständlichen Werten zusammen – damit du weißt, worauf du heute achten solltest." },
-    { "type": "text", "id": "disclaimer", "label": "Hinweis", "default": "Beispielhafte Darstellung der App-Oberfläche" },
-    { "type": "header", "content": "Abstände" },
-    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Oben (Desktop)", "default": 120 },
-    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Unten (Desktop)", "default": 120 },
-    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Oben (Mobil)", "default": 72 },
-    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Unten (Mobil)", "default": 72 }
+    { "type": "header", "content": "Content" },
+    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "From data to decisions." },
+    { "type": "textarea", "id": "body", "label": "Text", "default": "Every morning, RINGANI summarizes the night and previous day in three understandable scores – so you know what to focus on today." },
+    { "type": "text", "id": "disclaimer", "label": "Disclaimer", "default": "Illustrative representation of the app interface" },
+    { "type": "header", "content": "Spacing" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Top (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Bottom (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Top (Mobile)", "default": 72 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Bottom (Mobile)", "default": 72 }
   ],
   "blocks": [
-    { "type": "insight", "name": "Insight-Karte", "settings": [
-      { "type": "text", "id": "label", "label": "Label", "default": "Schlaf" },
-      { "type": "text", "id": "trend", "label": "Trend", "default": "+4 vs. Woche" },
-      { "type": "text", "id": "score", "label": "Wert", "default": "86" },
-      { "type": "range", "id": "bar", "min": 0, "max": 100, "step": 1, "unit": "%", "label": "Balken", "default": 86 },
-      { "type": "textarea", "id": "body", "label": "Text", "default": "Deine Nacht war länger und ruhiger als im Wochenmittel." }
+    { "type": "insight", "name": "Insight Card", "settings": [
+      { "type": "text", "id": "label", "label": "Label", "default": "Sleep" },
+      { "type": "text", "id": "trend", "label": "Trend", "default": "+4 vs. week" },
+      { "type": "text", "id": "score", "label": "Score", "default": "86" },
+      { "type": "range", "id": "bar", "min": 0, "max": 100, "step": 1, "unit": "%", "label": "Bar", "default": 86 },
+      { "type": "textarea", "id": "body", "label": "Text", "default": "Your night was longer and calmer than your weekly average." }
     ] }
   ],
   "presets": [
     { "name": "RINGANI – Insights", "blocks": [
-      { "type": "insight", "settings": { "label": "Schlaf", "trend": "+4 vs. Woche", "score": "86", "bar": 86, "body": "Deine Nacht war länger und ruhiger als im Wochenmittel." } },
-      { "type": "insight", "settings": { "label": "Erholung", "trend": "stabil", "score": "72", "bar": 72, "body": "Dein Körper liegt im gewohnten Bereich – moderate Belastung ist heute gut machbar." } },
-      { "type": "insight", "settings": { "label": "Aktivität", "trend": "−6 vs. Woche", "score": "64", "bar": 64, "body": "Etwas weniger Bewegung als üblich. Ein Spaziergang reicht, um wieder aufzuschließen." } }
+      { "type": "insight", "settings": { "label": "Sleep", "trend": "+4 vs. week", "score": "86", "bar": 86, "body": "Your night was longer and calmer than your weekly average." } },
+      { "type": "insight", "settings": { "label": "Recovery", "trend": "stable", "score": "72", "bar": 72, "body": "Your body is within its normal range – moderate exertion is fine today." } },
+      { "type": "insight", "settings": { "label": "Activity", "trend": "−6 vs. week", "score": "64", "bar": 64, "body": "Slightly less movement than usual. A walk is enough to catch up." } }
     ] }
   ]
 }

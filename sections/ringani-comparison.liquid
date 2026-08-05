@@ -1,5 +1,5 @@
 {%- comment -%}
-  RINGANI – Vergleich
+  RINGANI – Comparison
   Comparison table: three columns (RINGANI highlighted vs two competitors),
   reorderable rows as blocks. Horizontally scrollable on small screens.
 {%- endcomment -%}
@@ -54,39 +54,39 @@
 
 {% schema %}
 {
-  "name": "RINGANI – Vergleich",
+  "name": "RINGANI – Comparison",
   "tag": "section",
   "max_blocks": 12,
   "settings": [
-    { "type": "header", "content": "Inhalt" },
-    { "type": "inline_richtext", "id": "heading", "label": "Überschrift", "default": "Warum RINGANI?" },
-    { "type": "text", "id": "col_a", "label": "Spalte A (hervorgehoben)", "default": "RINGANI" },
-    { "type": "text", "id": "col_b", "label": "Spalte B", "default": "Smartwatch" },
-    { "type": "text", "id": "col_c", "label": "Spalte C", "default": "Fitness-Tracker" },
-    { "type": "text", "id": "note", "label": "Hinweis", "default": "Vergleich typischer Geräteklassen. Werte einzelner Modelle können abweichen." },
-    { "type": "header", "content": "Abstände" },
-    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Oben (Desktop)", "default": 120 },
-    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Unten (Desktop)", "default": 120 },
-    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Oben (Mobil)", "default": 72 },
-    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Unten (Mobil)", "default": 72 }
+    { "type": "header", "content": "Content" },
+    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "Why RINGANI?" },
+    { "type": "text", "id": "col_a", "label": "Column A (highlighted)", "default": "RINGANI" },
+    { "type": "text", "id": "col_b", "label": "Column B", "default": "Smartwatch" },
+    { "type": "text", "id": "col_c", "label": "Column C", "default": "Fitness-Tracker" },
+    { "type": "text", "id": "note", "label": "Note", "default": "Comparison of typical device categories. Individual model values may vary." },
+    { "type": "header", "content": "Spacing" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Top (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Bottom (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Top (Mobile)", "default": 72 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Bottom (Mobile)", "default": 72 }
   ],
   "blocks": [
-    { "type": "row", "name": "Vergleichszeile", "settings": [
-      { "type": "text", "id": "label", "label": "Merkmal", "default": "24/7 tragbar" },
-      { "type": "text", "id": "a", "label": "RINGANI", "default": "Ja" },
-      { "type": "text", "id": "b", "label": "Smartwatch", "default": "Eingeschränkt" },
-      { "type": "text", "id": "c", "label": "Fitness-Tracker", "default": "Eingeschränkt" }
+    { "type": "row", "name": "Comparison Row", "settings": [
+      { "type": "text", "id": "label", "label": "Feature", "default": "24/7 wearable" },
+      { "type": "text", "id": "a", "label": "RINGANI", "default": "Yes" },
+      { "type": "text", "id": "b", "label": "Smartwatch", "default": "Limited" },
+      { "type": "text", "id": "c", "label": "Fitness-Tracker", "default": "Limited" }
     ] }
   ],
   "presets": [
-    { "name": "RINGANI – Vergleich", "blocks": [
-      { "type": "row", "settings": { "label": "24/7 tragbar", "a": "Ja", "b": "Eingeschränkt", "c": "Eingeschränkt" } },
-      { "type": "row", "settings": { "label": "Schlafkomfort", "a": "Hoch", "b": "Gering", "c": "Mittel" } },
-      { "type": "row", "settings": { "label": "Diskretes Design", "a": "Ja", "b": "Nein", "c": "Teilweise" } },
-      { "type": "row", "settings": { "label": "Akkulaufzeit", "a": "bis 7 Tage", "b": "1–2 Tage", "c": "5–7 Tage" } },
-      { "type": "row", "settings": { "label": "App-Auswertung", "a": "Ausführlich", "b": "Ausführlich", "c": "Basis" } },
-      { "type": "row", "settings": { "label": "Abo erforderlich", "a": "Nein", "b": "Teilweise", "c": "Teilweise" } },
-      { "type": "row", "settings": { "label": "Gewicht", "a": "3 g", "b": "30–60 g", "c": "20–30 g" } }
+    { "name": "RINGANI – Comparison", "blocks": [
+      { "type": "row", "settings": { "label": "24/7 wearable", "a": "Yes", "b": "Limited", "c": "Limited" } },
+      { "type": "row", "settings": { "label": "Sleep comfort", "a": "High", "b": "Low", "c": "Medium" } },
+      { "type": "row", "settings": { "label": "Discreet design", "a": "Yes", "b": "No", "c": "Partial" } },
+      { "type": "row", "settings": { "label": "Battery life", "a": "up to 7 days", "b": "1–2 days", "c": "5–7 days" } },
+      { "type": "row", "settings": { "label": "App analytics", "a": "Detailed", "b": "Detailed", "c": "Basic" } },
+      { "type": "row", "settings": { "label": "Subscription required", "a": "No", "b": "Partial", "c": "Partial" } },
+      { "type": "row", "settings": { "label": "Weight", "a": "3 g", "b": "30–60 g", "c": "20–30 g" } }
     ] }
   ]
 }

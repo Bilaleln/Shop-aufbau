@@ -1,5 +1,5 @@
 {%- comment -%}
-  RINGANI – Finaler CTA
+  RINGANI – Final CTA
   Self-contained full-bleed image with overlaid heading, text and a button.
   Deliberately does NOT use the ringani-image snippet: the image is rendered
   here as a <picture> so the <img> can fill the whole section via
@@ -73,35 +73,35 @@
 
 {% schema %}
 {
-  "name": "RINGANI – Finaler CTA",
+  "name": "RINGANI – Final CTA",
   "tag": "section",
   "settings": [
-    { "type": "header", "content": "Medien" },
-    { "type": "image_picker", "id": "image", "label": "Bild (Desktop)" },
-    { "type": "image_picker", "id": "image_mobile", "label": "Bild (Mobil, optional)" },
-    { "type": "select", "id": "object_position", "label": "Bildausschnitt", "info": "Welcher Bildbereich sichtbar bleibt, wenn das Bild die Section füllt.", "options": [
-      { "value": "center", "label": "Mitte" },
-      { "value": "top", "label": "Oben" },
-      { "value": "bottom", "label": "Unten" },
-      { "value": "left", "label": "Links" },
-      { "value": "right", "label": "Rechts" },
-      { "value": "left top", "label": "Oben links" },
-      { "value": "right top", "label": "Oben rechts" },
-      { "value": "left bottom", "label": "Unten links" },
-      { "value": "right bottom", "label": "Unten rechts" }
+    { "type": "header", "content": "Media" },
+    { "type": "image_picker", "id": "image", "label": "Image (Desktop)" },
+    { "type": "image_picker", "id": "image_mobile", "label": "Image (Mobile, optional)" },
+    { "type": "select", "id": "object_position", "label": "Image focus", "info": "Which area of the image stays visible when the image fills the section.", "options": [
+      { "value": "center", "label": "Center" },
+      { "value": "top", "label": "Top" },
+      { "value": "bottom", "label": "Bottom" },
+      { "value": "left", "label": "Left" },
+      { "value": "right", "label": "Right" },
+      { "value": "left top", "label": "Top left" },
+      { "value": "right top", "label": "Top right" },
+      { "value": "left bottom", "label": "Bottom left" },
+      { "value": "right bottom", "label": "Bottom right" }
     ], "default": "center" },
-    { "type": "range", "id": "overlay_opacity", "min": 0, "max": 100, "step": 5, "unit": "%", "label": "Abdunklung", "info": "Dunkler Verlauf über dem Bild – sorgt für lesbaren Text.", "default": 55 },
-    { "type": "header", "content": "Höhe" },
-    { "type": "range", "id": "height", "min": 360, "max": 960, "step": 10, "unit": "px", "label": "Mindesthöhe (Desktop)", "default": 700 },
-    { "type": "range", "id": "height_mobile", "min": 300, "max": 800, "step": 10, "unit": "px", "label": "Mindesthöhe (Mobil)", "default": 540 },
-    { "type": "header", "content": "Inhalt" },
-    { "type": "inline_richtext", "id": "heading", "label": "Überschrift", "default": "Lerne deinen Körper besser kennen." },
-    { "type": "textarea", "id": "body", "label": "Text", "default": "Mit RINGANI wird aus täglichen Daten ein klareres Bild deiner Gesundheit und Gewohnheiten." },
-    { "type": "text", "id": "button_label", "label": "Button-Text", "default": "RINGANI entdecken" },
-    { "type": "url", "id": "button_link", "label": "Button-Link", "info": "Standard: springt zum Produktbereich (#ringani-produkt)." }
+    { "type": "range", "id": "overlay_opacity", "min": 0, "max": 100, "step": 5, "unit": "%", "label": "Overlay darkness", "info": "Dark gradient over the image – ensures readable text.", "default": 55 },
+    { "type": "header", "content": "Height" },
+    { "type": "range", "id": "height", "min": 360, "max": 960, "step": 10, "unit": "px", "label": "Min height (Desktop)", "default": 700 },
+    { "type": "range", "id": "height_mobile", "min": 300, "max": 800, "step": 10, "unit": "px", "label": "Min height (Mobile)", "default": 540 },
+    { "type": "header", "content": "Content" },
+    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "Get to know your body better." },
+    { "type": "textarea", "id": "body", "label": "Text", "default": "With RINGANI, daily data becomes a clearer picture of your health and habits." },
+    { "type": "text", "id": "button_label", "label": "Button text", "default": "Discover RINGANI" },
+    { "type": "url", "id": "button_link", "label": "Button link", "info": "Default: scrolls to the product section (#ringani-produkt)." }
   ],
   "presets": [
-    { "name": "RINGANI – Finaler CTA" }
+    { "name": "RINGANI – Final CTA" }
   ]
 }
 {% endschema %}

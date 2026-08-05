@@ -1,5 +1,5 @@
 {%- comment -%}
-  RINGANI – App-Showcase
+  RINGANI – App Showcase
   Intro copy + a responsive grid of app screenshots (phone frames).
 {%- endcomment -%}
 <section class="ringani ringani-section ringani-app" style="{% render 'ringani-section-vars', s: section %}">
@@ -43,27 +43,27 @@
   "tag": "section",
   "max_blocks": 8,
   "settings": [
-    { "type": "header", "content": "Inhalt" },
+    { "type": "header", "content": "Content" },
     { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "RINGANI App" },
-    { "type": "inline_richtext", "id": "heading", "label": "Überschrift", "default": "Alles, was dein Körper dir sagt. An einem Ort." },
-    { "type": "textarea", "id": "body", "label": "Text", "default": "Schlaf, Aktivität, Erholung, Herzfrequenz und Trends – übersichtlich zusammengeführt in einer App, die dich nicht mit Zahlen überfordert." },
-    { "type": "header", "content": "Abstände" },
-    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Oben (Desktop)", "default": 120 },
-    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Unten (Desktop)", "default": 120 },
-    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Oben (Mobil)", "default": 72 },
-    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Unten (Mobil)", "default": 72 }
+    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "Everything your body tells you. In one place." },
+    { "type": "textarea", "id": "body", "label": "Text", "default": "Sleep, activity, recovery, heart rate, and trends – clearly organized in one app that doesn't overwhelm you with numbers." },
+    { "type": "header", "content": "Spacing" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Top (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Bottom (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Top (Mobile)", "default": 72 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Bottom (Mobile)", "default": 72 }
   ],
   "blocks": [
-    { "type": "screen", "name": "App-Screen", "settings": [
+    { "type": "screen", "name": "App Screen", "settings": [
       { "type": "image_picker", "id": "image", "label": "Screenshot" },
-      { "type": "text", "id": "label", "label": "Label", "default": "Schlaf" }
+      { "type": "text", "id": "label", "label": "Label", "default": "Sleep" }
     ] }
   ],
   "presets": [
     { "name": "RINGANI – App-Showcase", "blocks": [
-      { "type": "screen", "settings": { "label": "Schlaf" } },
-      { "type": "screen", "settings": { "label": "Erholung" } },
-      { "type": "screen", "settings": { "label": "Aktivität" } },
+      { "type": "screen", "settings": { "label": "Sleep" } },
+      { "type": "screen", "settings": { "label": "Recovery" } },
+      { "type": "screen", "settings": { "label": "Activity" } },
       { "type": "screen", "settings": { "label": "Trends" } }
     ] }
   ]

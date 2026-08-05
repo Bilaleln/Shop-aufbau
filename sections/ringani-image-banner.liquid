@@ -1,7 +1,7 @@
 {%- comment -%}
-  RINGANI – Bild-Banner
+  RINGANI – Image Banner
   Full-bleed lifestyle image with an overlaid heading, text and optional stats.
-  Used for the "Gemacht, um ihn zu vergessen." comfort section.
+  Used for the "Made to be forgotten." comfort section.
 {%- endcomment -%}
 <section class="ringani ringani-banner" data-ringani-banner style="--ringani-banner-h:{{ section.settings.height }}px">
   <div class="ringani-banner__media ringani-media ringani-media--dark">
@@ -56,30 +56,30 @@
 
 {% schema %}
 {
-  "name": "RINGANI – Bild-Banner",
+  "name": "RINGANI – Image Banner",
   "tag": "section",
   "max_blocks": 4,
   "settings": [
-    { "type": "header", "content": "Medien" },
-    { "type": "image_picker", "id": "image", "label": "Bild (Desktop)" },
-    { "type": "image_picker", "id": "image_mobile", "label": "Bild (Mobil, optional)" },
-    { "type": "range", "id": "height", "min": 320, "max": 900, "step": 10, "unit": "px", "label": "Höhe", "default": 640 },
-    { "type": "header", "content": "Inhalt" },
-    { "type": "inline_richtext", "id": "heading", "label": "Überschrift", "default": "Gemacht, um ihn zu vergessen." },
-    { "type": "textarea", "id": "body", "label": "Text", "default": "Leicht, glatt und flach genug, um Tag und Nacht getragen zu werden – ohne Display, ohne Ablenkung, ohne dass du daran denkst." },
-    { "type": "select", "id": "text_position", "label": "Textposition", "options": [ { "value": "left", "label": "Links" }, { "value": "right", "label": "Rechts" }, { "value": "center", "label": "Mitte" } ], "default": "left" }
+    { "type": "header", "content": "Media" },
+    { "type": "image_picker", "id": "image", "label": "Image (Desktop)" },
+    { "type": "image_picker", "id": "image_mobile", "label": "Image (Mobile, optional)" },
+    { "type": "range", "id": "height", "min": 320, "max": 900, "step": 10, "unit": "px", "label": "Height", "default": 640 },
+    { "type": "header", "content": "Content" },
+    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "Made to be forgotten." },
+    { "type": "textarea", "id": "body", "label": "Text", "default": "Light, smooth, and flat enough to wear day and night – no display, no distraction, nothing to think about." },
+    { "type": "select", "id": "text_position", "label": "Text position", "options": [ { "value": "left", "label": "Left" }, { "value": "right", "label": "Right" }, { "value": "center", "label": "Center" } ], "default": "left" }
   ],
   "blocks": [
-    { "type": "stat", "name": "Kennzahl", "settings": [
-      { "type": "text", "id": "value", "label": "Wert", "default": "3 g" },
-      { "type": "text", "id": "label", "label": "Bezeichnung", "default": "Gewicht" }
+    { "type": "stat", "name": "Stat", "settings": [
+      { "type": "text", "id": "value", "label": "Value", "default": "3 g" },
+      { "type": "text", "id": "label", "label": "Label", "default": "Weight" }
     ] }
   ],
   "presets": [
-    { "name": "RINGANI – Bild-Banner (Komfort)", "blocks": [
-      { "type": "stat", "settings": { "value": "3 g", "label": "Gewicht" } },
-      { "type": "stat", "settings": { "value": "2,6 mm", "label": "Stärke" } },
-      { "type": "stat", "settings": { "value": "Titan", "label": "Material" } }
+    { "name": "RINGANI – Image Banner (Comfort)", "blocks": [
+      { "type": "stat", "settings": { "value": "3 g", "label": "Weight" } },
+      { "type": "stat", "settings": { "value": "2.6 mm", "label": "Thickness" } },
+      { "type": "stat", "settings": { "value": "Titanium", "label": "Material" } }
     ] }
   ]
 }

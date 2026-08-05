@@ -1,5 +1,5 @@
 {%- comment -%}
-  RINGANI – Produkt (Hauptbereich)
+  RINGANI – Product (Main)
   The commerce core. Uses real Shopify product / variant data:
   media gallery, price, compare-at, colour swatches + size picker generated
   from the product's own options, a native cart form, a synchronised sticky
@@ -70,7 +70,7 @@
     data-label-choose="{{ section.settings.label_choose | escape }}"
     data-save-template="{{ section.settings.save_template | escape }}"
     data-scroll-anchor="ringani-produkt"
-    data-added-msg="{{ 'Zum Warenkorb hinzugefügt' }}">
+    data-added-msg="{{ 'Added to cart' }}">
 
     {%- comment -%} ---------- Variant data for the controller ---------- {%- endcomment -%}
     <script type="application/json" data-ringani-variants>
@@ -230,7 +230,7 @@
             {%- endfor -%}
           </div>
           <div class="ringani-pm__sizepanel-foot">
-            <span data-ringani-size-hint data-default="{{ section.settings.size_hint_default | escape }}" data-chosen-prefix="Größe">{{ section.settings.size_hint_default }}</span>
+            <span data-ringani-size-hint data-default="{{ section.settings.size_hint_default | escape }}" data-chosen-prefix="Size">{{ section.settings.size_hint_default }}</span>
             <button type="button" class="ringani-pm__sizeguide-link" data-ringani-sizeguide-open>{{ section.settings.sizeguide_link }}</button>
           </div>
         </div>
@@ -258,9 +258,9 @@
         <input type="hidden" name="id" value="{{ current.id }}">
         <input type="hidden" name="quantity" value="1">
         <div class="ringani-pm__qty">
-          <button type="button" class="ringani-pm__qty-btn" data-ringani-dec aria-label="Menge verringern">−</button>
+          <button type="button" class="ringani-pm__qty-btn" data-ringani-dec aria-label="Decrease quantity">−</button>
           <span class="ringani-pm__qty-val" data-ringani-qty>1</span>
-          <button type="button" class="ringani-pm__qty-btn" data-ringani-inc aria-label="Menge erhöhen">+</button>
+          <button type="button" class="ringani-pm__qty-btn" data-ringani-inc aria-label="Increase quantity">+</button>
         </div>
         <button type="submit" class="ringani-btn ringani-pm__cta" data-ringani-submit>
           <span data-ringani-cta-label>{% if size_pos > 0 %}{{ section.settings.label_choose }}{% else %}{{ section.settings.label_add }}{% endif %}</span>
@@ -276,9 +276,9 @@
         </div>
       {%- endif -%}
 
-      {%- comment -%} ---------- Zahlungs-Leiste: eigenes Bild, sonst DACH-Badges ---------- {%- endcomment -%}
+      {%- comment -%} ---------- Payment bar: custom image, else badge icons ---------- {%- endcomment -%}
       {%- if section.settings.payment_image != blank -%}
-        {%- assign pay_alt = section.settings.payment_image.alt | default: 'Akzeptierte Zahlungsarten' | escape -%}
+        {%- assign pay_alt = section.settings.payment_image.alt | default: 'Accepted payment methods' | escape -%}
         <div class="ringani-pm__payimg" style="margin-top:18px">
           <img
             src="{{ section.settings.payment_image | image_url: width: 900 }}"
@@ -312,7 +312,7 @@
                 </span>
               {%- elsif badge == 'rechnung' -%}
                 <span style="display:inline-flex;align-items:center;justify-content:center;min-width:42px;height:27px;padding:2px 6px;border:1px solid #E4E1DA;border-radius:5px;background:#fff">
-                  <span style="font-size:9px;font-weight:600;letter-spacing:.02em;color:#1A1A1A;white-space:nowrap">Rechnung</span>
+                  <span style="font-size:9px;font-weight:600;letter-spacing:.02em;color:#1A1A1A;white-space:nowrap">Invoice</span>
                 </span>
               {%- endif -%}
             {%- endfor -%}
@@ -378,7 +378,7 @@
       <div class="ringani-pm__modal" id="ringani-sizeguide-{{ section.id }}" data-open="false" role="dialog" aria-modal="true" aria-label="{{ section.settings.sizeguide_heading | escape }}">
         <div class="ringani-pm__modal-head">
           <h3>{{ section.settings.sizeguide_heading }}</h3>
-          <button type="button" class="ringani-pm__modal-close" data-ringani-sizeguide-close aria-label="Schließen">×</button>
+          <button type="button" class="ringani-pm__modal-close" data-ringani-sizeguide-close aria-label="Close">×</button>
         </div>
         {%- if section.settings.sizeguide_intro != blank -%}<p class="ringani-pm__modal-intro">{{ section.settings.sizeguide_intro }}</p>{%- endif -%}
         <div class="ringani-pm__sizetable">
@@ -404,105 +404,105 @@
 
 {% schema %}
 {
-  "name": "RINGANI – Produkt",
+  "name": "RINGANI – Product",
   "tag": "section",
   "class": "ringani-section-wrapper",
   "settings": [
-    { "type": "header", "content": "Inhalt" },
-    { "type": "checkbox", "id": "rating_show", "label": "Bewertungs-Zeile anzeigen", "default": true },
-    { "type": "text", "id": "rating_text", "label": "Bewertungstext", "default": "4,8/5 basierend auf Kundenbewertungen" },
-    { "type": "text", "id": "subheading", "label": "Unterüberschrift", "default": "Deine Gesundheit. Direkt an deinem Finger." },
-    { "type": "text", "id": "tax_note", "label": "Preis-Hinweis", "default": "inkl. MwSt. · Kostenloser Versand" },
-    { "type": "header", "content": "Preis & Ersparnis" },
-    { "type": "checkbox", "id": "show_savings", "label": "Ersparnis-Badge anzeigen (wenn Vergleichspreis gesetzt)", "default": true },
-    { "type": "text", "id": "save_template", "label": "Ersparnis-Text", "info": "{amount} wird durch den berechneten Betrag ersetzt.", "default": "Du sparst {amount}" },
-    { "type": "header", "content": "Varianten-Zuordnung" },
-    { "type": "paragraph", "content": "Diese Namen müssen exakt den Produkt-Optionen entsprechen, damit Farbfelder und Größen-Buttons erzeugt werden." },
-    { "type": "text", "id": "color_option_name", "label": "Name der Farb-Option", "default": "Farbe" },
-    { "type": "text", "id": "size_option_name", "label": "Name der Größen-Option", "default": "Größe" },
-    { "type": "header", "content": "Größen-Panel" },
-    { "type": "text", "id": "size_panel_heading", "label": "Überschrift", "default": "Ich kenne meine Größe" },
-    { "type": "text", "id": "size_panel_sub", "label": "Unterzeile", "default": "Wähle jetzt deine Ringgröße" },
-    { "type": "text", "id": "size_hint_default", "label": "Standard-Hinweis", "default": "Ausgegraute Größen sind derzeit ausverkauft." },
-    { "type": "text", "id": "sizeguide_link", "label": "Größenberater-Link", "default": "Welche Größe brauche ich?" },
-    { "type": "header", "content": "Add-to-Cart Beschriftungen" },
-    { "type": "text", "id": "label_add", "label": "Verfügbar", "default": "In den Warenkorb" },
-    { "type": "text", "id": "label_soldout", "label": "Ausverkauft", "default": "Ausverkauft" },
-    { "type": "text", "id": "label_choose", "label": "Keine Größe gewählt", "default": "Größe wählen" },
-    { "type": "select", "id": "on_add", "label": "Nach dem Hinzufügen", "options": [
-      { "value": "drawer", "label": "Warenkorb-Drawer öffnen (falls vorhanden)" },
-      { "value": "cart", "label": "Zur Warenkorb-Seite gehen" },
-      { "value": "stay", "label": "Auf der Seite bleiben (nur Hinweis)" }
+    { "type": "header", "content": "Content" },
+    { "type": "checkbox", "id": "rating_show", "label": "Show rating line", "default": true },
+    { "type": "text", "id": "rating_text", "label": "Rating text", "default": "4.8/5 based on customer reviews" },
+    { "type": "text", "id": "subheading", "label": "Subheading", "default": "Your health. Right on your finger." },
+    { "type": "text", "id": "tax_note", "label": "Price note", "default": "Free shipping included" },
+    { "type": "header", "content": "Price & Savings" },
+    { "type": "checkbox", "id": "show_savings", "label": "Show savings badge (when compare price is set)", "default": true },
+    { "type": "text", "id": "save_template", "label": "Savings text", "info": "{amount} is replaced with the calculated amount.", "default": "You save {amount}" },
+    { "type": "header", "content": "Variant Mapping" },
+    { "type": "paragraph", "content": "These names must match the product options exactly for color swatches and size buttons to be generated." },
+    { "type": "text", "id": "color_option_name", "label": "Color option name", "default": "Color" },
+    { "type": "text", "id": "size_option_name", "label": "Size option name", "default": "Size" },
+    { "type": "header", "content": "Size Panel" },
+    { "type": "text", "id": "size_panel_heading", "label": "Heading", "default": "I know my size" },
+    { "type": "text", "id": "size_panel_sub", "label": "Subtitle", "default": "Choose your ring size" },
+    { "type": "text", "id": "size_hint_default", "label": "Default hint", "default": "Grayed-out sizes are currently sold out." },
+    { "type": "text", "id": "sizeguide_link", "label": "Size guide link", "default": "What size do I need?" },
+    { "type": "header", "content": "Add-to-Cart Labels" },
+    { "type": "text", "id": "label_add", "label": "Available", "default": "Add to Cart" },
+    { "type": "text", "id": "label_soldout", "label": "Sold Out", "default": "Sold Out" },
+    { "type": "text", "id": "label_choose", "label": "No size selected", "default": "Select Size" },
+    { "type": "select", "id": "on_add", "label": "After adding", "options": [
+      { "value": "drawer", "label": "Open cart drawer (if available)" },
+      { "value": "cart", "label": "Go to cart page" },
+      { "value": "stay", "label": "Stay on page (notification only)" }
     ], "default": "drawer" },
-    { "type": "header", "content": "Vertrauen & Zahlung" },
-    { "type": "textarea", "id": "trust_items", "label": "Trust-Punkte (eine Zeile pro Punkt)", "default": "Kostenloser Versand\nSichere Zahlung\n30 Tage Rückgaberecht" },
-    { "type": "image_picker", "id": "payment_image", "label": "Zahlungs-Bild (Logo-Leiste)", "info": "Lade hier deine eigene Zahlungsarten-Grafik hoch (z. B. PayPal, Klarna, Visa …). Wird bevorzugt vor den automatischen Icons angezeigt." },
-    { "type": "range", "id": "payment_image_width", "min": 160, "max": 600, "step": 10, "unit": "px", "label": "Max. Breite Zahlungs-Bild", "default": 440 },
-    { "type": "checkbox", "id": "payment_icons_show", "label": "Zahlungs-Badges anzeigen", "info": "Zeigt die Badges aus der Liste unten als gestylte Icons an (Fallback wenn kein Zahlungs-Bild gesetzt).", "default": true },
-    { "type": "textarea", "id": "payment_badges", "label": "Zahlungs-Badges (eine pro Zeile)", "info": "Reihenfolge und Auswahl der Icons. Unterstützt: PayPal, Klarna, Rechnung, Visa, Mastercard, Maestro, Apple Pay, Google Pay, G Pay, American Express, AMEX", "default": "PayPal\nKlarna\nRechnung\nVisa\nMastercard\nMaestro\nApple Pay\nGoogle Pay\nAmerican Express" },
-    { "type": "checkbox", "id": "payment_text_show", "label": "Zahlungsarten als Text-Chips anzeigen", "default": false },
-    { "type": "textarea", "id": "payments", "label": "Zahlungsarten als Text (eine Zeile pro Eintrag)", "info": "Nur relevant, wenn Text-Chips oben aktiviert sind.", "default": "Visa\nMastercard\nPayPal\nKlarna\nApple Pay\nGoogle Pay" },
+    { "type": "header", "content": "Trust & Payment" },
+    { "type": "textarea", "id": "trust_items", "label": "Trust points (one per line)", "default": "Free Shipping\nSecure Payment\n30-Day Returns" },
+    { "type": "image_picker", "id": "payment_image", "label": "Payment image (logo bar)", "info": "Upload your own payment method graphic (e.g. PayPal, Visa …). Displayed instead of the auto-generated icons." },
+    { "type": "range", "id": "payment_image_width", "min": 160, "max": 600, "step": 10, "unit": "px", "label": "Max width payment image", "default": 440 },
+    { "type": "checkbox", "id": "payment_icons_show", "label": "Show payment badges", "info": "Displays the badges from the list below as styled icons (fallback when no payment image is set).", "default": true },
+    { "type": "textarea", "id": "payment_badges", "label": "Payment badges (one per line)", "info": "Order and selection of badge icons. Supported: PayPal, Klarna, Visa, Mastercard, Maestro, Apple Pay, Google Pay, G Pay, American Express, AMEX", "default": "PayPal\nVisa\nMastercard\nApple Pay\nGoogle Pay\nAmerican Express" },
+    { "type": "checkbox", "id": "payment_text_show", "label": "Show payment methods as text chips", "default": false },
+    { "type": "textarea", "id": "payments", "label": "Payment methods as text (one per line)", "info": "Only relevant when text chips above are enabled.", "default": "Visa\nMastercard\nPayPal\nApple Pay\nGoogle Pay" },
     { "type": "header", "content": "Sticky Add-to-Cart" },
-    { "type": "checkbox", "id": "sticky_enable", "label": "Sticky-Kaufleiste aktivieren", "default": true },
-    { "type": "header", "content": "Größenberater (Modal)" },
-    { "type": "text", "id": "sizeguide_heading", "label": "Überschrift", "default": "Ringgröße finden" },
-    { "type": "textarea", "id": "sizeguide_intro", "label": "Einleitung", "default": "Miss den Innendurchmesser eines gut sitzenden Rings oder den Fingerumfang mit einem Maßband. Miss abends – Finger sind morgens schmaler." },
-    { "type": "text", "id": "sizeguide_col1", "label": "Spalte 1", "default": "Größe" },
-    { "type": "text", "id": "sizeguide_col2", "label": "Spalte 2", "default": "Innendurchmesser" },
-    { "type": "text", "id": "sizeguide_col3", "label": "Spalte 3", "default": "Umfang" },
-    { "type": "textarea", "id": "sizeguide_note", "label": "Hinweis unten", "default": "Unsicher? Unser kostenloses Sizing-Kit lässt sich im Bestellprozess hinzufügen." },
-    { "type": "header", "content": "Abstände" },
-    { "type": "range", "id": "padding_top", "min": 0, "max": 120, "step": 2, "unit": "px", "label": "Oben (Desktop)", "default": 36 },
-    { "type": "range", "id": "padding_bottom", "min": 0, "max": 160, "step": 2, "unit": "px", "label": "Unten (Desktop)", "default": 80 },
-    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 100, "step": 2, "unit": "px", "label": "Oben (Mobil)", "default": 20 },
-    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 120, "step": 2, "unit": "px", "label": "Unten (Mobil)", "default": 56 }
+    { "type": "checkbox", "id": "sticky_enable", "label": "Enable sticky buy bar", "default": true },
+    { "type": "header", "content": "Size Guide (Modal)" },
+    { "type": "text", "id": "sizeguide_heading", "label": "Heading", "default": "Find Your Ring Size" },
+    { "type": "textarea", "id": "sizeguide_intro", "label": "Introduction", "default": "Measure the inner diameter of a well-fitting ring or the finger circumference with a measuring tape. Measure in the evening – fingers are thinner in the morning." },
+    { "type": "text", "id": "sizeguide_col1", "label": "Column 1", "default": "Size" },
+    { "type": "text", "id": "sizeguide_col2", "label": "Column 2", "default": "Inner Diameter" },
+    { "type": "text", "id": "sizeguide_col3", "label": "Column 3", "default": "Circumference" },
+    { "type": "textarea", "id": "sizeguide_note", "label": "Note below", "default": "Not sure? A free sizing kit can be added during checkout." },
+    { "type": "header", "content": "Spacing" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 120, "step": 2, "unit": "px", "label": "Top (Desktop)", "default": 36 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 160, "step": 2, "unit": "px", "label": "Bottom (Desktop)", "default": 80 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 100, "step": 2, "unit": "px", "label": "Top (Mobile)", "default": 20 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 120, "step": 2, "unit": "px", "label": "Bottom (Mobile)", "default": 56 }
   ],
   "blocks": [
     {
       "type": "benefit",
-      "name": "Vorteil",
+      "name": "Benefit",
       "settings": [
-        { "type": "text", "id": "text", "label": "Text", "default": "Vorteil beschreiben" }
+        { "type": "text", "id": "text", "label": "Text", "default": "Describe benefit" }
       ]
     },
     {
       "type": "panel",
-      "name": "Info-Panel (Akkordeon)",
+      "name": "Info Panel (Accordion)",
       "settings": [
-        { "type": "text", "id": "title", "label": "Titel", "default": "Versand & Lieferzeit" },
-        { "type": "richtext", "id": "body", "label": "Text", "default": "<p>Beschreibung hier eintragen.</p>" }
+        { "type": "text", "id": "title", "label": "Title", "default": "Shipping & Delivery" },
+        { "type": "richtext", "id": "body", "label": "Text", "default": "<p>Enter description here.</p>" }
       ]
     },
     {
       "type": "size_row",
-      "name": "Größentabelle: Zeile",
+      "name": "Size Chart: Row",
       "settings": [
-        { "type": "text", "id": "size", "label": "Größe", "default": "Größe 7" },
-        { "type": "text", "id": "diameter", "label": "Innendurchmesser", "default": "17,3 mm" },
-        { "type": "text", "id": "circumference", "label": "Umfang", "default": "54,3 mm" }
+        { "type": "text", "id": "size", "label": "Size", "default": "Size 7" },
+        { "type": "text", "id": "diameter", "label": "Inner Diameter", "default": "17.3 mm" },
+        { "type": "text", "id": "circumference", "label": "Circumference", "default": "54.3 mm" }
       ]
     }
   ],
   "presets": [
     {
-      "name": "RINGANI – Produkt (Hauptbereich)",
+      "name": "RINGANI – Product (Main)",
       "blocks": [
-        { "type": "benefit", "settings": { "text": "Schlaf & Erholung Nacht für Nacht verstehen" } },
-        { "type": "benefit", "settings": { "text": "Herzfrequenz und Trends im Blick behalten" } },
-        { "type": "benefit", "settings": { "text": "Aktivität und Schritte automatisch erfassen" } },
-        { "type": "benefit", "settings": { "text": "Lange Akkulaufzeit" } },
-        { "type": "benefit", "settings": { "text": "Keine monatlichen Gebühren – kein Abo" } },
-        { "type": "panel", "settings": { "title": "Versand & Lieferzeit", "body": "<p>Kostenloser Versand innerhalb Deutschlands. Zustellung in der Regel innerhalb von 2–4 Werktagen. Sendungsverfolgung per E-Mail.</p>" } },
-        { "type": "panel", "settings": { "title": "Rückgabe & Gewährleistung", "body": "<p>30 Tage Rückgaberecht ab Erhalt. 2 Jahre gesetzliche Gewährleistung.</p>" } },
-        { "type": "panel", "settings": { "title": "Kompatibilität", "body": "<p>Die RINGANI App ist für iOS und Android verfügbar.</p>" } },
-        { "type": "size_row", "settings": { "size": "Größe 6", "diameter": "16,5 mm", "circumference": "51,8 mm" } },
-        { "type": "size_row", "settings": { "size": "Größe 7", "diameter": "17,3 mm", "circumference": "54,3 mm" } },
-        { "type": "size_row", "settings": { "size": "Größe 8", "diameter": "18,1 mm", "circumference": "56,9 mm" } },
-        { "type": "size_row", "settings": { "size": "Größe 9", "diameter": "18,9 mm", "circumference": "59,4 mm" } },
-        { "type": "size_row", "settings": { "size": "Größe 10", "diameter": "19,8 mm", "circumference": "62,2 mm" } },
-        { "type": "size_row", "settings": { "size": "Größe 11", "diameter": "20,6 mm", "circumference": "64,7 mm" } },
-        { "type": "size_row", "settings": { "size": "Größe 12", "diameter": "21,4 mm", "circumference": "67,2 mm" } },
-        { "type": "size_row", "settings": { "size": "Größe 13", "diameter": "22,2 mm", "circumference": "69,7 mm" } }
+        { "type": "benefit", "settings": { "text": "Understand sleep & recovery night after night" } },
+        { "type": "benefit", "settings": { "text": "Track heart rate and trends at a glance" } },
+        { "type": "benefit", "settings": { "text": "Automatically track activity and steps" } },
+        { "type": "benefit", "settings": { "text": "Long battery life" } },
+        { "type": "benefit", "settings": { "text": "No monthly fees – no subscription" } },
+        { "type": "panel", "settings": { "title": "Shipping & Delivery", "body": "<p>Free shipping within the US. Delivery typically within 3–5 business days. Tracking via email.</p>" } },
+        { "type": "panel", "settings": { "title": "Returns & Warranty", "body": "<p>30-day return policy from date of receipt. 2-year manufacturer warranty.</p>" } },
+        { "type": "panel", "settings": { "title": "Compatibility", "body": "<p>The RINGANI app is available for iOS and Android.</p>" } },
+        { "type": "size_row", "settings": { "size": "Size 6", "diameter": "16.5 mm", "circumference": "51.8 mm" } },
+        { "type": "size_row", "settings": { "size": "Size 7", "diameter": "17.3 mm", "circumference": "54.3 mm" } },
+        { "type": "size_row", "settings": { "size": "Size 8", "diameter": "18.1 mm", "circumference": "56.9 mm" } },
+        { "type": "size_row", "settings": { "size": "Size 9", "diameter": "18.9 mm", "circumference": "59.4 mm" } },
+        { "type": "size_row", "settings": { "size": "Size 10", "diameter": "19.8 mm", "circumference": "62.2 mm" } },
+        { "type": "size_row", "settings": { "size": "Size 11", "diameter": "20.6 mm", "circumference": "64.7 mm" } },
+        { "type": "size_row", "settings": { "size": "Size 12", "diameter": "21.4 mm", "circumference": "67.2 mm" } },
+        { "type": "size_row", "settings": { "size": "Size 13", "diameter": "22.2 mm", "circumference": "69.7 mm" } }
       ]
     }
   ]

@@ -1,5 +1,5 @@
 {%- comment -%}
-  RINGANI – Alltag / Wasserbeständigkeit
+  RINGANI – Everyday / Water resistance
   Intro copy + a grid of labelled lifestyle tiles.
 {%- endcomment -%}
 <section class="ringani ringani-section ringani-everyday" style="{% render 'ringani-section-vars', s: section %}">
@@ -34,31 +34,31 @@
 
 {% schema %}
 {
-  "name": "RINGANI – Alltag",
+  "name": "RINGANI – Everyday",
   "tag": "section",
   "max_blocks": 8,
   "settings": [
-    { "type": "header", "content": "Inhalt" },
-    { "type": "inline_richtext", "id": "heading", "label": "Überschrift", "default": "Bereit für deinen Alltag." },
-    { "type": "textarea", "id": "body", "label": "Text", "default": "Wasserbeständigkeit: 10 ATM. Vom Training über die Dusche bis zur Nacht – RINGANI bleibt am Finger." },
-    { "type": "header", "content": "Abstände" },
-    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Oben (Desktop)", "default": 120 },
-    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Unten (Desktop)", "default": 120 },
-    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Oben (Mobil)", "default": 72 },
-    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Unten (Mobil)", "default": 72 }
+    { "type": "header", "content": "Content" },
+    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "Ready for your everyday." },
+    { "type": "textarea", "id": "body", "label": "Text", "default": "Water resistance: 10 ATM. From workouts to the shower to the night – RINGANI stays on your finger." },
+    { "type": "header", "content": "Spacing" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Top (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Bottom (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Top (Mobile)", "default": 72 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Bottom (Mobile)", "default": 72 }
   ],
   "blocks": [
-    { "type": "tile", "name": "Kachel", "settings": [
-      { "type": "image_picker", "id": "image", "label": "Bild" },
-      { "type": "text", "id": "label", "label": "Label", "default": "Training" }
+    { "type": "tile", "name": "Tile", "settings": [
+      { "type": "image_picker", "id": "image", "label": "Image" },
+      { "type": "text", "id": "label", "label": "Label", "default": "Workout" }
     ] }
   ],
   "presets": [
-    { "name": "RINGANI – Alltag", "blocks": [
-      { "type": "tile", "settings": { "label": "Training" } },
-      { "type": "tile", "settings": { "label": "Dusche" } },
-      { "type": "tile", "settings": { "label": "Alltag" } },
-      { "type": "tile", "settings": { "label": "Nacht" } }
+    { "name": "RINGANI – Everyday", "blocks": [
+      { "type": "tile", "settings": { "label": "Workout" } },
+      { "type": "tile", "settings": { "label": "Shower" } },
+      { "type": "tile", "settings": { "label": "Everyday" } },
+      { "type": "tile", "settings": { "label": "Night" } }
     ] }
   ]
 }

@@ -56,32 +56,32 @@
   "tag": "section",
   "max_blocks": 20,
   "settings": [
-    { "type": "header", "content": "Inhalt" },
-    { "type": "inline_richtext", "id": "heading", "label": "Überschrift", "default": "Häufige Fragen" },
-    { "type": "text", "id": "anchor", "label": "Anker-ID", "default": "faq" },
-    { "type": "checkbox", "id": "enable_schema", "label": "FAQ-Rich-Snippet (SEO) ausgeben", "default": true },
-    { "type": "header", "content": "Abstände" },
-    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Oben (Desktop)", "default": 120 },
-    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Unten (Desktop)", "default": 120 },
-    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Oben (Mobil)", "default": 72 },
-    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Unten (Mobil)", "default": 72 }
+    { "type": "header", "content": "Content" },
+    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "Frequently Asked Questions" },
+    { "type": "text", "id": "anchor", "label": "Anchor ID", "default": "faq" },
+    { "type": "checkbox", "id": "enable_schema", "label": "Output FAQ rich snippet (SEO)", "default": true },
+    { "type": "header", "content": "Spacing" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Top (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Bottom (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Top (Mobile)", "default": 72 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Bottom (Mobile)", "default": 72 }
   ],
   "blocks": [
-    { "type": "faq", "name": "Frage", "settings": [
-      { "type": "text", "id": "question", "label": "Frage", "default": "Was misst der RINGANI Smart Ring?" },
-      { "type": "richtext", "id": "answer", "label": "Antwort", "default": "<p>Der Ring erfasst die in den technischen Daten aufgeführten Messwerte. RINGANI ist ein Wellness-Produkt und kein Medizinprodukt.</p>" }
+    { "type": "faq", "name": "Question", "settings": [
+      { "type": "text", "id": "question", "label": "Question", "default": "What does the RINGANI Smart Ring measure?" },
+      { "type": "richtext", "id": "answer", "label": "Answer", "default": "<p>The ring captures the metrics listed in the technical specifications, including sleep data, heart rate, and activity. The full list can be found in the 'Specifications' section. RINGANI is a wellness product and not a medical device.</p>" }
     ] }
   ],
   "presets": [
     { "name": "RINGANI – FAQ", "blocks": [
-      { "type": "faq", "settings": { "question": "Was misst der RINGANI Smart Ring?", "answer": "<p>Der Ring erfasst die in den technischen Daten aufgeführten Messwerte, darunter Schlafdaten, Herzfrequenz und Aktivität. Die vollständige Liste findest du im Abschnitt „Technische Daten\". RINGANI ist ein Wellness-Produkt und kein Medizinprodukt.</p>" } },
-      { "type": "faq", "settings": { "question": "Wie finde ich die richtige Ringgröße?", "answer": "<p>Nutze den Größenrechner über „Welche Größe brauche ich?\" oder miss den Innendurchmesser eines gut sitzenden Rings. Bei Unsicherheit kannst du im Bestellprozess ein kostenloses Sizing-Kit hinzufügen.</p>" } },
-      { "type": "faq", "settings": { "question": "Kann ich RINGANI beim Schlafen tragen?", "answer": "<p>Ja. Der Ring ist flach, leicht und ohne Display gestaltet – genau dafür, Tag und Nacht getragen zu werden.</p>" } },
-      { "type": "faq", "settings": { "question": "Wie lange hält der Akku?", "answer": "<p>Bis zu 7 Tage je nach Nutzung. Das Ladecase liefert zusätzliche Ladungen für unterwegs.</p>" } },
-      { "type": "faq", "settings": { "question": "Funktioniert RINGANI mit iPhone und Android?", "answer": "<p>Die RINGANI App ist für iOS und Android verfügbar. Die unterstützten Mindestversionen findest du in den technischen Daten.</p>" } },
-      { "type": "faq", "settings": { "question": "Brauche ich ein Abonnement?", "answer": "<p>Nein. Alle Funktionen der App sind ohne monatliche Gebühren enthalten.</p>" } },
-      { "type": "faq", "settings": { "question": "Ist der Ring wasserfest?", "answer": "<p>Die Schutzklasse beträgt 10 ATM. Für Tauchgänge ist der Ring nicht vorgesehen.</p>" } },
-      { "type": "faq", "settings": { "question": "Wie funktioniert die Rückgabe?", "answer": "<p>Du hast 30 Tage Rückgaberecht ab Erhalt. Melde dich beim Support, du erhältst ein Rücksendelabel und nach Prüfung die Erstattung.</p>" } }
+      { "type": "faq", "settings": { "question": "What does the RINGANI Smart Ring measure?", "answer": "<p>The ring captures the metrics listed in the technical specifications, including sleep data, heart rate, and activity. The full list can be found in the 'Specifications' section. RINGANI is a wellness product and not a medical device.</p>" } },
+      { "type": "faq", "settings": { "question": "How do I find the right ring size?", "answer": "<p>Use the size calculator via 'What size do I need?' or measure the inner diameter of a well-fitting ring. If unsure, you can add a free sizing kit during checkout.</p>" } },
+      { "type": "faq", "settings": { "question": "Can I wear RINGANI while sleeping?", "answer": "<p>Yes. The ring is flat, lightweight, and designed without a display – made to be worn day and night.</p>" } },
+      { "type": "faq", "settings": { "question": "How long does the battery last?", "answer": "<p>Up to 7 days depending on usage. The charging case provides additional charges on the go.</p>" } },
+      { "type": "faq", "settings": { "question": "Does RINGANI work with iPhone and Android?", "answer": "<p>The RINGANI app is available for iOS and Android. Minimum supported versions can be found in the specifications.</p>" } },
+      { "type": "faq", "settings": { "question": "Do I need a subscription?", "answer": "<p>No. All app features are included without monthly fees.</p>" } },
+      { "type": "faq", "settings": { "question": "Is the ring waterproof?", "answer": "<p>The protection rating is 10 ATM. The ring is not intended for diving.</p>" } },
+      { "type": "faq", "settings": { "question": "How do returns work?", "answer": "<p>You have a 30-day return window from receipt. Contact support to receive a return label, and after inspection, you'll receive your refund.</p>" } }
     ] }
   ]
 }

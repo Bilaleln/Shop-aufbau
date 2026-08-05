@@ -1,10 +1,10 @@
 {%- comment -%}
-  RINGANI – Bewertungen
+  RINGANI – Reviews
   Heading + rating summary + review cards. Supports review-app blocks (@app):
   if you install a review app, add its block here to render real reviews.
   The built-in cards are clearly labelled as demo content via the disclaimer.
 {%- endcomment -%}
-<section id="{{ section.settings.anchor | default: 'bewertungen' }}" class="ringani ringani-section ringani-reviews" style="{% render 'ringani-section-vars', s: section %}">
+<section id="{{ section.settings.anchor | default: 'reviews' }}" class="ringani ringani-section ringani-reviews" style="{% render 'ringani-section-vars', s: section %}">
   <div class="ringani-inner">
     <div class="ringani-reveal ringani-reviews__head">
       {%- if section.settings.heading != blank -%}<h2 class="ringani-h2 ringani-reviews__h">{{ section.settings.heading }}</h2>{%- endif -%}
@@ -74,38 +74,38 @@
 
 {% schema %}
 {
-  "name": "RINGANI – Bewertungen",
+  "name": "RINGANI – Reviews",
   "tag": "section",
   "settings": [
-    { "type": "header", "content": "Inhalt" },
-    { "type": "inline_richtext", "id": "heading", "label": "Überschrift", "default": "Was RINGANI Nutzer sagen." },
-    { "type": "text", "id": "anchor", "label": "Anker-ID", "default": "bewertungen" },
-    { "type": "checkbox", "id": "show_summary", "label": "Bewertungs-Zusammenfassung anzeigen", "default": true },
-    { "type": "text", "id": "rating_value", "label": "Bewertung", "default": "4,8" },
-    { "type": "text", "id": "rating_count", "label": "Anzahl", "default": "1.284 verifizierte Bewertungen" },
-    { "type": "text", "id": "disclaimer", "label": "Hinweis", "info": "Wenn du echte Bewertungen aus einer App einbindest, kannst du diesen Hinweis leeren.", "default": "Demo-Inhalte – vor dem Launch durch echte Bewertungen ersetzen" },
-    { "type": "header", "content": "Abstände" },
-    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Oben (Desktop)", "default": 120 },
-    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Unten (Desktop)", "default": 120 },
-    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Oben (Mobil)", "default": 72 },
-    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Unten (Mobil)", "default": 72 }
+    { "type": "header", "content": "Content" },
+    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "What RINGANI users say." },
+    { "type": "text", "id": "anchor", "label": "Anchor ID", "default": "reviews" },
+    { "type": "checkbox", "id": "show_summary", "label": "Show rating summary", "default": true },
+    { "type": "text", "id": "rating_value", "label": "Rating", "default": "4.8" },
+    { "type": "text", "id": "rating_count", "label": "Count", "default": "1,284 verified reviews" },
+    { "type": "text", "id": "disclaimer", "label": "Disclaimer", "info": "When using real reviews from an app, you can leave this empty.", "default": "Demo content – replace with real reviews before launch" },
+    { "type": "header", "content": "Spacing" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Top (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Bottom (Desktop)", "default": 120 },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Top (Mobile)", "default": 72 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 140, "step": 4, "unit": "px", "label": "Bottom (Mobile)", "default": 72 }
   ],
   "blocks": [
     { "type": "@app" },
-    { "type": "review", "name": "Bewertung", "settings": [
-      { "type": "text", "id": "stars", "label": "Sterne", "default": "★★★★★" },
-      { "type": "text", "id": "title", "label": "Titel", "default": "Endlich Schlaf verstanden" },
-      { "type": "textarea", "id": "body", "label": "Text", "default": "Ich trage ihn seit acht Wochen und vergesse ihn komplett. Die Auswertung am Morgen ist verständlich." },
+    { "type": "review", "name": "Review", "settings": [
+      { "type": "text", "id": "stars", "label": "Stars", "default": "★★★★★" },
+      { "type": "text", "id": "title", "label": "Title", "default": "Finally understood my sleep" },
+      { "type": "textarea", "id": "body", "label": "Text", "default": "I've been wearing it for eight weeks and completely forget it's there. The morning analysis is clear without overwhelming me with numbers." },
       { "type": "text", "id": "name", "label": "Name", "default": "Marie K." },
-      { "type": "text", "id": "verified_label", "label": "Badge", "default": "Verifizierter Kauf" }
+      { "type": "text", "id": "verified_label", "label": "Badge", "default": "Verified Purchase" }
     ] }
   ],
   "presets": [
-    { "name": "RINGANI – Bewertungen", "blocks": [
-      { "type": "review", "settings": { "stars": "★★★★★", "title": "Endlich Schlaf verstanden", "body": "Ich trage ihn seit acht Wochen und vergesse ihn komplett. Die Auswertung am Morgen ist verständlich, ohne mich mit Zahlen zu erschlagen.", "name": "Marie K." } },
-      { "type": "review", "settings": { "stars": "★★★★★", "title": "Angenehmer als eine Uhr", "body": "Nachts hat mich meine Smartwatch immer gestört. Der Ring fällt mir gar nicht mehr auf – und die App ist deutlich aufgeräumter.", "name": "Julian B." } },
-      { "type": "review", "settings": { "stars": "★★★★☆", "title": "Sehr gute Verarbeitung", "body": "Wirkt hochwertig und sitzt perfekt. Ich hätte mir nur etwas mehr Erklärung zu einzelnen Werten gewünscht.", "name": "Sandra L." } },
-      { "type": "review", "settings": { "stars": "★★★★★", "title": "Kein Abo – großer Pluspunkt", "body": "Dass alle Funktionen ohne monatliche Kosten dabei sind, war für mich der ausschlaggebende Punkt.", "name": "Tobias M." } }
+    { "name": "RINGANI – Reviews", "blocks": [
+      { "type": "review", "settings": { "stars": "★★★★★", "title": "Finally understood my sleep", "body": "I've been wearing it for eight weeks and completely forget it's there. The morning analysis is clear without overwhelming me with numbers.", "name": "Marie K." } },
+      { "type": "review", "settings": { "stars": "★★★★★", "title": "More comfortable than a watch", "body": "My smartwatch always bothered me at night. I don't even notice the ring anymore – and the app is much cleaner.", "name": "Julian B." } },
+      { "type": "review", "settings": { "stars": "★★★★☆", "title": "Excellent build quality", "body": "Feels premium and fits perfectly. I just wish there was a bit more explanation for some of the metrics.", "name": "Sandra L." } },
+      { "type": "review", "settings": { "stars": "★★★★★", "title": "No subscription – huge plus", "body": "The fact that all features come without monthly costs was the deciding factor for me.", "name": "Tobias M." } }
     ] }
   ]
 }
