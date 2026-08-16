@@ -1122,7 +1122,8 @@
             "highlight_gradient_end_color": "#ddf5fd",
             "highlight_gradient_angle": 90,
             "subtitle_glass_color": "#ffffff",
-            "subtitle_icon_color": "#3ab6e4"
+            "subtitle_icon_color": "#3ab6e4",
+            "product_image": "shopify://shop_images/veilkind-bottle-white-cutout.png"
           }
         },
         "col_others": {
@@ -1140,7 +1141,8 @@
             "highlight_color": "#f7fbfd",
             "use_highlight_gradient": false,
             "subtitle_glass_color": "#ffffff",
-            "subtitle_icon_color": "#93a5b1"
+            "subtitle_icon_color": "#93a5b1",
+            "product_image": "shopify://shop_images/veilkind-generic-bottle.png"
           }
         },
         "row_1": {
