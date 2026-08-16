@@ -57,6 +57,12 @@ body {
    "standard-ized"). Turn it off wherever we set narrow columns.
    -------------------------------------------------------------------------- */
 
+/* NOTE ON `!important`: this file is pulled in by a Custom Liquid block inside
+   the product section, so it lands in the body — before every section
+   stylesheet that loads further down the page. section-statistics.css and
+   friends therefore win any same-specificity tie, and the rules that must
+   survive that are marked accordingly. */
+
 .statistic-title,
 .statistic-description,
 .custom-benefit-title,
@@ -65,8 +71,8 @@ body {
 .feature-description,
 .step-title,
 .step-description {
-  -webkit-hyphens: manual;
-  hyphens: manual;
+  -webkit-hyphens: manual !important;
+  hyphens: manual !important;
   overflow-wrap: break-word;
   text-wrap: pretty;
 }
@@ -194,30 +200,36 @@ body {
    -------------------------------------------------------------------------- */
 
 @media screen and (max-width: 749px) {
+  /* `1fr` rows make every row the same height, so all four cards match rather
+     than each sizing itself to its own copy. */
   .statistics-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    grid-auto-rows: auto !important;
-    align-items: stretch;
+    grid-auto-rows: 1fr !important;
+    align-items: stretch !important;
     gap: 12px !important;
     max-width: 100% !important;
   }
 
+  /* The item must keep an auto height, otherwise grid stretching is disabled
+     and the card falls back to its own content height. */
   .statistic-item {
     aspect-ratio: auto !important;
     max-width: none !important;
     width: 100% !important;
     height: auto !important;
+    align-self: stretch !important;
+    align-items: stretch !important;
     min-width: 0;
   }
 
   .statistic-card {
     aspect-ratio: auto !important;
-    height: auto !important;
-    min-height: 100%;
+    height: 100% !important;
+    min-height: 0 !important;
     justify-content: flex-start !important;
     padding: 20px 12px !important;
-    border-radius: 14px;
-    box-shadow: 0 1px 3px rgba(18, 48, 74, 0.06);
+    border-radius: 14px !important;
+    box-shadow: 0 1px 3px rgba(18, 48, 74, 0.06) !important;
   }
 
   .statistic-circle-container {
@@ -230,15 +242,21 @@ body {
     font-size: 20px !important;
   }
 
+  /* Reserving two lines keeps the descriptions starting on the same baseline
+     across the row, whether the title wraps or not. */
   .statistic-title {
     font-size: 14px !important;
-    line-height: 1.25;
-    margin-bottom: 6px;
+    line-height: 1.25 !important;
+    margin-bottom: 8px !important;
+    min-height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .statistic-description {
     font-size: 12px !important;
-    line-height: 1.45;
+    line-height: 1.45 !important;
   }
 }
 
@@ -253,7 +271,7 @@ body {
 /* A finer ring reads as considered rather than chunky. */
 .circle-bg,
 .circle-progress {
-  stroke-width: 6;
+  stroke-width: 6 !important;
 }
 
 /* --------------------------------------------------------------------------
