@@ -1,0 +1,245 @@
+/* ==========================================================================
+   VEILKIND — Milk Thistle PDP
+   Loaded only by templates/product.milk-thistle.json (via a Custom Liquid
+   block in the product section), so nothing here affects other templates.
+
+   Mobile-first: base rules target 360–430px, breakpoints add up from there.
+   ========================================================================== */
+
+:root {
+  --vk-accent: #3ab6e4;
+  --vk-accent-dark: #2596c0;
+  --vk-accent-tint: #eaf8fd;
+  --vk-accent-tint-2: #ddf5fd;
+  --vk-accent-border: #b9e7f7;
+  --vk-ink: #12304a;
+  --vk-body: #202329;
+  --vk-muted: #5b6b78;
+  --vk-surface: #ffffff;
+  --vk-surface-soft: #f7fbfd;
+  --vk-radius-sm: 12px;
+  --vk-radius: 16px;
+  --vk-radius-lg: 20px;
+  --vk-gutter: 20px;
+}
+
+/* --------------------------------------------------------------------------
+   1. Overflow safety — nothing on this page may scroll sideways.
+   -------------------------------------------------------------------------- */
+
+body {
+  overflow-x: hidden;
+}
+
+.shop-product-section,
+.statistics-section,
+.reviews-section-outer,
+.alternating-features-section,
+.image-with-text-section,
+.steps-section,
+.product-comparison-section,
+.store-faq-section {
+  max-width: 100%;
+}
+
+.shop-product-section img,
+.statistics-section img,
+.reviews-section-outer img,
+.steps-section img,
+.image-with-text-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --------------------------------------------------------------------------
+   2. Buy box — tighter mobile rhythm, brand-blue primary CTA.
+   -------------------------------------------------------------------------- */
+
+.shop-add-to-cart-button {
+  min-height: 54px;
+  border-radius: 40px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  box-shadow: 0 6px 18px rgba(58, 182, 228, 0.28);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.shop-add-to-cart-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(58, 182, 228, 0.34);
+}
+
+.shop-add-to-cart-button:active {
+  transform: translateY(0);
+}
+
+/* Give the variant pills real tap targets on small screens. */
+.shop-product-info .variant-option,
+.shop-product-info .simple-variant-option {
+  min-height: 46px;
+}
+
+/* Breathing room where the Loop widget will later be dropped in. */
+.shop-product-info .vk-loop-slot {
+  min-height: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   3. Benefit row under the title — 2x2 on mobile, single row from tablet up.
+   -------------------------------------------------------------------------- */
+
+.custom-benefits-grid,
+.benefits-grid-container {
+  gap: 12px;
+}
+
+@media screen and (max-width: 480px) {
+  .custom-benefits-grid,
+  .benefits-grid-container {
+    gap: 10px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. UGC video carousel ("Trusted by") — vertical 9:16 cards.
+   -------------------------------------------------------------------------- */
+
+.review-image,
+.review-video {
+  width: 158px;
+  height: 281px; /* 9:16 */
+  object-fit: cover;
+}
+
+.review-video-card {
+  width: 158px;
+  height: 281px;
+  box-shadow: 0 8px 20px rgba(18, 48, 74, 0.1);
+}
+
+@media screen and (min-width: 750px) {
+  .review-image,
+  .review-video,
+  .review-video-card {
+    width: 216px;
+    height: 384px;
+  }
+}
+
+/* The swipe ribbon must be able to bleed to the screen edge without
+   creating a horizontal scrollbar on the page itself. */
+.reviewSwiper {
+  overflow: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   5. Formula facts (statistics grid) — 2x2 on mobile instead of 1 per row.
+   -------------------------------------------------------------------------- */
+
+@media screen and (max-width: 749px) {
+  .statistics-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .statistics-grid .statistic-item {
+    width: auto !important;
+    min-width: 0;
+  }
+
+  .statistics-grid .statistic-card {
+    padding: 16px 10px;
+    height: 100%;
+  }
+
+  .statistics-grid .statistic-title {
+    font-size: 14px;
+    line-height: 1.25;
+  }
+
+  .statistics-grid .statistic-description {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .statistics-grid .percentage-text {
+    font-size: 22px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. Comparison table — must stay readable at 375px.
+   -------------------------------------------------------------------------- */
+
+@media screen and (max-width: 749px) {
+  .product-comparison-section .feature-name,
+  .comparison-table .feature-name {
+    font-size: 12px;
+    line-height: 1.3;
+    padding-right: 6px;
+    hyphens: auto;
+  }
+
+  .product-comparison-section .comparison-row,
+  .comparison-table .comparison-row {
+    min-height: 52px;
+  }
+
+  .product-comparison-section .product-title,
+  .comparison-table .product-title {
+    font-size: 15px;
+    line-height: 1.2;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   7. FAQ — calmer spacing, brand-tinted open state.
+   -------------------------------------------------------------------------- */
+
+.store-faq-section .faq-question {
+  min-height: 52px;
+  line-height: 1.35;
+}
+
+.store-faq-section .faq-item {
+  border-radius: var(--vk-radius-sm);
+  overflow: hidden;
+}
+
+.store-faq-section .faq-item + .faq-item {
+  margin-top: 10px;
+}
+
+.store-faq-section .faq-answer p {
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   8. Sticky add to cart — never sit on top of content or the home indicator.
+   -------------------------------------------------------------------------- */
+
+.sticky-add-to-cart,
+#sticky-add-to-cart {
+  padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+  box-shadow: 0 -6px 20px rgba(18, 48, 74, 0.12);
+}
+
+/* Keep the last section clear of the sticky bar on small screens. */
+@media screen and (max-width: 989px) {
+  .vk-last-section {
+    padding-bottom: 96px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   9. Motion — respect the user's reduced-motion preference.
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .shop-add-to-cart-button,
+  .shop-add-to-cart-button:hover {
+    transition: none;
+    transform: none;
+  }
+}
