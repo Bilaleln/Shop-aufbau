@@ -52,7 +52,61 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   2. Buy box — tighter mobile rhythm, brand-blue primary CTA.
+   2. Typography hygiene — the storefront runs with a German <html lang>, so
+   automatic hyphenation breaks English copy in ugly places ("ex-tract",
+   "standard-ized"). Turn it off wherever we set narrow columns.
+   -------------------------------------------------------------------------- */
+
+.statistic-title,
+.statistic-description,
+.custom-benefit-title,
+.custom-benefit-description,
+.feature-title,
+.feature-description,
+.step-title,
+.step-description {
+  -webkit-hyphens: manual;
+  hyphens: manual;
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+}
+
+/* --------------------------------------------------------------------------
+   3. Line icons — product-benefits.css forces `fill: currentColor` onto the
+   whole SVG, which turns our stroked circles and ellipses into solid blobs.
+   Every icon on this template is a line icon, so reassert `fill: none` and
+   let the stroke do the drawing.
+   -------------------------------------------------------------------------- */
+
+.custom-benefit-icon svg,
+.custom-benefits-list .custom-benefit-icon svg,
+.benefits-grid-icon svg,
+.custom-benefits-grid svg,
+.benefit-icon svg {
+  fill: none !important;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+/* Icons sit a touch larger and optically centred against the heading. */
+.custom-benefit-icon {
+  width: 28px !important;
+  height: 28px !important;
+  margin-right: 12px !important;
+}
+
+.custom-benefit-header {
+  align-items: flex-start;
+}
+
+.custom-benefit-icon {
+  margin-top: 1px;
+}
+
+/* --------------------------------------------------------------------------
+   4. Buy box — tighter mobile rhythm, brand-blue primary CTA.
    -------------------------------------------------------------------------- */
 
 .shop-add-to-cart-button {
@@ -73,7 +127,6 @@ body {
   transform: translateY(0);
 }
 
-/* Give the variant pills real tap targets on small screens. */
 .shop-product-info .variant-option,
 .shop-product-info .simple-variant-option {
   min-height: 46px;
@@ -85,7 +138,7 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   3. Benefit row under the title — 2x2 on mobile, single row from tablet up.
+   5. Benefit row under the title.
    -------------------------------------------------------------------------- */
 
 .custom-benefits-grid,
@@ -101,7 +154,7 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   4. UGC video carousel ("Trusted by") — vertical 9:16 cards.
+   6. UGC video carousel ("Trusted by") — vertical 9:16 cards.
    -------------------------------------------------------------------------- */
 
 .review-image,
@@ -126,50 +179,99 @@ body {
   }
 }
 
-/* The swipe ribbon must be able to bleed to the screen edge without
-   creating a horizontal scrollbar on the page itself. */
 .reviewSwiper {
   overflow: hidden;
 }
 
 /* --------------------------------------------------------------------------
-   5. Formula facts (statistics grid) — 2x2 on mobile instead of 1 per row.
+   7. Formula facts (statistics grid).
+
+   The theme pins `aspect-ratio: 1/1.15` on both the item and the card. At two
+   columns on a phone that is roughly 160x184px, far less than the ring plus
+   four lines of copy actually need — so the content escaped the card, the ring
+   floated above it and the description ran into the card below. Release the
+   fixed ratio and let the row size itself to its content instead.
    -------------------------------------------------------------------------- */
 
 @media screen and (max-width: 749px) {
   .statistics-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-auto-rows: auto !important;
+    align-items: stretch;
+    gap: 12px !important;
+    max-width: 100% !important;
   }
 
-  .statistics-grid .statistic-item {
-    width: auto !important;
+  .statistic-item {
+    aspect-ratio: auto !important;
+    max-width: none !important;
+    width: 100% !important;
+    height: auto !important;
     min-width: 0;
   }
 
-  .statistics-grid .statistic-card {
-    padding: 16px 10px;
-    height: 100%;
+  .statistic-card {
+    aspect-ratio: auto !important;
+    height: auto !important;
+    min-height: 100%;
+    justify-content: flex-start !important;
+    padding: 20px 12px !important;
+    border-radius: 14px;
+    box-shadow: 0 1px 3px rgba(18, 48, 74, 0.06);
   }
 
-  .statistics-grid .statistic-title {
-    font-size: 14px;
+  .statistic-circle-container {
+    width: 84px !important;
+    max-width: 84px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .percentage-text {
+    font-size: 20px !important;
+  }
+
+  .statistic-title {
+    font-size: 14px !important;
     line-height: 1.25;
+    margin-bottom: 6px;
   }
 
-  .statistics-grid .statistic-description {
-    font-size: 12px;
-    line-height: 1.4;
+  .statistic-description {
+    font-size: 12px !important;
+    line-height: 1.45;
+  }
+}
+
+/* One card per row on the narrowest phones, where two columns leave the
+   description too cramped to read. */
+@media screen and (max-width: 359px) {
+  .statistics-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}
+
+/* A finer ring reads as considered rather than chunky. */
+.circle-bg,
+.circle-progress {
+  stroke-width: 6;
+}
+
+/* --------------------------------------------------------------------------
+   8. Why it works — the card list needs room to breathe on mobile.
+   -------------------------------------------------------------------------- */
+
+@media screen and (max-width: 749px) {
+  .custom-benefits-list {
+    padding: 20px 18px !important;
   }
 
-  .statistics-grid .percentage-text {
-    font-size: 22px;
+  .custom-benefit-item {
+    margin-bottom: 20px !important;
   }
 }
 
 /* --------------------------------------------------------------------------
-   6. Comparison table — must stay readable at 375px.
+   9. Comparison table — must stay readable at 375px.
    -------------------------------------------------------------------------- */
 
 @media screen and (max-width: 749px) {
@@ -178,7 +280,6 @@ body {
     font-size: 12px;
     line-height: 1.3;
     padding-right: 6px;
-    hyphens: auto;
   }
 
   .product-comparison-section .comparison-row,
@@ -194,7 +295,7 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   7. FAQ — calmer spacing, brand-tinted open state.
+   10. FAQ — calmer spacing, brand-tinted open state.
    -------------------------------------------------------------------------- */
 
 .store-faq-section .faq-question {
@@ -216,7 +317,7 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   8. Sticky add to cart — never sit on top of content or the home indicator.
+   11. Sticky add to cart — never sit on top of content or the home indicator.
    -------------------------------------------------------------------------- */
 
 .sticky-add-to-cart,
@@ -225,7 +326,6 @@ body {
   box-shadow: 0 -6px 20px rgba(18, 48, 74, 0.12);
 }
 
-/* Keep the last section clear of the sticky bar on small screens. */
 @media screen and (max-width: 989px) {
   .vk-last-section {
     padding-bottom: 96px;
@@ -233,7 +333,7 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   9. Motion — respect the user's reduced-motion preference.
+   12. Motion — respect the user's reduced-motion preference.
    -------------------------------------------------------------------------- */
 
 @media (prefers-reduced-motion: reduce) {
