@@ -28,3 +28,29 @@ Festlegungen:
 
 Die Ausgabedateien enthalten personenbezogene Daten der Geschaedigten.
 `analyse/.gitignore` schliesst sie von der Versionsverwaltung aus.
+
+## tracking_abrufen.py
+
+    python3 analyse/tools/tracking_abrufen.py orders_export.csv analyse/tracking_raw
+
+Sichert die Trackingseiten zu den Sendungsnummern beweisfest. **Dieses Skript
+muss auf dem Rechner des Store-Inhabers ausgefuehrt werden** - in der
+Analyseumgebung ist die Domain epsfullfil.com durch eine Netzwerkrichtlinie
+gesperrt.
+
+Je Sendungsnummer werden gesichert: der unveraenderte HTML-Quelltext, die
+vollstaendigen HTTP-Antwortkopfzeilen, der SHA-256-Pruefwert des Quelltextes
+und der Abrufzeitpunkt in UTC und Ortszeit. Der Pruefwert belegt spaeter, dass
+die gesicherte Datei seit dem Abruf unveraendert ist.
+
+Wichtige Schalter:
+
+* `--limit N` - nur die ersten N Nummern abrufen (Stichprobe)
+* `--nummern datei.txt` - Nummern aus einer Textdatei statt aus dem CSV
+* `--durchgang 2` - Zweitabruf an einem spaeteren Tag. Damit laesst sich
+  pruefen, ob sich das angezeigte Zustelldatum mit dem Kalendertag mitbewegt.
+* `--pause SEK` - Wartezeit zwischen den Abrufen, Vorgabe 2 Sekunden
+
+Hinweis: Der Standard-Bestellexport von Shopify enthaelt keine Spalte fuer
+Sendungsnummern. Findet das Skript keine, gibt es aus, auf welchen Wegen die
+Nummern sonst zu beschaffen sind.
