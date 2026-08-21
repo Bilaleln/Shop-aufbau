@@ -1,0 +1,11 @@
+# Personenbezogene Daten aus dem Betrugsfall gehoeren NICHT in die Versionsverwaltung.
+# Dieses Repository liegt auf GitHub. Bestelldaten, Kundennamen, Adressen,
+# E-Mail-Adressen und die daraus erzeugten Anschreiben duerfen dort nicht landen.
+# Versioniert wird ausschliesslich das Auswertungswerkzeug.
+
+*
+!.gitignore
+!tools/
+tools/*
+!tools/*.py
+!tools/LIESMICH.md

@@ -1,0 +1,6 @@
+
+# Rohexporte aus dem Shopify-Admin: enthalten personenbezogene Daten
+# der Geschaedigten und gehoeren nicht in die Versionsverwaltung.
+orders_export.csv
+users_export.csv
+*_export.csv
