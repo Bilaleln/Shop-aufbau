@@ -1,0 +1,1863 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "trust_bar": {
+      "type": "scrolling-features-bar",
+      "blocks": {
+        "trust_guarantee": {
+          "type": "feature_item",
+          "settings": {
+            "text": "90-DAY MONEY-BACK GUARANTEE",
+            "icon_type": "svg",
+            "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3l7 2.6v5.9c0 4.3-2.9 7.7-7 9.3-4.1-1.6-7-5-7-9.3V5.6L12 3z\"></path><path d=\"M9 12l2 2 4-4\"></path></svg>"
+          }
+        },
+        "trust_silymarin": {
+          "type": "feature_item",
+          "settings": {
+            "text": "80% STANDARDIZED SILYMARIN",
+            "icon_type": "svg",
+            "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M11 20c-4 0-6-2.6-6-6.2C5 9 8.5 5.4 19 4c-.6 9.8-4.2 14-8 14z\"></path><path d=\"M5 20c1.5-4.6 4.5-8 9-10\"></path></svg>"
+          }
+        },
+        "trust_shipping": {
+          "type": "feature_item",
+          "settings": {
+            "text": "FREE U.S. SHIPPING",
+            "icon_type": "svg",
+            "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 7h11v9H3z\"></path><path d=\"M14 10h4l3 3v3h-7z\"></path><circle cx=\"7\" cy=\"18\" r=\"1.6\"></circle><circle cx=\"17\" cy=\"18\" r=\"1.6\"></circle></svg>"
+          }
+        },
+        "trust_formula": {
+          "type": "feature_item",
+          "settings": {
+            "text": "TRANSPARENT FORMULA",
+            "icon_type": "svg",
+            "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M6 3h9l4 4v14H6z\"></path><path d=\"M14 3v5h5\"></path><path d=\"M9 13h7M9 17h5\"></path></svg>"
+          }
+        }
+      },
+      "block_order": [
+        "trust_guarantee",
+        "trust_silymarin",
+        "trust_shipping",
+        "trust_formula"
+      ],
+      "settings": {
+        "use_theme_colors": false,
+        "background_color": "#12304a",
+        "text_color": "#ffffff",
+        "icon_color": "#3ab6e4",
+        "vertical_padding": 12,
+        "item_gap": 60,
+        "mobile_item_gap": 30,
+        "font_size": 13,
+        "mobile_font_size": 11,
+        "letter_spacing": 0.6,
+        "uppercase_text": true,
+        "icon_size": 18,
+        "mobile_icon_size": 16,
+        "icon_spacing": 9,
+        "scroll_speed": 22,
+        "pause_on_hover": true,
+        "icon_type": "svg"
+      }
+    },
+    "main": {
+      "type": "shop-product-details",
+      "blocks": {
+        "pdp_styles": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{{ 'veilkind-pdp.css' | asset_url | stylesheet_tag }}"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "use_custom_title": true,
+            "custom_title": "Milk Thistle Complex",
+            "font_size": 40,
+            "margin_top": 0,
+            "margin_bottom": 0,
+            "title_color": "#12304a",
+            "line_height": 1.1
+          }
+        },
+        "trustpilot_rating_YWWnA6": {
+          "type": "trustpilot_rating",
+          "settings": {
+            "rating_text": "Excellent",
+            "rating_score": "4.7 out of 5",
+            "text_color": "#12304a",
+            "star_color": "#3ab6e4",
+            "show_single_star_after_text": true,
+            "font_size_desktop": 14,
+            "font_size_tablet": 14,
+            "font_size_mobile": 14,
+            "star_size_desktop": 18,
+            "star_size_tablet": 18,
+            "star_size_mobile": 18,
+            "margin_top": 10,
+            "margin_bottom": 10,
+            "enable_background": false,
+            "background_color": "#f8f8f8",
+            "enable_background_gradient": false,
+            "background_gradient_start": "#eaf8fd",
+            "background_gradient_end": "#ddf5fd",
+            "background_gradient_direction": "to right",
+            "border_color": "#3ab6e4",
+            "border_width": 1,
+            "border_style": "solid",
+            "border_radius": 4
+          }
+        },
+        "subtitle": {
+          "type": "custom_text",
+          "settings": {
+            "text": "<p>Daily liver support built on milk thistle extract standardized to 80% silymarin, with turmeric, artichoke and inositol.</p>",
+            "show_description": false,
+            "description": "<p>Add additional descriptive text here</p>",
+            "description_font_size": 12,
+            "description_spacing": 4,
+            "description_color": "#666666",
+            "description_opacity": 0.8,
+            "show_icon": false,
+            "custom_icon": "<svg width=\"24\" height=\"24\" viewbox=\"0 0 16 16\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"currentColor\" class=\"bi bi-stars\"><path d=\"M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z\"></path></svg>",
+            "icon_color": "#333333",
+            "icon_size": 20,
+            "icon_spacing": 8,
+            "icon_alignment": "center",
+            "text_align": "left",
+            "font_size": 15,
+            "text_color": "#5b6b78",
+            "margin_top": 8,
+            "margin_bottom": 4,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "use_container": false,
+            "container_bg": "#f8f8f8",
+            "container_padding_v": 10,
+            "container_padding_h": 14,
+            "border_radius": 4,
+            "show_divider": false,
+            "divider_color": "#e4eff5",
+            "divider_height": 1,
+            "divider_style": "solid",
+            "divider_spacing": 12
+          }
+        },
+        "labels": {
+          "type": "product_labels",
+          "settings": {
+            "label_1_show": true,
+            "label_1_icon": "",
+            "label_1_custom_icon": "🌿",
+            "label_1_name": "80% Silymarin",
+            "label_1_serving_count": "Additional Info",
+            "label_1_show_serving_count": false,
+            "label_1_use_image": false,
+            "label_1_drop_shadow_enabled": true,
+            "label_1_shadow_blur": 8,
+            "label_1_shadow_spread": 0,
+            "label_1_shadow_offset_x": 0,
+            "label_1_shadow_offset_y": 4,
+            "label_1_shadow_color": "#d6f1fb",
+            "label_1_shadow_opacity": 100,
+            "label_1_background_color": "#eaf8fd",
+            "label_1_text_color": "#12304a",
+            "label_1_serving_text_color": "#5b6b78",
+            "label_1_border_color": "#3ab6e4",
+            "label_2_show": true,
+            "label_2_icon": "",
+            "label_2_custom_icon": "🌱",
+            "label_2_name": "Vegetarian Capsules",
+            "label_2_serving_count": "Additional Info",
+            "label_2_show_serving_count": false,
+            "label_2_use_image": false,
+            "label_2_drop_shadow_enabled": true,
+            "label_2_shadow_blur": 8,
+            "label_2_shadow_spread": 0,
+            "label_2_shadow_offset_x": 0,
+            "label_2_shadow_offset_y": 4,
+            "label_2_shadow_color": "#d8f3fc",
+            "label_2_shadow_opacity": 100,
+            "label_2_background_color": "#ddf5fd",
+            "label_2_text_color": "#12304a",
+            "label_2_serving_text_color": "#5b6b78",
+            "label_2_border_color": "#3ab6e4",
+            "label_3_show": false,
+            "label_3_icon": "",
+            "label_3_custom_icon": "",
+            "label_3_name": "",
+            "label_3_serving_count": "Additional Info",
+            "label_3_show_serving_count": true,
+            "label_3_use_image": false,
+            "label_3_drop_shadow_enabled": false,
+            "label_3_shadow_blur": 8,
+            "label_3_shadow_spread": 0,
+            "label_3_shadow_offset_x": 0,
+            "label_3_shadow_offset_y": 4,
+            "label_3_shadow_color": "#000000",
+            "label_3_shadow_opacity": 25,
+            "label_3_background_color": "#ffffff",
+            "label_3_text_color": "#333333",
+            "label_3_serving_text_color": "#666666",
+            "label_3_border_color": "#e0e0e0",
+            "container_gap": 12,
+            "labels_wrapper_left_padding": 0,
+            "label_bg_color": "#ffffff",
+            "label_border_color": "#e0e0e0",
+            "label_border_radius": 20,
+            "label_padding_v": 6,
+            "label_padding_h": 12,
+            "icon_bg_start": "#ff6b35",
+            "icon_bg_end": "#f7931e",
+            "icon_size": 20,
+            "icon_border_radius": 50,
+            "icon_show_background": false,
+            "product_name_color": "#12304a",
+            "product_name_font_size": 13,
+            "serving_info_color": "#5b6b78",
+            "serving_info_font_size": 12,
+            "margin_top": 10,
+            "margin_bottom": 0
+          }
+        },
+        "divider_top": {
+          "type": "divider",
+          "settings": {
+            "color": "#e4eff5",
+            "style": "solid",
+            "thickness": 1,
+            "width": "100%",
+            "max_width": "100%",
+            "alignment": "center",
+            "margin_top": 14,
+            "margin_bottom": 10
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "price_color": "#12304a",
+            "compare_price_color": "#93a5b1",
+            "sale_badge_bg_color": "#eaf8fd",
+            "sale_badge_text_color": "#12304a",
+            "save_badge_enable_border": true,
+            "save_badge_border_color": "#3ab6e4",
+            "save_badge_border_width": 1,
+            "save_badge_border_style": "solid",
+            "price_font_size": 28,
+            "compare_price_font_size": 19,
+            "save_badge_font_size": 12,
+            "price_font_weight": "700",
+            "price_margin_top": 0,
+            "price_margin_bottom": 0,
+            "show_save_icon": true,
+            "save_icon_size_ratio": 0.9,
+            "save_icon_position_y": 0,
+            "save_badge_padding_v": 5,
+            "save_badge_padding_h": 8,
+            "custom_save_text": "",
+            "save_badge_display_type": "percentage",
+            "custom_save_amount": ""
+          }
+        },
+        "benefits": {
+          "type": "benefits_grid",
+          "settings": {
+            "benefit_1_text": "Supports Healthy Liver Function",
+            "benefit_1_use_image": false,
+            "benefit_1_use_custom_icon": true,
+            "benefit_1_custom_icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M4 9C4 7.6 5 7 6.4 7H17.8C19.6 7 21 7.7 21 9.2C21 10.9 19.4 11.6 17.8 12.1C16.2 12.6 15.2 13.3 14.2 14.3C12.6 15.9 10.9 17 8.8 17C5.9 17 4 14.6 4 11.6V9Z\" stroke=\"#3AB6E4\" stroke-width=\"1.4\" stroke-linejoin=\"round\"></path><path d=\"M14.6 7C14.6 9.2 14 10.9 12.8 12.1\" stroke=\"#3AB6E4\" stroke-width=\"1.4\" stroke-linecap=\"round\"></path></svg>",
+            "benefit_2_text": "Supports Comfortable Digestion",
+            "benefit_2_use_image": false,
+            "benefit_2_use_custom_icon": true,
+            "benefit_2_custom_icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M9 3C9 4.8 8.7 5.6 7.9 6.6C6.6 8.2 6 10.2 6 12.2C6 15.4 8.6 18 11.9 18C14.8 18 16.8 16.2 16.8 13.9C16.8 12.3 15.9 11.3 14.5 10.6C13 9.8 12.2 8.5 12.2 6.8V3\" stroke=\"#3AB6E4\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M9 3H12.2\" stroke=\"#3AB6E4\" stroke-width=\"1.4\" stroke-linecap=\"round\"></path><path d=\"M8.6 12C9.4 11.2 10.3 12.8 11.1 12C11.9 11.2 12.8 12.8 13.6 12\" stroke=\"#3AB6E4\" stroke-width=\"1.4\" stroke-linecap=\"round\"></path></svg>",
+            "benefit_3_text": "Antioxidant Support From Silymarin",
+            "benefit_3_use_image": false,
+            "benefit_3_use_custom_icon": true,
+            "benefit_3_custom_icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M12 3.2L19 5.6V11.5C19 15.8 16.1 19.2 12 20.8C7.9 19.2 5 15.8 5 11.5V5.6L12 3.2Z\" stroke=\"#3AB6E4\" stroke-width=\"1.4\" stroke-linejoin=\"round\"></path><path d=\"M9.5 12l1.8 1.8L15 10\" stroke=\"#3AB6E4\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>",
+            "benefit_4_text": "Simple Daily Routine",
+            "benefit_4_use_image": false,
+            "benefit_4_use_custom_icon": true,
+            "benefit_4_custom_icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"12\" cy=\"12\" r=\"8.2\" stroke=\"#3AB6E4\" stroke-width=\"1.4\"></circle><path d=\"M12 7.6V12l3 1.8\" stroke=\"#3AB6E4\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>",
+            "icon_bg_color": "#ffffff",
+            "enable_icon_circle_stroke": true,
+            "icon_circle_stroke_color": "#b9e7f7",
+            "icon_circle_stroke_width": 1,
+            "icon_stroke_color": "#3ab6e4",
+            "text_color": "#202329",
+            "font_size": 12,
+            "icon_size": 22,
+            "icon_container_size": 40,
+            "grid_gap": 12,
+            "container_margin_top": 5,
+            "container_margin_bottom": 10
+          }
+        },
+        "divider_buy": {
+          "type": "divider",
+          "settings": {
+            "color": "#e4eff5",
+            "style": "solid",
+            "thickness": 1,
+            "width": "100%",
+            "max_width": "100%",
+            "alignment": "center",
+            "margin_top": 6,
+            "margin_bottom": 12
+          }
+        },
+        "supply_label": {
+          "type": "custom_text",
+          "disabled": true,
+          "settings": {
+            "text": "<p><strong>Choose your supply</strong></p>",
+            "show_description": false,
+            "description": "<p>Add additional descriptive text here</p>",
+            "description_font_size": 12,
+            "description_spacing": 4,
+            "description_color": "#666666",
+            "description_opacity": 0.8,
+            "show_icon": false,
+            "custom_icon": "<svg width=\"24\" height=\"24\" viewbox=\"0 0 16 16\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"currentColor\" class=\"bi bi-stars\"><path d=\"M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z\"></path></svg>",
+            "icon_color": "#333333",
+            "icon_size": 20,
+            "icon_spacing": 8,
+            "icon_alignment": "center",
+            "text_align": "left",
+            "font_size": 15,
+            "text_color": "#12304a",
+            "margin_top": 0,
+            "margin_bottom": 8,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "use_container": false,
+            "container_bg": "#f8f8f8",
+            "container_padding_v": 10,
+            "container_padding_h": 14,
+            "border_radius": 4,
+            "show_divider": false,
+            "divider_color": "#e4eff5",
+            "divider_height": 1,
+            "divider_style": "solid",
+            "divider_spacing": 12
+          }
+        },
+        "variant_picker": {
+          "type": "simple_variant_picker",
+          "disabled": true,
+          "settings": {
+            "enable_color_swatches": false,
+            "show_labels": false,
+            "enable_size_preset": false,
+            "show_variant_images": false,
+            "color_option_label": "Color",
+            "size_option_label": "Size",
+            "custom_option_label_1": "Supply",
+            "custom_option_label_2": "",
+            "custom_option_label_3": "",
+            "label_color": "#12304a",
+            "label_size": 14,
+            "option_bg_color": "#ffffff",
+            "option_border_color": "#cfe4ee",
+            "option_text_color": "#12304a",
+            "option_size": 13,
+            "option_border_radius": 12,
+            "selected_bg_color": "#eaf8fd",
+            "selected_text_color": "#12304a",
+            "selected_border_color": "#3ab6e4",
+            "selected_variant_color": "#12304a",
+            "swatch_size": 24,
+            "swatch_bg_color": "#cccccc",
+            "outline_color": "#e4eff5",
+            "custom_color_mappings": "red=#FF0000\nblue=#0000FF\ngreen=#00FF00\nyellow=#FFFF00\nblack=#000000\nwhite=#FFFFFF",
+            "show_selected_variant": false,
+            "text_color": "#12304a",
+            "option_padding_vertical": 12,
+            "option_padding_horizontal": 16,
+            "option_font_size": 13,
+            "margin_top": 0,
+            "margin_bottom": 12,
+            "container_margin_left": 0,
+            "container_margin_right": 0
+          }
+        },
+        "quantity": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+            "background_color": "#f7fbfd",
+            "button_color": "#ffffff",
+            "text_color": "#12304a",
+            "margin_top": 0,
+            "margin_bottom": 14
+          }
+        },
+        "add_to_cart": {
+          "type": "add_to_cart",
+          "settings": {
+            "use_theme_colors": false,
+            "button_text_override": "ADD TO CART",
+            "show_price_in_button": true,
+            "button_icon": "bag",
+            "custom_icon": "",
+            "icon_size": 20,
+            "buy_box_button_bg_color": "#3ab6e4",
+            "button_text_color": "#ffffff",
+            "buy_box_button_hover_color": "#2596c0",
+            "price_color": "#ffffff",
+            "card_border_radius": 20
+          }
+        },
+        "payment_icons": {
+          "type": "payment_icons",
+          "settings": {
+            "use_custom_icons": false,
+            "custom_svg_1": "",
+            "custom_svg_2": "",
+            "custom_svg_3": "",
+            "custom_svg_4": "",
+            "custom_svg_5": "",
+            "custom_svg_6": "",
+            "icon_height": 22,
+            "icon_spacing": 6,
+            "alignment": "center",
+            "margin_top": 0,
+            "margin_bottom": 5
+          }
+        },
+        "guarantee_badges": {
+          "type": "guarantee_badges",
+          "settings": {
+            "badge_1_show": true,
+            "badge_1_text": "90-Day Money-Back Guarantee",
+            "badge_1_icon": "shield",
+            "badge_1_custom_icon": "",
+            "badge_2_show": true,
+            "badge_2_text": "Free U.S. Shipping",
+            "badge_2_icon": "checkmark",
+            "badge_2_custom_icon": "",
+            "icon_color": "#3ab6e4",
+            "text_color": "#5b6b78",
+            "container_margin_top": 5,
+            "container_margin_right": 0,
+            "container_margin_bottom": 10,
+            "container_margin_left": 0,
+            "font_size": 12,
+            "icon_size": 16,
+            "gap": 8,
+            "align_center": true,
+            "mobile_stack": false
+          }
+        },
+        "money_back": {
+          "type": "custom_money_back",
+          "settings": {
+            "title_text": "Try it for 90 days",
+            "description_text": "Take it as part of your daily routine. If it isn't for you, contact us within 90 days of delivery and we'll refund your order — bottle open or not.",
+            "badge_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"#3AB6E4\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 2.6l8 3v6.6c0 4.9-3.3 8.8-8 10.5-4.7-1.7-8-5.6-8-10.5V5.6l8-3z\"></path><path d=\"M8.6 12.2l2.4 2.4 4.6-4.8\"></path></svg>",
+            "use_svg_badge": true,
+            "badge_size": 35,
+            "gradient_start_color": "#eaf8fd",
+            "gradient_end_color": "#f7fbfd",
+            "title_color": "#12304a",
+            "text_color": "#4c5f6c",
+            "border_style": "solid",
+            "border_color": "#b9e7f7",
+            "border_radius": 16,
+            "margin_top": 0,
+            "margin_bottom": 5,
+            "enable_shine": false,
+            "padding_top": 14,
+            "padding_right": 14,
+            "padding_bottom": 14,
+            "padding_left": 14
+          }
+        },
+        "quick_faq": {
+          "type": "product_faq",
+          "settings": {
+            "items_limit": 3,
+            "image_size": 30,
+            "image_border_radius": 8,
+            "image_fit": "cover",
+            "text_size": 14,
+            "answer_text_size": 13,
+            "item_padding": 3,
+            "question_padding": 10,
+            "margin_top": 10,
+            "margin_bottom": 5,
+            "border_radius": 12,
+            "border_color": "#e4eff5",
+            "question_color": "#12304a",
+            "question_bg_color": "#ffffff",
+            "answer_color": "#4c5f6c",
+            "answer_bg_color": "#ffffff",
+            "accordion_mode": true,
+            "question_1": "What's in it",
+            "answer_1": "<p>Milk thistle extract standardized to 80% silymarin, plus turmeric, artichoke and inositol. Every active and its amount is printed on the label — no proprietary blend.</p>",
+            "question_2": "How to take it",
+            "answer_2": "<p>Take [SERVING SIZE] daily with a glass of water, ideally at the same time each day. Consistency matters more than timing.</p>",
+            "question_3": "Shipping & returns",
+            "answer_3": "<p>Free shipping within the United States. If it isn't for you, contact us within 90 days of delivery for a refund.</p>",
+            "question_4": "Does it really work?",
+            "answer_4": "<p>Information about efficacy goes here.</p>",
+            "question_5": "What is the 100% results guarantee?",
+            "answer_5": "<p>Details about the guarantee go here.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "pdp_styles",
+        "title",
+        "trustpilot_rating_YWWnA6",
+        "subtitle",
+        "labels",
+        "divider_top",
+        "price",
+        "benefits",
+        "divider_buy",
+        "supply_label",
+        "variant_picker",
+        "quantity",
+        "add_to_cart",
+        "payment_icons",
+        "guarantee_badges",
+        "money_back",
+        "quick_faq"
+      ],
+      "settings": {
+        "use_theme_colors": false,
+        "section_bg_color": "#ffffff",
+        "blocks_spacing": 4,
+        "text_color": "#202329",
+        "accent_color": "#3ab6e4",
+        "divider_color": "#e4eff5",
+        "show_product_info": true,
+        "show_product_gallery": true,
+        "thumbnail_border_color": "#e4eff5",
+        "thumbnail_active_border_color": "#3ab6e4",
+        "arrow_bg_color": "#ffffff",
+        "arrow_border_color": "#e4eff5",
+        "arrow_icon_color": "#12304a",
+        "dots_color": "#cfe4ee",
+        "enable_full_width_image": false
+      }
+    },
+    "ugc_videos": {
+      "type": "customer-reviews",
+      "blocks": {
+        "ugc_1": {
+          "type": "review_image",
+          "settings": {
+            "review_image": "shopify://shop_images/veilkind-ugc-poster-1.png",
+            "review_video_url": "https://cdn.shopify.com/s/files/1/1038/2285/2439/files/veilkind-ugc-1.mp4?v=1786910034",
+            "caption": "Example customer clip"
+          }
+        },
+        "ugc_2": {
+          "type": "review_image",
+          "settings": {
+            "review_image": "shopify://shop_images/veilkind-ugc-poster-2b.png",
+            "review_video_url": "https://cdn.shopify.com/s/files/1/1038/2285/2439/files/veilkind-ugc-2b.mp4?v=1786921073",
+            "caption": "Example customer clip"
+          }
+        },
+        "ugc_3": {
+          "type": "review_image",
+          "settings": {
+            "review_image": "shopify://shop_images/veilkind-ugc-poster-3.png",
+            "review_video_url": "https://cdn.shopify.com/s/files/1/1038/2285/2439/files/veilkind-ugc-3.mp4?v=1786910182",
+            "caption": "Example customer clip"
+          }
+        },
+        "ugc_4": {
+          "type": "review_image",
+          "settings": {
+            "review_image": "shopify://shop_images/veilkind-ugc-poster-4b.png",
+            "review_video_url": "https://cdn.shopify.com/s/files/1/1038/2285/2439/files/veilkind-ugc-4b.mp4?v=1786921073",
+            "caption": "How the daily routine looks"
+          }
+        }
+      },
+      "block_order": [
+        "ugc_1",
+        "ugc_2",
+        "ugc_3",
+        "ugc_4"
+      ],
+      "settings": {
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_horizontal": 20,
+        "heading": "A routine people actually keep",
+        "subheading": "Short clips showing where VEILKIND fits into an ordinary morning. Swipe to watch.",
+        "button_text": "ADD TO CART",
+        "show_button": true,
+        "button_horizontal_padding": 34,
+        "rating_text": "Rated [4.8]/5 by [REVIEW COUNT] customers",
+        "mobile_title_size": 27,
+        "desktop_title_size": 40,
+        "mobile_subtitle_size": 14,
+        "desktop_subtitle_size": 17,
+        "title_padding_top": 0,
+        "title_padding_bottom": 14,
+        "title_padding_horizontal": 0,
+        "subtitle_padding_top": 0,
+        "subtitle_padding_bottom": 20,
+        "button_padding_top": 0,
+        "button_padding_bottom": 0,
+        "rating_padding_top": 12,
+        "content_padding_top_mobile": 0,
+        "content_padding_bottom_mobile": 0,
+        "content_padding_horizontal_mobile": 15,
+        "content_padding_top_desktop": 0,
+        "content_padding_bottom_desktop": 0,
+        "content_padding_horizontal_desktop": 20,
+        "use_theme_colors": false,
+        "button_color": "#3ab6e4",
+        "button_radius": 8,
+        "star_color": "#3ab6e4",
+        "title_color": "#12304a",
+        "subtitle_color": "#5b6b78",
+        "rating_text_color": "#5b6b78",
+        "slider_speed": 5000,
+        "enable_autoscroll": false,
+        "card_radius": 16,
+        "use_gradient": false,
+        "gradient_start_color": "#000000",
+        "gradient_end_color": "#ffffff",
+        "gradient_angle": 0,
+        "background_color": "#f7fbfd"
+      }
+    },
+    "why_it_works": {
+      "type": "product-benefits",
+      "blocks": {
+        "why_1": {
+          "type": "benefit",
+          "settings": {
+            "title": "Standardized, not guessed",
+            "description": "Milk thistle seed varies from harvest to harvest. Ours is extracted and standardized to 80% silymarin, so the amount of active compound in your capsule is a defined number rather than whatever the batch happened to contain.",
+            "benefit_color": "",
+            "benefit_description_color": "",
+            "use_image": false,
+            "preset_icon": "check",
+            "use_custom_icon": true,
+            "custom_icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"#3AB6E4\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M6 3h12\"></path><path d=\"M9 3v5.2L4.6 17A2.4 2.4 0 0 0 6.8 20.5h10.4A2.4 2.4 0 0 0 19.4 17L15 8.2V3\"></path><path d=\"M7 14h10\"></path></svg>"
+          }
+        },
+        "why_2": {
+          "type": "benefit",
+          "settings": {
+            "title": "Four actives that work as a set",
+            "description": "Milk thistle carries the formula. Turmeric, artichoke and inositol sit alongside it — chosen because they are the botanicals most often paired with silymarin in a liver and digestion routine, not to pad the label.",
+            "benefit_color": "",
+            "benefit_description_color": "",
+            "use_image": false,
+            "preset_icon": "check",
+            "use_custom_icon": true,
+            "custom_icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"#3AB6E4\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"8\" cy=\"8\" r=\"3.4\"></circle><circle cx=\"16\" cy=\"8\" r=\"3.4\"></circle><circle cx=\"8\" cy=\"16\" r=\"3.4\"></circle><circle cx=\"16\" cy=\"16\" r=\"3.4\"></circle></svg>"
+          }
+        },
+        "why_3": {
+          "type": "benefit",
+          "settings": {
+            "title": "One step, once a day",
+            "description": "No powders to mix, no three-times-daily schedule to remember. You take it with water when you already do something else — which is the only reason any supplement routine survives past week two.",
+            "benefit_color": "",
+            "benefit_description_color": "",
+            "use_image": false,
+            "preset_icon": "check",
+            "use_custom_icon": true,
+            "custom_icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"#3AB6E4\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"8.4\"></circle><path d=\"M12 7.4V12l3.2 1.9\"></path></svg>"
+          }
+        },
+        "why_4": {
+          "type": "benefit",
+          "settings": {
+            "title": "Nothing hidden behind a blend",
+            "description": "Every active and its amount is printed on the label. If a formula hides its doses inside a proprietary blend, you have no way to compare it against anything — including this one.",
+            "benefit_color": "",
+            "benefit_description_color": "",
+            "use_image": false,
+            "preset_icon": "check",
+            "use_custom_icon": true,
+            "custom_icon_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"#3AB6E4\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2.6 12S6 5.6 12 5.6 21.4 12 21.4 12 18 18.4 12 18.4 2.6 12 2.6 12z\"></path><circle cx=\"12\" cy=\"12\" r=\"2.8\"></circle></svg>"
+          }
+        }
+      },
+      "block_order": [
+        "why_1",
+        "why_2",
+        "why_3",
+        "why_4"
+      ],
+      "custom_css": [
+        ".custom-benefits-list {padding: 28px !important; border-radius: 20px !important;}",
+        ".custom-benefit-item {margin-bottom: 22px !important;}",
+        ".custom-benefit-item:last-child {margin-bottom: 0 !important;}",
+        ".custom-benefit-header {margin-bottom: 6px !important;}",
+        ".custom-benefit-icon {width: 30px !important; height: 30px !important; margin-right: 12px !important;}",
+        ".custom-benefit-icon svg {width: 30px !important; height: 30px !important;}"
+      ],
+      "settings": {
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_left": 20,
+        "padding_right": 20,
+        "heading_size_mobile": 30,
+        "heading_size_desktop": 38,
+        "subtitle_size_mobile": 14,
+        "subtitle_size_desktop": 15,
+        "benefit_title_size_mobile": 17,
+        "benefit_title_size_desktop": 18,
+        "benefit_description_size_mobile": 14,
+        "benefit_description_size_desktop": 15,
+        "accent_color": "#3ab6e4",
+        "use_theme_colors": false,
+        "override_global_accent": true,
+        "accent_font_family": "inherit",
+        "accent_font_style": "normal",
+        "accent_font_weight": "800",
+        "use_accent_gradient": false,
+        "accent_gradient_start_color": "#ef4a65",
+        "accent_gradient_end_color": "#ff6b9d",
+        "accent_gradient_angle": 45,
+        "accent_text_margin_left": 0,
+        "background_color": "#ffffff",
+        "list_background_color": "#f7fbfd",
+        "enable_list_gradient": false,
+        "list_gradient_start": "#ffffff",
+        "list_gradient_end": "#f0f0f0",
+        "list_gradient_direction": "to bottom",
+        "list_border_radius": 20,
+        "border_color": "#b9e7f7",
+        "heading_accent": "Why",
+        "heading_regular": "this formula is built the way it is",
+        "subtitle": "Most milk thistle products tell you the herb is in there. Very few tell you how much of the active you are actually getting. That difference is the whole point of this formula.",
+        "show_image": true,
+        "feature_image": "shopify://shop_images/veilkind-bottle-capsules-detail.png",
+        "image_alt": "VEILKIND bottle with vegetarian capsules",
+        "heading_color": "#12304a",
+        "subtitle_color": "#5b6b78",
+        "description_color": "#4c5f6c",
+        "use_gradient": false,
+        "gradient_start_color": "#ffffff",
+        "gradient_end_color": "#ffffff",
+        "gradient_angle": 0
+      }
+    },
+    "ingredients": {
+      "type": "alternating-features",
+      "blocks": {
+        "ing_1": {
+          "type": "feature",
+          "settings": {
+            "title": "Milk Thistle — standardized to 80% silymarin",
+            "description": "The backbone of the formula. Silymarin is the group of compounds from the milk thistle seed that the plant is actually valued for, and standardizing to 80% is what turns contains milk thistle into a number you can check.",
+            "icon": "shopify://shop_images/veilkind-ingredient-milk-thistle.png"
+          }
+        },
+        "ing_2": {
+          "type": "feature",
+          "settings": {
+            "title": "Turmeric",
+            "description": "A root used in kitchens and herbal traditions for centuries, included here for its own antioxidant compounds. It is the ingredient most commonly paired with milk thistle in a daily wellness routine.",
+            "icon": "shopify://shop_images/veilkind-ingredient-turmeric.png"
+          }
+        },
+        "ing_3": {
+          "type": "feature",
+          "settings": {
+            "title": "Artichoke",
+            "description": "Artichoke leaf has a long history in European herbalism as part of a digestive routine. It rounds out the formula rather than competing with the milk thistle for space on the label.",
+            "icon": "shopify://shop_images/veilkind-ingredient-artichoke.png"
+          }
+        },
+        "ing_4": {
+          "type": "feature",
+          "settings": {
+            "title": "Inositol",
+            "description": "A naturally occurring compound found in foods such as citrus fruit and beans. It is the one non-botanical in the formula, included to support the everyday wellness side of the routine.",
+            "icon": "shopify://shop_images/veilkind-ingredient-inositol.png"
+          }
+        }
+      },
+      "block_order": [
+        "ing_1",
+        "ing_2",
+        "ing_3",
+        "ing_4"
+      ],
+      "settings": {
+        "use_theme_colors": false,
+        "padding_top": 55,
+        "padding_bottom": 55,
+        "section_border_radius": 0,
+        "icon_size": 70,
+        "icon_image_size": 70,
+        "icon_background_enabled": false,
+        "title": "Four ingredients.",
+        "title_accent": "Every amount on the label.",
+        "main_image": "shopify://shop_images/veilkind-bottle-with-ingredients.png",
+        "background_color": "#eaf8fd",
+        "use_gradient": false,
+        "gradient_start_color": "#ef4a65",
+        "gradient_end_color": "#990000",
+        "gradient_angle": 90,
+        "heading_color": "#12304a",
+        "accent_color": "#3ab6e4",
+        "use_accent_gradient": false,
+        "accent_gradient_start_color": "#ef4a65",
+        "accent_gradient_end_color": "#ff6b9d",
+        "accent_gradient_angle": 45,
+        "accent_font_family": "inherit",
+        "accent_font_style": "normal",
+        "accent_font_weight": "800",
+        "feature_title_color": "#12304a",
+        "description_color": "#4c5f6c",
+        "icon_background_color": "#ffffff",
+        "icon_color": "#3ab6e4",
+        "divider_color": "#12304a1a",
+        "image_border_radius": 20,
+        "section_title_size": 34,
+        "feature_title_size_mobile": 15,
+        "feature_title_size_desktop": 17,
+        "description_size_mobile": 13,
+        "description_size_desktop": 14,
+        "feature_spacing": 25
+      }
+    },
+    "formula_facts": {
+      "type": "statistics-grid",
+      "blocks": {
+        "fact_1": {
+          "type": "statistic",
+          "settings": {
+            "percentage": 80,
+            "title": "Standardized Silymarin",
+            "description": "The milk thistle extract is standardized to 80% silymarin, so every batch delivers the same defined amount."
+          }
+        },
+        "fact_2": {
+          "type": "statistic",
+          "settings": {
+            "percentage": 100,
+            "title": "Vegetarian Capsule",
+            "description": "A plant-based capsule shell rather than gelatin, so the formula suits more people."
+          }
+        },
+        "fact_3": {
+          "type": "statistic",
+          "settings": {
+            "percentage": 100,
+            "title": "Doses On The Label",
+            "description": "Every active ingredient and its amount is printed on the bottle, so you can compare it against anything."
+          }
+        },
+        "fact_4": {
+          "type": "statistic",
+          "settings": {
+            "percentage": 0,
+            "title": "Proprietary Blends",
+            "description": "None. Nothing in this formula hides behind a blend name that conceals how much you are actually getting."
+          }
+        }
+      },
+      "block_order": [
+        "fact_1",
+        "fact_2",
+        "fact_3",
+        "fact_4"
+      ],
+      "settings": {
+        "use_theme_colors": false,
+        "heading_part_1": "The formula,",
+        "heading_part_2": "in four numbers",
+        "subheading": "No clinical claims and no invented percentages — just what is actually in the bottle.",
+        "header_bottom_margin": 10,
+        "background_color": "#ffffff",
+        "card_background_color": "#ffffff",
+        "use_gradient": false,
+        "gradient_start_color": "#ef4a65",
+        "gradient_end_color": "#d81b60",
+        "gradient_angle": 90,
+        "accent_color": "#3ab6e4",
+        "circle_bg_color": "#e4eff5",
+        "use_gradient_circle": true,
+        "circle_gradient_type": "linear",
+        "circle_gradient_start": "#3ab6e4",
+        "circle_gradient_end": "#7fd4f0",
+        "circle_gradient_angle": 90,
+        "heading_color": "#12304a",
+        "heading_accent_color": "#3ab6e4",
+        "subtitle_color": "#5b6b78",
+        "statistic_title_color": "#12304a",
+        "statistic_description_color": "#4c5f6c",
+        "heading_font_size": 34,
+        "text_font_size": 13,
+        "accent_text_margin": 6,
+        "use_accent_gradient": false,
+        "accent_gradient_start_color": "#ef4a65",
+        "accent_gradient_end_color": "#ff6b9d",
+        "accent_gradient_angle": 45,
+        "accent_font_family": "inherit",
+        "accent_font_style": "normal",
+        "accent_font_weight": "inherit",
+        "desktop_padding_top": 55,
+        "desktop_padding_right": 40,
+        "desktop_padding_bottom": 55,
+        "desktop_padding_left": 40,
+        "mobile_padding_top": 40,
+        "mobile_padding_right": 15,
+        "mobile_padding_bottom": 40,
+        "mobile_padding_left": 15,
+        "contain_section": true,
+        "border_radius": 16,
+        "container_padding_top": 20,
+        "container_padding_right": 10,
+        "container_padding_bottom": 20,
+        "container_padding_left": 10,
+        "container_bg_color": "#f7fbfd",
+        "enable_container_gradient": false,
+        "container_gradient_color_1": "#ffffff",
+        "container_gradient_color_2": "#f8f8f8",
+        "container_gradient_direction": "to bottom",
+        "enable_border": true,
+        "border_width": 1,
+        "border_style": "solid",
+        "border_color": "#dcecf4",
+        "enable_shadow": false
+      }
+    },
+    "lifestyle": {
+      "type": "image-with-text",
+      "blocks": {
+        "lifestyle_copy": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_text": "<p>Nobody starts a supplement because they want another bottle on the counter. They start because they want the ordinary parts of the day to feel less like work — the morning, the meal out, the week that ran long.</p><p>VEILKIND is built for that: one capsule, taken at the same time each day, as part of a routine you keep rather than a programme you finish.</p>",
+            "margin_top": 0,
+            "margin_bottom": 8,
+            "paragraph_color": "#4c5f6c"
+          }
+        },
+        "lifestyle_cta": {
+          "type": "button",
+          "settings": {
+            "button_label": "Start your routine",
+            "button_link": "",
+            "scroll_to_products": true,
+            "button_bg_color": "#3ab6e4",
+            "button_text_color": "#ffffff",
+            "margin_top": 6,
+            "margin_bottom": 0,
+            "button_text_size": 16,
+            "button_border_radius": 40
+          }
+        }
+      },
+      "block_order": [
+        "lifestyle_copy",
+        "lifestyle_cta"
+      ],
+      "settings": {
+        "use_theme_colors": false,
+        "image_position": "left",
+        "text_align": "left",
+        "column_width": 50,
+        "padding_top": 55,
+        "padding_bottom": 55,
+        "container_padding": 20,
+        "content_spacing": 25,
+        "desktop_content_spacing": 45,
+        "section_border_radius": 0,
+        "heading": "A quieter kind of",
+        "heading_accent": "daily upkeep.",
+        "image": "shopify://shop_images/veilkind-lifestyle-wide.png",
+        "heading_font_size_mobile": 2.1,
+        "heading_font_size_desktop": 2.9,
+        "accent_font_size_mobile": 2.1,
+        "accent_font_size_desktop": 2.9,
+        "text_font_size_mobile": 1.1,
+        "text_font_size_desktop": 1.1,
+        "content_elements_spacing": 15,
+        "desktop_content_elements_spacing": 20,
+        "heading_bottom_margin": 15,
+        "desktop_heading_bottom_margin": 20,
+        "text_bottom_margin": 20,
+        "desktop_text_bottom_margin": 20,
+        "text_padding_vertical": 0,
+        "text_padding_left": 0,
+        "text_padding_right": 0,
+        "mobile_text_padding_vertical": 0,
+        "mobile_text_padding_horizontal": 0,
+        "button_padding_vertical": 15,
+        "button_padding_horizontal": 30,
+        "button_border_radius": 40,
+        "background_color": "#f7fbfd",
+        "use_gradient": false,
+        "gradient_start_color": "#f5f5f5",
+        "gradient_end_color": "#ffffff",
+        "gradient_angle": 90,
+        "heading_color": "#12304a",
+        "accent_color": "#3ab6e4",
+        "text_color": "#4c5f6c",
+        "button_bg_color": "#3ab6e4",
+        "button_text_color": "#ffffff",
+        "image_max_width": 700,
+        "image_max_height": 0,
+        "image_border_radius": 20,
+        "image_padding": 0
+      }
+    },
+    "journey": {
+      "type": "steps",
+      "blocks": {
+        "step_1": {
+          "type": "step",
+          "settings": {
+            "step_image": "shopify://shop_images/veilkind-journey-step-1.png",
+            "image_background_color": "#eaf8fd",
+            "step_title": "Week one — pick your moment",
+            "step_description": "Take it with water at a point in the day you never skip: with breakfast, or right after you make coffee. Attaching it to something existing is what makes it stick.",
+            "content_background_color": "#ffffff"
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {
+            "step_image": "shopify://shop_images/veilkind-journey-step-2.png",
+            "image_background_color": "#eaf8fd",
+            "step_title": "Weeks two to four — it stops being a decision",
+            "step_description": "By the third or fourth week most people are no longer reminding themselves. The bottle lives where the routine happens and taking it is automatic.",
+            "content_background_color": "#ffffff"
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "step_image": "shopify://shop_images/veilkind-journey-step-3.png",
+            "image_background_color": "#eaf8fd",
+            "step_title": "Month two onward — keep it going",
+            "step_description": "Milk thistle is a daily-habit supplement, not a course you finish. People who keep a multi-bottle supply on the shelf are the ones who never fall out of the routine.",
+            "content_background_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ],
+      "settings": {
+        "use_theme_colors": false,
+        "section_background": "#ffffff",
+        "use_gradient": false,
+        "gradient_start_color": "#ffffff",
+        "gradient_end_color": "#f8f8f8",
+        "padding_top": 55,
+        "padding_bottom": 55,
+        "padding_horizontal": 20,
+        "title": "What the first",
+        "title_highlight": "90 days look like",
+        "subtitle": "This is about building a routine, not hitting milestones. Everyone's experience differs — what follows is simply how the habit tends to form.",
+        "title_color": "#12304a",
+        "highlight_color": "#3ab6e4",
+        "subtitle_color": "#5b6b78",
+        "title_size_desktop": 34,
+        "title_size_mobile": 28,
+        "subtitle_size_desktop": 16,
+        "subtitle_size_mobile": 14,
+        "step_title_size_desktop": 17,
+        "step_title_size_mobile": 17,
+        "step_description_size_desktop": 13,
+        "step_description_size_mobile": 13,
+        "number_size_desktop": 18,
+        "number_size_mobile": 20,
+        "number_circle_size_desktop": 40,
+        "number_circle_size_mobile": 40,
+        "label_color": "#3ab6e4",
+        "number_border_color": "#3ab6e4",
+        "step_title_color": "#12304a",
+        "description_color": "#4c5f6c",
+        "card_border_radius": 16,
+        "card_border_color": "#dcecf4"
+      }
+    },
+    "testimonials": {
+      "type": "customer-reviews-carousel",
+      "blocks": {
+        "review_1": {
+          "type": "review",
+          "settings": {
+            "image_position": "center center",
+            "wrap_image": false,
+            "rating": 5,
+            "review_text": "[PLACEHOLDER — replace with a real verified review. Do not publish this section until genuine customer reviews are connected.]",
+            "reviewer_name": "[CUSTOMER NAME]",
+            "reviewer_age": "",
+            "show_verified_badge": false,
+            "show_purchased_product": false,
+            "product_reference": "",
+            "product_title": "Milk Thistle Complex",
+            "product_price": "$29.99",
+            "product_compare_price": "$39.99",
+            "show_purchase_date": false,
+            "purchase_date": "March 14th, 2025"
+          }
+        },
+        "review_2": {
+          "type": "review",
+          "settings": {
+            "image_position": "center center",
+            "wrap_image": false,
+            "rating": 5,
+            "review_text": "[PLACEHOLDER — replace with a real verified review. Do not publish this section until genuine customer reviews are connected.]",
+            "reviewer_name": "[CUSTOMER NAME]",
+            "reviewer_age": "",
+            "show_verified_badge": false,
+            "show_purchased_product": false,
+            "product_reference": "",
+            "product_title": "Milk Thistle Complex",
+            "product_price": "$29.99",
+            "product_compare_price": "$39.99",
+            "show_purchase_date": false,
+            "purchase_date": "March 14th, 2025"
+          }
+        },
+        "review_3": {
+          "type": "review",
+          "settings": {
+            "image_position": "center center",
+            "wrap_image": false,
+            "rating": 5,
+            "review_text": "[PLACEHOLDER — replace with a real verified review. Do not publish this section until genuine customer reviews are connected.]",
+            "reviewer_name": "[CUSTOMER NAME]",
+            "reviewer_age": "",
+            "show_verified_badge": false,
+            "show_purchased_product": false,
+            "product_reference": "",
+            "product_title": "Milk Thistle Complex",
+            "product_price": "$29.99",
+            "product_compare_price": "$39.99",
+            "show_purchase_date": false,
+            "purchase_date": "March 14th, 2025"
+          }
+        }
+      },
+      "block_order": [
+        "review_1",
+        "review_2",
+        "review_3"
+      ],
+      "settings": {
+        "use_theme_colors": false,
+        "section_width": 1200,
+        "section_background": "#f7fbfd",
+        "title_text": "What customers",
+        "accent_text": "say",
+        "title_color": "#12304a",
+        "accent_color": "#3ab6e4",
+        "accent_text_margin_left": 6,
+        "use_accent_gradient": false,
+        "accent_gradient_start_color": "#ef4a65",
+        "accent_gradient_end_color": "#ff6b9d",
+        "accent_gradient_angle": 45,
+        "accent_font_family": "inherit",
+        "accent_font_style": "normal",
+        "accent_font_weight": "inherit",
+        "custom_heading_styling": false,
+        "heading_font_size": 40,
+        "heading_font_size_mobile": 28,
+        "heading_line_height": 1.2,
+        "show_description": true,
+        "description_text": "Placeholder cards — connect your review app or paste real reviews before publishing.",
+        "description_color": "#5b6b78",
+        "prev_button_bg": "#ffffff",
+        "prev_button_color": "#12304a",
+        "prev_button_border": "#dcecf4",
+        "next_button_bg": "#3ab6e4",
+        "next_button_color": "#ffffff",
+        "next_button_border": "#3ab6e4",
+        "scroll_amount": 340,
+        "card_width": 330,
+        "card_border_radius": 16,
+        "card_border_color": "#dcecf4",
+        "card_background": "#ffffff",
+        "card_margin_top": 0,
+        "card_margin_right": 0,
+        "card_margin_bottom": 0,
+        "card_margin_left": 0,
+        "star_filled_color": "#3ab6e4",
+        "star_empty_color": "#dcecf4",
+        "review_text_color": "#4c5f6c",
+        "review_text_size": 14,
+        "review_text_size_mobile": 13,
+        "reviewer_info_color": "#12304a",
+        "reviewer_info_bg_color": "#eaf8fd",
+        "verified_badge_text": "Verified Buyer",
+        "verified_badge_color": "#12304a",
+        "verified_icon_color": "#3ab6e4",
+        "enable_reviewer_info_border": false,
+        "reviewer_info_border_width": 1,
+        "reviewer_info_border_style": "solid",
+        "reviewer_info_border_color": "#e0e0e0",
+        "reviewer_info_border_radius": 12,
+        "product_label": "Item Purchased",
+        "product_label_color": "#5b6b78",
+        "product_title_color": "#12304a",
+        "product_price_color": "#12304a",
+        "product_bg_color": "#f7fbfd",
+        "product_border_color": "#dcecf4",
+        "product_border_width": 1,
+        "product_border_style": "solid",
+        "summary_star_color": "#3ab6e4",
+        "summary_text_color": "#12304a",
+        "rating_prefix": "Rated",
+        "rating_number": "4.7",
+        "based_on_text": "based on",
+        "custom_review_count_text": "73.000 reviews",
+        "rating_count_color": "#5b6b78",
+        "rating_value_color": "#12304a",
+        "rating_summary_bg_color": "#eaf8fd",
+        "purchase_date_prefix": "Purchased on",
+        "purchase_date_color": "#5b6b78",
+        "purchase_date_icon_color": "#3ab6e4",
+        "based_on_text_color": "#5b6b78",
+        "enable_rating_summary_gradient": true,
+        "rating_summary_gradient_start": "#eaf8fd",
+        "rating_summary_gradient_end": "#ddf5fd",
+        "rating_summary_gradient_direction": "to bottom",
+        "enable_rating_summary_border": true,
+        "rating_summary_border_width": 1,
+        "rating_summary_border_style": "solid",
+        "rating_summary_border_color": "#b9e7f7",
+        "rating_summary_border_radius": 50
+      }
+    },
+    "comparison": {
+      "type": "product-comparison",
+      "blocks": {
+        "col_ours": {
+          "type": "product_column",
+          "settings": {
+            "product_name": "VEILKIND",
+            "product_subtitle": "Milk Thistle Complex",
+            "product_image": "shopify://shop_images/veilkind-bottle-white-cutout.png",
+            "product_image_size": 80,
+            "product_image_size_tablet": 80,
+            "product_image_size_mobile": 65,
+            "subtitle_custom_icon": "",
+            "show_subtitle_icon": true,
+            "use_subtitle_background": true,
+            "subtitle_border_color": "#ffffff",
+            "highlight_column": true,
+            "highlight_color": "#eaf8fd",
+            "use_highlight_gradient": true,
+            "highlight_gradient_start_color": "#eaf8fd",
+            "highlight_gradient_end_color": "#ddf5fd",
+            "highlight_gradient_angle": 90,
+            "subtitle_glass_color": "#ffffff",
+            "subtitle_icon_color": "#3ab6e4"
+          }
+        },
+        "col_others": {
+          "type": "product_column",
+          "settings": {
+            "product_name": "Typical alternatives",
+            "product_subtitle": "Generic milk thistle",
+            "product_image": "shopify://shop_images/veilkind-generic-bottle.png",
+            "product_image_size": 80,
+            "product_image_size_tablet": 60,
+            "product_image_size_mobile": 55,
+            "subtitle_custom_icon": "",
+            "show_subtitle_icon": true,
+            "use_subtitle_background": true,
+            "subtitle_border_color": "#ffffff",
+            "highlight_column": false,
+            "highlight_color": "#f7fbfd",
+            "use_highlight_gradient": false,
+            "highlight_gradient_start_color": "#ef4a65",
+            "highlight_gradient_end_color": "#ff6b9d",
+            "highlight_gradient_angle": 45,
+            "subtitle_glass_color": "#ffffff",
+            "subtitle_icon_color": "#93a5b1"
+          }
+        },
+        "row_1": {
+          "type": "feature_row",
+          "settings": {
+            "feature_name": "Extract standardized to 80% silymarin",
+            "show_icon": false,
+            "feature_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><path d=\"M12 8v8\"></path><path d=\"M8 12h8\"></path></svg>",
+            "value_type": "checkmark",
+            "value_1": "yes",
+            "text_value_1": "Yes",
+            "value_2": "no",
+            "text_value_2": "Varies"
+          }
+        },
+        "row_2": {
+          "type": "feature_row",
+          "settings": {
+            "feature_name": "Turmeric, artichoke and inositol included",
+            "show_icon": false,
+            "feature_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><path d=\"M12 8v8\"></path><path d=\"M8 12h8\"></path></svg>",
+            "value_type": "checkmark",
+            "value_1": "yes",
+            "text_value_1": "Yes",
+            "value_2": "no",
+            "text_value_2": "Rarely"
+          }
+        },
+        "row_3": {
+          "type": "feature_row",
+          "settings": {
+            "feature_name": "Every amount printed on the label",
+            "show_icon": false,
+            "feature_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><path d=\"M12 8v8\"></path><path d=\"M8 12h8\"></path></svg>",
+            "value_type": "text",
+            "value_1": "yes",
+            "text_value_1": "Yes",
+            "value_2": "no",
+            "text_value_2": "Often a blend"
+          }
+        },
+        "row_4": {
+          "type": "feature_row",
+          "settings": {
+            "feature_name": "Vegetarian capsule",
+            "show_icon": false,
+            "feature_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><path d=\"M12 8v8\"></path><path d=\"M8 12h8\"></path></svg>",
+            "value_type": "checkmark",
+            "value_1": "yes",
+            "text_value_1": "Yes",
+            "value_2": "no",
+            "text_value_2": "Often gelatin"
+          }
+        },
+        "row_5": {
+          "type": "feature_row",
+          "settings": {
+            "feature_name": "Simple once-a-day routine",
+            "show_icon": false,
+            "feature_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><path d=\"M12 8v8\"></path><path d=\"M8 12h8\"></path></svg>",
+            "value_type": "checkmark",
+            "value_1": "yes",
+            "text_value_1": "Yes",
+            "value_2": "no",
+            "text_value_2": "Varies"
+          }
+        },
+        "row_6": {
+          "type": "feature_row",
+          "settings": {
+            "feature_name": "Money-back window",
+            "show_icon": false,
+            "feature_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><path d=\"M12 8v8\"></path><path d=\"M8 12h8\"></path></svg>",
+            "value_type": "text",
+            "value_1": "yes",
+            "text_value_1": "90 days",
+            "value_2": "no",
+            "text_value_2": "30 days typical"
+          }
+        }
+      },
+      "block_order": [
+        "col_ours",
+        "col_others",
+        "row_1",
+        "row_2",
+        "row_3",
+        "row_4",
+        "row_5",
+        "row_6"
+      ],
+      "custom_css": [],
+      "settings": {
+        "use_theme_colors": false,
+        "show_heading": true,
+        "title_part_1": "How it compares",
+        "title_part_2": "",
+        "title_part_1_color": "#12304a",
+        "title_part_2_color": "#3ab6e4",
+        "subheading": "Measured against the generic milk thistle capsules you'll find on most shelves.",
+        "heading_size": 32,
+        "subheading_size": 14,
+        "subheading_color": "#5b6b78",
+        "accent_text_margin_left": 6,
+        "use_accent_gradient": false,
+        "accent_gradient_start_color": "#ef4a65",
+        "accent_gradient_end_color": "#ff6b9d",
+        "accent_gradient_angle": 45,
+        "accent_font_family": "inherit",
+        "accent_font_style": "normal",
+        "accent_font_weight": "inherit",
+        "product_title_size": 19,
+        "subtitle_size": 11,
+        "feature_name_size": 15,
+        "text_value_size": 13,
+        "product_title_size_mobile": 15,
+        "subtitle_size_mobile": 10,
+        "feature_name_size_mobile": 12,
+        "text_value_size_mobile": 11,
+        "use_gradient_background": false,
+        "background_color": "#ffffff",
+        "gradient_direction": 90,
+        "gradient_color_1": "#ffffff",
+        "gradient_color_2": "#f5f5f5",
+        "text_color": "#12304a",
+        "subtitle_color": "#5b6b78",
+        "highlighted_text_color": "#12304a",
+        "highlighted_subtitle_color": "#12304a",
+        "highlighted_check_color": "#3ab6e4",
+        "highlighted_x_color": "#ffffff",
+        "border_color": "#e4eff5",
+        "icon_color": "#3ab6e4",
+        "check_color": "#3ab6e4",
+        "x_color": "#b3c2cc",
+        "highlight_border_radius": 16,
+        "use_highlight_border": true,
+        "highlight_border_color": "#3ab6e4",
+        "highlight_border_width": 1,
+        "unhighlighted_text_color": "#5b6b78",
+        "unhighlighted_subtitle_color": "#93a5b1",
+        "unhighlighted_icon_color": "#b3c2cc",
+        "unhighlighted_check_color": "#b3c2cc",
+        "unhighlighted_x_color": "#b3c2cc"
+      }
+    },
+    "guarantee": {
+      "type": "satisfaction-guarantee",
+      "settings": {
+        "use_theme_colors": false,
+        "show_photos": true,
+        "allow_overflow": false,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_top_mobile": 35,
+        "padding_bottom_mobile": 35,
+        "padding_top_no_photos": 15,
+        "content_padding_mobile": 0,
+        "content_padding_desktop": 60,
+        "content_width_with_photos": 50,
+        "content_max_width_with_photos": 600,
+        "image_extension": 80,
+        "image_vertical_offset": 0,
+        "polaroid_size_desktop": 180,
+        "polaroid_size_mobile": 100,
+        "icon_style": "outline",
+        "custom_svg_code": "",
+        "icon_color": "#3ab6e4",
+        "heading_risk_free": "90 days,",
+        "heading_beauty_revolution": "no argument",
+        "risk_free_color": "#3ab6e4",
+        "beauty_revolution_color": "#12304a",
+        "use_accent_gradient": false,
+        "accent_gradient_start_color": "#ef4a65",
+        "accent_gradient_end_color": "#ff6b9d",
+        "accent_gradient_angle": 45,
+        "accent_font_family": "inherit",
+        "accent_font_style": "normal",
+        "accent_font_weight": "inherit",
+        "description_text": "Take it for three months. If it hasn't earned its place in your routine, email us within 90 days of delivery and we'll refund the order — you don't need to send back an unopened bottle, and you don't need to explain yourself.",
+        "description_color": "#4c5f6c",
+        "benefit_text_color": "#12304a",
+        "product_name": "Milk Thistle Complex",
+        "description_line_height": 1.6,
+        "heading_size_desktop": 30,
+        "heading_size_mobile": 26,
+        "description_size_desktop": 14,
+        "description_size_mobile": 13,
+        "benefit_size_desktop": 12,
+        "benefit_size_mobile": 10,
+        "button_text": "ADD TO CART",
+        "button_color": "#3ab6e4",
+        "button_text_color": "#ffffff",
+        "button_border_width": 0,
+        "button_border_color": "#3ab6e4",
+        "use_global_button_style": false,
+        "benefit_1": "90-Day Refund Window",
+        "benefit_2": "Free U.S. Shipping",
+        "benefit_3": "Real Human Support",
+        "background": "linear-gradient(to right, #FFE8EC, #FFF9F0)",
+        "section_bg_color": "#ffffff",
+        "enable_section_gradient": false,
+        "section_gradient_color_1": "#f7f5fc",
+        "section_gradient_color_2": "#e6e1f9",
+        "section_gradient_direction": "to right",
+        "section_padding_vertical": 15,
+        "section_padding_horizontal": 5,
+        "section_padding_vertical_mobile": 10,
+        "section_padding_horizontal_mobile": 10,
+        "contain_section": true,
+        "container_padding": 5,
+        "container_bg_color": "#f7fbfd",
+        "enable_container_gradient": true,
+        "container_gradient_color_1": "#eaf8fd",
+        "container_gradient_color_2": "#f7fbfd",
+        "container_gradient_direction": "to bottom",
+        "enable_border": true,
+        "border_width": 1,
+        "border_style": "solid",
+        "border_color": "#b9e7f7",
+        "border_radius": 20,
+        "enable_shadow": false,
+        "accent_text_margin_left": 5
+      }
+    },
+    "faq": {
+      "type": "store-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is milk thistle?",
+            "answer": "<p>Milk thistle (<em>Silybum marianum</em>) is a flowering plant that has been used in European herbal traditions for a very long time. The part that matters is the seed, which contains a group of plant compounds called silymarin.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What does 80% silymarin actually mean?",
+            "answer": "<p>Silymarin is the active compound group in the milk thistle seed. Standardizing the extract to 80% silymarin means 80% of the extract is that compound group — so each batch delivers the same defined amount instead of varying with the harvest.</p><p>Plain milk thistle powder isn't standardized at all, which is why two products can list the same herb and deliver very different amounts of the thing you actually want.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What's in the formula?",
+            "answer": "<p>Four actives: milk thistle extract standardized to 80% silymarin, turmeric, artichoke and inositol. Each one and its amount is printed on the label — there's no proprietary blend.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How and when do I take it?",
+            "answer": "<p>Take [SERVING SIZE] daily with a glass of water. Most people take it in the morning with food, but the specific time matters far less than taking it at the same time each day.</p><p><em>Store owner: confirm the serving size against the finished label before publishing.</em></p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How long does one bottle last?",
+            "answer": "<p>One bottle contains [CAPSULE COUNT] capsules, which is [X] days at the suggested serving. The 3- and 6-bottle options exist so you don't run out mid-routine.</p><p><em>Store owner: confirm the capsule count against the finished label before publishing.</em></p>"
+          }
+        },
+        "faq_6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is it vegetarian?",
+            "answer": "<p>Yes — the capsule shell is plant-based rather than gelatin.</p><p><em>Store owner: confirm this against your manufacturer's specification before publishing.</em></p>"
+          }
+        },
+        "faq_7": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Should I check with my doctor first?",
+            "answer": "<p>Yes, if you're pregnant or nursing, taking prescription medication, or managing a medical condition. This is a dietary supplement, not a treatment, and it isn't intended to diagnose, treat, cure or prevent any disease.</p>"
+          }
+        },
+        "faq_8": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What if it isn't for me?",
+            "answer": "<p>Email us within 90 days of delivery and we'll refund the order. An opened bottle is fine — that's the point of a 90-day window.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6",
+        "faq_7",
+        "faq_8"
+      ],
+      "settings": {
+        "use_theme_colors": false,
+        "heading": "Questions, answered",
+        "subtitle": "<p>If something isn't covered here, email us — a person replies.</p>",
+        "heading_color": "#12304a",
+        "section_padding": 60,
+        "section_bg_color": "#f7fbfd",
+        "border_radius": 12,
+        "border_color": "#dcecf4",
+        "question_color": "#12304a",
+        "question_bg_color": "#ffffff",
+        "answer_color": "#4c5f6c",
+        "answer_bg_color": "#ffffff",
+        "accordion_mode": true,
+        "heading_font_size": 34,
+        "heading_font_size_mobile": 28,
+        "subtitle_font_size": 15,
+        "subtitle_font_size_mobile": 14,
+        "question_font_size": 15,
+        "question_font_size_mobile": 14,
+        "answer_font_size": 14,
+        "answer_font_size_mobile": 13
+      }
+    },
+    "final_cta": {
+      "type": "featured-product-details",
+      "blocks": {
+        "cta_title": {
+          "type": "title",
+          "settings": {
+            "use_custom_title": true,
+            "custom_title": "Milk Thistle Complex",
+            "font_size": 32,
+            "margin_top": 0,
+            "margin_bottom": 4,
+            "title_color": "#12304a",
+            "line_height": 1.2
+          }
+        },
+        "cta_reviews": {
+          "type": "reviews",
+          "settings": {
+            "star_color": "#3ab6e4",
+            "empty_star_color": "#dcecf4",
+            "rating_label": "Rated",
+            "custom_rating": "[4.8]",
+            "custom_rating_count": "[REVIEW COUNT]",
+            "rating_text_color": "#12304a",
+            "rating_count_color": "#5b6b78",
+            "satisfaction_text": "90-Day Guarantee",
+            "satisfaction_text_color": "#12304a",
+            "satisfaction_bg_color": "#eaf8fd",
+            "margin_top": 0,
+            "margin_bottom": 12
+          }
+        },
+        "cta_bullets": {
+          "type": "bullet_list",
+          "settings": {
+            "bullet_1": "80% standardized silymarin",
+            "bullet_2": "Turmeric, artichoke and inositol",
+            "bullet_3": "One capsule, once a day",
+            "use_custom_icon_1": false,
+            "custom_icon_1": "",
+            "use_custom_icon_2": false,
+            "custom_icon_2": "",
+            "use_custom_icon_3": false,
+            "custom_icon_3": "",
+            "icon_color": "#3ab6e4",
+            "bullet_text_color": "#333333",
+            "icon_size": 18,
+            "text_size": 15,
+            "spacing": 10,
+            "show_bg": false,
+            "bg_color": "#f5f5f5",
+            "use_gradient": false,
+            "gradient_start": "#f5f5f5",
+            "gradient_end": "#e0e0e0",
+            "gradient_direction": "to right",
+            "border_radius": 12,
+            "margin_top": 5,
+            "margin_bottom": 15
+          }
+        },
+        "cta_price": {
+          "type": "price",
+          "settings": {
+            "price_color": "#12304a",
+            "compare_price_color": "#93a5b1",
+            "sale_badge_bg_color": "#eaf8fd",
+            "sale_badge_text_color": "#12304a",
+            "price_font_size": 26,
+            "compare_price_font_size": 18,
+            "save_badge_font_size": 12,
+            "price_font_weight": "700",
+            "price_margin_top": 0,
+            "price_margin_bottom": 12,
+            "show_save_icon": true,
+            "save_icon_size_ratio": 0.9,
+            "save_icon_position_y": 0,
+            "save_badge_padding_v": 5,
+            "save_badge_padding_h": 8,
+            "custom_save_text": "",
+            "save_badge_display_type": "percentage",
+            "custom_save_amount": "",
+            "save_badge_enable_border": false,
+            "save_badge_border_color": "#000000",
+            "save_badge_border_width": 1,
+            "save_badge_border_style": "solid"
+          }
+        },
+        "cta_variants": {
+          "type": "simple_variant_picker",
+          "settings": {
+            "enable_color_swatches": false,
+            "enable_size_preset": false,
+            "show_variant_images": false,
+            "color_option_label": "Color",
+            "size_option_label": "Size",
+            "label_color": "#12304a",
+            "label_size": 14,
+            "option_bg_color": "#ffffff",
+            "option_border_color": "#cfe4ee",
+            "option_text_color": "#12304a",
+            "option_size": 13,
+            "option_border_radius": 12,
+            "swatch_size": 24,
+            "selected_bg_color": "#eaf8fd",
+            "selected_text_color": "#12304a",
+            "selected_border_color": "#3ab6e4",
+            "selected_variant_color": "#000000",
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        },
+        "cta_button": {
+          "type": "add_to_cart",
+          "settings": {
+            "button_text_override": "ADD TO CART",
+            "show_price_in_button": true,
+            "button_icon": "bag",
+            "icon_size": 20,
+            "buy_box_button_bg_color": "#3ab6e4",
+            "buy_box_button_text_color": "#ffffff",
+            "buy_box_button_hover_color": "#2596c0",
+            "margin_top": 5,
+            "margin_bottom": 10
+          }
+        },
+        "cta_guarantee": {
+          "type": "guarantee_badges",
+          "settings": {
+            "badge_1_show": true,
+            "badge_1_text": "90-Day Money-Back Guarantee",
+            "badge_1_icon": "shield",
+            "badge_2_show": true,
+            "badge_2_text": "Free U.S. Shipping",
+            "badge_2_icon": "checkmark",
+            "icon_color": "#3ab6e4",
+            "badge_text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "cta_title",
+        "cta_reviews",
+        "cta_bullets",
+        "cta_price",
+        "cta_variants",
+        "cta_button",
+        "cta_guarantee"
+      ],
+      "settings": {
+        "featured_product": "placeholder-product",
+        "use_theme_color": true,
+        "background_color": "base",
+        "custom_background_color": "#ffffff",
+        "theme_text_color": "text",
+        "custom_text_color": "#000000",
+        "top_spacing": 50,
+        "bottom_spacing": 50,
+        "left_padding": 15,
+        "right_padding": 15,
+        "use_theme_colors": false,
+        "section_bg_color": "#eaf8fd",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_left": 20,
+        "padding_right": 20,
+        "blocks_spacing": 4,
+        "text_color": "#202329",
+        "accent_color": "#3ab6e4",
+        "divider_color": "#dcecf4",
+        "show_product_info": true,
+        "main_image_bg_color": "#ffffff",
+        "thumbnail_border_color": "#dcecf4",
+        "thumbnail_active_border_color": "#3ab6e4",
+        "arrow_bg_color": "#ffffff",
+        "arrow_border_color": "#dcecf4",
+        "arrow_icon_color": "#12304a",
+        "dots_color": "#cfe4ee",
+        "indicator_color": "#cfe4ee",
+        "indicator_active_color": "#3ab6e4",
+        "button_color": "#3ab6e4",
+        "button_text_color": "#ffffff",
+        "title_color": "#12304a",
+        "price_color": "#12304a",
+        "compare_price_color": "#93a5b1",
+        "sale_badge_bg_color": "#ffffff",
+        "sale_badge_text_color": "#12304a",
+        "description_color": "#4c5f6c",
+        "custom_content_color": "#4c5f6c",
+        "scrollbar_color": "#04c7ff",
+        "disable_sound_controls": false,
+        "show_social_badge": false,
+        "social_platform": "tiktok",
+        "view_count": 56,
+        "badge_text": "Over",
+        "badge_suffix": "M Views On TikTok",
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "sticky_atc": {
+      "type": "sticky-add-to-cart",
+      "settings": {
+        "button_text": "ADD TO CART",
+        "delivery_days": 5,
+        "title_color": "#12304a",
+        "title_desktop_font_size": 16,
+        "title_letter_spacing": 0,
+        "rating_text": "Rated [4.8] | [REVIEW COUNT] reviews",
+        "use_theme_colors": false,
+        "button_bg_color": "#3ab6e4",
+        "button_hover_color": "#2596c0",
+        "button_text_color": "#ffffff",
+        "star_color": "#3ab6e4",
+        "background_color": "#ffffff",
+        "border_radius": 20,
+        "z_index": 9900,
+        "rating_text_color": "#5b6b78",
+        "rating_text_font_weight": "var(--font-weight-regular)",
+        "rating_text_desktop_font_size": 13,
+        "rating_text_letter_spacing": 0,
+        "delivery_text_color": "#12304a",
+        "delivery_text_font_weight": "var(--font-weight-bold)",
+        "delivery_text_desktop_font_size": 13,
+        "delivery_text_mobile_font_size": 12,
+        "delivery_text_letter_spacing": 0,
+        "delivery_date_display_format": "weekday_month_day",
+        "turn_off_delivery_date": true,
+        "delivery_text_prefix": "Get It By"
+      }
+    }
+  },
+  "order": [
+    "trust_bar",
+    "main",
+    "ugc_videos",
+    "why_it_works",
+    "ingredients",
+    "formula_facts",
+    "lifestyle",
+    "journey",
+    "testimonials",
+    "comparison",
+    "guarantee",
+    "faq",
+    "final_cta",
+    "sticky_atc"
+  ]
+}

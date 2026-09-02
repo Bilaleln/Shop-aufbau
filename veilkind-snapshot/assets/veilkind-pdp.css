@@ -1,0 +1,360 @@
+/* ==========================================================================
+   VEILKIND — Milk Thistle PDP
+   Loaded only by templates/product.milk-thistle.json (via a Custom Liquid
+   block in the product section), so nothing here affects other templates.
+
+   Mobile-first: base rules target 360–430px, breakpoints add up from there.
+   ========================================================================== */
+
+:root {
+  --vk-accent: #3ab6e4;
+  --vk-accent-dark: #2596c0;
+  --vk-accent-tint: #eaf8fd;
+  --vk-accent-tint-2: #ddf5fd;
+  --vk-accent-border: #b9e7f7;
+  --vk-ink: #12304a;
+  --vk-body: #202329;
+  --vk-muted: #5b6b78;
+  --vk-surface: #ffffff;
+  --vk-surface-soft: #f7fbfd;
+  --vk-radius-sm: 12px;
+  --vk-radius: 16px;
+  --vk-radius-lg: 20px;
+  --vk-gutter: 20px;
+}
+
+/* --------------------------------------------------------------------------
+   1. Overflow safety — nothing on this page may scroll sideways.
+   -------------------------------------------------------------------------- */
+
+body {
+  overflow-x: hidden;
+}
+
+.shop-product-section,
+.statistics-section,
+.reviews-section-outer,
+.alternating-features-section,
+.image-with-text-section,
+.steps-section,
+.product-comparison-section,
+.store-faq-section {
+  max-width: 100%;
+}
+
+.shop-product-section img,
+.statistics-section img,
+.reviews-section-outer img,
+.steps-section img,
+.image-with-text-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --------------------------------------------------------------------------
+   2. Typography hygiene — the storefront runs with a German <html lang>, so
+   automatic hyphenation breaks English copy in ugly places ("ex-tract",
+   "standard-ized"). Turn it off wherever we set narrow columns.
+
+   NOTE ON `!important`: this file is pulled in by a Custom Liquid block inside
+   the product section, so it lands in the body — before every section
+   stylesheet that loads further down the page. section-statistics.css and
+   friends therefore win any same-specificity tie, and the rules that must
+   survive that are marked accordingly.
+   -------------------------------------------------------------------------- */
+
+.statistic-title,
+.statistic-description,
+.custom-benefit-title,
+.custom-benefit-description,
+.feature-title,
+.feature-description,
+.step-title,
+.step-description {
+  -webkit-hyphens: manual !important;
+  hyphens: manual !important;
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+}
+
+/* --------------------------------------------------------------------------
+   3. Line icons — product-benefits.css forces `fill: currentColor` onto the
+   whole SVG, which turns our stroked circles and ellipses into solid blobs.
+   Every icon on this template is a line icon, so reassert `fill: none` and
+   let the stroke do the drawing.
+   -------------------------------------------------------------------------- */
+
+.custom-benefit-icon svg,
+.custom-benefits-list .custom-benefit-icon svg,
+.benefits-grid-icon svg,
+.custom-benefits-grid svg,
+.benefit-icon svg {
+  fill: none !important;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+/* Icons sit a touch larger and optically centred against the heading. */
+.custom-benefit-icon {
+  width: 28px !important;
+  height: 28px !important;
+  margin-right: 12px !important;
+  margin-top: 1px;
+}
+
+.custom-benefit-header {
+  align-items: flex-start;
+}
+
+/* --------------------------------------------------------------------------
+   4. Buy box — tighter mobile rhythm, brand-blue primary CTA.
+   -------------------------------------------------------------------------- */
+
+.shop-add-to-cart-button {
+  min-height: 54px;
+  border-radius: 40px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  box-shadow: 0 6px 18px rgba(58, 182, 228, 0.28);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.shop-add-to-cart-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(58, 182, 228, 0.34);
+}
+
+.shop-add-to-cart-button:active {
+  transform: translateY(0);
+}
+
+.shop-product-info .variant-option,
+.shop-product-info .simple-variant-option {
+  min-height: 46px;
+}
+
+/* Breathing room where the Loop widget will later be dropped in. */
+.shop-product-info .vk-loop-slot {
+  min-height: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   5. Benefit row under the title.
+   -------------------------------------------------------------------------- */
+
+.custom-benefits-grid,
+.benefits-grid-container {
+  gap: 12px;
+}
+
+@media screen and (max-width: 480px) {
+  .custom-benefits-grid,
+  .benefits-grid-container {
+    gap: 10px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. UGC video carousel ("Trusted by") — vertical 9:16 cards.
+   -------------------------------------------------------------------------- */
+
+.review-image,
+.review-video {
+  width: 158px;
+  height: 281px; /* 9:16 */
+  object-fit: cover;
+}
+
+.review-video-card {
+  width: 158px;
+  height: 281px;
+  box-shadow: 0 8px 20px rgba(18, 48, 74, 0.1);
+}
+
+@media screen and (min-width: 750px) {
+  .review-image,
+  .review-video,
+  .review-video-card {
+    width: 216px;
+    height: 384px;
+  }
+}
+
+.reviewSwiper {
+  overflow: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   7. Formula facts (statistics grid).
+
+   The theme pins `aspect-ratio: 1/1.15` on both the item and the card. At two
+   columns on a phone that is roughly 160x184px, far less than the ring plus
+   four lines of copy actually need — so the content escaped the card, the ring
+   floated above it and the description ran into the card below. Release the
+   fixed ratio and let the row size itself to its content instead.
+   -------------------------------------------------------------------------- */
+
+@media screen and (max-width: 749px) {
+  /* `1fr` rows make every row the same height, so all four cards match rather
+     than each sizing itself to its own copy. */
+  .statistics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-auto-rows: 1fr !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    max-width: 100% !important;
+  }
+
+  /* The item must keep an auto height, otherwise grid stretching is disabled
+     and the card falls back to its own content height. */
+  .statistic-item {
+    aspect-ratio: auto !important;
+    max-width: none !important;
+    width: 100% !important;
+    height: auto !important;
+    align-self: stretch !important;
+    align-items: stretch !important;
+    min-width: 0;
+  }
+
+  .statistic-card {
+    aspect-ratio: auto !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    justify-content: flex-start !important;
+    padding: 20px 12px !important;
+    border-radius: 14px !important;
+    box-shadow: 0 1px 3px rgba(18, 48, 74, 0.06) !important;
+  }
+
+  .statistic-circle-container {
+    width: 84px !important;
+    max-width: 84px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .percentage-text {
+    font-size: 20px !important;
+  }
+
+  /* Reserving two lines keeps the descriptions starting on the same baseline
+     across the row, whether the title wraps or not. */
+  .statistic-title {
+    font-size: 14px !important;
+    line-height: 1.25 !important;
+    margin-bottom: 8px !important;
+    min-height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .statistic-description {
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+  }
+}
+
+/* One card per row on the narrowest phones, where two columns leave the
+   description too cramped to read. */
+@media screen and (max-width: 359px) {
+  .statistics-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}
+
+/* A finer ring reads as considered rather than chunky. */
+.circle-bg,
+.circle-progress {
+  stroke-width: 6 !important;
+}
+
+/* --------------------------------------------------------------------------
+   8. Why it works — the card list needs room to breathe on mobile.
+   -------------------------------------------------------------------------- */
+
+@media screen and (max-width: 749px) {
+  .custom-benefits-list {
+    padding: 20px 18px !important;
+  }
+
+  .custom-benefit-item {
+    margin-bottom: 20px !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   9. Comparison table — must stay readable at 375px.
+   -------------------------------------------------------------------------- */
+
+@media screen and (max-width: 749px) {
+  .product-comparison-section .feature-name,
+  .comparison-table .feature-name {
+    font-size: 12px;
+    line-height: 1.3;
+    padding-right: 6px;
+  }
+
+  .product-comparison-section .comparison-row,
+  .comparison-table .comparison-row {
+    min-height: 52px;
+  }
+
+  .product-comparison-section .product-title,
+  .comparison-table .product-title {
+    font-size: 15px;
+    line-height: 1.2;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   10. FAQ — calmer spacing, brand-tinted open state.
+   -------------------------------------------------------------------------- */
+
+.store-faq-section .faq-question {
+  min-height: 52px;
+  line-height: 1.35;
+}
+
+.store-faq-section .faq-item {
+  border-radius: var(--vk-radius-sm);
+  overflow: hidden;
+}
+
+.store-faq-section .faq-item + .faq-item {
+  margin-top: 10px;
+}
+
+.store-faq-section .faq-answer p {
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   11. Sticky add to cart — never sit on top of content or the home indicator.
+   -------------------------------------------------------------------------- */
+
+.sticky-add-to-cart,
+#sticky-add-to-cart {
+  padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+  box-shadow: 0 -6px 20px rgba(18, 48, 74, 0.12);
+}
+
+@media screen and (max-width: 989px) {
+  .vk-last-section {
+    padding-bottom: 96px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   12. Motion — respect the user's reduced-motion preference.
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .shop-add-to-cart-button,
+  .shop-add-to-cart-button:hover {
+    transition: none;
+    transform: none;
+  }
+}
