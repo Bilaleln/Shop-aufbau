@@ -1,0 +1,17 @@
+URL https://quiz.evorabody.com/
+FINAL https://quiz.evorabody.com/#front-
+HTTP 200
+
+Take This 1-Minute Quiz To Claim Your $105 Discount!
+
+✅ Most users see first visibly results in just 3-4 weeks
+
+✅ Take this quiz to get your personalized skin smoothing timeline
+
+How Old Are you?
+Selecting an option will navigate to the next step.
+Over 70
+60-69
+50-59
+40-49
+Under 40

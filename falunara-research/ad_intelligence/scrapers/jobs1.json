@@ -1,0 +1,20 @@
+[
+{"name":"evora_page_active_video","page_id":"1031841923353593","status":"active","media":"video"},
+{"name":"evora_page_active_image","page_id":"1031841923353593","status":"active","media":"image"},
+{"name":"evora_page_all_pre2026-08","page_id":"1031841923353593","status":"all","smax":"2026-07-31"},
+{"name":"evora_page_all_2026-08","page_id":"1031841923353593","status":"all","smin":"2026-08-01","smax":"2026-08-31"},
+{"name":"evora_page_all_2026-09plus","page_id":"1031841923353593","status":"all","smin":"2026-09-01"},
+{"name":"evora_page_inactive","page_id":"1031841923353593","status":"inactive"},
+{"name":"natalie_brooks_page_all","page_id":"998946876632416","status":"all"},
+{"name":"natalie_brooks_page_pre2026-09","page_id":"998946876632416","status":"all","smax":"2026-08-31"},
+{"name":"ageless_glow_today_page_all","page_id":"957899007407821","status":"all"},
+{"name":"hannah_lewis_page_all","page_id":"885138048026249","status":"all"},
+{"name":"daily_discounts_page_all","page_id":"1237233869479317","status":"all"},
+{"name":"kw_evorabody_inactive","q":"evorabody","status":"inactive"},
+{"name":"kw_evorabody_pre2026-08","q":"evorabody","status":"all","smax":"2026-07-31"},
+{"name":"kw_crepey_body_oil","q":"crepey body oil","status":"active"},
+{"name":"kw_crepey_skin_pre2026-04","q":"crepey skin","status":"active","smax":"2026-03-31"},
+{"name":"kw_crepe_skin_arms","q":"crepey arms","status":"active"},
+{"name":"kw_body_oil_over_50","q":"body oil women over 50","status":"active"},
+{"name":"kw_crepey_exact","q":"crepey","exact":true,"status":"active","smin":"2026-07-01"}
+]

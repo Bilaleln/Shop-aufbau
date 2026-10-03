@@ -1,0 +1,4 @@
+[evora_page_active_video] http=200 ads=30 total=170 https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=US&media_type=video&search_type=page&view_all_page_id=1031841923353593
+[evora_page_active_image] http=200 ads=0 total=None https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=US&media_type=image&search_type=page&view_all_page_id=1031841923353593
+[evora_page_all_pre2026-08] http=403 ads=0 total=None https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=US&media_type=all&search_type=page&view_all_page_id=1031841923353593&start_date[max]=2026-07-31
+  403/err -> backoff 240s
