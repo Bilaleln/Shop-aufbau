@@ -92,14 +92,16 @@ def main():
     ap.add_argument("--out", default="meta_ads.jsonl")
     a = ap.parse_args()
     url = build_url(a); print("URL", url, file=sys.stderr)
-    found, total = {}, None
+    found, total, gql_hits = {}, None, []
     with sync_playwright() as p:
         b, ctx = launch(p)
         page = ctx.new_page()
         def on_resp(r):
             if "/api/graphql" in r.url:
-                try: parse_graphql(r.text(), found)
-                except Exception: pass
+                try:
+                    before = len(found); parse_graphql(r.text(), found)
+                    gql_hits.append(len(found) - before)
+                except Exception as e: gql_hits.append(f"err {e}")
         page.on("response", on_resp)
         page.goto(url, wait_until="domcontentloaded", timeout=60000)
         time.sleep(6)
@@ -109,9 +111,10 @@ def main():
         m = re.search(r'"search_results_connection":\{"count":(\d+)', html)
         total = int(m.group(1)) if m else None
         parse_json_blobs(html, found)
+        print("after html parse:", len(found), file=sys.stderr)
         for i in range(a.scrolls):
-            page.mouse.wheel(0, 6000); time.sleep(2.5)
-            print(f"scroll {i+1}: {len(found)} ads", file=sys.stderr)
+            page.evaluate("window.scrollTo(0, document.body.scrollHeight)"); time.sleep(3)
+            print(f"scroll {i+1}: {len(found)} ads, graphql responses={gql_hits}", file=sys.stderr)
         b.close()
     rows = [flatten(o) for o in found.values()]
     with open(a.out, "w") as f:
