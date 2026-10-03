@@ -10,3 +10,4 @@
 [natalie_brooks_page_pre2026-09] http=403 ads=0 total=None https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=US&media_type=all&search_type=page&view_all_page_id=998946876632416&start_date[max]=2026-08-31
   403/err -> backoff 240s
 [natalie_brooks_page_pre2026-09] http=200 ads=30 total=40 https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=US&media_type=all&search_type=page&view_all_page_id=998946876632416&start_date[max]=2026-08-31
+[ageless_glow_today_page_all] http=200 ads=30 total=210 https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=US&media_type=all&search_type=page&view_all_page_id=957899007407821
