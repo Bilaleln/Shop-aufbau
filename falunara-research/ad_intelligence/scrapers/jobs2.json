@@ -1,0 +1,20 @@
+[
+{"name":"goda_page_active","page_id":"123971964123694","status":"active"},
+{"name":"goda_page_pre2026-04","page_id":"123971964123694","status":"active","smax":"2026-03-31"},
+{"name":"over40fabulous_page_all","page_id":"691427450714766","status":"all"},
+{"name":"drlilamerrit_page_all","page_id":"732023073327451","status":"all"},
+{"name":"kw_goda_silk_body_oil","q":"goda.co","status":"active"},
+{"name":"drmtlgy_page_active_pre2026-06","page_id":"1089860041103335","status":"active","smax":"2026-05-31"},
+{"name":"kw_drmtlgy_retinol_body","q":"retinol body lotion crepey","status":"active"},
+{"name":"crepe_erase_kw","q":"crepe erase","status":"active"},
+{"name":"saeskyn_page_active","page_id":"683748144815985","status":"active"},
+{"name":"turmskin_page_active","page_id":"420143697843183","status":"active"},
+{"name":"besque_page_active","page_id":"114239804036917","status":"active"},
+{"name":"feline_page_active","page_id":"929801383741023","status":"active"},
+{"name":"annes_blog_page_active","page_id":"281672218366936","status":"active"},
+{"name":"kw_osea_body_oil","q":"undaria algae body oil","status":"active"},
+{"name":"kw_necessaire_body_retinol","q":"body retinol","status":"active"},
+{"name":"kw_gold_bond_crepe","q":"crepe corrector","status":"active"},
+{"name":"kw_crepey_skin_video_2026-09","q":"crepey skin","status":"active","media":"video","smin":"2026-09-01"},
+{"name":"kw_crepey_skin_image_pre2026-07","q":"crepey skin","status":"active","media":"image","smax":"2026-06-30"}
+]

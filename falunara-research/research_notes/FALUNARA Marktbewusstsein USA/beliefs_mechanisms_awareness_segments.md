@@ -115,7 +115,6 @@ All five levels are visible. The **largest and loudest** group in the data is **
 - "Skin is dry as a desert.........WTF is this?" — [r/Menopause](https://www.reddit.com/r/Menopause/comments/1kmvyu0/skin_is_dry_as_a_desertwtf_is_this/)
 - "I remember looking at my legs and trying to pull up my loose, saggy stockings BUT I WASN'T WEARING ANY STOCKINGS!" — [r/Menopause](https://www.reddit.com/r/Menopause/comments/1fd0h17/my_hands_and_arms_have_suddenly_become_crepey/)
 - "I've got some hail damage on my upper arms." / "bat wings AKA Bingo Flaps and/or deli owner arms" — [r/Menopause](https://www.reddit.com/r/Menopause/comments/1hvpiqd/what_happened_to_my_arms/m5vl5in/)
-- "Hi I'm 39 and have noticed my skin is developing lines all over my body. Not sure if it's crepey skin/ thin skin." — [r/30PlusSkinCare](https://www.reddit.com/r/30PlusSkinCare/comments/1cxdk0l/) (title only seen via search; listed as search result)
 - "Is this normal?" posts: "I am 35F and have noticed in the last two years my skin has started to become crepey and sag. Is this normal?" — [r/30PlusSkinCare](https://www.reddit.com/r/30PlusSkinCare/comments/1u0r0ts/is_this_normal/)
 - Other words used: "papery", "clinkles" (chest), "old lady crepey look", "dried up husk", "crepe paper".
 
