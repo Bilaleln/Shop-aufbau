@@ -1,20 +1,151 @@
 [
-{"name":"goda_page_active","page_id":"123971964123694","status":"active"},
-{"name":"goda_page_pre2026-04","page_id":"123971964123694","status":"active","smax":"2026-03-31"},
-{"name":"over40fabulous_page_all","page_id":"691427450714766","status":"all"},
-{"name":"drlilamerrit_page_all","page_id":"732023073327451","status":"all"},
-{"name":"kw_goda_silk_body_oil","q":"goda.co","status":"active"},
-{"name":"drmtlgy_page_active_pre2026-06","page_id":"1089860041103335","status":"active","smax":"2026-05-31"},
-{"name":"kw_drmtlgy_retinol_body","q":"retinol body lotion crepey","status":"active"},
-{"name":"crepe_erase_kw","q":"crepe erase","status":"active"},
-{"name":"saeskyn_page_active","page_id":"683748144815985","status":"active"},
-{"name":"turmskin_page_active","page_id":"420143697843183","status":"active"},
-{"name":"besque_page_active","page_id":"114239804036917","status":"active"},
-{"name":"feline_page_active","page_id":"929801383741023","status":"active"},
-{"name":"annes_blog_page_active","page_id":"281672218366936","status":"active"},
-{"name":"kw_osea_body_oil","q":"undaria algae body oil","status":"active"},
-{"name":"kw_necessaire_body_retinol","q":"body retinol","status":"active"},
-{"name":"kw_gold_bond_crepe","q":"crepe corrector","status":"active"},
-{"name":"kw_crepey_skin_video_2026-09","q":"crepey skin","status":"active","media":"video","smin":"2026-09-01"},
-{"name":"kw_crepey_skin_image_pre2026-07","q":"crepey skin","status":"active","media":"image","smax":"2026-06-30"}
+{
+"name": "goda_page_active",
+"page_id": "123971964123694",
+"status": "active"
+},
+{
+"name": "goda_page_pre2026-04",
+"page_id": "123971964123694",
+"status": "active",
+"smax": "2026-03-31"
+},
+{
+"name": "over40fabulous_page_all",
+"page_id": "691427450714766",
+"status": "all"
+},
+{
+"name": "drlilamerrit_page_all",
+"page_id": "732023073327451",
+"status": "all"
+},
+{
+"name": "kw_goda_silk_body_oil",
+"q": "goda.co",
+"status": "active"
+},
+{
+"name": "drmtlgy_page_active_pre2026-06",
+"page_id": "1089860041103335",
+"status": "active",
+"smax": "2026-05-31"
+},
+{
+"name": "kw_drmtlgy_retinol_body",
+"q": "retinol body lotion crepey",
+"status": "active"
+},
+{
+"name": "crepe_erase_kw",
+"q": "crepe erase",
+"status": "active"
+},
+{
+"name": "saeskyn_page_active",
+"page_id": "683748144815985",
+"status": "active"
+},
+{
+"name": "turmskin_page_active",
+"page_id": "420143697843183",
+"status": "active"
+},
+{
+"name": "besque_page_active",
+"page_id": "114239804036917",
+"status": "active"
+},
+{
+"name": "feline_page_active",
+"page_id": "929801383741023",
+"status": "active"
+},
+{
+"name": "annes_blog_page_active",
+"page_id": "281672218366936",
+"status": "active"
+},
+{
+"name": "kw_osea_body_oil",
+"q": "undaria algae body oil",
+"status": "active"
+},
+{
+"name": "kw_necessaire_body_retinol",
+"q": "body retinol",
+"status": "active"
+},
+{
+"name": "kw_gold_bond_crepe",
+"q": "crepe corrector",
+"status": "active"
+},
+{
+"name": "kw_crepey_skin_video_2026-09",
+"q": "crepey skin",
+"status": "active",
+"media": "video",
+"smin": "2026-09-01"
+},
+{
+"name": "kw_crepey_skin_image_pre2026-07",
+"q": "crepey skin",
+"status": "active",
+"media": "image",
+"smax": "2026-06-30"
+},
+{
+"name": "nordbody_page_active",
+"page_id": "1162941896892016",
+"status": "active"
+},
+{
+"name": "body_confidence_daily_page_active",
+"page_id": "820493664476157",
+"status": "active"
+},
+{
+"name": "vitaecharm_page_active",
+"page_id": "321287208643721",
+"status": "active"
+},
+{
+"name": "miamimd_page_active",
+"page_id": "109505650695478",
+"status": "active"
+},
+{
+"name": "healthyclub_page_active",
+"page_id": "686797521181950",
+"status": "active"
+},
+{
+"name": "40plusfabulous_page_active",
+"page_id": "465173070005445",
+"status": "active"
+},
+{
+"name": "joanna_woodley_page_active",
+"page_id": "697744180095553",
+"status": "active"
+},
+{
+"name": "kw_body_oil_over_50_retry",
+"q": "body oil over 50",
+"status": "active"
+},
+{
+"name": "evora_page_all_2026-09-01_15",
+"page_id": "1031841923353593",
+"status": "all",
+"smin": "2026-09-01",
+"smax": "2026-09-15"
+},
+{
+"name": "natalie_brooks_pre2026-09_retry",
+"page_id": "998946876632416",
+"status": "all",
+"smax": "2026-08-31"
+}
 ]
