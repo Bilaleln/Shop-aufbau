@@ -367,7 +367,10 @@
         // Bundle offer cards
         this.offers.forEach(function (o) {
           var q = parseInt(o.getAttribute('data-qty'), 10) || 1;
-          var paid = parseInt(o.getAttribute('data-paid'), 10) || q;
+          // Free units come from an automatic "Buy X get Y" discount, which
+          // Shopify applies to one-time purchases only — so a subscription
+          // bundle is priced at full quantity.
+          var paid = useSub ? q : (parseInt(o.getAttribute('data-paid'), 10) || q);
           var total = unitPrice * paid;
           var compare = unitCompare * q;
           var save = Math.max(0, compare - total);
@@ -402,7 +405,7 @@
         if (self.sizePos) parts.push(self.selected[self.sizePos - 1] ? 'Size ' + self.selected[self.sizePos - 1] : self.labelChoose);
         if (self.colorPos && self.selected[self.colorPos - 1]) parts.push(self.selected[self.colorPos - 1]);
         if (display) {
-          var paidUnits = this.offer ? (parseInt(this.offer.getAttribute('data-paid'), 10) || this.qty) : 1;
+          var paidUnits = this.offer ? (useSub ? this.qty : (parseInt(this.offer.getAttribute('data-paid'), 10) || this.qty)) : 1;
           var stickyQty = this.offer ? this.qty : 1;
           parts.push((stickyQty > 1 ? stickyQty + '× · ' : '') + this.formatMoney(unitPrice * paidUnits));
         }
