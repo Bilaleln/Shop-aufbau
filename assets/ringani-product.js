@@ -376,7 +376,7 @@
           o.querySelectorAll('[data-ringani-offer-compare]').forEach(function (el) { el.textContent = self.formatMoney(compare); el.hidden = save <= 0; });
           o.querySelectorAll('[data-ringani-offer-text]').forEach(function (el) {
             var t = el.getAttribute('data-template') || '';
-            el.textContent = t.split('{amount}').join(saveStr);
+            el.textContent = t.split('{amount}').join(saveStr).split('{per_unit}').join(self.formatMoney(total / q));
             var hide = save <= 0 && t.indexOf('{amount}') !== -1;
             var row = el.closest('.ringani-pm__offer-bullet') || el;
             row.hidden = hide;

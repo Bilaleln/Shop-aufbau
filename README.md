@@ -190,7 +190,7 @@ Der Kaufbereich (`ringani-product-main`) kann zwei Verkaufs-Module zeigen:
 **1. Mengen-Angebote** („Buy 1" / „Buy 2 Get 1 FREE")
 - Theme-Editor → Section *RINGANI – Product* → Block **„Bundle offer"** hinzufügen (max. 5).
 - Pro Block: Titel, Badge (z. B. „Most Popular"), Bild, *Units added to cart*,
-  *Of which free*, Untertitel/Check-Punkte (`{amount}` = berechnete Ersparnis), „Preselected".
+  *Of which free*, Untertitel/Check-Punkte (`{amount}` = berechnete Ersparnis, `{per_unit}` = Preis pro Stück), „Preselected".
 - Preise werden live aus der gewählten Variante berechnet:
   Preis = Stückpreis × bezahlte Einheiten, Streichpreis = Vergleichspreis × Einheiten.
 - **Wichtig:** Gratis-Einheiten müssen in Shopify unter *Rabatte* als

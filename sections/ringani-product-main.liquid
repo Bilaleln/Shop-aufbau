@@ -296,6 +296,7 @@
               assign o_compare = unit_compare | times: o_qty
               assign o_save = o_compare | minus: o_price | at_least: 0
               assign o_save_money = o_save | money
+              assign o_unit_money = o_price | times: 1.0 | divided_by: o_qty | round | money
               assign o_selected = false
               if forloop.index0 == offer_default
                 assign o_selected = true
@@ -317,7 +318,7 @@
               <span class="ringani-pm__offer-body">
                 <span class="ringani-pm__offer-title">{{ block.settings.title }}</span>
                 {%- if block.settings.subtitle != blank -%}
-                  <span class="ringani-pm__offer-sub" data-ringani-offer-text data-template="{{ block.settings.subtitle | escape }}" {% if o_save == 0 and block.settings.subtitle contains '{amount}' %}hidden{% endif %}>{{ block.settings.subtitle | replace: '{amount}', o_save_money }}</span>
+                  <span class="ringani-pm__offer-sub" data-ringani-offer-text data-template="{{ block.settings.subtitle | escape }}" {% if o_save == 0 and block.settings.subtitle contains '{amount}' %}hidden{% endif %}>{{ block.settings.subtitle | replace: '{amount}', o_save_money | replace: '{per_unit}', o_unit_money }}</span>
                 {%- endif -%}
                 {%- if block.settings.bullets != blank -%}
                   {%- assign o_lines = block.settings.bullets | newline_to_br | strip_newlines | split: '<br />' -%}
@@ -327,7 +328,7 @@
                       {%- if line_t != blank -%}
                         <span class="ringani-pm__offer-bullet" {% if o_save == 0 and line_t contains '{amount}' %}hidden{% endif %}>
                           <span class="ringani-pm__offer-check" aria-hidden="true">✓</span>
-                          <span data-ringani-offer-text data-template="{{ line_t | escape }}">{{ line_t | replace: '{amount}', o_save_money }}</span>
+                          <span data-ringani-offer-text data-template="{{ line_t | escape }}">{{ line_t | replace: '{amount}', o_save_money | replace: '{per_unit}', o_unit_money }}</span>
                         </span>
                       {%- endif -%}
                     {%- endfor -%}
@@ -683,8 +684,8 @@
         { "type": "range", "id": "free_units", "min": 0, "max": 5, "step": 1, "label": "Of which free", "info": "E.g. Buy 2 Get 1 FREE: units 3, free 1. Requires a matching automatic discount in Shopify admin.", "default": 0 },
         { "type": "text", "id": "badge", "label": "Badge", "info": "E.g. Most Popular. Leave empty for none." },
         { "type": "image_picker", "id": "image", "label": "Image" },
-        { "type": "text", "id": "subtitle", "label": "Subtitle", "info": "{amount} = calculated savings.", "default": "You save {amount}" },
-        { "type": "textarea", "id": "bullets", "label": "Check points (one per line)", "info": "{amount} = calculated savings." },
+        { "type": "text", "id": "subtitle", "label": "Subtitle", "info": "{amount} = calculated savings, {per_unit} = price per unit.", "default": "You save {amount}" },
+        { "type": "textarea", "id": "bullets", "label": "Check points (one per line)", "info": "{amount} = calculated savings, {per_unit} = price per unit." },
         { "type": "checkbox", "id": "preselect", "label": "Preselected", "default": false }
       ]
     },
