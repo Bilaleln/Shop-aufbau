@@ -188,13 +188,13 @@
                 assign key = vname | downcase | strip
                 if swatch_bg == '' and swatch_img == blank
                   case key
-                    when 'schwarz','black','anthrazit','graphit'
+                    when 'black','schwarz','charcoal','graphite','anthracite','anthrazit','graphit','onyx','midnight'
                       assign swatch_bg = 'linear-gradient(145deg,#3A3A38,#131312)'
-                    when 'silber','silver','grau','gray','platin'
+                    when 'silver','silber','gray','grey','grau','platinum','platin','titanium'
                       assign swatch_bg = 'linear-gradient(145deg,#EDEDEA,#B7B7B1)'
-                    when 'gold','roségold','rosegold','rose gold'
+                    when 'gold','rose gold','rosegold','rose-gold','roségold'
                       assign swatch_bg = 'linear-gradient(145deg,#E3CBA1,#B4915F)'
-                    when 'blau','blue','navy'
+                    when 'blue','blau','navy'
                       assign swatch_bg = 'linear-gradient(145deg,#3E6FA8,#183A63)'
                     else
                       assign swatch_bg = '#C7C4BD'
@@ -310,7 +310,7 @@
                 <span style="display:inline-flex;align-items:center;justify-content:center;width:42px;height:27px;padding:2px;border:1px solid #E4E1DA;border-radius:5px;background:#fff">
                   {{ svg_key | payment_type_svg_tag }}
                 </span>
-              {%- elsif badge == 'rechnung' -%}
+              {%- elsif badge == 'invoice' or badge == 'rechnung' -%}
                 <span style="display:inline-flex;align-items:center;justify-content:center;min-width:42px;height:27px;padding:2px 6px;border:1px solid #E4E1DA;border-radius:5px;background:#fff">
                   <span style="font-size:9px;font-weight:600;letter-spacing:.02em;color:#1A1A1A;white-space:nowrap">Invoice</span>
                 </span>
@@ -492,8 +492,8 @@
         { "type": "benefit", "settings": { "text": "Automatically track activity and steps" } },
         { "type": "benefit", "settings": { "text": "Long battery life" } },
         { "type": "benefit", "settings": { "text": "No monthly fees – no subscription" } },
-        { "type": "panel", "settings": { "title": "Shipping & Delivery", "body": "<p>Free shipping within the US. Delivery typically within 3–5 business days. Tracking via email.</p>" } },
-        { "type": "panel", "settings": { "title": "Returns & Warranty", "body": "<p>30-day return policy from date of receipt. 2-year manufacturer warranty.</p>" } },
+        { "type": "panel", "settings": { "title": "Shipping & Delivery", "body": "<p>Free shipping within the US. Delivery typically within 3–7 business days. Tracking via email.</p>" } },
+        { "type": "panel", "settings": { "title": "Returns & Warranty", "body": "<p>30-day returns from the date you receive your order. 1-year limited warranty.</p>" } },
         { "type": "panel", "settings": { "title": "Compatibility", "body": "<p>The RINGANI app is available for iOS and Android.</p>" } },
         { "type": "size_row", "settings": { "size": "Size 6", "diameter": "16.5 mm", "circumference": "51.8 mm" } },
         { "type": "size_row", "settings": { "size": "Size 7", "diameter": "17.3 mm", "circumference": "54.3 mm" } },

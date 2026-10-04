@@ -3,7 +3,7 @@
   Alternating image + text storytelling rows (Sleep / Recovery / Activity).
   Each row is a reorderable block.
 {%- endcomment -%}
-<section id="{{ section.settings.anchor | default: 'technologie' }}" class="ringani ringani-section ringani-features" style="{% render 'ringani-section-vars', s: section %}">
+<section id="{{ section.settings.anchor | default: 'technology' }}" class="ringani ringani-section ringani-features" style="{% render 'ringani-section-vars', s: section %}">
   <div class="ringani-inner ringani-features__wrap">
     {%- for block in section.blocks -%}
       {%- liquid
@@ -61,7 +61,7 @@
   "tag": "section",
   "max_blocks": 8,
   "settings": [
-    { "type": "text", "id": "anchor", "label": "Anchor ID (for navigation)", "default": "technologie" },
+    { "type": "text", "id": "anchor", "label": "Anchor ID (for navigation)", "default": "technology" },
     { "type": "header", "content": "Spacing" },
     { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Top (Desktop)", "default": 120 },
     { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "label": "Bottom (Desktop)", "default": 120 },

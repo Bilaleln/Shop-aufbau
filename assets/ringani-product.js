@@ -111,9 +111,9 @@
       this.cartUrl = this.getAttribute('data-cart-url') || '/cart';
       this.productUrl = this.getAttribute('data-product-url') || '';
       this.onAdd = this.getAttribute('data-on-add') || 'drawer';
-      this.labelAdd = this.getAttribute('data-label-add') || 'In den Warenkorb';
-      this.labelSoldOut = this.getAttribute('data-label-soldout') || 'Ausverkauft';
-      this.labelChoose = this.getAttribute('data-label-choose') || 'Größe wählen';
+      this.labelAdd = this.getAttribute('data-label-add') || 'Add to cart';
+      this.labelSoldOut = this.getAttribute('data-label-soldout') || 'Sold out';
+      this.labelChoose = this.getAttribute('data-label-choose') || 'Select size';
 
       // Selected option values (index 0..optionCount-1)
       var current = this.currentVariant();
@@ -254,7 +254,7 @@
       if (hint) {
         var chosenSize = self.sizePos ? self.selected[self.sizePos - 1] : null;
         hint.textContent = chosenSize
-          ? (hint.getAttribute('data-chosen-prefix') || 'Größe') + ' ' + chosenSize
+          ? (hint.getAttribute('data-chosen-prefix') || 'Size') + ' ' + chosenSize
           : (hint.getAttribute('data-default') || '');
       }
       var badge = this.querySelector('[data-ringani-size-badge]');
@@ -264,7 +264,7 @@
       var summary = this.querySelector('[data-ringani-sticky-summary]');
       if (summary) {
         var parts = [];
-        if (self.sizePos) parts.push(self.selected[self.sizePos - 1] ? 'Größe ' + self.selected[self.sizePos - 1] : self.labelChoose);
+        if (self.sizePos) parts.push(self.selected[self.sizePos - 1] ? 'Size ' + self.selected[self.sizePos - 1] : self.labelChoose);
         if (self.colorPos && self.selected[self.colorPos - 1]) parts.push(self.selected[self.colorPos - 1]);
         if (display) parts.push(display.price);
         summary.textContent = parts.join(' · ');
@@ -495,7 +495,7 @@
       // 3) Configurable fallback when no theme drawer is detected.
       this.refreshBubble();
       if (this.onAdd === 'cart') window.location.href = this.cartUrl;
-      else this.toast(this.getAttribute('data-added-msg') || 'Zum Warenkorb hinzugefügt');
+      else this.toast(this.getAttribute('data-added-msg') || 'Added to cart');
     };
 
     C.prototype.replaceSection = function (id, html) {
@@ -522,7 +522,7 @@
     };
 
     C.prototype.cartError = function (msg) {
-      this.toast(msg || 'Hinzufügen nicht möglich.');
+      this.toast(msg || 'Could not add to cart.');
     };
 
     C.prototype.toast = function (msg) {
