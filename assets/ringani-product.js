@@ -123,7 +123,22 @@
       if (this.sizePos) this.selected[this.sizePos - 1] = null;
 
       this.qty = 1;
+      this.moneyFormat = this.getAttribute('data-money-format') || '${{amount}}';
+
+      // Bundle offers: quantity comes from the selected offer card.
+      this.offers = Array.prototype.slice.call(this.querySelectorAll('[data-ringani-offer]'));
+      var offerSel = this.offers.filter(function (o) { return o.getAttribute('aria-checked') === 'true'; })[0] || this.offers[0];
+      this.offer = offerSel || null;
+      if (this.offer) this.qty = parseInt(this.offer.getAttribute('data-qty'), 10) || 1;
+
+      // Purchase option: one-time vs. subscription (selling plan).
+      var subBtn = this.querySelector('[data-ringani-purchase="sub"]');
+      var planSelect = this.querySelector('[data-ringani-plan-select]');
+      this.purchase = subBtn && subBtn.getAttribute('aria-checked') === 'true' ? 'sub' : 'once';
+      this.planId = planSelect ? planSelect.value : null;
+
       this._wireEvents();
+      this.setQty(this.qty);
       this.refresh();
       scanReveals(this);
     };
@@ -138,6 +153,10 @@
           if (size.hasAttribute('disabled') || size.getAttribute('aria-disabled') === 'true') return;
           self.pick(self.sizePos, size.getAttribute('data-value')); return;
         }
+        var offer = e.target.closest('[data-ringani-offer]');
+        if (offer) { self.selectOffer(offer); return; }
+        var purchase = e.target.closest('[data-ringani-purchase]');
+        if (purchase) { self.purchase = purchase.getAttribute('data-ringani-purchase'); self.refresh(); return; }
         var thumb = e.target.closest('[data-ringani-thumb]');
         if (thumb) { self.showMedia(thumb.getAttribute('data-media-id')); return; }
         if (e.target.closest('[data-ringani-inc]')) { self.setQty(self.qty + 1); return; }
@@ -150,6 +169,24 @@
       this.querySelectorAll('[data-ringani-option-select]').forEach(function (sel) {
         sel.addEventListener('change', function () {
           self.pick(parseInt(sel.getAttribute('data-position'), 10), sel.value);
+        });
+      });
+      var planSelect = this.querySelector('[data-ringani-plan-select]');
+      if (planSelect) {
+        planSelect.addEventListener('change', function () {
+          self.planId = planSelect.value;
+          self.purchase = 'sub';
+          self.refresh();
+        });
+      }
+      // Arrow-key navigation inside the offer radiogroup.
+      this.offers.forEach(function (o, i) {
+        o.addEventListener('keydown', function (e) {
+          var d = (e.key === 'ArrowDown' || e.key === 'ArrowRight') ? 1 : (e.key === 'ArrowUp' || e.key === 'ArrowLeft') ? -1 : 0;
+          if (!d) return;
+          e.preventDefault();
+          var next = self.offers[(i + d + self.offers.length) % self.offers.length];
+          self.selectOffer(next); next.focus();
         });
       });
       // Add-to-cart forms (main + sticky share one variant state).
@@ -183,6 +220,52 @@
       if (!position) return;
       this.selected[position - 1] = value;
       this.refresh();
+    };
+
+    C.prototype.selectOffer = function (el) {
+      this.offer = el;
+      this.offers.forEach(function (o) {
+        var on = o === el;
+        o.setAttribute('aria-checked', on ? 'true' : 'false');
+        o.setAttribute('tabindex', on ? '0' : '-1');
+      });
+      this.setQty(parseInt(el.getAttribute('data-qty'), 10) || 1);
+      this.refresh();
+    };
+
+    // Active selling-plan allocation for a variant ({price_raw, compare_raw}) or null.
+    C.prototype.planFor = function (v) {
+      if (!v || !v.plans || !this.planId) return null;
+      return v.plans[this.planId] || null;
+    };
+
+    C.prototype.formatMoney = function (cents) {
+      cents = Math.round(Number(cents) || 0);
+      var fmt = this.moneyFormat;
+      function delimit(n, prec, thou, dec) {
+        var parts = (n / 100).toFixed(prec).split('.');
+        return parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, thou) + (parts[1] ? dec + parts[1] : '');
+      }
+      var m = fmt.match(/\{\{\s*(\w+)\s*\}\}/);
+      var key = m ? m[1] : 'amount';
+      var val;
+      switch (key) {
+        case 'amount_no_decimals': val = delimit(cents, 0, ',', '.'); break;
+        case 'amount_with_comma_separator': val = delimit(cents, 2, '.', ','); break;
+        case 'amount_no_decimals_with_comma_separator': val = delimit(cents, 0, '.', ','); break;
+        case 'amount_with_apostrophe_separator': val = delimit(cents, 2, "'", '.'); break;
+        case 'amount_with_space_separator': val = delimit(cents, 2, ' ', ','); break;
+        default: val = delimit(cents, 2, ',', '.');
+      }
+      return m ? fmt.replace(m[0], val) : val;
+    };
+
+    C.prototype.fillTemplates = function (sel, map) {
+      this.querySelectorAll(sel).forEach(function (el) {
+        var t = el.getAttribute('data-template') || '';
+        Object.keys(map).forEach(function (k) { t = t.split('{' + k + '}').join(map[k]); });
+        el.textContent = t;
+      });
     };
 
     C.prototype.setQty = function (n) {
@@ -235,18 +318,70 @@
       var matched = this.matchedVariant();
       var display = matched || this.currentVariant();
 
+      // Purchase option (subscription) — fall back to one-time when the
+      // displayed variant is not part of the chosen plan.
+      var plan = this.planFor(display);
+      var hasPlans = !!this.querySelector('[data-ringani-purchase="sub"]');
+      var requiresPlan = hasPlans && !this.querySelector('[data-ringani-purchase="once"]');
+      var useSub = hasPlans && (this.purchase === 'sub' || requiresPlan) && !!plan;
+      this.querySelectorAll('[data-ringani-purchase]').forEach(function (b) {
+        var on = (b.getAttribute('data-ringani-purchase') === 'sub') === useSub;
+        b.setAttribute('aria-checked', on ? 'true' : 'false');
+        var card = b.closest('[data-ringani-plan-card]');
+        if (card) card.setAttribute('data-active', on ? 'true' : 'false');
+      });
+      this.querySelectorAll('[data-ringani-selling-plan]').forEach(function (el) {
+        el.value = useSub ? self.planId : '';
+        el.disabled = !useSub;
+      });
+
       // Price
+      var unitPrice = display ? (useSub ? plan.price_raw : display.price_raw) : 0;
+      var unitCompare = display ? Math.max(display.compare_at_price_raw || 0, display.price_raw) : 0;
       if (display) {
-        this.setText('[data-ringani-price]', display.price);
+        this.setText('[data-ringani-price]', this.formatMoney(unitPrice));
         var compareEl = this.querySelectorAll('[data-ringani-compare]');
         var saveEl = this.querySelectorAll('[data-ringani-save]');
-        if (display.compare_at_price_raw > display.price_raw) {
-          compareEl.forEach(function (el) { el.textContent = display.compare_at_price; el.hidden = false; });
-          saveEl.forEach(function (el) { el.textContent = self.savingsText(display); el.hidden = false; });
+        if (unitCompare > unitPrice) {
+          var saveAmount = this.formatMoney(unitCompare - unitPrice);
+          compareEl.forEach(function (el) { el.textContent = self.formatMoney(unitCompare); el.hidden = false; });
+          saveEl.forEach(function (el) { el.textContent = self.savingsText({ savings: saveAmount }); el.hidden = false; });
         } else {
           compareEl.forEach(function (el) { el.hidden = true; });
           saveEl.forEach(function (el) { el.hidden = true; });
         }
+
+        // Purchase-option prices
+        var planDisp = plan || null;
+        this.setText('[data-ringani-once-price]', display.price);
+        if (planDisp) {
+          var pct = planDisp.compare_raw > 0 ? Math.round((planDisp.compare_raw - planDisp.price_raw) * 100 / planDisp.compare_raw) : 0;
+          this.setText('[data-ringani-sub-price]', this.formatMoney(planDisp.price_raw));
+          this.querySelectorAll('[data-ringani-sub-compare]').forEach(function (el) {
+            el.textContent = self.formatMoney(planDisp.compare_raw); el.hidden = pct <= 0;
+          });
+          this.fillTemplates('[data-ringani-sub-text]', { percent: pct, price: this.formatMoney(planDisp.price_raw) });
+          this.querySelectorAll('.ringani-pm__plan-badge').forEach(function (el) { el.hidden = pct <= 0; });
+        }
+
+        // Bundle offer cards
+        this.offers.forEach(function (o) {
+          var q = parseInt(o.getAttribute('data-qty'), 10) || 1;
+          var paid = parseInt(o.getAttribute('data-paid'), 10) || q;
+          var total = unitPrice * paid;
+          var compare = unitCompare * q;
+          var save = Math.max(0, compare - total);
+          var saveStr = self.formatMoney(save);
+          o.querySelectorAll('[data-ringani-offer-price]').forEach(function (el) { el.textContent = self.formatMoney(total); });
+          o.querySelectorAll('[data-ringani-offer-compare]').forEach(function (el) { el.textContent = self.formatMoney(compare); el.hidden = save <= 0; });
+          o.querySelectorAll('[data-ringani-offer-text]').forEach(function (el) {
+            var t = el.getAttribute('data-template') || '';
+            el.textContent = t.split('{amount}').join(saveStr);
+            var hide = save <= 0 && t.indexOf('{amount}') !== -1;
+            var row = el.closest('.ringani-pm__offer-bullet') || el;
+            row.hidden = hide;
+          });
+        });
       }
 
       // Size hint
@@ -264,9 +399,13 @@
       var summary = this.querySelector('[data-ringani-sticky-summary]');
       if (summary) {
         var parts = [];
-        if (self.sizePos) parts.push(self.selected[self.sizePos - 1] ? 'Größe ' + self.selected[self.sizePos - 1] : self.labelChoose);
+        if (self.sizePos) parts.push(self.selected[self.sizePos - 1] ? 'Size ' + self.selected[self.sizePos - 1] : self.labelChoose);
         if (self.colorPos && self.selected[self.colorPos - 1]) parts.push(self.selected[self.colorPos - 1]);
-        if (display) parts.push(display.price);
+        if (display) {
+          var paidUnits = this.offer ? (parseInt(this.offer.getAttribute('data-paid'), 10) || this.qty) : 1;
+          var stickyQty = this.offer ? this.qty : 1;
+          parts.push((stickyQty > 1 ? stickyQty + '× · ' : '') + this.formatMoney(unitPrice * paidUnits));
+        }
         summary.textContent = parts.join(' · ');
       }
 
@@ -408,7 +547,7 @@
         this.dispatchEvent(new CLU({
           action: 'add',
           context: 'product',
-          lines: [{ merchandiseId: String(id), quantity: itemCount }],
+          lines: [{ merchandiseId: String(id), quantity: itemCount, sellingPlanId: body.get('selling_plan') || undefined }],
           promise: deferred.promise
         }));
       } catch (err) { return false; }

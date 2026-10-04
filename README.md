@@ -180,3 +180,27 @@ Metafelder umstellen.
   Bewertungen" hinzufügen.
 - **Veröffentlichen:** Nur in einem **unveröffentlichten** Dev-Theme testen und
   erst nach deiner Freigabe live schalten.
+
+---
+
+## Bundle-Angebote & Abo (Subscribe & Save)
+
+Der Kaufbereich (`ringani-product-main`) kann zwei Verkaufs-Module zeigen:
+
+**1. Mengen-Angebote** („Buy 1" / „Buy 2 Get 1 FREE")
+- Theme-Editor → Section *RINGANI – Product* → Block **„Bundle offer"** hinzufügen (max. 5).
+- Pro Block: Titel, Badge (z. B. „Most Popular"), Bild, *Units added to cart*,
+  *Of which free*, Untertitel/Check-Punkte (`{amount}` = berechnete Ersparnis), „Preselected".
+- Preise werden live aus der gewählten Variante berechnet:
+  Preis = Stückpreis × bezahlte Einheiten, Streichpreis = Vergleichspreis × Einheiten.
+- **Wichtig:** Gratis-Einheiten müssen in Shopify unter *Rabatte* als
+  **automatischer „Kaufe X, erhalte Y"-Rabatt** angelegt werden (z. B. kaufe 2, erhalte 1 gratis),
+  sonst wird an der Kasse der volle Preis berechnet.
+- Farben (Akzent, Hintergrund der aktiven Karte, Badge-Text) unter „Bundle Offers" einstellbar.
+
+**2. Kaufoption Einmalkauf / Abo**
+- Erscheint automatisch, sobald das Produkt einen **Abo-Plan** (Selling Plan) hat –
+  z. B. über die kostenlose App **„Shopify Subscriptions"** (Plan mit z. B. 15 % Rabatt, Lieferung alle 30/60 Tage).
+- Rabatt-%, Abo-Preis und Lieferintervalle kommen aus dem Plan; Texte sind editierbar
+  (`{percent}`, `{price}`).
+- Kombinierbar mit den Mengen-Angeboten (Abo-Preis × Einheiten).

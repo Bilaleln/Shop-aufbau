@@ -69,6 +69,7 @@
     data-label-soldout="{{ section.settings.label_soldout | escape }}"
     data-label-choose="{{ section.settings.label_choose | escape }}"
     data-save-template="{{ section.settings.save_template | escape }}"
+    data-money-format="{{ shop.money_format | strip_html | escape }}"
     data-scroll-anchor="ringani-produkt"
     data-added-msg="{{ 'Added to cart' }}">
 
@@ -85,7 +86,12 @@
             "compare_at_price": {{ v.compare_at_price | money | json }},
             "compare_at_price_raw": {{ v.compare_at_price | default: 0 }},
             "savings": {{ v.compare_at_price | minus: v.price | at_least: 0 | money | json }},
-            "featured_media_id": {% if v.featured_media %}{{ v.featured_media.id }}{% else %}null{% endif %}
+            "featured_media_id": {% if v.featured_media %}{{ v.featured_media.id }}{% else %}null{% endif %},
+            "plans": {
+              {%- for a in v.selling_plan_allocations -%}
+                "{{ a.selling_plan.id }}": { "price_raw": {{ a.price }}, "compare_raw": {{ a.compare_at_price | default: v.price }} }{%- unless forloop.last -%},{%- endunless -%}
+              {%- endfor -%}
+            }
           }{%- unless forloop.last -%},{%- endunless -%}
         {%- endfor -%}
       ]
@@ -253,15 +259,188 @@
         {%- endif -%}
       {%- endfor -%}
 
+      {%- comment -%}
+        ---------- Bundle offers (quantity breaks) ----------
+        Each "offer" block = one selectable card. Price shown = unit price ×
+        paid units (quantity − free units); compare = compare-at (or price)
+        × quantity. The free units must be honoured at checkout by a matching
+        automatic discount (e.g. "Buy X get Y") in Shopify admin.
+      {%- endcomment -%}
+      {%- liquid
+        assign offer_blocks = section.blocks | where: 'type', 'offer'
+        assign offer_default = 0
+        for block in offer_blocks
+          if block.settings.preselect
+            assign offer_default = forloop.index0
+            break
+          endif
+        endfor
+        assign unit_compare = current.price
+        if has_compare
+          assign unit_compare = current.compare_at_price
+        endif
+        assign initial_qty = 1
+      -%}
+      {%- if offer_blocks.size > 0 -%}
+        <div class="ringani-pm__offers" role="radiogroup" aria-label="{{ section.settings.offers_heading | default: 'Bundle offers' | escape }}"
+          style="--ringani-offer-accent:{{ section.settings.offer_accent }};--ringani-offer-tint:{{ section.settings.offer_tint }};--ringani-offer-badge-text:{{ section.settings.offer_badge_text }}">
+          {%- if section.settings.offers_heading != blank -%}
+            <div class="ringani-pm__divider-head"><span>{{ section.settings.offers_heading }}</span></div>
+          {%- endif -%}
+          {%- for block in offer_blocks -%}
+            {%- liquid
+              assign o_qty = block.settings.quantity
+              assign o_free = block.settings.free_units | at_most: o_qty
+              assign o_paid = o_qty | minus: o_free | at_least: 1
+              assign o_price = current.price | times: o_paid
+              assign o_compare = unit_compare | times: o_qty
+              assign o_save = o_compare | minus: o_price | at_least: 0
+              assign o_save_money = o_save | money
+              assign o_selected = false
+              if forloop.index0 == offer_default
+                assign o_selected = true
+                assign initial_qty = o_qty
+              endif
+            -%}
+            <button type="button" role="radio" class="ringani-pm__offer" data-ringani-offer
+              data-qty="{{ o_qty }}" data-paid="{{ o_paid }}"
+              aria-checked="{{ o_selected }}" tabindex="{% if o_selected %}0{% else %}-1{% endif %}"
+              {{ block.shopify_attributes }}>
+              {%- if block.settings.badge != blank -%}
+                <span class="ringani-pm__offer-badge">{{ block.settings.badge }}</span>
+              {%- endif -%}
+              {%- if block.settings.image != blank -%}
+                <span class="ringani-pm__offer-img">
+                  {{ block.settings.image | image_url: width: 200 | image_tag: loading: 'lazy', widths: '80, 160, 200', alt: '' }}
+                </span>
+              {%- endif -%}
+              <span class="ringani-pm__offer-body">
+                <span class="ringani-pm__offer-title">{{ block.settings.title }}</span>
+                {%- if block.settings.subtitle != blank -%}
+                  <span class="ringani-pm__offer-sub" data-ringani-offer-text data-template="{{ block.settings.subtitle | escape }}" {% if o_save == 0 and block.settings.subtitle contains '{amount}' %}hidden{% endif %}>{{ block.settings.subtitle | replace: '{amount}', o_save_money }}</span>
+                {%- endif -%}
+                {%- if block.settings.bullets != blank -%}
+                  {%- assign o_lines = block.settings.bullets | newline_to_br | strip_newlines | split: '<br />' -%}
+                  <span class="ringani-pm__offer-bullets">
+                    {%- for line in o_lines -%}
+                      {%- assign line_t = line | strip -%}
+                      {%- if line_t != blank -%}
+                        <span class="ringani-pm__offer-bullet" {% if o_save == 0 and line_t contains '{amount}' %}hidden{% endif %}>
+                          <span class="ringani-pm__offer-check" aria-hidden="true">✓</span>
+                          <span data-ringani-offer-text data-template="{{ line_t | escape }}">{{ line_t | replace: '{amount}', o_save_money }}</span>
+                        </span>
+                      {%- endif -%}
+                    {%- endfor -%}
+                  </span>
+                {%- endif -%}
+              </span>
+              <span class="ringani-pm__offer-prices">
+                <span class="ringani-pm__offer-price" data-ringani-offer-price>{{ o_price | money }}</span>
+                <span class="ringani-pm__offer-compare" data-ringani-offer-compare {% if o_save == 0 %}hidden{% endif %}>{{ o_compare | money }}</span>
+              </span>
+            </button>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+
+      {%- comment -%}
+        ---------- Purchase options: one-time vs. subscription ----------
+        Rendered only when the product has selling plans (subscription app,
+        e.g. "Shopify Subscriptions"). Prices come from the plan allocations.
+      {%- endcomment -%}
+      {%- if section.settings.sub_enable and product.selling_plan_groups.size > 0 -%}
+        {%- liquid
+          assign first_alloc = current.selling_plan_allocations | first
+          assign sub_percent = 0
+          if first_alloc and first_alloc.compare_at_price > 0
+            assign sub_diff = first_alloc.compare_at_price | minus: first_alloc.price | times: 100
+            assign sub_percent = sub_diff | divided_by: first_alloc.compare_at_price | round
+          endif
+          assign sub_selected = false
+          if product.requires_selling_plan or section.settings.sub_default == 'sub'
+            assign sub_selected = true
+          endif
+          assign sub_label = section.settings.sub_label | replace: '{percent}', sub_percent
+          assign sub_badge = section.settings.sub_badge | replace: '{percent}', sub_percent
+        -%}
+        <div class="ringani-pm__plans" data-ringani-plans
+          style="--ringani-offer-accent:{{ section.settings.offer_accent }};--ringani-offer-tint:{{ section.settings.offer_tint }}">
+          {%- if section.settings.sub_heading != blank -%}
+            <div class="ringani-pm__divider-head"><span>{{ section.settings.sub_heading }}</span></div>
+          {%- endif -%}
+          <div role="radiogroup" aria-label="{{ section.settings.sub_heading | default: 'Purchase options' | escape }}" class="ringani-pm__plans-list">
+            {%- unless product.requires_selling_plan -%}
+              <div class="ringani-pm__plan" data-ringani-plan-card data-active="{% if sub_selected %}false{% else %}true{% endif %}">
+                <button type="button" role="radio" class="ringani-pm__plan-head" data-ringani-purchase="once" aria-checked="{% if sub_selected %}false{% else %}true{% endif %}">
+                  <span class="ringani-pm__plan-dot" aria-hidden="true"></span>
+                  <span class="ringani-pm__plan-label">{{ section.settings.once_label }}</span>
+                  <span class="ringani-pm__plan-prices">
+                    <span class="ringani-pm__plan-price" data-ringani-once-price>{{ current.price | money }}</span>
+                  </span>
+                </button>
+              </div>
+            {%- endunless -%}
+            <div class="ringani-pm__plan" data-ringani-plan-card data-active="{{ sub_selected }}">
+              <button type="button" role="radio" class="ringani-pm__plan-head" data-ringani-purchase="sub" aria-checked="{{ sub_selected }}">
+                <span class="ringani-pm__plan-dot" aria-hidden="true"></span>
+                <span class="ringani-pm__plan-label">
+                  <span data-ringani-sub-text data-template="{{ section.settings.sub_label | escape }}">{{ sub_label }}</span>
+                  {%- if section.settings.sub_badge != blank -%}
+                    <span class="ringani-pm__plan-badge" data-ringani-sub-text data-template="{{ section.settings.sub_badge | escape }}" {% if sub_percent == 0 %}hidden{% endif %}>{{ sub_badge }}</span>
+                  {%- endif -%}
+                </span>
+                <span class="ringani-pm__plan-prices">
+                  <span class="ringani-pm__plan-price" data-ringani-sub-price>{% if first_alloc %}{{ first_alloc.price | money }}{% endif %}</span>
+                  <span class="ringani-pm__plan-compare" data-ringani-sub-compare {% if sub_percent == 0 %}hidden{% endif %}>{% if first_alloc %}{{ first_alloc.compare_at_price | money }}{% endif %}</span>
+                </span>
+              </button>
+              <div class="ringani-pm__plan-details">
+                {%- assign how_lines = section.settings.sub_how | newline_to_br | strip_newlines | split: '<br />' -%}
+                {%- if section.settings.sub_how != blank -%}
+                  <div class="ringani-pm__plan-how">
+                    {%- if section.settings.sub_how_heading != blank -%}<div class="ringani-pm__plan-how-title">{{ section.settings.sub_how_heading }}</div>{%- endif -%}
+                    <ul>
+                      {%- for line in how_lines -%}
+                        {%- assign line_t = line | strip -%}
+                        {%- if line_t != blank -%}
+                          {%- assign line_r = line_t | replace: '{percent}', sub_percent -%}
+                          {%- if first_alloc -%}{%- assign sub_price_money = first_alloc.price | money -%}{%- assign line_r = line_r | replace: '{price}', sub_price_money -%}{%- endif -%}
+                          <li><span class="ringani-pm__offer-check" aria-hidden="true">✓</span><span data-ringani-sub-text data-template="{{ line_t | escape }}">{{ line_r }}</span></li>
+                        {%- endif -%}
+                      {%- endfor -%}
+                    </ul>
+                  </div>
+                {%- endif -%}
+                {%- assign plan_count = 0 -%}
+                {%- for group in product.selling_plan_groups -%}{%- assign plan_count = plan_count | plus: group.selling_plans.size -%}{%- endfor -%}
+                <div class="ringani-pm__plan-freq" {% if plan_count < 2 %}hidden{% endif %}>
+                  <label for="ringani-plan-{{ section.id }}">{{ section.settings.sub_frequency_label }}</label>
+                  <select id="ringani-plan-{{ section.id }}" class="ringani-pm__plan-select" data-ringani-plan-select>
+                    {%- for group in product.selling_plan_groups -%}
+                      {%- for plan in group.selling_plans -%}
+                        <option value="{{ plan.id }}" {% if first_alloc and first_alloc.selling_plan.id == plan.id %}selected{% endif %}>{{ plan.name }}</option>
+                      {%- endfor -%}
+                    {%- endfor -%}
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {%- endif -%}
+
       {%- comment -%} ---------- Quantity + Add to cart ---------- {%- endcomment -%}
       <form data-ringani-form action="{{ routes.cart_add_url }}" method="post" enctype="multipart/form-data" class="ringani-pm__buy">
         <input type="hidden" name="id" value="{{ current.id }}">
-        <input type="hidden" name="quantity" value="1">
-        <div class="ringani-pm__qty">
-          <button type="button" class="ringani-pm__qty-btn" data-ringani-dec aria-label="Decrease quantity">−</button>
-          <span class="ringani-pm__qty-val" data-ringani-qty>1</span>
-          <button type="button" class="ringani-pm__qty-btn" data-ringani-inc aria-label="Increase quantity">+</button>
-        </div>
+        <input type="hidden" name="quantity" value="{{ initial_qty }}">
+        <input type="hidden" name="selling_plan" value="" disabled data-ringani-selling-plan>
+        {%- if offer_blocks.size == 0 -%}
+          <div class="ringani-pm__qty">
+            <button type="button" class="ringani-pm__qty-btn" data-ringani-dec aria-label="Decrease quantity">−</button>
+            <span class="ringani-pm__qty-val" data-ringani-qty>1</span>
+            <button type="button" class="ringani-pm__qty-btn" data-ringani-inc aria-label="Increase quantity">+</button>
+          </div>
+        {%- endif -%}
         <button type="submit" class="ringani-btn ringani-pm__cta" data-ringani-submit>
           <span data-ringani-cta-label>{% if size_pos > 0 %}{{ section.settings.label_choose }}{% else %}{{ section.settings.label_add }}{% endif %}</span>
         </button>
@@ -362,7 +541,8 @@
           </div>
           <form data-ringani-form action="{{ routes.cart_add_url }}" method="post" enctype="multipart/form-data">
             <input type="hidden" name="id" value="{{ current.id }}">
-            <input type="hidden" name="quantity" value="1">
+            <input type="hidden" name="quantity" value="{{ initial_qty }}">
+            <input type="hidden" name="selling_plan" value="" disabled data-ringani-selling-plan>
             <button type="submit" class="ringani-btn ringani-pm__sticky-cta" data-ringani-submit>
               <span data-ringani-cta-label>{% if size_pos > 0 %}{{ section.settings.label_choose }}{% else %}{{ section.settings.label_add }}{% endif %}</span>
             </button>
@@ -425,6 +605,26 @@
     { "type": "text", "id": "size_panel_sub", "label": "Subtitle", "default": "Choose your ring size" },
     { "type": "text", "id": "size_hint_default", "label": "Default hint", "default": "Grayed-out sizes are currently sold out." },
     { "type": "text", "id": "sizeguide_link", "label": "Size guide link", "default": "What size do I need?" },
+    { "type": "header", "content": "Bundle Offers" },
+    { "type": "paragraph", "content": "Add \"Bundle offer\" blocks to show quantity cards (e.g. Buy 1 / Buy 2 Get 1 FREE). Free units must also be set up as an automatic discount (Buy X get Y) in Shopify admin → Discounts, otherwise checkout charges full price." },
+    { "type": "text", "id": "offers_heading", "label": "Heading above offers", "default": "Bundle & Save" },
+    { "type": "color", "id": "offer_accent", "label": "Accent color (selected card, badge)", "default": "#1B6FD4" },
+    { "type": "color", "id": "offer_tint", "label": "Selected card background", "default": "#F1F7FF" },
+    { "type": "color", "id": "offer_badge_text", "label": "Badge text color", "default": "#FFFFFF" },
+    { "type": "header", "content": "Subscription (Subscribe & Save)" },
+    { "type": "paragraph", "content": "Shown only when the product has a subscription plan (e.g. via the free \"Shopify Subscriptions\" app). Discount and delivery intervals come from that plan." },
+    { "type": "checkbox", "id": "sub_enable", "label": "Show purchase options", "default": true },
+    { "type": "select", "id": "sub_default", "label": "Preselected option", "options": [
+      { "value": "once", "label": "One-time purchase" },
+      { "value": "sub", "label": "Subscribe & Save" }
+    ], "default": "once" },
+    { "type": "text", "id": "sub_heading", "label": "Heading", "default": "Choose your purchase option" },
+    { "type": "text", "id": "once_label", "label": "One-time label", "default": "One-time purchase" },
+    { "type": "text", "id": "sub_label", "label": "Subscription label", "info": "{percent} = subscription discount.", "default": "Subscribe & Save {percent}%" },
+    { "type": "text", "id": "sub_badge", "label": "Subscription badge", "default": "{percent}% off" },
+    { "type": "text", "id": "sub_how_heading", "label": "Details heading", "default": "How it works:" },
+    { "type": "textarea", "id": "sub_how", "label": "Details (one per line)", "info": "{percent} = discount, {price} = subscription price per unit.", "default": "Save {percent}% on every delivery.\n{price} per unit, charged automatically with each delivery until you cancel.\nShipping and any applicable taxes are shown at checkout.\nSkip, pause or cancel anytime" },
+    { "type": "text", "id": "sub_frequency_label", "label": "Frequency label", "default": "Deliver every:" },
     { "type": "header", "content": "Add-to-Cart Labels" },
     { "type": "text", "id": "label_add", "label": "Available", "default": "Add to Cart" },
     { "type": "text", "id": "label_soldout", "label": "Sold Out", "default": "Sold Out" },
@@ -471,6 +671,21 @@
       "settings": [
         { "type": "text", "id": "title", "label": "Title", "default": "Shipping & Delivery" },
         { "type": "richtext", "id": "body", "label": "Text", "default": "<p>Enter description here.</p>" }
+      ]
+    },
+    {
+      "type": "offer",
+      "name": "Bundle offer",
+      "limit": 5,
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Buy 1" },
+        { "type": "range", "id": "quantity", "min": 1, "max": 10, "step": 1, "label": "Units added to cart", "default": 1 },
+        { "type": "range", "id": "free_units", "min": 0, "max": 5, "step": 1, "label": "Of which free", "info": "E.g. Buy 2 Get 1 FREE: units 3, free 1. Requires a matching automatic discount in Shopify admin.", "default": 0 },
+        { "type": "text", "id": "badge", "label": "Badge", "info": "E.g. Most Popular. Leave empty for none." },
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "subtitle", "label": "Subtitle", "info": "{amount} = calculated savings.", "default": "You save {amount}" },
+        { "type": "textarea", "id": "bullets", "label": "Check points (one per line)", "info": "{amount} = calculated savings." },
+        { "type": "checkbox", "id": "preselect", "label": "Preselected", "default": false }
       ]
     },
     {
