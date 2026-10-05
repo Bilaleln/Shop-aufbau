@@ -9,6 +9,9 @@ This is an operational audit, not legal advice. It does not establish compliance
 | Session 1 | Navigation → Footer menu | Added "Contact" (→ /pages/contact) above "Search" and "Your Privacy Choices" |
 | Session 2 | Product "FALUNARA Botanical Body Oil" | Vendor "Falunara" → "FALUNARA"; SEO title "Botanical Body Oil \| Falunara" → "… \| FALUNARA"; SEO description "…from Falunara…" → "…from FALUNARA…" |
 | Session 2 | Page "Contact" (/pages/contact) | Body was empty; added support text with badush71@proton.me. The native contact form is unchanged. |
+| Session 3 | Theme duplicate "FALUNARA – launch fixes (2026-10-05)" (UNPUBLISHED, id 189900292476) | product.json: social-proof/review/testimonial/comparison/replica sections & blocks disabled; guarantee/FAQ/size/90-day texts replaced. index.json: size + brand. header-group: brand. collection.json: hardcoded rating off. footer-group: Menu block "Help" → Footer menu. Live theme untouched. |
+| Session 3 | Files | Temporary upload files created and deleted again (falunara-product/index-template.txt) |
+
 Nothing else was changed: no prices, bundles, subscriptions, shipping rates, checkout, payments or theme files.
 Read-only check: `draftOrderCalculate` for a US address (nothing was saved).
 
