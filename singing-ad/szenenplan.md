@@ -1,6 +1,6 @@
 # Scene Plan – FALUNARA Singing Ad
 
-**Total scenes:** ~42
+**Total scenes:** ~56
 **Estimated duration:** ~3:02 min
 **Format:** 9:16, Pixar 3D, Kling 3.0 std 720p, no audio
 
@@ -28,17 +28,17 @@
 | 20 | Of broken promises | 2s | Claire closing the medicine cabinet, her reflection briefly visible. Resigned expression. | Claire (robe) | Resigned |
 | 21 | But the real problem was never her skin | 3s | Claire sitting on bed edge at night, hands in lap, thinking. Bedroom with warm low lamp light. | Claire (night) | Contemplative |
 | 22 | It was the rush | 2s | Quick montage feel: blurred clock, rushing feet, phone buzzing. Abstract busy-life imagery in Pixar style. | Abstract | Stressful |
-| 23 | Every product she ever tried / Was designed to be fast | 4s | Bathroom counter: generic lotion being squeezed and instantly disappearing into skin in seconds. Fast, clinical feeling. | Claire hand | Clinical |
-| 24 | Quick absorbing done in seconds / Just get on with your day | 4s | Claire already dressed, walking away from bathroom while still rubbing hands together. Distracted. | Claire (day) | Mindless |
-| 25 | But her skin didn't need speed | 3s | Slow, warm shot: close-up of Claire's forearm skin in soft golden light. No product. Just skin and light. | Skin close-up | Gentle shift |
-| 26 | After fifty years it needed patience | 3s | Claire's face, a soft realization in her eyes. She stops. Bathroom, evening light starting to warm. | Claire (robe) | Dawning understanding |
-| 27 | It needed time / To actually absorb something real | 4s | Extreme close-up: a single golden drop of oil on skin, slowly being absorbed. Warm amber tones. Beautiful. | Oil on skin | Magical, slow |
-| 28 | That's what makes Fa-lu-NA-ra different | 3s | The FALUNARA bottle appears center frame on a cream marble surface, warm golden backlight, slight glow. Nightstand or bathroom counter. USE PRODUCT REFERENCE IMAGE. | FALUNARA bottle | Reveal, warm |
-| 29 | Fa-lu-NA-ra Botanical Body Oil | 3s | Claire holding the FALUNARA bottle in both hands, looking at it with gentle curiosity. Bathroom, evening. USE PRODUCT REFERENCE IMAGE for bottle. | Claire (robe) + bottle | Curious, gentle |
-| 30 | You press it into damp skin / Right after your shower | 4s | Claire in robe, fresh from shower (steam visible), pressing oil into her damp forearm with slow deliberate motion. Warm amber bathroom light, candle glowing. | Claire (robe) | Ritualistic, slow |
+| 23 | Every product she ever tried / Was just another step to get through | 4s | Bathroom counter: Claire hastily pumping generic lotion, not looking, phone in other hand. Clinical, cold light. | Claire hand | Mindless |
+| 24 | Pump it on and move along / No moment no attention | 4s | Claire already dressed, walking away from bathroom while rubbing hands together. Distracted, no care. | Claire (day) | Mindless |
+| 25 | Her skin wasn't starving for a better cream | 3s | Slow, warm shot: close-up of Claire's forearm skin in soft golden light. No product. Just skin and light. | Skin close-up | Gentle shift |
+| 26 | It was starving for five minutes of care | 3s | Claire's face, a soft realization in her eyes. She stops. Bathroom, evening light starting to warm. | Claire (robe) | Dawning understanding |
+| 27 | That's what makes Fa-lu-NA-ra different | 3s | The FALUNARA gold box appears center frame on cream marble surface, warm golden backlight, slight glow. USE PRODUCT REFERENCE IMAGE. | FALUNARA box | Reveal, warm |
+| 28 | Fa-lu-NA-ra Botanical Body Oil | 3s | Claire holding the FALUNARA gold bottle in both hands, looking at it with gentle curiosity. Bathroom, evening. USE PRODUCT REFERENCE IMAGE. | Claire (robe) + bottle | Curious, gentle |
+| 29 | Sunflower and sweet almond / Jojoba and argan and olive | 4s | Pixar-style botanical animation: golden drops of each oil flowing together into one luminous golden stream. Warm, magical, no text labels. | Botanical abstract | Beautiful, natural |
+| 30 | Pressed into damp skin / Right after your shower | 4s | Claire in robe, fresh from shower (steam visible), pressing oil into her damp forearm with slow deliberate motion. Warm amber bathroom light, candle glowing. | Claire (robe) | Ritualistic, slow |
 | 31 | Not rubbed but pressed slowly | 3s | Close-up of Claire's hands pressing oil into her upper arm. Slow, intentional movement. Glistening skin. | Claire hands | Intentional |
-| 32 | And it doesn't vanish in two seconds / Like those watery lotions | 4s | Split feel: left side shows watery lotion disappearing instantly (cold light), right shows golden oil settling slowly into skin (warm light). | Skin comparison | Contrast |
-| 33 | It settles and it sinks / And your skin drinks it in | 4s | Extreme close-up: oil absorbing into skin in warm light, Pixar-style golden glow effect. Skin looks hydrated, soft, luminous. | Skin close-up | Satisfying, beautiful |
+| 32 | It sinks in and your skin starts to glow | 3s | Extreme close-up: oil absorbing into skin in warm light, Pixar-style golden glow effect. Skin looks hydrated, soft, luminous. | Skin close-up | Satisfying, beautiful |
+| 33 | Nourish restore and glow | 3s | The three words appear as golden light pulses on Claire's glowing arm, then the FALUNARA bottle in foreground. No text on screen. Just the warm glow. | Bottle + arm | Tagline moment |
 | 34 | Week one she noticed her arms / Felt different after her shower | 4s | Claire in robe after shower, running hand along arm, slight pleasant surprise on face. Bathroom, warm light. | Claire (robe) | Pleasantly surprised |
 | 35 | Not greasy and not dry / Just soft like skin is supposed to feel | 4s | Close-up of Claire's arm: skin looks soft, healthy glow. She touches it gently with two fingers. Slight smile starting. | Claire arm | Content |
 | 36 | Week two the rough patches on her shins / Were finally smoothing out | 4s | Same bathtub-edge position as scene 5, but now skin looks smoother. Claire looking down, relieved. Warmer light than scene 5. | Claire (robe) | Relieved |
@@ -49,9 +49,10 @@
 | 41 | Those five minutes after her shower / Became her favorite part of the day | 5s | Claire applying FALUNARA oil slowly to her arm, eyes closed, slight smile. Steam wisps, candle glow, warm amber everywhere. Pure self-care moment. | Claire (robe) | Blissful |
 | 42 | Not because of the oil / But because she was finally doing / Something just for herself | 5s | Wide shot: Claire in her bathroom, evening ritual. Golden light. She looks content, present, at peace. The FALUNARA bottle and candle on the counter. | Claire (robe) | Empowered, at peace |
 | 43 | Fa-lu-NA-ra is not a cream you slap on / It's an evening ritual | 4s | The FALUNARA bottle on the nightstand next to a book and reading glasses. Warm lamp glow. Bedroom. USE PRODUCT REFERENCE IMAGE. | Bottle + nightstand | Elegant, calm |
-| 44 | The bottle feels like it belongs / Right on your nightstand | 3s | Wider shot of the bedroom nightstand scene. Claire's hand reaching for the book, bottle in foreground. Soft focus. | Claire hand + bottle | Belonging |
-| 45 | Not hidden in a cabinet | 2s | Quick contrast: a cramped medicine cabinet crammed with generic products. Cold, cluttered. Then closes. | Cabinet only | Contrast |
-| 46 | It's the kind of thing / That makes you slow down and breathe | 4s | Claire taking a deep breath by the bedroom window, night sky visible. Calm, serene expression. | Claire (night) | Serene |
+| 44 | No parabens no silicone / Just pure botanical oils on your skin | 4s | Pixar-style close-up: golden botanical oil drops and leaf silhouettes floating in warm light. Clean, pure, natural. No text. | Botanical abstract | Pure, clean |
+| 45 | The gold bottle feels like it belongs / Right on your nightstand | 3s | Wider shot of the bedroom nightstand scene. Claire's hand reaching for the book, FALUNARA gold bottle in foreground. Soft focus. | Claire hand + bottle | Belonging |
+| 46 | Not hidden in a cabinet | 2s | Quick contrast: a cramped medicine cabinet crammed with generic products. Cold, cluttered. Then closes. | Cabinet only | Contrast |
+| 47 | It's the kind of thing / That makes you slow down and breathe | 4s | Claire taking a deep breath by the bedroom window, night sky visible. Calm, serene expression. | Claire (night) | Serene |
 | 47 | Right now you can try Fa-lu-NA-ra / Buy two and get one free | 4s | Three FALUNARA bottles arranged beautifully on cream marble. Warm light, golden tones. "Buy 2 Get 1 FREE" feel without text. USE PRODUCT REFERENCE IMAGE. | 3 bottles | Offer, inviting |
 | 48 | Three full bottles / That's four whole months of evenings | 4s | Calendar-style Pixar visual: four golden glowing months flowing by with warm evening scenes. No English text on calendar. Abstract warm glow. | Abstract | Generous, long-lasting |
 | 49 | Where you actually stop / And take care of you | 3s | Claire smiling softly at herself in the bathroom mirror. Warm, confident, calm. First time she looks truly happy. | Claire (robe) | Self-love |
@@ -65,8 +66,8 @@
 ---
 
 ## Notes
-- **Total scenes:** 55
-- **FALUNARA bottle scenes (28, 29, 43, 47, 50, 55):** Use GPT Image 2 with real product image as reference for label accuracy
+- **Total scenes:** 56
+- **FALUNARA bottle/box scenes (27, 28, 33, 43, 48, 51, 56):** Use GPT Image 2 with real packaging image (`falunara-packaging.webp`) as reference for label accuracy
 - **All other scenes:** Nano Banana Pro with character reference images
 - **Clips:** Kling 3.0 std 720p, no sound
 - **4:5 safety zone:** Every scene keeps faces and key objects in middle 70%

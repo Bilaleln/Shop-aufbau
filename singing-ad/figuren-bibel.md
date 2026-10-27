@@ -23,12 +23,12 @@ Pixar/Disney-style 3D animation still, glossy soft-shaded render, warm golden-ho
 - **Outfit:** Casual – oversized sage green sweater, jeans
 - **Appears in:** Scene where she hugs Claire (Week 3)
 
-## The FALUNARA Bottle
-- **Shape:** Tall, elegant glass bottle with rounded shoulders
-- **Color:** Amber/golden glass, warm honey tones
-- **Label:** "FALUNARA" in clean serif font, "Botanical Body Oil" underneath, "100 ml" at bottom
-- **Cap:** Matte gold dropper cap
-- **Note:** ALWAYS use the real product image as reference. Never let AI invent the label text. Use GPT Image 2 for any scene showing the label clearly.
+## The FALUNARA Packaging & Bottle
+- **Box:** Gold rectangular box with botanical leaf embossing, "FALUNARA" in clean serif at top, "BOTANICAL BODY OIL" below, "NOURISH · RESTORE · GLOW" tagline, "100 mL ℮ 3.4 FL OZ" at bottom. Three certification icons: PARABEN FREE, SILICONE FREE, CRUELTY FREE.
+- **Bottle (inside box):** Gold/amber glass dropper bottle matching the box color scheme.
+- **Reference file:** `singing-ad/falunara-packaging.webp`
+- **Label text (exact):** "FALUNARA", "BOTANICAL BODY OIL", "NOURISH · RESTORE · GLOW", "100 mL"
+- **Note:** ALWAYS use the real packaging image (`falunara-packaging.webp`) as reference for GPT Image 2. Never let AI invent the label text. Every word on the packaging must match the reference exactly. Use GPT Image 2 for any scene showing the label or box clearly.
 
 ---
 
