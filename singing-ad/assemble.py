@@ -28,8 +28,10 @@ for s in plan:
     seg = os.path.join(WORK, f"seg_{s['id']}.mp4")
     vf = (f'setpts={slow:.4f}*PTS,scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos,'
           f'crop={W}:{H},fps={FPS},format=yuv420p')
-    subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', src, '-t', f"{s['dur']:.3f}", '-vf', vf, '-an',
-                    '-c:v', 'libx264', '-preset', 'medium', '-crf', '16', seg], check=True)
+    if not (os.path.exists(seg) and os.path.getmtime(seg) > os.path.getmtime(src)):
+        subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', src, '-t', f"{s['dur']:.3f}", '-vf', vf, '-an',
+                        '-c:v', 'libx264', '-preset', 'medium', '-crf', '16', seg + '.tmp.mp4'], check=True)
+        os.replace(seg + '.tmp.mp4', seg)
     segments.append(seg)
     print(f"{s['id']:>4} {s['dur']:5.2f}s  src {have:.2f}s  slow x{slow:.3f}", flush=True)
 
