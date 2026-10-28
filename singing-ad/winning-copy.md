@@ -8,7 +8,7 @@
 **Tagline:** Nourish · Restore · Glow
 **Ingredients:** Sunflower Seed Oil, Sweet Almond Oil, Jojoba Seed Oil, Argan Kernel Oil, Olive Fruit Oil, Vitamin E, Natural Fragrance
 **Free from:** Parabens, Silicone, Cruelty Free
-**Packaging:** Gold box with botanical leaf design, gold dropper bottle
+**Packaging:** Gold box with botanical leaf design, tall cylindrical clear glass pump bottle with white pump dispenser and transparent protective cap
 
 ---
 

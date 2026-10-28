@@ -25,10 +25,15 @@ Pixar/Disney-style 3D animation still, glossy soft-shaded render, warm golden-ho
 
 ## The FALUNARA Packaging & Bottle
 - **Box:** Gold rectangular box with botanical leaf embossing, "FALUNARA" in clean serif at top, "BOTANICAL BODY OIL" below, "NOURISH · RESTORE · GLOW" tagline, "100 mL ℮ 3.4 FL OZ" at bottom. Three certification icons: PARABEN FREE, SILICONE FREE, CRUELTY FREE.
-- **Bottle (inside box):** Gold/amber glass dropper bottle matching the box color scheme.
-- **Reference file:** `singing-ad/falunara-packaging.webp`
-- **Label text (exact):** "FALUNARA", "BOTANICAL BODY OIL", "NOURISH · RESTORE · GLOW", "100 mL"
-- **Note:** ALWAYS use the real packaging image (`falunara-packaging.webp`) as reference for GPT Image 2. Never let AI invent the label text. Every word on the packaging must match the reference exactly. Use GPT Image 2 for any scene showing the label or box clearly.
+- **Bottle:** Tall cylindrical 100 ml clear glass bottle with golden liquid visible inside. White pump dispenser on top, transparent protective cap over the pump. Gold-toned label with "FALUNARA" in clean serif, "BOTANICAL BODY OIL" below, "NOURISH · RESTORE · GLOW" tagline, "100 mL ℮ 3.4 FL OZ" at bottom. Proportions: slender and tall, roughly 4:1 height-to-width ratio.
+- **NOT a dropper / pipette / squeeze bottle.** It is a PUMP bottle. The only way oil comes out is by pressing the white pump dispenser down.
+- **Application ritual (3 steps, separate shots for reliability):**
+  1. Remove the transparent protective cap from the pump
+  2. Press the pump dispenser — thin golden oil flows into the cupped palm
+  3. Press the oil gently onto the forearm with an open palm (NOT rubbing)
+- **Reference files:** `singing-ad/falunara-product-ref.webp` (bottle — binding reference for form, proportions, color and label), `singing-ad/falunara-packaging.webp` (box — 4 views)
+- **Label text (exact):** "FALUNARA", "BOTANICAL BODY OIL", "NOURISH · RESTORE · GLOW", "100 mL ℮ 3.4 FL OZ"
+- **Note:** ALWAYS use the real product reference image (`falunara-product-ref.webp`) as image_url for every generation where the bottle is visible. Never let AI invent the bottle shape or label. Use GPT Image 2 with product reference for any scene showing the label clearly.
 
 ---
 
