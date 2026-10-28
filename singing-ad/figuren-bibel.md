@@ -27,11 +27,13 @@ Pixar/Disney-style 3D animation still, glossy soft-shaded render, warm golden-ho
 - **Box:** Gold rectangular box with botanical leaf embossing, "FALUNARA" in clean serif at top, "BOTANICAL BODY OIL" below, "NOURISH · RESTORE · GLOW" tagline, "100 mL ℮ 3.4 FL OZ" at bottom. Three certification icons: PARABEN FREE, SILICONE FREE, CRUELTY FREE.
 - **Bottle:** Tall cylindrical 100 ml clear glass bottle with golden liquid visible inside. White pump dispenser on top, transparent protective cap over the pump. Gold-toned label with "FALUNARA" in clean serif, "BOTANICAL BODY OIL" below, "NOURISH · RESTORE · GLOW" tagline, "100 mL ℮ 3.4 FL OZ" at bottom. Proportions: slender and tall, roughly 4:1 height-to-width ratio.
 - **NOT a dropper / pipette / squeeze bottle.** It is a PUMP bottle. The only way oil comes out is by pressing the white pump dispenser down.
+- **Pump head:** Compact white stepped cylinder (three tiers, narrowing upward) with a small round opening on the top front — NO long spout or nozzle arm (never a soap-dispenser pump). The transparent cap is a straight clear cylinder the same width as the bottle, covering the whole pump head; the pump stays on the bottle when the cap comes off.
+- **Scale:** Bottle is about hand-length tall (see `ref_bottle_in_hands.jpg`).
 - **Application ritual (3 steps, separate shots for reliability):**
   1. Remove the transparent protective cap from the pump
   2. Press the pump dispenser — thin golden oil flows into the cupped palm
   3. Press the oil gently onto the forearm with an open palm (NOT rubbing)
-- **Reference files:** `singing-ad/falunara-product-ref.webp` (bottle — binding reference for form, proportions, color and label), `singing-ad/falunara-packaging.webp` (box — 4 views)
+- **Reference files (binding):** `ref_bottle_front.jpg` (isolated bottle, front), `ref_bottle_pump_closeup.jpg` (pump head + cap), `ref_bottle_in_hands.jpg` (scale in hands), `falunara-product-ref.jpg` (bottle + box), `ref_box_dieline.jpg` (box, all sides)
 - **Label text (exact):** "FALUNARA", "BOTANICAL BODY OIL", "NOURISH · RESTORE · GLOW", "100 mL ℮ 3.4 FL OZ"
 - **Note:** ALWAYS pass the real product reference (`falunara-product-ref.jpg`) for every generation where the bottle is visible — Nano Banana Pro: `image_input: [claire_ref, product_ref]` + `aspect_ratio: "9:16"`; Kling 3.0: `image_urls: [start_frame, end_frame]` (a singular `image_url` is silently ignored by both). Never let AI invent the bottle shape or label. Use GPT Image 2 with product reference for any scene showing the label clearly.
 
