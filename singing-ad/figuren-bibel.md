@@ -33,7 +33,7 @@ Pixar/Disney-style 3D animation still, glossy soft-shaded render, warm golden-ho
   3. Press the oil gently onto the forearm with an open palm (NOT rubbing)
 - **Reference files:** `singing-ad/falunara-product-ref.webp` (bottle — binding reference for form, proportions, color and label), `singing-ad/falunara-packaging.webp` (box — 4 views)
 - **Label text (exact):** "FALUNARA", "BOTANICAL BODY OIL", "NOURISH · RESTORE · GLOW", "100 mL ℮ 3.4 FL OZ"
-- **Note:** ALWAYS use the real product reference image (`falunara-product-ref.webp`) as image_url for every generation where the bottle is visible. Never let AI invent the bottle shape or label. Use GPT Image 2 with product reference for any scene showing the label clearly.
+- **Note:** ALWAYS pass the real product reference (`falunara-product-ref.jpg`) for every generation where the bottle is visible — Nano Banana Pro: `image_input: [claire_ref, product_ref]` + `aspect_ratio: "9:16"`; Kling 3.0: `image_urls: [start_frame, end_frame]` (a singular `image_url` is silently ignored by both). Never let AI invent the bottle shape or label. Use GPT Image 2 with product reference for any scene showing the label clearly.
 
 ---
 

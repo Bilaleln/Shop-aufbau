@@ -68,7 +68,7 @@
 
 ## Notes
 - **Total scenes:** 56
-- **FALUNARA bottle/box scenes (27, 28, 30a, 30b, 33, 43, 45, 47, 50, 51, 55):** Use real product reference (`falunara-product-ref.webp`) as image_url. For close-up label shots use GPT Image 2 for text accuracy; for wider scenes Nano Banana Pro with product reference is sufficient
+- **FALUNARA bottle/box scenes (27, 28, 30a, 30b, 33, 43, 45, 47, 50, 51, 55):** Pass real product reference (`falunara-product-ref.jpg`) via `image_input` (Nano Banana Pro); animate with Kling `image_urls: [start, end]`. For close-up label shots use GPT Image 2 for text accuracy; for wider scenes Nano Banana Pro with product reference is sufficient
 - **Bottle form:** Tall cylindrical pump bottle with white pump dispenser and clear protective cap — NO dropper, NO pipette
 - **All other scenes:** Nano Banana Pro with character reference images
 - **Clips:** Kling 3.0 std 720p, no sound
