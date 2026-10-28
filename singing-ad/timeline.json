@@ -1,0 +1,1019 @@
+{
+ "duration": 228.181,
+ "scenes": [
+  {
+   "id": "1",
+   "lyric": "She was fifty-three",
+   "desc": "Close-up of Claire's face, looking down pensively, warm afternoon light in kitchen. Mouth closed.",
+   "chars": "Claire (day)",
+   "mood": "Reflective, slightly sad",
+   "line_idx": 0,
+   "start": 0.0,
+   "end": 2.78,
+   "dur": 2.78
+  },
+  {
+   "id": "2",
+   "lyric": "When she looked down at her hands",
+   "desc": "Claire's POV looking down at her own hands resting on the kitchen counter. Fine lines, dry skin visible. Warm daylight.",
+   "chars": "Claire hands only",
+   "mood": "Noticing",
+   "line_idx": 1,
+   "start": 2.78,
+   "end": 5.76,
+   "dur": 2.98
+  },
+  {
+   "id": "3",
+   "lyric": "And didn't recognize them",
+   "desc": "Claire's face, slight furrow in brow, eyes troubled. Kitchen background blurred. No smile.",
+   "chars": "Claire (day)",
+   "mood": "Worried",
+   "line_idx": 2,
+   "start": 5.76,
+   "end": 8.34,
+   "dur": 2.58
+  },
+  {
+   "id": "4",
+   "lyric": "The skin on her arms felt like paper",
+   "desc": "Side shot: Claire running her right hand along her left forearm in bathroom mirror light. Dry, dull skin texture visible.",
+   "chars": "Claire (robe)",
+   "mood": "Uncomfortable",
+   "line_idx": 3,
+   "start": 8.34,
+   "end": 11.5,
+   "dur": 3.16
+  },
+  {
+   "id": "5",
+   "lyric": "Dry patches on her shins",
+   "desc": "Low angle: Claire sitting on edge of bathtub in robe, looking down at her shins. Dry patches visible. Soft bathroom light.",
+   "chars": "Claire (robe)",
+   "mood": "Frustrated",
+   "line_idx": 4,
+   "start": 11.5,
+   "end": 13.3,
+   "dur": 1.8
+  },
+  {
+   "id": "6",
+   "lyric": "That no lotion could fix",
+   "desc": "Bathroom counter: three generic lotion bottles pushed aside, one tipped over. Claire's hand in frame pushing them away.",
+   "chars": "Claire hand",
+   "mood": "Defeated",
+   "line_idx": 5,
+   "start": 13.3,
+   "end": 16.94,
+   "dur": 3.64
+  },
+  {
+   "id": "7",
+   "lyric": "Elbows rough enough to catch on silk",
+   "desc": "Close-up: Claire's elbow catching slightly on the sleeve of a cream silk blouse as she puts it on. Morning bedroom light.",
+   "chars": "Claire (dressing)",
+   "mood": "Annoyed",
+   "line_idx": 6,
+   "start": 16.94,
+   "end": 22.86,
+   "dur": 5.92
+  },
+  {
+   "id": "8",
+   "lyric": "Every single morning",
+   "desc": "Wide shot: Claire's kitchen, morning rush. Coffee mug, phone, keys on counter. Bright harsh morning light.",
+   "chars": "Claire (day)",
+   "mood": "Hurried",
+   "line_idx": 7,
+   "start": 22.86,
+   "end": 23.94,
+   "dur": 1.08
+  },
+  {
+   "id": "9",
+   "lyric": "She would slap on whatever was fastest",
+   "desc": "Quick bathroom shot: Claire hastily pumping generic lotion onto her arm, barely looking, other hand holding phone.",
+   "chars": "Claire (day)",
+   "mood": "Rushed",
+   "line_idx": 8,
+   "start": 23.94,
+   "end": 25.92,
+   "dur": 1.98
+  },
+  {
+   "id": "10",
+   "lyric": "And rush right out the door",
+   "desc": "Claire grabbing keys and bag, heading out the front door. Motion blur on edges. Morning light.",
+   "chars": "Claire (day)",
+   "mood": "Rushed",
+   "line_idx": 9,
+   "start": 25.92,
+   "end": 27.78,
+   "dur": 1.86
+  },
+  {
+   "id": "11",
+   "lyric": "Thirty years of raising kids",
+   "desc": "Warm flashback feel: Claire (younger version suggested by brighter colors) carrying grocery bags, a child's backpack on the kitchen chair.",
+   "chars": "Claire (day)",
+   "mood": "Nostalgic, tired",
+   "line_idx": 10,
+   "start": 27.78,
+   "end": 29.58,
+   "dur": 1.8
+  },
+  {
+   "id": "12",
+   "lyric": "Running a house and building a career",
+   "desc": "Split composition: left side shows Claire at a desk with papers, right side shows laundry basket and kitchen. Warm but busy.",
+   "chars": "Claire (day)",
+   "mood": "Overwhelmed",
+   "line_idx": 11,
+   "start": 29.58,
+   "end": 33.2,
+   "dur": 3.62
+  },
+  {
+   "id": "13",
+   "lyric": "Thirty years of putting herself last",
+   "desc": "Claire standing in bathroom doorway at night, looking at herself in mirror from a distance. Dim light. Tired expression.",
+   "chars": "Claire (night pajamas)",
+   "mood": "Melancholy",
+   "line_idx": 12,
+   "start": 33.2,
+   "end": 36.28,
+   "dur": 3.08
+  },
+  {
+   "id": "14",
+   "lyric": "And her skin kept the score",
+   "desc": "Close-up: Claire's reflection in bathroom mirror, her hand touching her forearm. Soft sad lighting. No smile.",
+   "chars": "Claire (robe)",
+   "mood": "Emotional",
+   "line_idx": 13,
+   "start": 36.28,
+   "end": 41.44,
+   "dur": 5.16
+  },
+  {
+   "id": "15",
+   "lyric": "She tried the department store creams",
+   "desc": "Department store shelf: rows of fancy cream jars under bright fluorescent light. Claire's hand reaching for one. Cold sterile look.",
+   "chars": "Claire hand",
+   "mood": "Hopeful but skeptical",
+   "line_idx": 14,
+   "start": 41.44,
+   "end": 44.46,
+   "dur": 3.02
+  },
+  {
+   "id": "16",
+   "lyric": "The ones in the fancy jars",
+   "desc": "Close-up of a generic luxury cream jar being opened. Glossy, expensive looking. No real brand names. No text on jar.",
+   "chars": "Product only",
+   "mood": "Seductive",
+   "line_idx": 15,
+   "start": 44.46,
+   "end": 46.78,
+   "dur": 2.32
+  },
+  {
+   "id": "17",
+   "lyric": "That promised transformation overnight",
+   "desc": "Claire at home, applying fancy cream to her face at night, looking expectant. Bathroom mirror.",
+   "chars": "Claire (night)",
+   "mood": "Hopeful",
+   "line_idx": 16,
+   "start": 46.78,
+   "end": 51.16,
+   "dur": 4.38
+  },
+  {
+   "id": "18",
+   "lyric": "Sixty dollars for two ounces of nothing",
+   "desc": "Morning after: Claire looking at her arm, disappointed. The fancy jar sits on the counter, nearly empty.",
+   "chars": "Claire (robe)",
+   "mood": "Disappointed",
+   "line_idx": 17,
+   "start": 51.16,
+   "end": 54.72,
+   "dur": 3.56
+  },
+  {
+   "id": "19",
+   "lyric": "Her bathroom shelf looked like a graveyard",
+   "desc": "Wide shot of bathroom shelf: seven or eight different half-used cream and lotion bottles crowded together. Harsh light. EXACTLY eight bottles, no other items.",
+   "chars": "Products only",
+   "mood": "Cluttered, wasteful",
+   "line_idx": 18,
+   "start": 54.72,
+   "end": 58.98,
+   "dur": 4.26
+  },
+  {
+   "id": "20",
+   "lyric": "Of broken promises",
+   "desc": "Claire closing the medicine cabinet, her reflection briefly visible. Resigned expression.",
+   "chars": "Claire (robe)",
+   "mood": "Resigned",
+   "line_idx": 19,
+   "start": 58.98,
+   "end": 60.34,
+   "dur": 1.36
+  },
+  {
+   "id": "21",
+   "lyric": "But the real problem was never her skin",
+   "desc": "Claire sitting on bed edge at night, hands in lap, thinking. Bedroom with warm low lamp light.",
+   "chars": "Claire (night)",
+   "mood": "Contemplative",
+   "line_idx": 20,
+   "start": 60.34,
+   "end": 65.26,
+   "dur": 4.92
+  },
+  {
+   "id": "22",
+   "lyric": "It was the rush",
+   "desc": "Quick montage feel: blurred clock, rushing feet, phone buzzing. Abstract busy-life imagery in Pixar style.",
+   "chars": "Abstract",
+   "mood": "Stressful",
+   "line_idx": 21,
+   "start": 65.26,
+   "end": 65.92,
+   "dur": 0.66
+  },
+  {
+   "id": "23",
+   "lyric": "Every product she ever tried / Was just another step to get through",
+   "desc": "Bathroom counter: Claire hastily pumping generic lotion, not looking, phone in other hand. Clinical, cold light.",
+   "chars": "Claire hand",
+   "mood": "Mindless",
+   "line_idx": 22,
+   "start": 65.92,
+   "end": 70.22,
+   "dur": 4.3
+  },
+  {
+   "id": "24",
+   "lyric": "Pump it on and move along / No moment no attention",
+   "desc": "Claire already dressed, walking away from bathroom while rubbing hands together. Distracted, no care.",
+   "chars": "Claire (day)",
+   "mood": "Mindless",
+   "line_idx": 24,
+   "start": 70.22,
+   "end": 74.52,
+   "dur": 4.3
+  },
+  {
+   "id": "25",
+   "lyric": "Her skin wasn't starving for a better cream",
+   "desc": "Slow, warm shot: close-up of Claire's forearm skin in soft golden light. No product. Just skin and light.",
+   "chars": "Skin close-up",
+   "mood": "Gentle shift",
+   "line_idx": 26,
+   "start": 74.52,
+   "end": 76.88,
+   "dur": 2.36
+  },
+  {
+   "id": "26",
+   "lyric": "It was starving for five minutes of care",
+   "desc": "Claire's face, a soft realization in her eyes. She stops. Bathroom, evening light starting to warm.",
+   "chars": "Claire (robe)",
+   "mood": "Dawning understanding",
+   "line_idx": 27,
+   "start": 76.88,
+   "end": 82.2,
+   "dur": 5.32
+  },
+  {
+   "id": "27",
+   "lyric": "That's what makes Fa-lu-NA-ra different",
+   "desc": "The FALUNARA gold box appears center frame on cream marble surface, warm golden backlight, slight glow. USE PRODUCT REFERENCE IMAGE.",
+   "chars": "FALUNARA box",
+   "mood": "Reveal, warm",
+   "line_idx": 28,
+   "start": 82.2,
+   "end": 87.1,
+   "dur": 4.9
+  },
+  {
+   "id": "28",
+   "lyric": "Fa-lu-NA-ra Botanical Body Oil",
+   "desc": "Claire holding the FALUNARA tall pump bottle (white pump, clear cap) in both hands, looking at it with gentle curiosity. Bathroom, evening. USE PRODUCT REFERENCE IMAGE (`falunara-product-ref.webp`).",
+   "chars": "Claire (robe) + bottle",
+   "mood": "Curious, gentle",
+   "line_idx": 29,
+   "start": 87.1,
+   "end": 88.48,
+   "dur": 1.38
+  },
+  {
+   "id": "29",
+   "lyric": "Sunflower and sweet almond / Jojoba and argan and olive",
+   "desc": "Pixar-style botanical animation: golden drops of each oil flowing together into one luminous golden stream. Warm, magical, no text labels.",
+   "chars": "Botanical abstract",
+   "mood": "Beautiful, natural",
+   "line_idx": 30,
+   "start": 88.48,
+   "end": 93.48,
+   "dur": 5.0
+  },
+  {
+   "id": "30a",
+   "lyric": "Pressed into damp skin",
+   "desc": "Claire in robe, fresh from shower (steam visible), removes the transparent protective cap from the FALUNARA pump bottle on the marble counter. Warm amber bathroom light, candle glowing. USE PRODUCT REFERENCE IMAGE.",
+   "chars": "Claire (robe) + bottle",
+   "mood": "Ritualistic, slow",
+   "line_idx": 32,
+   "start": 93.48,
+   "end": 96.24,
+   "dur": 2.76
+  },
+  {
+   "id": "30b",
+   "lyric": "Right after your shower",
+   "desc": "Close-up: Claire's hand pressing the white pump dispenser down \u2014 thin golden oil flows into her cupped palm. The tall cylindrical FALUNARA bottle clearly visible. USE PRODUCT REFERENCE IMAGE.",
+   "chars": "Claire hand + bottle",
+   "mood": "Ritualistic, slow",
+   "line_idx": 33,
+   "start": 96.24,
+   "end": 98.34,
+   "dur": 2.1
+  },
+  {
+   "id": "31",
+   "lyric": "Not rubbed but pressed slowly",
+   "desc": "Close-up of Claire pressing oil from her open palm onto her damp forearm with slow, gentle, deliberate motion. NOT rubbing \u2014 an open-palm press. Glistening skin. Warm amber light.",
+   "chars": "Claire hands",
+   "mood": "Intentional",
+   "line_idx": 34,
+   "start": 98.34,
+   "end": 101.5,
+   "dur": 3.16
+  },
+  {
+   "id": "32",
+   "lyric": "It sinks in and your skin starts to glow",
+   "desc": "Extreme close-up: oil absorbing into skin in warm light, Pixar-style golden glow effect. Skin looks hydrated, soft, luminous.",
+   "chars": "Skin close-up",
+   "mood": "Satisfying, beautiful",
+   "line_idx": 35,
+   "start": 101.5,
+   "end": 107.68,
+   "dur": 6.18
+  },
+  {
+   "id": "33",
+   "lyric": "Nourish restore and glow",
+   "desc": "Golden light pulses on Claire's glowing arm, then the FALUNARA pump bottle in foreground. No text on screen. Just the warm glow. USE PRODUCT REFERENCE IMAGE.",
+   "chars": "Bottle + arm",
+   "mood": "Tagline moment",
+   "line_idx": 36,
+   "start": 107.68,
+   "end": 110.38,
+   "dur": 2.7
+  },
+  {
+   "id": "34",
+   "lyric": "Week one she noticed her arms / Felt different after her shower",
+   "desc": "Claire in robe after shower, running hand along arm, slight pleasant surprise on face. Bathroom, warm light.",
+   "chars": "Claire (robe)",
+   "mood": "Pleasantly surprised",
+   "line_idx": 37,
+   "start": 110.38,
+   "end": 114.96,
+   "dur": 4.58
+  },
+  {
+   "id": "35",
+   "lyric": "Not greasy and not dry / Just soft like skin is supposed to feel",
+   "desc": "Close-up of Claire's arm: skin looks soft, healthy glow. She touches it gently with two fingers. Slight smile starting.",
+   "chars": "Claire arm",
+   "mood": "Content",
+   "line_idx": 39,
+   "start": 114.96,
+   "end": 120.14,
+   "dur": 5.18
+  },
+  {
+   "id": "36",
+   "lyric": "Week two the rough patches on her shins / Were finally smoothing out",
+   "desc": "Same bathtub-edge position as scene 5, but now skin looks smoother. Claire looking down, relieved. Warmer light than scene 5.",
+   "chars": "Claire (robe)",
+   "mood": "Relieved",
+   "line_idx": 41,
+   "start": 120.14,
+   "end": 124.72,
+   "dur": 4.58
+  },
+  {
+   "id": "37",
+   "lyric": "She ran her fingers down her leg / And she actually smiled",
+   "desc": "Claire's hand gliding down her shin, then cut to her face: a genuine, soft smile. First real smile in the ad.",
+   "chars": "Claire (robe)",
+   "mood": "Joyful",
+   "line_idx": 43,
+   "start": 124.72,
+   "end": 129.98,
+   "dur": 5.26
+  },
+  {
+   "id": "38",
+   "lyric": "Week three her daughter hugged her",
+   "desc": "Living room: Lily hugging Claire from the side. Warm evening light, cozy. Both with genuine expressions.",
+   "chars": "Claire (day) + Lily",
+   "mood": "Warm, loving",
+   "line_idx": 45,
+   "start": 129.98,
+   "end": 131.96,
+   "dur": 1.98
+  },
+  {
+   "id": "39",
+   "lyric": "And whispered Mom your skin feels amazing / She almost cried right there",
+   "desc": "Close-up of Claire's face during the hug: eyes glistening with emotion, touched. Lily's shoulder in foreground.",
+   "chars": "Claire face",
+   "mood": "Deeply moved",
+   "line_idx": 46,
+   "start": 131.96,
+   "end": 139.72,
+   "dur": 7.76
+  },
+  {
+   "id": "40",
+   "lyric": "Week four she wasn't rushing anymore",
+   "desc": "Claire in bathroom, evening. She's standing calmly, not hurrying. Candle lit. FALUNARA tall pump bottle on counter. Peaceful.",
+   "chars": "Claire (robe)",
+   "mood": "Peaceful",
+   "line_idx": 48,
+   "start": 139.72,
+   "end": 142.44,
+   "dur": 2.72
+  },
+  {
+   "id": "41",
+   "lyric": "Those five minutes after her shower / Became her favorite part of the day",
+   "desc": "Claire pressing FALUNARA oil from palm onto her arm, eyes closed, slight smile. The tall pump bottle visible on counter. Steam wisps, candle glow, warm amber everywhere. Pure self-care moment.",
+   "chars": "Claire (robe)",
+   "mood": "Blissful",
+   "line_idx": 49,
+   "start": 142.44,
+   "end": 150.38,
+   "dur": 7.94
+  },
+  {
+   "id": "42",
+   "lyric": "Not because of the oil / But because she was finally doing / Something just for herself",
+   "desc": "Wide shot: Claire in her bathroom, evening ritual. Golden light. She looks content, present, at peace. The FALUNARA pump bottle (white pump, no cap) and candle on the counter.",
+   "chars": "Claire (robe)",
+   "mood": "Empowered, at peace",
+   "line_idx": 51,
+   "start": 150.38,
+   "end": 163.82,
+   "dur": 13.44
+  },
+  {
+   "id": "43",
+   "lyric": "Fa-lu-NA-ra is not a cream you slap on / It's an evening ritual",
+   "desc": "The FALUNARA tall pump bottle (cap on) on the nightstand next to a book and reading glasses. Warm lamp glow. Bedroom. USE PRODUCT REFERENCE IMAGE (`falunara-product-ref.webp`).",
+   "chars": "Bottle + nightstand",
+   "mood": "Elegant, calm",
+   "line_idx": 54,
+   "start": 163.82,
+   "end": 167.24,
+   "dur": 3.42
+  },
+  {
+   "id": "44",
+   "lyric": "No parabens no silicone / Just pure botanical oils on your skin",
+   "desc": "Pixar-style close-up: golden botanical oil drops and leaf silhouettes floating in warm light. Clean, pure, natural. No text.",
+   "chars": "Botanical abstract",
+   "mood": "Pure, clean",
+   "line_idx": 56,
+   "start": 167.24,
+   "end": 173.32,
+   "dur": 6.08
+  },
+  {
+   "id": "45",
+   "lyric": "The gold bottle feels like it belongs / Right on your nightstand",
+   "desc": "Wider shot of the bedroom nightstand scene. Claire's hand reaching for the book, FALUNARA tall pump bottle in foreground. Soft focus. USE PRODUCT REFERENCE IMAGE.",
+   "chars": "Claire hand + bottle",
+   "mood": "Belonging",
+   "line_idx": 58,
+   "start": 173.32,
+   "end": 177.64,
+   "dur": 4.32
+  },
+  {
+   "id": "46",
+   "lyric": "Not hidden in a cabinet",
+   "desc": "Quick contrast: a cramped medicine cabinet crammed with generic products. Cold, cluttered. Then closes.",
+   "chars": "Cabinet only",
+   "mood": "Contrast",
+   "line_idx": 60,
+   "start": 177.64,
+   "end": 179.64,
+   "dur": 2.0
+  },
+  {
+   "id": "47",
+   "lyric": "It's the kind of thing / That makes you slow down and breathe",
+   "desc": "Claire taking a deep breath by the bedroom window, night sky visible. Calm, serene expression.",
+   "chars": "Claire (night)",
+   "mood": "Serene",
+   "line_idx": 61,
+   "start": 179.64,
+   "end": 183.78,
+   "dur": 4.14
+  },
+  {
+   "id": "47",
+   "lyric": "Right now you can try Fa-lu-NA-ra / Buy two and get one free",
+   "desc": "Three FALUNARA tall pump bottles (caps on) arranged beautifully on cream marble. Warm light, golden tones. \"Buy 2 Get 1 FREE\" feel without text. USE PRODUCT REFERENCE IMAGE (`falunara-product-ref.webp`).",
+   "chars": "3 bottles",
+   "mood": "Offer, inviting",
+   "line_idx": 63,
+   "start": 183.78,
+   "end": 188.44,
+   "dur": 4.66
+  },
+  {
+   "id": "48",
+   "lyric": "Three full bottles / That's four whole months of evenings",
+   "desc": "Calendar-style Pixar visual: four golden glowing months flowing by with warm evening scenes. No English text on calendar. Abstract warm glow.",
+   "chars": "Abstract",
+   "mood": "Generous, long-lasting",
+   "line_idx": 65,
+   "start": 188.44,
+   "end": 192.54,
+   "dur": 4.1
+  },
+  {
+   "id": "49",
+   "lyric": "Where you actually stop / And take care of you",
+   "desc": "Claire smiling softly at herself in the bathroom mirror. Warm, confident, calm. First time she looks truly happy.",
+   "chars": "Claire (robe)",
+   "mood": "Self-love",
+   "line_idx": 67,
+   "start": 192.54,
+   "end": 197.32,
+   "dur": 4.78
+  },
+  {
+   "id": "50",
+   "lyric": "Thirty day return guaranteed / If you don't feel the difference / Just send it back no questions asked",
+   "desc": "Simple, clean shot: FALUNARA tall pump bottle (cap on) with a gentle golden shield/checkmark glow effect around it. Trust and safety feeling. USE PRODUCT REFERENCE IMAGE.",
+   "chars": "Bottle",
+   "mood": "Trustworthy",
+   "line_idx": 69,
+   "start": 197.32,
+   "end": 206.42,
+   "dur": 9.1
+  },
+  {
+   "id": "51",
+   "lyric": "Tap below this video to learn more",
+   "desc": "Subtle downward arrow motion or gentle hand gesture pointing down. Claire or bottle in warm light. CTA moment.",
+   "chars": "Claire or bottle",
+   "mood": "Call to action",
+   "line_idx": 72,
+   "start": 206.42,
+   "end": 209.66,
+   "dur": 3.24
+  },
+  {
+   "id": "52",
+   "lyric": "She didn't change her skin",
+   "desc": "Claire's glowing, healthy arm in golden light.",
+   "chars": "Arm close-up",
+   "mood": "Reflective",
+   "line_idx": 73,
+   "start": 209.66,
+   "end": 211.48,
+   "dur": 1.82
+  },
+  {
+   "id": "53",
+   "lyric": "She changed how she treated herself",
+   "desc": "Claire's face: confident, warm, at peace. Slight knowing smile. Full eye contact with camera.",
+   "chars": "Claire (robe)",
+   "mood": "Empowered",
+   "line_idx": 74,
+   "start": 211.48,
+   "end": 215.42,
+   "dur": 3.94
+  },
+  {
+   "id": "54",
+   "lyric": "And it started with five quiet minutes",
+   "desc": "The bathroom ritual scene one more time: Claire pressing oil from palm onto skin, the FALUNARA pump bottle on counter, candle, steam, golden light.",
+   "chars": "Claire (robe)",
+   "mood": "Ritualistic",
+   "line_idx": 75,
+   "start": 215.42,
+   "end": 220.14,
+   "dur": 4.72
+  },
+  {
+   "id": "55",
+   "lyric": "And one golden bottle",
+   "desc": "Final shot: FALUNARA tall pump bottle (cap on) center frame, warm golden light radiating softly. Beautiful, clean, iconic. Fade to warm amber. USE PRODUCT REFERENCE IMAGE (`falunara-product-ref.webp`).",
+   "chars": "Bottle",
+   "mood": "Iconic close",
+   "line_idx": 76,
+   "start": 220.14,
+   "end": 228.18,
+   "dur": 8.04
+  }
+ ],
+ "subtitles": [
+  {
+   "text": "She was fifty-three",
+   "start": 1.06,
+   "end": 2.78
+  },
+  {
+   "text": "When she looked down at her hands",
+   "start": 2.78,
+   "end": 5.76
+  },
+  {
+   "text": "And didn't recognize them",
+   "start": 5.76,
+   "end": 7.94
+  },
+  {
+   "text": "The skin on her arms felt like paper",
+   "start": 8.34,
+   "end": 11.04
+  },
+  {
+   "text": "Dry patches on her shins",
+   "start": 11.5,
+   "end": 12.76
+  },
+  {
+   "text": "That no lotion could fix",
+   "start": 13.3,
+   "end": 16.06
+  },
+  {
+   "text": "Elbows rough enough to catch on silk",
+   "start": 16.94,
+   "end": 21.1
+  },
+  {
+   "text": "Every single morning",
+   "start": 22.86,
+   "end": 23.94
+  },
+  {
+   "text": "She would slap on whatever was fastest",
+   "start": 23.94,
+   "end": 25.92
+  },
+  {
+   "text": "And rush right out the door",
+   "start": 25.92,
+   "end": 27.78
+  },
+  {
+   "text": "Thirty years of raising kids",
+   "start": 27.78,
+   "end": 29.58
+  },
+  {
+   "text": "Running a house and building a career",
+   "start": 29.58,
+   "end": 32.18
+  },
+  {
+   "text": "Thirty years of putting herself last",
+   "start": 33.2,
+   "end": 36.28
+  },
+  {
+   "text": "And her skin kept the score",
+   "start": 36.28,
+   "end": 38.18
+  },
+  {
+   "text": "She tried the department store creams",
+   "start": 41.44,
+   "end": 44.24
+  },
+  {
+   "text": "The ones in the fancy jars",
+   "start": 44.46,
+   "end": 46.78
+  },
+  {
+   "text": "That promised transformation overnight",
+   "start": 46.78,
+   "end": 49.8
+  },
+  {
+   "text": "Sixty dollars for two ounces of nothing",
+   "start": 51.16,
+   "end": 54.72
+  },
+  {
+   "text": "Her bathroom shelf looked like a graveyard",
+   "start": 54.72,
+   "end": 57.88
+  },
+  {
+   "text": "Of broken promises",
+   "start": 58.98,
+   "end": 60.34
+  },
+  {
+   "text": "But the real problem was never her skin",
+   "start": 60.34,
+   "end": 65.04
+  },
+  {
+   "text": "It was the rush",
+   "start": 65.26,
+   "end": 65.92
+  },
+  {
+   "text": "Every product she ever tried",
+   "start": 65.92,
+   "end": 67.82
+  },
+  {
+   "text": "Was just another step to get through",
+   "start": 67.82,
+   "end": 70.22
+  },
+  {
+   "text": "Pump it on and move along",
+   "start": 70.22,
+   "end": 72.16
+  },
+  {
+   "text": "No moment no attention",
+   "start": 72.16,
+   "end": 73.92
+  },
+  {
+   "text": "Her skin wasn't starving for a better cream",
+   "start": 74.52,
+   "end": 76.88
+  },
+  {
+   "text": "It was starving for five minutes of care",
+   "start": 76.88,
+   "end": 82.2
+  },
+  {
+   "text": "That's what makes Fa-lu-NA-ra different",
+   "start": 82.2,
+   "end": 85.5
+  },
+  {
+   "text": "Fa-lu-NA-ra Botanical Body Oil",
+   "start": 87.1,
+   "end": 88.08
+  },
+  {
+   "text": "Sunflower and sweet almond",
+   "start": 88.48,
+   "end": 90.66
+  },
+  {
+   "text": "Jojoba and argan and olive",
+   "start": 92.6,
+   "end": 93.48
+  },
+  {
+   "text": "Pressed into damp skin",
+   "start": 93.48,
+   "end": 95.82
+  },
+  {
+   "text": "Right after your shower",
+   "start": 96.24,
+   "end": 96.86
+  },
+  {
+   "text": "Not rubbed but pressed slowly",
+   "start": 98.34,
+   "end": 100.88
+  },
+  {
+   "text": "It sinks in and your skin starts to glow",
+   "start": 101.5,
+   "end": 104.66
+  },
+  {
+   "text": "Nourish restore and glow",
+   "start": 107.68,
+   "end": 109.92
+  },
+  {
+   "text": "Week one she noticed her arms",
+   "start": 110.38,
+   "end": 112.12
+  },
+  {
+   "text": "Felt different after her shower",
+   "start": 112.12,
+   "end": 114.32
+  },
+  {
+   "text": "Not greasy and not dry",
+   "start": 114.96,
+   "end": 116.6
+  },
+  {
+   "text": "Just soft like skin is supposed to feel",
+   "start": 116.6,
+   "end": 119.8
+  },
+  {
+   "text": "Week two the rough patches on her shins",
+   "start": 120.14,
+   "end": 122.64
+  },
+  {
+   "text": "Were finally smoothing out",
+   "start": 122.64,
+   "end": 124.52
+  },
+  {
+   "text": "She ran her fingers down her leg",
+   "start": 124.72,
+   "end": 127.02
+  },
+  {
+   "text": "And she actually smiled",
+   "start": 127.02,
+   "end": 129.42
+  },
+  {
+   "text": "Week three her daughter hugged her",
+   "start": 129.98,
+   "end": 131.96
+  },
+  {
+   "text": "And whispered Mom your skin feels amazing",
+   "start": 131.96,
+   "end": 134.86
+  },
+  {
+   "text": "She almost cried right there",
+   "start": 134.86,
+   "end": 139.16
+  },
+  {
+   "text": "Week four she wasn't rushing anymore",
+   "start": 139.72,
+   "end": 142.44
+  },
+  {
+   "text": "Those five minutes after her shower",
+   "start": 142.44,
+   "end": 145.46
+  },
+  {
+   "text": "Became her favorite part of the day",
+   "start": 145.46,
+   "end": 149.62
+  },
+  {
+   "text": "Not because of the oil",
+   "start": 150.38,
+   "end": 152.14
+  },
+  {
+   "text": "But because she was finally doing",
+   "start": 152.14,
+   "end": 155.26
+  },
+  {
+   "text": "Something just for herself",
+   "start": 155.26,
+   "end": 159.5
+  },
+  {
+   "text": "Fa-lu-NA-ra is not a cream you slap on",
+   "start": 163.82,
+   "end": 165.68
+  },
+  {
+   "text": "It's an evening ritual",
+   "start": 165.98,
+   "end": 166.5
+  },
+  {
+   "text": "No parabens no silicone",
+   "start": 167.24,
+   "end": 169.78
+  },
+  {
+   "text": "Just pure botanical oils on your skin",
+   "start": 170.4,
+   "end": 173.08
+  },
+  {
+   "text": "The gold bottle feels like it belongs",
+   "start": 173.32,
+   "end": 175.22
+  },
+  {
+   "text": "Right on your nightstand",
+   "start": 175.22,
+   "end": 176.67
+  },
+  {
+   "text": "Not hidden in a cabinet",
+   "start": 177.64,
+   "end": 178.9
+  },
+  {
+   "text": "It's the kind of thing",
+   "start": 179.64,
+   "end": 180.5
+  },
+  {
+   "text": "That makes you slow down and breathe",
+   "start": 180.5,
+   "end": 183.34
+  },
+  {
+   "text": "Right now you can try Fa-lu-NA-ra",
+   "start": 183.78,
+   "end": 185.28
+  },
+  {
+   "text": "Buy two and get one free",
+   "start": 186.82,
+   "end": 188.44
+  },
+  {
+   "text": "Three full bottles",
+   "start": 188.44,
+   "end": 189.84
+  },
+  {
+   "text": "That's four whole months of evenings",
+   "start": 190.06,
+   "end": 191.74
+  },
+  {
+   "text": "Where you actually stop",
+   "start": 192.54,
+   "end": 194.66
+  },
+  {
+   "text": "And take care of you",
+   "start": 195.3,
+   "end": 197.32
+  },
+  {
+   "text": "Thirty day return guaranteed",
+   "start": 197.32,
+   "end": 199.02
+  },
+  {
+   "text": "If you don't feel the difference",
+   "start": 200.38,
+   "end": 202.94
+  },
+  {
+   "text": "Just send it back no questions asked",
+   "start": 202.94,
+   "end": 205.62
+  },
+  {
+   "text": "Tap below this video to learn more",
+   "start": 206.42,
+   "end": 209.38
+  },
+  {
+   "text": "She didn't change her skin",
+   "start": 209.66,
+   "end": 211.24
+  },
+  {
+   "text": "She changed how she treated herself",
+   "start": 211.48,
+   "end": 214.42
+  },
+  {
+   "text": "And it started with five quiet minutes",
+   "start": 215.42,
+   "end": 219.52
+  },
+  {
+   "text": "And one golden bottle",
+   "start": 220.14,
+   "end": 222.42
+  }
+ ]
+}

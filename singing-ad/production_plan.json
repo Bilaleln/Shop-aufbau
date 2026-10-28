@@ -1,0 +1,648 @@
+[
+ {
+  "id": "1",
+  "start": 0.0,
+  "dur": 2.78,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a cream linen blouse, dark navy trousers and small gold stud earrings, hair loose. Expression: tired and worried, no smile. Scene: Close-up of Claire in her bright kitchen in warm afternoon light, looking down pensively, slightly sad.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. Very slow push-in. She slowly lowers her gaze and blinks, lost in thought.",
+  "veo_dur": 4
+ },
+ {
+  "id": "2",
+  "start": 2.78,
+  "dur": 2.98,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a cream linen blouse, dark navy trousers and small gold stud earrings, hair loose. Scene: Claire's point of view looking down at her own two hands resting on a kitchen counter: fine lines, dry, dull skin, warm daylight. Only her hands and blouse sleeves visible, no face.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. Her fingers flex slowly and she turns her hands over, inspecting the dry skin.",
+  "veo_dur": 4
+ },
+ {
+  "id": "3",
+  "start": 5.76,
+  "dur": 2.58,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a cream linen blouse, dark navy trousers and small gold stud earrings, hair loose. Expression: tired and worried, no smile. Scene: Close-up of Claire's face, brow slightly furrowed, eyes troubled, blurred kitchen behind her.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. Subtle slow head tilt, her eyes narrow with worry. Static camera.",
+  "veo_dur": 4
+ },
+ {
+  "id": "4",
+  "start": 8.34,
+  "dur": 3.16,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/scene30_pump_start_v2.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Reference image 2 shows Claire in her bathroom (style, lighting and location reference). Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a soft white terrycloth robe, hair loosely clipped up. Expression: tired and worried, no smile. Scene: Side shot of Claire in her bathroom by the mirror, running her right hand along her left forearm; the forearm skin looks dry and dull, like paper.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. Her right hand slides slowly along her dry forearm, she frowns slightly.",
+  "veo_dur": 4
+ },
+ {
+  "id": "5",
+  "start": 11.5,
+  "dur": 1.8,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/scene30_pump_start_v2.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Reference image 2 shows Claire in her bathroom (style, lighting and location reference). Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a soft white terrycloth robe, hair loosely clipped up. Expression: tired and worried, no smile. Scene: Low angle: Claire sitting on the edge of a white bathtub, looking down at her shins, which show dry flaky patches. Soft bathroom light.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. She touches her dry shin with her fingertips and frowns.",
+  "veo_dur": 4
+ },
+ {
+  "id": "6",
+  "start": 13.3,
+  "dur": 3.64,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/scene30_pump_start_v2.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Reference image 2 shows Claire in her bathroom (style, lighting and location reference). Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a soft white terrycloth robe, hair loosely clipped up. Expression: tired and worried, no smile. All other bottles and jars are plain and unbranded with no text at all. Scene: Bathroom counter close-up: three plain unbranded lotion bottles, Claire's hand in frame pushing them aside, one already tipped over.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. Her hand pushes the lotion bottles aside in frustration and one tips over.",
+  "veo_dur": 4
+ },
+ {
+  "id": "7",
+  "start": 16.94,
+  "dur": 5.92,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a cream linen blouse, dark navy trousers and small gold stud earrings, hair loose. Expression: tired and worried, no smile. Scene: Morning bedroom: Claire putting on a cream silk blouse; close on her bent elbow, the rough dry elbow skin catching on the silk sleeve.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. The silk sleeve snags on her rough elbow as she pulls it on, she winces slightly.",
+  "veo_dur": 6
+ },
+ {
+  "id": "9",
+  "start": 22.86,
+  "dur": 3.06,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/scene30_pump_start_v2.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Reference image 2 shows Claire in her bathroom (style, lighting and location reference). Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a cream linen blouse, dark navy trousers and small gold stud earrings, hair loose. Expression: tired and worried, no smile. All other bottles and jars are plain and unbranded with no text at all. Scene: Morning in the bathroom, harsh light: Claire hastily pumping a plain unbranded white lotion bottle onto her arm while staring at a phone in her other hand, barely looking.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. She quickly pumps lotion and smears it on in a hurry, eyes on her phone.",
+  "veo_dur": 4
+ },
+ {
+  "id": "10",
+  "start": 25.92,
+  "dur": 1.86,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a cream linen blouse, dark navy trousers and small gold stud earrings, hair loose. Expression: tired and worried, no smile. Scene: Claire at her front door grabbing her keys and handbag, rushing out, morning light, slight motion.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. She grabs the keys and hurries out of the door. Quick motion, static camera.",
+  "veo_dur": 4
+ },
+ {
+  "id": "11",
+  "start": 27.78,
+  "dur": 1.8,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a cream linen blouse, dark navy trousers and small gold stud earrings, hair loose. Expression: tired but loving. Scene: Warm nostalgic kitchen with brighter colours: Claire carrying heavy grocery bags, a child's backpack hanging on a kitchen chair.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. She sets the grocery bags on the counter and lets out a tired sigh.",
+  "veo_dur": 4
+ },
+ {
+  "id": "12",
+  "start": 29.58,
+  "dur": 3.62,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a cream linen blouse, dark navy trousers and small gold stud earrings, hair loose. Expression: tired and worried, no smile. Scene: Claire at the kitchen table with a laptop and stacks of papers, an overflowing laundry basket next to her, busy evening light.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. She rubs her temple, glances from the laptop to the laundry basket.",
+  "veo_dur": 4
+ },
+ {
+  "id": "13",
+  "start": 33.2,
+  "dur": 3.08,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/scene30_pump_start_v2.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Reference image 2 shows Claire in her bathroom (style, lighting and location reference). Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a light grey cotton pajama top, hair down. Expression: tired and worried, no smile. Scene: Night: Claire standing in her bathroom doorway, looking at herself in the mirror from a distance, dim light.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. Slow push-in towards her, she exhales tiredly.",
+  "veo_dur": 4
+ },
+ {
+  "id": "14",
+  "start": 36.28,
+  "dur": 5.16,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/scene30_pump_start_v2.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Reference image 2 shows Claire in her bathroom (style, lighting and location reference). Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a soft white terrycloth robe, hair loosely clipped up. Expression: tired and worried, no smile. Scene: Close-up of Claire's reflection in the bathroom mirror, her hand touching her forearm, soft sad lighting.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. Her fingers trace her forearm slowly, her eyes glisten slightly.",
+  "veo_dur": 6
+ },
+ {
+  "id": "15",
+  "start": 41.44,
+  "dur": 3.02,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a cream linen blouse, dark navy trousers and small gold stud earrings, hair loose. All other bottles and jars are plain and unbranded with no text at all. Scene: Department store: glass shelves with rows of fancy luxury cream jars under cold fluorescent light, Claire's hand reaching for one jar.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. Her hand reaches in and picks up one of the jars.",
+  "veo_dur": 4
+ },
+ {
+  "id": "16",
+  "start": 44.46,
+  "dur": 2.32,
+  "refs": [],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. All other bottles and jars are plain and unbranded with no text at all. Scene: Close-up of a glossy, expensive-looking generic luxury cream jar being opened, gold lid, no text or brand.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. The lid unscrews and lifts, revealing the smooth cream inside.",
+  "veo_dur": 4
+ },
+ {
+  "id": "17",
+  "start": 46.78,
+  "dur": 4.38,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/scene30_pump_start_v2.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Reference image 2 shows Claire in her bathroom (style, lighting and location reference). Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a light grey cotton pajama top, hair down. Expression: hopeful and expectant. All other bottles and jars are plain and unbranded with no text at all. Scene: Night, bathroom mirror: Claire applying a fancy cream from the generic jar to her cheek.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. She dabs the cream on her cheek, looking hopefully at her reflection.",
+  "veo_dur": 6
+ },
+ {
+  "id": "18",
+  "start": 51.16,
+  "dur": 3.56,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/scene30_pump_start_v2.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Reference image 2 shows Claire in her bathroom (style, lighting and location reference). Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a soft white terrycloth robe, hair loosely clipped up. Expression: disappointed. All other bottles and jars are plain and unbranded with no text at all. Scene: Next morning: Claire looking at her arm, disappointed; the fancy generic jar sits almost empty on the counter.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. She looks at her arm, sighs and her shoulders drop.",
+  "veo_dur": 4
+ },
+ {
+  "id": "19",
+  "start": 54.72,
+  "dur": 4.26,
+  "refs": [],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. All other bottles and jars are plain and unbranded with no text at all. Scene: A bathroom shelf crowded with exactly eight half-used plain unbranded cream jars and lotion bottles, harsh light, no other items.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. Slow sideways pan along the cluttered shelf.",
+  "veo_dur": 6
+ },
+ {
+  "id": "20",
+  "start": 58.98,
+  "dur": 1.36,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/scene30_pump_start_v2.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Reference image 2 shows Claire in her bathroom (style, lighting and location reference). Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a soft white terrycloth robe, hair loosely clipped up. Expression: resigned. Scene: Claire closing a mirrored medicine cabinet, her reflection briefly visible.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. She slowly swings the mirrored cabinet door shut.",
+  "veo_dur": 4
+ },
+ {
+  "id": "21",
+  "start": 60.34,
+  "dur": 4.92,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a light grey cotton pajama top, hair down. Expression: contemplative, quiet. Scene: Night bedroom: Claire sitting on the edge of her bed with grey linen bedding, hands in her lap, warm low lamp light.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. Slow push-in, she looks down at her hands and thinks.",
+  "veo_dur": 6
+ },
+ {
+  "id": "23",
+  "start": 65.26,
+  "dur": 4.96,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/scene30_pump_start_v2.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Reference image 2 shows Claire in her bathroom (style, lighting and location reference). Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a cream linen blouse, dark navy trousers and small gold stud earrings, hair loose. Expression: tired and worried, no smile. All other bottles and jars are plain and unbranded with no text at all. Scene: Close-up in cold bathroom light: Claire's hands hastily rubbing lotion together while a phone buzzes on the counter next to a plain unbranded lotion bottle.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. Hurried hand rubbing, the phone vibrates on the counter.",
+  "veo_dur": 6
+ },
+ {
+  "id": "24",
+  "start": 70.22,
+  "dur": 4.3,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a cream linen blouse, dark navy trousers and small gold stud earrings, hair loose. Expression: distracted. Scene: Claire, dressed for work, walking away out of her bathroom while rubbing her hands together and glancing at her watch.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. She walks out of the room rubbing her hands, not looking back.",
+  "veo_dur": 6
+ },
+ {
+  "id": "25",
+  "start": 74.52,
+  "dur": 2.36,
+  "refs": [],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Scene: Slow, warm close-up of a woman's bare forearm skin in soft golden light, no product, just skin and light.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. Golden light slowly warms and moves across the skin.",
+  "veo_dur": 4
+ },
+ {
+  "id": "26",
+  "start": 76.88,
+  "dur": 5.32,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/scene30_pump_start_v2.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Reference image 2 shows Claire in her bathroom (style, lighting and location reference). Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a soft white terrycloth robe, hair loosely clipped up. Expression: soft dawning realization, gentle. Scene: Claire in her bathroom in the evening, the light starting to turn warm golden; she pauses and stops rushing.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. She stops, her eyes lift, she takes a slow breath and her face softens.",
+  "veo_dur": 6
+ },
+ {
+  "id": "27",
+  "start": 82.2,
+  "dur": 3.3,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/falunara-product-ref.jpg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_box_dieline.jpg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_bottle_pixar_crop.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the real FALUNARA bottle next to its gold box. Reference image 2 shows the real FALUNARA gold box, all sides. Reference image 3 shows the FALUNARA bottle in the target Pixar style. The FALUNARA bottle must match the bottle references exactly: tall slim clear glass cylinder full of golden oil, text printed directly on the glass in dark brown - FALUNARA with a small gold brush stroke below, BOTANICAL BODY OIL, NOURISH \u00b7 RESTORE \u00b7 GLOW, 100 mL - and a compact white stepped pump head with no spout, covered by a straight transparent cylindrical cap. This label is the only text allowed in the image. Scene: Product reveal: the gold FALUNARA box (matching the box references, FALUNARA, gold brush stroke, botanical leaves, BOTANICAL BODY OIL) standing upright on a cream marble surface with the FALUNARA bottle beside it, warm golden backlight, soft glow.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. Slow push-in, a warm golden glow shimmers around the box and bottle.",
+  "veo_dur": 4
+ },
+ {
+  "id": "28",
+  "start": 85.5,
+  "dur": 2.98,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/scene30_pump_start_v2.jpg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_bottle_pixar_crop.jpg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_bottle_front.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Reference image 2 shows Claire in her bathroom (style, lighting and location reference). Reference image 3 shows the FALUNARA bottle in the target Pixar style. Reference image 4 shows the real FALUNARA bottle, front view. Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a soft white terrycloth robe, hair loosely clipped up. Expression: calm, relaxed and content, a soft gentle smile. The FALUNARA bottle must match the bottle references exactly: tall slim clear glass cylinder full of golden oil, text printed directly on the glass in dark brown - FALUNARA with a small gold brush stroke below, BOTANICAL BODY OIL, NOURISH \u00b7 RESTORE \u00b7 GLOW, 100 mL - and a compact white stepped pump head with no spout, covered by a straight transparent cylindrical cap. This label is the only text allowed in the image. Scene: Claire in her evening bathroom holding the FALUNARA bottle in both hands at chest height, looking at it with gentle curiosity.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. She gently turns the bottle in her hands and smiles softly.",
+  "veo_dur": 4
+ },
+ {
+  "id": "29",
+  "start": 88.48,
+  "dur": 5.0,
+  "refs": [],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Scene: Magical Pixar-style botanical scene: a sunflower, almonds, a jojoba branch, argan fruits and olives, each releasing glowing golden oil drops that flow together into one luminous golden stream, warm light, no labels.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. Golden drops fall from each plant and merge into one flowing luminous stream.",
+  "veo_dur": 6
+ },
+ {
+  "id": "30",
+  "start": 93.48,
+  "dur": 4.86,
+  "fixed": "scene30_pump_veo.mp4"
+ },
+ {
+  "id": "31",
+  "start": 98.34,
+  "dur": 3.16,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/scene30_pump_start_v2.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Reference image 2 shows Claire in her bathroom (style, lighting and location reference). Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a soft white terrycloth robe, hair loosely clipped up. Expression: calm, relaxed and content, a soft gentle smile. Scene: Close-up: Claire presses golden oil from her open flat palm onto her damp forearm (an open-palm press, not rubbing), glistening skin, warm amber light, robe sleeve visible.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. Her open palm presses slowly onto the forearm, lifts and presses again further up. No rubbing.",
+  "veo_dur": 4
+ },
+ {
+  "id": "32",
+  "start": 101.5,
+  "dur": 6.18,
+  "refs": [],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Scene: Extreme close-up of oil absorbing into a woman's forearm skin in warm light, Pixar-style soft golden glow, skin looks hydrated and luminous.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. The glossy oil sheen slowly sinks into the skin and a soft golden glow blooms.",
+  "veo_dur": 8
+ },
+ {
+  "id": "33",
+  "start": 107.68,
+  "dur": 2.7,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/scene30_pump_start_v2.jpg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_bottle_pixar_crop.jpg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_bottle_front.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows Claire in her bathroom (style, lighting and location reference). Reference image 2 shows the FALUNARA bottle in the target Pixar style. Reference image 3 shows the real FALUNARA bottle, front view. Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a soft white terrycloth robe, hair loosely clipped up. Expression: calm, relaxed and content, a soft gentle smile. The FALUNARA bottle must match the bottle references exactly: tall slim clear glass cylinder full of golden oil, text printed directly on the glass in dark brown - FALUNARA with a small gold brush stroke below, BOTANICAL BODY OIL, NOURISH \u00b7 RESTORE \u00b7 GLOW, 100 mL - and a compact white stepped pump head with no spout, covered by a straight transparent cylindrical cap. This label is the only text allowed in the image. Scene: Claire's softly glowing forearm in the background, the FALUNARA bottle in sharp focus in the foreground on the marble counter, warm golden light.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. Gentle pulses of warm light run along her arm, slow rack focus to the bottle.",
+  "veo_dur": 4
+ },
+ {
+  "id": "34",
+  "start": 110.38,
+  "dur": 4.58,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/scene30_pump_start_v2.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Reference image 2 shows Claire in her bathroom (style, lighting and location reference). Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a soft white terrycloth robe, hair loosely clipped up. Expression: pleasantly surprised, starting to smile. Scene: Claire after her shower, running her hand along her arm, noticing how soft it feels, warm bathroom light.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. Her hand glides down her arm and her eyebrows lift in pleasant surprise.",
+  "veo_dur": 6
+ },
+ {
+  "id": "35",
+  "start": 114.96,
+  "dur": 5.18,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/scene30_pump_start_v2.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Reference image 2 shows Claire in her bathroom (style, lighting and location reference). Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a soft white terrycloth robe, hair loosely clipped up. Expression: calm, relaxed and content, a soft gentle smile. Scene: Close-up of Claire's forearm, skin soft with a healthy glow, two of her fingers touching it gently, her smiling face softly blurred at the frame edge.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. Two fingers stroke the skin slowly, her smile grows.",
+  "veo_dur": 6
+ },
+ {
+  "id": "36",
+  "start": 120.14,
+  "dur": 4.58,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/scene30_pump_start_v2.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Reference image 2 shows Claire in her bathroom (style, lighting and location reference). Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a soft white terrycloth robe, hair loosely clipped up. Expression: relieved. Scene: Claire sitting on the edge of the bathtub looking down at her shins, which are now smooth, warm golden light.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. She looks at her smooth shins and exhales with relief.",
+  "veo_dur": 6
+ },
+ {
+  "id": "37",
+  "start": 124.72,
+  "dur": 5.26,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/scene30_pump_start_v2.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Reference image 2 shows Claire in her bathroom (style, lighting and location reference). Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a soft white terrycloth robe, hair loosely clipped up. Expression: a genuine, warm smile. Scene: Claire's hand gliding down her smooth shin while she smiles, sitting on the bathtub edge.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. Her hand glides down her shin and she breaks into a warm smile.",
+  "veo_dur": 6
+ },
+ {
+  "id": "38",
+  "start": 129.98,
+  "dur": 1.98,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_lily.jpeg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Reference image 2 shows the character Lily, Claire's daughter. Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a cream linen blouse, dark navy trousers and small gold stud earrings, hair loose. Lily is Claire's daughter, about 28, long straight dark brown hair, oversized sage green sweater and jeans; keep her face as in the reference. Both look warm and loving. Scene: Cozy living room in warm evening light: Lily hugging Claire from the side, both happy.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. Lily hugs her tighter, both close their eyes and smile.",
+  "veo_dur": 4
+ },
+ {
+  "id": "39",
+  "start": 131.96,
+  "dur": 7.76,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_lily.jpeg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Reference image 2 shows the character Lily, Claire's daughter. Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a cream linen blouse, dark navy trousers and small gold stud earrings, hair loose. Lily is Claire's daughter, about 28, long straight dark brown hair, oversized sage green sweater and jeans; keep her face as in the reference. Expression: deeply moved, eyes glistening, a touched smile. Scene: Close-up of Claire's face during the hug, eyes glistening with emotion; Lily's dark hair and green sweater shoulder in the foreground.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. A tear glistens in her eye as she smiles, Lily holds her.",
+  "veo_dur": 8
+ },
+ {
+  "id": "40",
+  "start": 139.72,
+  "dur": 2.72,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/scene30_pump_start_v2.jpg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_bottle_pixar_crop.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Reference image 2 shows Claire in her bathroom (style, lighting and location reference). Reference image 3 shows the FALUNARA bottle in the target Pixar style. Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a soft white terrycloth robe, hair loosely clipped up. Expression: calm, relaxed and content, a soft gentle smile. The FALUNARA bottle must match the bottle references exactly: tall slim clear glass cylinder full of golden oil, text printed directly on the glass in dark brown - FALUNARA with a small gold brush stroke below, BOTANICAL BODY OIL, NOURISH \u00b7 RESTORE \u00b7 GLOW, 100 mL - and a compact white stepped pump head with no spout, covered by a straight transparent cylindrical cap. This label is the only text allowed in the image. Scene: Claire standing calmly in her bathroom in the evening, candle lit, the FALUNARA bottle on the counter, peaceful, unhurried.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. She breathes slowly and calmly, the candle flickers.",
+  "veo_dur": 4
+ },
+ {
+  "id": "41",
+  "start": 142.44,
+  "dur": 7.94,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/scene30_pump_start_v2.jpg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_bottle_pixar_crop.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Reference image 2 shows Claire in her bathroom (style, lighting and location reference). Reference image 3 shows the FALUNARA bottle in the target Pixar style. Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a soft white terrycloth robe, hair loosely clipped up. Expression: blissful, eyes closed, slight smile. The FALUNARA bottle must match the bottle references exactly: tall slim clear glass cylinder full of golden oil, text printed directly on the glass in dark brown - FALUNARA with a small gold brush stroke below, BOTANICAL BODY OIL, NOURISH \u00b7 RESTORE \u00b7 GLOW, 100 mL - and a compact white stepped pump head with no spout, covered by a straight transparent cylindrical cap. This label is the only text allowed in the image. Scene: Claire pressing FALUNARA oil from her palm onto her arm with her eyes closed, steam wisps, candle glow, warm amber light, the bottle on the counter.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. She slowly presses her palm onto her arm, eyes closed, serene.",
+  "veo_dur": 8
+ },
+ {
+  "id": "42",
+  "start": 150.38,
+  "dur": 4.88,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/scene30_pump_start_v2.jpg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_bottle_pixar_crop.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Reference image 2 shows Claire in her bathroom (style, lighting and location reference). Reference image 3 shows the FALUNARA bottle in the target Pixar style. Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a soft white terrycloth robe, hair loosely clipped up. Expression: calm, relaxed and content, a soft gentle smile. The FALUNARA bottle must match the bottle references exactly: tall slim clear glass cylinder full of golden oil, text printed directly on the glass in dark brown - FALUNARA with a small gold brush stroke below, BOTANICAL BODY OIL, NOURISH \u00b7 RESTORE \u00b7 GLOW, 100 mL - and a compact white stepped pump head with no spout, covered by a straight transparent cylindrical cap. This label is the only text allowed in the image. Scene: Wide shot of Claire in her bathroom during her evening ritual, golden light, the FALUNARA bottle and a candle on the counter, she looks present and at peace.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. Slow dolly-in towards her.",
+  "veo_dur": 6
+ },
+ {
+  "id": "42b",
+  "start": 155.26,
+  "dur": 8.56,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/scene30_pump_start_v2.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Reference image 2 shows Claire in her bathroom (style, lighting and location reference). Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a soft white terrycloth robe, hair loosely clipped up. Expression: peaceful, eyes closed, then a content smile. Scene: Close-up of Claire's face in warm golden light, eyes closed, completely at peace.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. She takes a deep breath in, opens her eyes and smiles contentedly.",
+  "veo_dur": 8
+ },
+ {
+  "id": "43",
+  "start": 163.82,
+  "dur": 3.42,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_bottle_pixar_crop.jpg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_bottle_front.jpg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_bottle_pump_closeup.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the FALUNARA bottle in the target Pixar style. Reference image 2 shows the real FALUNARA bottle, front view. Reference image 3 shows the real FALUNARA pump head under its transparent cap. The FALUNARA bottle must match the bottle references exactly: tall slim clear glass cylinder full of golden oil, text printed directly on the glass in dark brown - FALUNARA with a small gold brush stroke below, BOTANICAL BODY OIL, NOURISH \u00b7 RESTORE \u00b7 GLOW, 100 mL - and a compact white stepped pump head with no spout, covered by a straight transparent cylindrical cap. This label is the only text allowed in the image. Scene: The FALUNARA bottle with its cap on standing on a wooden nightstand next to a closed book and reading glasses, warm reading-lamp glow, cozy bedroom.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. Slow push-in, soft lamp glow.",
+  "veo_dur": 4
+ },
+ {
+  "id": "44",
+  "start": 167.24,
+  "dur": 6.08,
+  "refs": [],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Scene: Pixar-style close-up of golden botanical oil drops and green leaf silhouettes floating in warm light, clean, pure, natural.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. The golden drops and leaves float and drift slowly.",
+  "veo_dur": 8
+ },
+ {
+  "id": "45",
+  "start": 173.32,
+  "dur": 4.32,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_bottle_pixar_crop.jpg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_bottle_front.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Reference image 2 shows the FALUNARA bottle in the target Pixar style. Reference image 3 shows the real FALUNARA bottle, front view. Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a light grey cotton pajama top, hair down. The FALUNARA bottle must match the bottle references exactly: tall slim clear glass cylinder full of golden oil, text printed directly on the glass in dark brown - FALUNARA with a small gold brush stroke below, BOTANICAL BODY OIL, NOURISH \u00b7 RESTORE \u00b7 GLOW, 100 mL - and a compact white stepped pump head with no spout, covered by a straight transparent cylindrical cap. This label is the only text allowed in the image. Scene: Wider shot of the bedroom nightstand: the FALUNARA bottle in the foreground, Claire's hand in a grey pajama sleeve reaching for the book behind it, soft focus.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. Her hand picks up the book, the bottle stays in the foreground.",
+  "veo_dur": 6
+ },
+ {
+  "id": "46",
+  "start": 177.64,
+  "dur": 2.0,
+  "refs": [],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. All other bottles and jars are plain and unbranded with no text at all. Scene: A cramped, cold-lit medicine cabinet crammed with generic unbranded products.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. The cabinet door swings shut.",
+  "veo_dur": 4
+ },
+ {
+  "id": "47",
+  "start": 179.64,
+  "dur": 4.14,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a light grey cotton pajama top, hair down. Expression: serene. Scene: Claire standing by her bedroom window at night, starry sky outside, calm.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. She takes a slow deep breath and her shoulders relax.",
+  "veo_dur": 6
+ },
+ {
+  "id": "47b",
+  "start": 183.78,
+  "dur": 4.66,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_bottle_pixar_crop.jpg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_bottle_front.jpg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_bottle_pump_closeup.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the FALUNARA bottle in the target Pixar style. Reference image 2 shows the real FALUNARA bottle, front view. Reference image 3 shows the real FALUNARA pump head under its transparent cap. The FALUNARA bottle must match the bottle references exactly: tall slim clear glass cylinder full of golden oil, text printed directly on the glass in dark brown - FALUNARA with a small gold brush stroke below, BOTANICAL BODY OIL, NOURISH \u00b7 RESTORE \u00b7 GLOW, 100 mL - and a compact white stepped pump head with no spout, covered by a straight transparent cylindrical cap. This label is the only text allowed in the image. Scene: Three identical FALUNARA bottles with caps on arranged beautifully on cream marble, warm golden light.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. Slow gentle camera arc, warm glints on the glass.",
+  "veo_dur": 6
+ },
+ {
+  "id": "48",
+  "start": 188.44,
+  "dur": 4.1,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_bottle_pixar_crop.jpg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_bottle_front.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the FALUNARA bottle in the target Pixar style. Reference image 2 shows the real FALUNARA bottle, front view. The FALUNARA bottle must match the bottle references exactly: tall slim clear glass cylinder full of golden oil, text printed directly on the glass in dark brown - FALUNARA with a small gold brush stroke below, BOTANICAL BODY OIL, NOURISH \u00b7 RESTORE \u00b7 GLOW, 100 mL - and a compact white stepped pump head with no spout, covered by a straight transparent cylindrical cap. This label is the only text allowed in the image. Scene: Three FALUNARA bottles in a row on a cozy bathroom shelf with a candle, warm evening light through the window.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. The window light shifts slowly from dusk to night, candle glows.",
+  "veo_dur": 6
+ },
+ {
+  "id": "49",
+  "start": 192.54,
+  "dur": 4.78,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/scene30_pump_start_v2.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Reference image 2 shows Claire in her bathroom (style, lighting and location reference). Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a soft white terrycloth robe, hair loosely clipped up. Expression: truly happy, confident, calm smile. Scene: Claire smiling softly at herself in the bathroom mirror.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. She smiles at her reflection and tilts her head slightly.",
+  "veo_dur": 6
+ },
+ {
+  "id": "50",
+  "start": 197.32,
+  "dur": 3.06,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_bottle_pixar_crop.jpg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_bottle_front.jpg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_bottle_pump_closeup.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the FALUNARA bottle in the target Pixar style. Reference image 2 shows the real FALUNARA bottle, front view. Reference image 3 shows the real FALUNARA pump head under its transparent cap. The FALUNARA bottle must match the bottle references exactly: tall slim clear glass cylinder full of golden oil, text printed directly on the glass in dark brown - FALUNARA with a small gold brush stroke below, BOTANICAL BODY OIL, NOURISH \u00b7 RESTORE \u00b7 GLOW, 100 mL - and a compact white stepped pump head with no spout, covered by a straight transparent cylindrical cap. This label is the only text allowed in the image. Scene: Clean shot of the FALUNARA bottle with its cap on, surrounded by a gentle golden protective glow, trust and safety feeling, no symbols.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. The golden glow pulses gently around the bottle.",
+  "veo_dur": 4
+ },
+ {
+  "id": "50b",
+  "start": 200.38,
+  "dur": 6.04,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_bottle_pixar_crop.jpg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_bottle_front.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Reference image 2 shows the FALUNARA bottle in the target Pixar style. Reference image 3 shows the real FALUNARA bottle, front view. Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a cream linen blouse, dark navy trousers and small gold stud earrings, hair loose. Expression: calm, relaxed and content, a soft gentle smile. The FALUNARA bottle must match the bottle references exactly: tall slim clear glass cylinder full of golden oil, text printed directly on the glass in dark brown - FALUNARA with a small gold brush stroke below, BOTANICAL BODY OIL, NOURISH \u00b7 RESTORE \u00b7 GLOW, 100 mL - and a compact white stepped pump head with no spout, covered by a straight transparent cylindrical cap. This label is the only text allowed in the image. Scene: Claire in a warm living room holding the FALUNARA bottle, smiling reassuringly at the camera.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. She gives a small reassuring nod and smiles.",
+  "veo_dur": 8
+ },
+ {
+  "id": "51",
+  "start": 206.42,
+  "dur": 3.24,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/scene30_pump_start_v2.jpg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_bottle_pixar_crop.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Reference image 2 shows Claire in her bathroom (style, lighting and location reference). Reference image 3 shows the FALUNARA bottle in the target Pixar style. Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a soft white terrycloth robe, hair loosely clipped up. Expression: calm, relaxed and content, a soft gentle smile. The FALUNARA bottle must match the bottle references exactly: tall slim clear glass cylinder full of golden oil, text printed directly on the glass in dark brown - FALUNARA with a small gold brush stroke below, BOTANICAL BODY OIL, NOURISH \u00b7 RESTORE \u00b7 GLOW, 100 mL - and a compact white stepped pump head with no spout, covered by a straight transparent cylindrical cap. This label is the only text allowed in the image. Scene: Claire in her warm bathroom gesturing gently downward with an open hand, smiling at the camera, the FALUNARA bottle on the counter.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. She gestures gently downward with her open hand and smiles.",
+  "veo_dur": 4
+ },
+ {
+  "id": "52",
+  "start": 209.66,
+  "dur": 1.82,
+  "refs": [],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Scene: A woman's glowing, healthy forearm in warm golden light.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. Golden light glides softly along the arm.",
+  "veo_dur": 4
+ },
+ {
+  "id": "53",
+  "start": 211.48,
+  "dur": 3.94,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/scene30_pump_start_v2.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Reference image 2 shows Claire in her bathroom (style, lighting and location reference). Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a soft white terrycloth robe, hair loosely clipped up. Expression: confident, warm, at peace, slight knowing smile, looking directly at the camera. Scene: Portrait of Claire in warm light.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. Her knowing smile slowly grows, steady eye contact.",
+  "veo_dur": 4
+ },
+ {
+  "id": "54",
+  "start": 215.42,
+  "dur": 4.72,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_claire.jpeg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/scene30_pump_start_v2.jpg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_bottle_pixar_crop.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the character Claire. Reference image 2 shows Claire in her bathroom (style, lighting and location reference). Reference image 3 shows the FALUNARA bottle in the target Pixar style. Claire is a 53-year-old woman: keep her face exactly as in the reference - visible fine lines, shoulder-length soft silver-blonde wavy hair, warm hazel-brown eyes, one small beauty mark on her left cheekbone. Mouth closed. She wears a soft white terrycloth robe, hair loosely clipped up. Expression: calm, relaxed and content, a soft gentle smile. The FALUNARA bottle must match the bottle references exactly: tall slim clear glass cylinder full of golden oil, text printed directly on the glass in dark brown - FALUNARA with a small gold brush stroke below, BOTANICAL BODY OIL, NOURISH \u00b7 RESTORE \u00b7 GLOW, 100 mL - and a compact white stepped pump head with no spout, covered by a straight transparent cylindrical cap. This label is the only text allowed in the image. Scene: Bathroom ritual: Claire pressing oil onto her shoulder with her open palm, candle, steam, golden light, the FALUNARA bottle on the counter.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. She slowly presses her palm onto her shoulder, steam drifts.",
+  "veo_dur": 6
+ },
+ {
+  "id": "55",
+  "start": 220.14,
+  "dur": 8.04,
+  "refs": [
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_bottle_pixar_crop.jpg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_bottle_front.jpg",
+   "https://raw.githubusercontent.com/Bilaleln/Shop-aufbau/claude/intelligent-galileo-n26o8k/singing-ad/ref_bottle_pump_closeup.jpg"
+  ],
+  "img_prompt": "Pixar/Disney-style 3D animation still, glossy soft-shaded render, expressive eyes, soft skin textures, cinematic depth of field, vertical 9:16 frame. Keep faces, hands and key objects within the central 70% of the image height. No captions, letters, logos or readable text anywhere. Reference image 1 shows the FALUNARA bottle in the target Pixar style. Reference image 2 shows the real FALUNARA bottle, front view. Reference image 3 shows the real FALUNARA pump head under its transparent cap. The FALUNARA bottle must match the bottle references exactly: tall slim clear glass cylinder full of golden oil, text printed directly on the glass in dark brown - FALUNARA with a small gold brush stroke below, BOTANICAL BODY OIL, NOURISH \u00b7 RESTORE \u00b7 GLOW, 100 mL - and a compact white stepped pump head with no spout, covered by a straight transparent cylindrical cap. This label is the only text allowed in the image. Scene: Final hero shot: the FALUNARA bottle with its cap on, center frame on cream marble, warm golden light radiating softly, clean and iconic.",
+  "motion": "Stylized Pixar 3D animated film, glossy soft cartoon render; keep exactly the art style, characters, faces and objects of the first frame, not photorealistic. One continuous shot, no cuts. Nobody speaks, mouths stay closed. No text appears on screen. Very slow push-in, the warm glow intensifies softly.",
+  "veo_dur": 8
+ }
+]
