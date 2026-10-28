@@ -1,6 +1,6 @@
 ---
 name: yapping-ad
-description: Erstellt realistische Yapping Ads (AI UGC, Talking-Head-Ads), bei denen eine KI-Person direkt in die Kamera erzählt. Aus einem viralen organischen Video oder einer Winner-Ad wird ein verkaufendes Script, daraus ein Referenzclip und mehrere bis 15 s lange Segmente mit Lipsync (Wan 3.0 Prime oder Seedance 2.5), dazu Produkt-Halteszenen und B-Roll. Verwenden bei "Yapping Ad", "AI UGC", "UGC Ad", "Talking Head Ad", "Storytime Ad", "organisches Video zur Ad machen", "Switch Actor", "Segment-Prompts". Enthält Script-Regeln, Gemini-Analyse, Segment-Vorlage, Modellwahl, Kosten und Endkontrolle.
+description: Erstellt realistische Yapping Ads (AI UGC), in denen eine KI-Person in die Kamera erzählt. Bei Yapping Ad, AI UGC, UGC Ad, Talking Head Ad oder organisches Video zur Ad machen.
 ---
 
 # Yapping Ad (AI UGC)
