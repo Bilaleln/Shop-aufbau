@@ -143,6 +143,29 @@ Im Kurs war das erste Claude-Script schlecht: Es hatte die unterhaltsamen Teile 
 11. **Feedback per Diktat** geben (Whisper Flow o. Ä.). Erklären, wohin es gehen soll, statt Text selbst zu tippen.
 12. **Muster sammeln:** Eigene und fremde Winner-Ads regelmäßig zerlegen. Wie wird das Produkt eingeführt, wie wird übergeleitet, wie wird erklärt? Nur so erkennt man ein gutes Script.
 
+### Long-Form-Story (Yapping Style) laut Story & Drama
+Diese Ergänzung stammt aus „Elite Copywriting / Part 5 – Story & Drama“, Lektionen 12 und 13. Sie hilft, wenn kein organisches Video als Vorlage da ist und das Script neu geschrieben wird. Die vollständigen Struktur- und Script-Regeln stehen im Skill `ugc-script`.
+
+- **Abgrenzung:** Eine UGC-VSL macht die Sprecherin zur Autorität (Ursache, Mechanismus, Abschluss mit Dringlichkeit). Beim Yapping erzählt eine ganz normale Person wie die Zuschauerin, ohne schweres Direct-Response-Marketing. Den Mechanismus deshalb nur andeuten: „Da ist X und Y drin, keine Ahnung, wie genau das wirkt, aber …“ Wichtiger ist, **was** es für sie getan hat, nicht **wie**. Laut Zakaria wirkt das Format besonders gut bei Frauen.
+- **Beats für 1 Minute:**
+
+  | Beat | Zeit |
+  |---|---|
+  | Hook mitten in die Szene | 5 s |
+  | Vorgeschichte | 15 s |
+  | Tiefpunkt (ein Moment, keine Entscheidung) | 10 s |
+  | Entdeckung mit Skepsis | 8 s |
+  | Verlauf („Woche 1 nichts, fast aufgehört …“) | 12 s |
+  | Jetzt plus sanfter CTA | 10 s |
+
+  Bei 2 Minuten dehnst du jeden Beat, der Hook bekommt etwa 8 s.
+- **Hook:** keine Vorstellung („Hi Leute, ich bin …“ ist verboten). „Okay, ich muss euch erzählen, was passiert ist, ich bin echt geschockt“ ist laut Zakaria zu schwach. Besser ist eine intensive Szene aus dem Alltag, z. B. „Mein Mann dachte, ich betrüge ihn, weil ich jede Nacht um 3 Uhr aufgestanden bin.“ Stichworte wie „fast abgezockt“, „fast erwischt“ oder „er dachte, ich betrüge ihn“ ziehen, solange die Story sie einlöst.
+- **Drei Stile:** **Story** („Lass mich erzählen, was passiert ist“, für Verwandlungen), **Geständnis** („Ich wollte das eigentlich nicht posten …“, für peinliche Themen wie Wechseljahre, Sex, Gewicht), **Rant** („Mich regt so auf, dass keiner darüber redet“, für den Angle „von Ärzten abgespeist“).
+- **Sprechweise im Prompt mitgeben:** Unsicherheit („Woche drei, vielleicht vier“), echte Gefühle („Ich hätte fast geweint“), schneller bei Aufregung, langsamer in emotionalen Momenten, Abschweifungen („Ich weiß, das klingt verrückt, aber …“).
+- **Die Delivery entscheidet:** Eine starke Performerin macht aus einem mittelmäßigen Script einen Winner. Bei KI deshalb in jedem Segment-Prompt Intensität und Gestik festlegen (Hände, Pausen, Blick) und in Abschnitt 8 konsequent nachsteuern. Das KI-Gesicht passt zum Avatar: Alter, Look und im Kopf der Zuschauerin auch die Herkunft.
+- **Beispiel Happy Mammoth (8,3 Mio. Aufrufe, 56 s):** „Ich bin in meinen 40ern, und Ende 30 fingen diese komischen Gesundheitsprobleme an“, dann Symptome, dann „alles voller Mist“ (sie hat für die Zuschauerin gefiltert), dann „über ein Online-Quiz gestolpert … warum nicht?“, dann „besser als in den letzten zehn Jahren“, dann „Was hast du zu verlieren?“. Der CTA verkauft **nicht das Produkt, sondern den nächsten Schritt** (das Quiz). Das ist eine Option, wenn die Seite danach den Verkauf übernimmt.
+- **Ehrlicher Hinweis:** Zakaria empfiehlt, Yapping-Ads über die Seite der Creatorin oder eine Drittseite laufen zu lassen. Mit einer KI-Person ist das eine Täuschung über die Person und kommt nicht in Frage (Abschnitt 12). Er selbst setzt für seine Marken laut Discord keine erfundenen KI-Creatorinnen ein (Stichworte FTC und Exit), sondern KI nur für B-Roll und Animation.
+
 ### Deutsche Ads (Annahme)
 - Vorlage englisch, Ad deutsch: Script nicht wörtlich übersetzen, sondern wie eine deutsche Creatorin sprechen lassen, mit deutschen Füllwörtern („also“, „ehrlich gesagt“, „keine Ahnung“) und Alltagssprache.
 - Zahlen und Abkürzungen so schreiben, wie sie gesprochen werden sollen. Für Fremd- und Markennamen eine PRONUNCIATION-Zeile vorbereiten (Abschnitt 7).
