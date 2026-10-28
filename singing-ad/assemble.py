@@ -62,7 +62,7 @@ WrapStyle: 0
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Lyric,Inter ExtraBold,66,&H00FFFFFF,&H00FFFFFF,&H00202020,&H64000000,0,0,0,0,100,100,0,0,1,5,2,2,90,90,470,1
+Style: Lyric,Inter ExtraBold,66,&H00FFFFFF,&H00FFFFFF,&H00202020,&H64000000,0,0,0,0,100,100,0,0,1,5,2,2,90,90,330,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
@@ -76,6 +76,7 @@ subprocess.run(['ffmpeg', '-v', 'error', '-y', '-f', 'concat', '-safe', '0', '-i
                 '-vf', f"ass={ass_path},fade=t=in:st=0:d=0.4,fade=t=out:st={total - 1.2:.2f}:d=1.2",
                 '-af', f'afade=t=out:st={total - 1.5:.2f}:d=1.5',
                 '-map', '0:v', '-map', '1:a', '-t', f'{total:.3f}',
-                '-c:v', 'libx264', '-preset', 'slow', '-crf', '19', '-profile:v', 'high', '-pix_fmt', 'yuv420p',
+                '-c:v', 'libx264', '-preset', 'slow', '-crf', '21', '-maxrate', '3M', '-bufsize', '6M',
+                '-profile:v', 'high', '-pix_fmt', 'yuv420p',
                 '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', OUT], check=True)
 print('wrote', OUT, f'{probe_dur(OUT):.2f}s')
