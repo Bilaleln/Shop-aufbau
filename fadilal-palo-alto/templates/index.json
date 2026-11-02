@@ -187,9 +187,7 @@
         "subheading": "Reviews",
         "title": "[KUNDENZAHL] women. [ANZAHL] 5-star reviews.",
         "text_alignment": "text-left",
-        "color_scheme": "scheme-1",
-        "testimonial_block_color": "#ffffff",
-        "star_color": "#B8862F"
+        "color_scheme": "scheme-1"
       }
     },
     "spotlight": {
@@ -283,8 +281,8 @@
             "button_link": "/products/kerze-merze",
             "button_color": "btn--primary",
             "button_style": "btn--solid",
-            "bg_color": "#EADBC8",
-            "text_color": "#2E211A"
+            "bg_color": "#e6edf3",
+            "text_color": "#151515"
           }
         },
         "two": {
@@ -298,8 +296,8 @@
             "button_link": "/products/kerze-merze",
             "button_color": "btn--primary",
             "button_style": "btn--solid",
-            "bg_color": "#EADBC8",
-            "text_color": "#2E211A"
+            "bg_color": "#e6edf3",
+            "text_color": "#151515"
           }
         },
         "three": {
@@ -313,8 +311,8 @@
             "button_link": "/products/kerze-merze",
             "button_color": "btn--primary",
             "button_style": "btn--solid",
-            "bg_color": "#EADBC8",
-            "text_color": "#2E211A"
+            "bg_color": "#a9c1d6",
+            "text_color": "#151515"
           }
         }
       },
@@ -368,8 +366,7 @@
         "columns": 3,
         "icons_width": 35,
         "color_scheme": "scheme-1",
-        "text_color": "#2E211A",
-        "color_border": "#B8862F"
+        "color_border": "#a9c1d6"
       }
     },
     "expert": {
@@ -434,7 +431,7 @@
       ],
       "settings": {
         "height": "five-fifty-height",
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-4",
         "width": "wrapper--full-padded",
         "padding_top": 30,
         "padding_bottom": 30

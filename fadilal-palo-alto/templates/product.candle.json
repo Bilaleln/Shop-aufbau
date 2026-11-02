@@ -32,7 +32,6 @@
           "type": "icon",
           "settings": {
             "icon_name": "star",
-            "icon_color": "#B8862F",
             "icon_text": "[KUNDENZAHL]+ women bought this",
             "padding_bottom": 16
           }
@@ -51,7 +50,6 @@
           "type": "icon",
           "settings": {
             "icon_name": "heart",
-            "icon_color": "#B8862F",
             "icon_text": "Melts into warm, silky body oil",
             "padding_bottom": 6
           }
@@ -60,7 +58,6 @@
           "type": "icon",
           "settings": {
             "icon_name": "shield",
-            "icon_color": "#B8862F",
             "icon_text": "Warm, not hot: melts just above body temperature",
             "padding_bottom": 6
           }
@@ -69,7 +66,6 @@
           "type": "icon",
           "settings": {
             "icon_name": "check",
-            "icon_color": "#B8862F",
             "icon_text": "Soaks in, never greasy",
             "padding_bottom": 6
           }
@@ -78,7 +74,6 @@
           "type": "icon",
           "settings": {
             "icon_name": "plant-based",
-            "icon_color": "#B8862F",
             "icon_text": "Plant oils and butters, no paraffin",
             "padding_bottom": 20
           }
@@ -96,7 +91,6 @@
           "type": "icon",
           "settings": {
             "icon_name": "truck",
-            "icon_color": "#B8862F",
             "icon_text": "Ships in [X] days",
             "text_size": 95,
             "padding_bottom": 4
@@ -106,7 +100,6 @@
           "type": "icon",
           "settings": {
             "icon_name": "award",
-            "icon_color": "#B8862F",
             "icon_text": "[GARANTIE TAGE]-day money-back guarantee",
             "text_size": 95,
             "padding_bottom": 20
@@ -206,7 +199,7 @@
         "columns": 4,
         "icons_width": 35,
         "color_scheme": "scheme-2",
-        "color_border": "#B8862F"
+        "color_border": "#a9c1d6"
       }
     },
     "results_heading": {
@@ -247,8 +240,8 @@
             "heading_size": 160,
             "description": "[ERGEBNIS-BESCHREIBUNG 1]",
             "disclaimer": "[STUDIEN-QUELLE]",
-            "bg_color": "#EADBC8",
-            "text_color": "#2E211A"
+            "bg_color": "#e6edf3",
+            "text_color": "#151515"
           }
         },
         "s2": {
@@ -258,8 +251,8 @@
             "heading_size": 160,
             "description": "[ERGEBNIS-BESCHREIBUNG 2]",
             "disclaimer": "[STUDIEN-QUELLE]",
-            "bg_color": "#EADBC8",
-            "text_color": "#2E211A"
+            "bg_color": "#e6edf3",
+            "text_color": "#151515"
           }
         },
         "s3": {
@@ -269,8 +262,8 @@
             "heading_size": 160,
             "description": "[ERGEBNIS-BESCHREIBUNG 3]",
             "disclaimer": "[STUDIEN-QUELLE]",
-            "bg_color": "#EADBC8",
-            "text_color": "#2E211A"
+            "bg_color": "#e6edf3",
+            "text_color": "#151515"
           }
         }
       },
@@ -283,7 +276,8 @@
         "count_up_enabled": false,
         "height": "300",
         "color_scheme": "scheme-1",
-        "padding_top": 30
+        "padding_top": 30,
+        "layout": "none"
       }
     },
     "different": {
@@ -334,7 +328,7 @@
         "columns": 4,
         "icons_width": 35,
         "color_scheme": "scheme-1",
-        "color_border": "#B8862F"
+        "color_border": "#a9c1d6"
       }
     },
     "how_to": {
@@ -383,7 +377,7 @@
         "heading": "How to use",
         "columns": 4,
         "color_scheme": "scheme-2",
-        "color_border": "#B8862F",
+        "color_border": "#a9c1d6",
         "button_text": "Start your ritual",
         "button_link": "/products/kerze-merze",
         "button_color": "btn--primary",
@@ -474,7 +468,7 @@
         "columns": 3,
         "icons_width": 35,
         "color_scheme": "scheme-2",
-        "color_border": "#B8862F",
+        "color_border": "#a9c1d6",
         "padding_bottom": 20
       }
     },
@@ -495,7 +489,7 @@
       "settings": {
         "layout": "one-column",
         "title": "",
-        "tabs_bg_color": "#F7F1E8",
+        "tabs_bg_color": "#ffffff",
         "color_scheme": "scheme-2",
         "width": "wrapper--narrow",
         "padding_top": 0
@@ -510,7 +504,7 @@
             "star_rating": 5,
             "heading": "[ANZAHL] 5-star reviews",
             "subheading": "<p>[DURCHSCHNITTSBEWERTUNG] average</p>",
-            "block_color": "#5F8576",
+            "block_color": "#151515",
             "text_color": "#ffffff"
           }
         },
@@ -581,9 +575,7 @@
       "settings": {
         "subheading": "Reviews",
         "title": "What women say",
-        "color_scheme": "scheme-1",
-        "testimonial_block_color": "#ffffff",
-        "star_color": "#B8862F"
+        "color_scheme": "scheme-1"
       }
     },
     "lifestyle": {
@@ -668,7 +660,7 @@
         "columns": 3,
         "alignment": "left",
         "color_scheme": "scheme-1",
-        "color_border": "#B8862F"
+        "color_border": "#a9c1d6"
       }
     },
     "timeline": {
@@ -719,7 +711,7 @@
         "columns": 4,
         "icons_width": 30,
         "color_scheme": "scheme-2",
-        "color_border": "#B8862F"
+        "color_border": "#a9c1d6"
       }
     },
     "comparison": {
@@ -878,7 +870,7 @@
         "layout": "one-column",
         "subheading": "FAQ",
         "title": "Questions, answered",
-        "tabs_bg_color": "#EADBC8",
+        "tabs_bg_color": "#e6edf3",
         "color_scheme": "scheme-1",
         "width": "wrapper--narrow"
       }
@@ -921,7 +913,7 @@
         "columns": 3,
         "icons_width": 35,
         "color_scheme": "scheme-2",
-        "color_border": "#B8862F"
+        "color_border": "#a9c1d6"
       }
     },
     "newsletter": {
