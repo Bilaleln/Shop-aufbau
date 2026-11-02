@@ -1,0 +1,189 @@
+{
+  "type": "header",
+  "name": "Header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "offer": {
+          "type": "text",
+          "settings": {
+            "text": "<p>[OFFER-TEXT]</p>",
+            "icon_name": "none"
+          }
+        },
+        "guarantee": {
+          "type": "text",
+          "settings": {
+            "text": "<p>[GARANTIE TAGE]-day money-back guarantee</p>",
+            "icon_name": "award"
+          }
+        }
+      },
+      "block_order": [
+        "offer",
+        "guarantee"
+      ],
+      "settings": {
+        "width": "wrapper--full",
+        "layout": "marquee",
+        "show_top_border": false,
+        "show_bottom_border": true,
+        "padding": 10,
+        "slider_speed": 14,
+        "show_arrows": false,
+        "marquee_speed": 100,
+        "direction": "ticker-ltr",
+        "text_caps": true,
+        "type_font": "work_sans_n5",
+        "text_size": 100,
+        "letter_spacing": 75,
+        "message_spacing": 30,
+        "color_scheme": "scheme-3",
+        "color": "",
+        "border_color": ""
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "sticky_header": false,
+        "link_hover_effect": "dot",
+        "highlight_color": "#fff7f2",
+        "header_border": true,
+        "header_border_color": "",
+        "border_opacity": 50,
+        "logo_max_width": 160,
+        "main-menu": "fadilal-main",
+        "main_menu_secondary": "",
+        "show_images": false,
+        "image_aspect_ratio": 1.1,
+        "menu_alignment": "center",
+        "header_icons_as_text": false,
+        "show_locale_selector": false,
+        "show_locale_code": true,
+        "show_country_selector": false,
+        "show_country_name": false,
+        "show_country_flag": false,
+        "highlight_item": "",
+        "enable_custom_badge": false,
+        "custom_badge_text": "15% off",
+        "highlight_item_color": "#de5757",
+        "highlight_item_text_color": "#ffffff",
+        "header_transparent": false,
+        "header_gradient": true
+      }
+    },
+    "mobile_menu_CDGjkt": {
+      "type": "mobile-menu",
+      "blocks": {
+        "menu_KQkDaG": {
+          "type": "menu",
+          "settings": {
+            "mobile_menu_linklist": "fadilal-main",
+            "text_size": 100,
+            "show_images": true,
+            "image_aspect_ratio": 0.5,
+            "highlight_item": "",
+            "enable_custom_badge": false,
+            "custom_badge_text": "10% OFF",
+            "highlight_item_color": "#d02e2e",
+            "highlight_item_text_color": "#ffffff",
+            "padding": false,
+            "padding_bottom": 10
+          }
+        },
+        "login_wcK6Yq": {
+          "type": "login",
+          "settings": {
+            "text_size": 100,
+            "pin_to_bottom": true,
+            "padding_bottom": 10
+          }
+        },
+        "search_9f3CPU": {
+          "type": "search",
+          "settings": {
+            "text_size": 100,
+            "pin_to_bottom": true,
+            "padding_bottom": 10
+          }
+        },
+        "localization_Mh4yrg": {
+          "type": "localization",
+          "settings": {
+            "show_locale_selector": true,
+            "show_locale_code": true,
+            "show_country_selector": true,
+            "show_country_name": false,
+            "show_country_flag": false,
+            "pin_to_bottom": true,
+            "padding_bottom": 10
+          }
+        },
+        "button_8AqTJ3": {
+          "type": "button",
+          "settings": {
+            "button_text": "Shop now",
+            "button_link": "/products/kerze-merze",
+            "button_color": "btn--primary",
+            "button_style": "btn--solid",
+            "button_size": "btn--medium",
+            "pin_to_bottom": true,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "menu_KQkDaG",
+        "login_wcK6Yq",
+        "search_9f3CPU",
+        "localization_Mh4yrg",
+        "button_8AqTJ3"
+      ],
+      "settings": {
+        "logo_max_width": 150
+      }
+    },
+    "countdown": {
+      "type": "header-countdown",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>[OFFER-TEXT] ends in</p>",
+            "button_text": "Shop now",
+            "button_url": "/products/kerze-merze",
+            "button_color": "white",
+            "button_style": "text"
+          }
+        },
+        "timer": {
+          "type": "timer",
+          "settings": {
+            "end_date": "2026-12-31",
+            "end_time": "11:59",
+            "period": "pm",
+            "end_message": "<p>[OFFER BEENDET TEXT]</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text",
+        "timer"
+      ],
+      "disabled": true,
+      "settings": {
+        "layout": "centered",
+        "type_style": "font-body",
+        "color_scheme": "scheme-3"
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "countdown",
+    "header",
+    "mobile_menu_CDGjkt"
+  ]
+}

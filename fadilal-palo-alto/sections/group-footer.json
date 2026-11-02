@@ -1,0 +1,79 @@
+{
+  "type": "footer",
+  "name": "Footer group",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "logo": {
+          "type": "logo",
+          "settings": {
+            "alignment": "text-left",
+            "logo_width": 120,
+            "show_shop_name": false,
+            "text": "<p>FADILAL is body care in candle form. Light it, let it melt, and pour warm oil onto your skin. Warm oil, not hot wax.</p>",
+            "column_width": "30"
+          }
+        },
+        "shop": {
+          "type": "link",
+          "settings": {
+            "alignment": "text-left",
+            "menu": "fadilal-footer-shop",
+            "title": "Shop",
+            "column_width": "20"
+          }
+        },
+        "service": {
+          "type": "link",
+          "settings": {
+            "alignment": "text-left",
+            "menu": "fadilal-footer-service",
+            "title": "Service",
+            "column_width": "20"
+          }
+        },
+        "legal": {
+          "type": "link",
+          "settings": {
+            "alignment": "text-left",
+            "menu": "fadilal-footer-legal",
+            "title": "Legal",
+            "column_width": "20"
+          }
+        }
+      },
+      "block_order": [
+        "logo",
+        "shop",
+        "service",
+        "legal"
+      ],
+      "settings": {
+        "show_footer_wave": false,
+        "enable_footer_parallax": true,
+        "increase_border_radius": true,
+        "bottom_bar_alignment": "text-left",
+        "show_social_links": true,
+        "enable_follow_on_shop": true,
+        "show_payment_icons": true,
+        "enable_greyscale": false,
+        "bottom_menu": "",
+        "color_text": "",
+        "color_border": "",
+        "show_locale_selector": false,
+        "show_locale_code": true,
+        "show_country_selector": false,
+        "show_country_name": false,
+        "show_country_flag": false,
+        "width": "wrapper--full-padded",
+        "padding_top": 20,
+        "padding_bottom": 10,
+        "color_scheme": "scheme-2"
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

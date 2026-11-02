@@ -1,0 +1,958 @@
+{
+  "sections": {
+    "main": {
+      "type": "product",
+      "blocks": {
+        "badges": {
+          "type": "badges",
+          "settings": {
+            "show_sale_badge": true,
+            "show_custom_badge": true,
+            "show_preorder_badge": false,
+            "show_badges_over_gallery": false,
+            "padding_bottom": 10
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "subheading": "none",
+            "title_size": 110,
+            "padding_bottom": 6
+          }
+        },
+        "subline": {
+          "type": "text",
+          "settings": {
+            "title": "<p>The body oil that comes as a candle.</p>",
+            "padding_bottom": 10
+          }
+        },
+        "social_proof": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "star",
+            "icon_color": "#B8862F",
+            "icon_text": "[KUNDENZAHL]+ women bought this",
+            "padding_bottom": 16
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "price_size": 120,
+            "bold_price": true,
+            "show_tax_information": false,
+            "show_shipping_policy": false,
+            "padding_bottom": 16
+          }
+        },
+        "benefit_1": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "heart",
+            "icon_color": "#B8862F",
+            "icon_text": "Melts into warm, silky body oil",
+            "padding_bottom": 6
+          }
+        },
+        "benefit_2": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "shield",
+            "icon_color": "#B8862F",
+            "icon_text": "Warm, not hot: melts just above body temperature",
+            "padding_bottom": 6
+          }
+        },
+        "benefit_3": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "check",
+            "icon_color": "#B8862F",
+            "icon_text": "Soaks in, never greasy",
+            "padding_bottom": 6
+          }
+        },
+        "benefit_4": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "plant-based",
+            "icon_color": "#B8862F",
+            "icon_text": "Plant oils and butters, no paraffin",
+            "padding_bottom": 20
+          }
+        },
+        "form": {
+          "type": "form",
+          "settings": {
+            "show_labels": true,
+            "show_quantity": true,
+            "show_payment_button": false,
+            "padding_bottom": 12
+          }
+        },
+        "shipping": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "truck",
+            "icon_color": "#B8862F",
+            "icon_text": "Ships in [X] days",
+            "text_size": 95,
+            "padding_bottom": 4
+          }
+        },
+        "guarantee": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "award",
+            "icon_color": "#B8862F",
+            "icon_text": "[GARANTIE TAGE]-day money-back guarantee",
+            "text_size": 95,
+            "padding_bottom": 20
+          }
+        },
+        "acc_ingredients": {
+          "type": "product_accordion",
+          "settings": {
+            "accordion_heading": "Ingredients",
+            "accordion_text": "<p>[INHALTSSTOFFE]</p>",
+            "padding_bottom": 0
+          }
+        },
+        "acc_how": {
+          "type": "product_accordion",
+          "settings": {
+            "accordion_heading": "How to use",
+            "accordion_text": "<ol><li>Light it before your shower.</li><li>Let it melt for 10–15 minutes.</li><li>Blow it out and test the warmth with your finger.</li><li>Pour onto damp skin and massage in.</li></ol><p>Never leave a burning candle unattended.</p>",
+            "padding_bottom": 0
+          }
+        },
+        "acc_shipping": {
+          "type": "product_accordion",
+          "settings": {
+            "accordion_heading": "Shipping & returns",
+            "accordion_text": "<p>Ships in [X] days. [VERSANDINFO]</p><p>[GARANTIE TAGE]-day money-back guarantee. [RÜCKGABE-INFO]</p>",
+            "padding_bottom": 20
+          }
+        }
+      },
+      "block_order": [
+        "badges",
+        "title",
+        "subline",
+        "social_proof",
+        "price",
+        "benefit_1",
+        "benefit_2",
+        "benefit_3",
+        "benefit_4",
+        "form",
+        "shipping",
+        "guarantee",
+        "acc_ingredients",
+        "acc_how",
+        "acc_shipping"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_top": 30
+      }
+    },
+    "right_for_me": {
+      "type": "section-icons-row",
+      "blocks": {
+        "c1": {
+          "type": "text",
+          "settings": {
+            "icon_name": "leaf",
+            "title": "Your skin feels dry",
+            "text": "<p>Even right after a lotion, it feels tight again.</p>"
+          }
+        },
+        "c2": {
+          "type": "text",
+          "settings": {
+            "icon_name": "heart",
+            "title": "Crepey arms and legs",
+            "text": "<p>You want your arms and legs to feel soft and smooth again.</p>"
+          }
+        },
+        "c3": {
+          "type": "text",
+          "settings": {
+            "icon_name": "clipboard",
+            "title": "You've tried every lotion",
+            "text": "<p>Sticky, did nothing, or you simply forgot to use it.</p>"
+          }
+        },
+        "c4": {
+          "type": "text",
+          "settings": {
+            "icon_name": "clock",
+            "title": "You want a nightly ritual",
+            "text": "<p>Ten calm minutes for yourself at the end of the day.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "settings": {
+        "heading": "Is this right for me?",
+        "columns": 4,
+        "icons_width": 35,
+        "color_scheme": "scheme-2",
+        "color_border": "#B8862F"
+      }
+    },
+    "results_heading": {
+      "type": "section-text",
+      "blocks": {
+        "sub": {
+          "type": "subheading",
+          "settings": {
+            "text": "<p>Results</p>"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "text": "<p>What women noticed</p>",
+            "size": 120,
+            "heading_highlight_type": "italics"
+          }
+        }
+      },
+      "block_order": [
+        "sub",
+        "heading"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "results": {
+      "type": "section-promotion-row",
+      "blocks": {
+        "s1": {
+          "type": "column",
+          "settings": {
+            "heading": "<p>[STUDIEN-ERGEBNIS 1]</p>",
+            "heading_size": 160,
+            "description": "[ERGEBNIS-BESCHREIBUNG 1]",
+            "disclaimer": "[STUDIEN-QUELLE]",
+            "bg_color": "#EADBC8",
+            "text_color": "#2E211A"
+          }
+        },
+        "s2": {
+          "type": "column",
+          "settings": {
+            "heading": "<p>[STUDIEN-ERGEBNIS 2]</p>",
+            "heading_size": 160,
+            "description": "[ERGEBNIS-BESCHREIBUNG 2]",
+            "disclaimer": "[STUDIEN-QUELLE]",
+            "bg_color": "#EADBC8",
+            "text_color": "#2E211A"
+          }
+        },
+        "s3": {
+          "type": "column",
+          "settings": {
+            "heading": "<p>[STUDIEN-ERGEBNIS 3]</p>",
+            "heading_size": 160,
+            "description": "[ERGEBNIS-BESCHREIBUNG 3]",
+            "disclaimer": "[STUDIEN-QUELLE]",
+            "bg_color": "#EADBC8",
+            "text_color": "#2E211A"
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "settings": {
+        "count_up_enabled": false,
+        "height": "300",
+        "color_scheme": "scheme-1",
+        "padding_top": 30
+      }
+    },
+    "different": {
+      "type": "section-icons-row",
+      "blocks": {
+        "d1": {
+          "type": "text",
+          "settings": {
+            "icon_name": "shield",
+            "title": "Warm oil, not hot wax",
+            "text": "<p>Melts at a low temperature, just above body temperature.</p>"
+          }
+        },
+        "d2": {
+          "type": "text",
+          "settings": {
+            "icon_name": "plant-based",
+            "title": "Plant oils and butters",
+            "text": "<p>[INHALTSSTOFFE]</p>"
+          }
+        },
+        "d3": {
+          "type": "text",
+          "settings": {
+            "icon_name": "leaf",
+            "title": "No paraffin",
+            "text": "<p>Made without paraffin.</p>"
+          }
+        },
+        "d4": {
+          "type": "text",
+          "settings": {
+            "icon_name": "flower",
+            "title": "Scent for the room, care for the skin",
+            "text": "<p>A calming scent while it melts, soft skin after you pour.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "d1",
+        "d2",
+        "d3",
+        "d4"
+      ],
+      "settings": {
+        "heading": "What makes it different?",
+        "subheading": "<p>FADILAL is not a massage candle. It is body care in candle form: you light it, let it melt, and pour the warm oil onto your skin.</p>",
+        "columns": 4,
+        "icons_width": 35,
+        "color_scheme": "scheme-1",
+        "color_border": "#B8862F"
+      }
+    },
+    "how_to": {
+      "type": "section-icons-row",
+      "blocks": {
+        "h1": {
+          "type": "text",
+          "settings": {
+            "icon_name": "none",
+            "title": "1. Light it before your shower",
+            "text": "<p>Place it on a stable, heat-safe surface.</p>"
+          }
+        },
+        "h2": {
+          "type": "text",
+          "settings": {
+            "icon_name": "none",
+            "title": "2. Let it melt 10–15 minutes",
+            "text": "<p>The candle melts into a pool of warm oil.</p>"
+          }
+        },
+        "h3": {
+          "type": "text",
+          "settings": {
+            "icon_name": "none",
+            "title": "3. Blow it out and test the warmth",
+            "text": "<p>Always test with your finger first.</p>"
+          }
+        },
+        "h4": {
+          "type": "text",
+          "settings": {
+            "icon_name": "none",
+            "title": "4. Pour onto damp skin and massage in",
+            "text": "<p>A little goes a long way. Let it absorb.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "settings": {
+        "heading": "How to use",
+        "columns": 4,
+        "color_scheme": "scheme-2",
+        "color_border": "#B8862F",
+        "button_text": "Start your ritual",
+        "button_link": "/products/kerze-merze",
+        "button_color": "btn--primary",
+        "button_style": "btn--solid"
+      }
+    },
+    "guarantee": {
+      "type": "section-text",
+      "blocks": {
+        "sub": {
+          "type": "subheading",
+          "settings": {
+            "text": "<p>Our promise</p>"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "text": "<p>How does the money-back guarantee work?</p>",
+            "size": 120,
+            "heading_highlight_type": "italics"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Try FADILAL for [GARANTIE TAGE] days. If you don't love it, contact us and we'll refund your purchase. [GARANTIE-BEDINGUNGEN]</p>",
+            "size": 105
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_text": "Try it risk-free",
+            "button_link": "/products/kerze-merze",
+            "button_color": "btn--primary",
+            "button_style": "btn--solid"
+          }
+        }
+      },
+      "block_order": [
+        "sub",
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_top": 70,
+        "padding_bottom": 70
+      }
+    },
+    "ingredients": {
+      "type": "section-icons-row",
+      "blocks": {
+        "i1": {
+          "type": "text",
+          "settings": {
+            "icon_name": "plant-based",
+            "title": "[INHALTSSTOFF 1]",
+            "text": "<p>[INHALTSSTOFF 1 BESCHREIBUNG]</p>"
+          }
+        },
+        "i2": {
+          "type": "text",
+          "settings": {
+            "icon_name": "leaf",
+            "title": "[INHALTSSTOFF 2]",
+            "text": "<p>[INHALTSSTOFF 2 BESCHREIBUNG]</p>"
+          }
+        },
+        "i3": {
+          "type": "text",
+          "settings": {
+            "icon_name": "flower",
+            "title": "[INHALTSSTOFF 3]",
+            "text": "<p>[INHALTSSTOFF 3 BESCHREIBUNG]</p>"
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3"
+      ],
+      "settings": {
+        "heading": "What's inside",
+        "columns": 3,
+        "icons_width": 35,
+        "color_scheme": "scheme-2",
+        "color_border": "#B8862F",
+        "padding_bottom": 20
+      }
+    },
+    "ingredients_full": {
+      "type": "section-accordions",
+      "blocks": {
+        "full": {
+          "type": "text",
+          "settings": {
+            "title": "Full ingredient list",
+            "text": "<p>[INHALTSSTOFFE]</p>"
+          }
+        }
+      },
+      "block_order": [
+        "full"
+      ],
+      "settings": {
+        "layout": "one-column",
+        "title": "",
+        "tabs_bg_color": "#F7F1E8",
+        "color_scheme": "scheme-2",
+        "width": "wrapper--narrow",
+        "padding_top": 0
+      }
+    },
+    "reviews": {
+      "type": "section-testimonials",
+      "blocks": {
+        "summary": {
+          "type": "text",
+          "settings": {
+            "star_rating": 5,
+            "heading": "[ANZAHL] 5-star reviews",
+            "subheading": "<p>[DURCHSCHNITTSBEWERTUNG] average</p>",
+            "block_color": "#5F8576",
+            "text_color": "#ffffff"
+          }
+        },
+        "r1": {
+          "type": "testimonial",
+          "settings": {
+            "heading": "[REVIEW-HEADLINE 1]",
+            "text": "<p>[ZITAT 1]</p>",
+            "customer_name": "[VORNAME N.]",
+            "subheading": "<p>Verified buyer</p>"
+          }
+        },
+        "r2": {
+          "type": "testimonial",
+          "settings": {
+            "heading": "[REVIEW-HEADLINE 2]",
+            "text": "<p>[ZITAT 2]</p>",
+            "customer_name": "[VORNAME N.]",
+            "subheading": "<p>Verified buyer</p>"
+          }
+        },
+        "r3": {
+          "type": "testimonial",
+          "settings": {
+            "heading": "[REVIEW-HEADLINE 3]",
+            "text": "<p>[ZITAT 3]</p>",
+            "customer_name": "[VORNAME N.]",
+            "subheading": "<p>Verified buyer</p>"
+          }
+        },
+        "r4": {
+          "type": "testimonial",
+          "settings": {
+            "heading": "[REVIEW-HEADLINE 4]",
+            "text": "<p>[ZITAT 4]</p>",
+            "customer_name": "[VORNAME N.]",
+            "subheading": "<p>Verified buyer</p>"
+          }
+        },
+        "r5": {
+          "type": "testimonial",
+          "settings": {
+            "heading": "[REVIEW-HEADLINE 5]",
+            "text": "<p>[ZITAT 5]</p>",
+            "customer_name": "[VORNAME N.]",
+            "subheading": "<p>Verified buyer</p>"
+          }
+        },
+        "r6": {
+          "type": "testimonial",
+          "settings": {
+            "heading": "[REVIEW-HEADLINE 6]",
+            "text": "<p>[ZITAT 6]</p>",
+            "customer_name": "[VORNAME N.]",
+            "subheading": "<p>Verified buyer</p>"
+          }
+        }
+      },
+      "block_order": [
+        "summary",
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5",
+        "r6"
+      ],
+      "settings": {
+        "subheading": "Reviews",
+        "title": "What women say",
+        "color_scheme": "scheme-1",
+        "testimonial_block_color": "#ffffff",
+        "star_color": "#B8862F"
+      }
+    },
+    "lifestyle": {
+      "type": "section-image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "<p>Your 10 minutes. Every night.</p>",
+            "size": 140,
+            "heading_highlight_type": "italics"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Light the candle, take your shower, and come back to warm oil waiting for you. A small ritual that is easy to keep.</p>",
+            "size": 105
+          }
+        },
+        "benefit_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>A calm moment for yourself</strong><br>Ten minutes that are only about you.</p>",
+            "size": 100
+          }
+        },
+        "benefit_2": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Body care you won't skip</strong><br>Because it feels good, it becomes a habit.</p>",
+            "size": 100
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "benefit_1",
+        "benefit_2"
+      ],
+      "settings": {
+        "image_location": "right",
+        "color_scheme": "scheme-2"
+      }
+    },
+    "why_warm": {
+      "type": "section-icons-row",
+      "blocks": {
+        "w1": {
+          "type": "text",
+          "settings": {
+            "icon_name": "none",
+            "title": "1. Warm, not cold",
+            "text": "<p>Lotion goes on cold. Warm oil feels comforting, so you actually enjoy putting it on.</p>"
+          }
+        },
+        "w2": {
+          "type": "text",
+          "settings": {
+            "icon_name": "none",
+            "title": "2. Oils, not mostly water",
+            "text": "<p>Many lotions are mostly water. FADILAL is made from plant oils and butters.</p>"
+          }
+        },
+        "w3": {
+          "type": "text",
+          "settings": {
+            "icon_name": "none",
+            "title": "3. A ritual you never skip",
+            "text": "<p>Something you look forward to is something you keep doing, night after night.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "w1",
+        "w2",
+        "w3"
+      ],
+      "settings": {
+        "heading": "Why warm oil works differently",
+        "columns": 3,
+        "alignment": "left",
+        "color_scheme": "scheme-1",
+        "color_border": "#B8862F"
+      }
+    },
+    "timeline": {
+      "type": "section-icons-row",
+      "blocks": {
+        "t1": {
+          "type": "text",
+          "settings": {
+            "icon_name": "clock",
+            "title": "First night",
+            "text": "<p>[ERGEBNIS ERSTE NACHT]</p>"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "icon_name": "calendar",
+            "title": "1 week",
+            "text": "<p>[ERGEBNIS NACH 1 WOCHE]</p>"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "icon_name": "calendar",
+            "title": "2–3 weeks",
+            "text": "<p>[ERGEBNIS NACH 2–3 WOCHEN]</p>"
+          }
+        },
+        "t4": {
+          "type": "text",
+          "settings": {
+            "icon_name": "heart",
+            "title": "Every night after",
+            "text": "<p>[ERGEBNIS LANGFRISTIG]</p>"
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3",
+        "t4"
+      ],
+      "settings": {
+        "heading": "What to expect",
+        "subheading": "<p>[HINWEIS: Individual results may vary.]</p>",
+        "columns": 4,
+        "icons_width": 30,
+        "color_scheme": "scheme-2",
+        "color_border": "#B8862F"
+      }
+    },
+    "comparison": {
+      "type": "fadilal-comparison-table",
+      "blocks": {
+        "warm": {
+          "type": "row",
+          "settings": {
+            "label": "Warm when you apply it",
+            "value_1": "yes",
+            "value_2": "no",
+            "value_3": "yes"
+          }
+        },
+        "oils": {
+          "type": "row",
+          "settings": {
+            "label": "Plant oils and butters",
+            "value_1": "yes",
+            "value_2": "text",
+            "text_2": "Mostly water",
+            "value_3": "text",
+            "text_3": "Varies"
+          }
+        },
+        "paraffin": {
+          "type": "row",
+          "settings": {
+            "label": "No paraffin",
+            "value_1": "yes",
+            "value_2": "text",
+            "text_2": "Varies",
+            "value_3": "no"
+          }
+        },
+        "greasy": {
+          "type": "row",
+          "settings": {
+            "label": "Not greasy or sticky",
+            "value_1": "yes",
+            "value_2": "text",
+            "text_2": "Varies",
+            "value_3": "no"
+          }
+        },
+        "scent": {
+          "type": "row",
+          "settings": {
+            "label": "Room scent + skin care in one",
+            "value_1": "yes",
+            "value_2": "no",
+            "value_3": "text",
+            "text_3": "Scent only"
+          }
+        },
+        "ritual": {
+          "type": "row",
+          "settings": {
+            "label": "A ritual you look forward to",
+            "value_1": "yes",
+            "value_2": "no",
+            "value_3": "no"
+          }
+        }
+      },
+      "block_order": [
+        "warm",
+        "oils",
+        "paraffin",
+        "greasy",
+        "scent",
+        "ritual"
+      ],
+      "settings": {
+        "title": "Why FADILAL?",
+        "column_1": "FADILAL",
+        "column_2": "Regular lotion",
+        "column_3": "Cheap massage candles",
+        "highlight_column": "1",
+        "caption": "Comparison of FADILAL, regular lotion and cheap massage candles",
+        "color_scheme": "scheme-1",
+        "width": "wrapper--narrow"
+      }
+    },
+    "faq": {
+      "type": "section-accordions",
+      "blocks": {
+        "q1": {
+          "type": "text",
+          "settings": {
+            "title": "Will it burn my skin?",
+            "text": "<p>It melts at a low temperature into warm oil, not hot wax. Always test the warmth with your finger first.</p>"
+          }
+        },
+        "q2": {
+          "type": "text",
+          "settings": {
+            "title": "Is it greasy?",
+            "text": "<p>It soaks in and leaves skin soft, not sticky. Pour onto damp skin and use a small amount.</p>"
+          }
+        },
+        "q3": {
+          "type": "text",
+          "settings": {
+            "title": "Will it stain my sheets?",
+            "text": "<p>Use a small amount and let it absorb before you get dressed or go to bed.</p>"
+          }
+        },
+        "q4": {
+          "type": "text",
+          "settings": {
+            "title": "How long does one candle last?",
+            "text": "<p>About [ANWENDUNGEN PRO KERZE] uses. Burn time: [BRENNDAUER].</p>"
+          }
+        },
+        "q5": {
+          "type": "text",
+          "settings": {
+            "title": "Is there an unscented option?",
+            "text": "<p>[UNSCENTED-INFO]</p>"
+          }
+        },
+        "q6": {
+          "type": "text",
+          "settings": {
+            "title": "Can it arrive melted?",
+            "text": "<p>[VERSANDINFO SCHMELZEN]</p>"
+          }
+        },
+        "q7": {
+          "type": "text",
+          "settings": {
+            "title": "What if I don't like it?",
+            "text": "<p>You're covered by our [GARANTIE TAGE]-day money-back guarantee. [GARANTIE-BEDINGUNGEN]</p>"
+          }
+        },
+        "q8": {
+          "type": "text",
+          "settings": {
+            "title": "How fast is shipping?",
+            "text": "<p>Ships in [X] days. [VERSANDINFO]</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7",
+        "q8"
+      ],
+      "settings": {
+        "layout": "one-column",
+        "subheading": "FAQ",
+        "title": "Questions, answered",
+        "tabs_bg_color": "#EADBC8",
+        "color_scheme": "scheme-1",
+        "width": "wrapper--narrow"
+      }
+    },
+    "values": {
+      "type": "section-icons-row",
+      "blocks": {
+        "v1": {
+          "type": "text",
+          "settings": {
+            "icon_name": "plant-based",
+            "title": "Plant oils and butters",
+            "text": "<p>No paraffin. [MARKENWERT 1 DETAIL]</p>"
+          }
+        },
+        "v2": {
+          "type": "text",
+          "settings": {
+            "icon_name": "heart",
+            "title": "Care that feels good",
+            "text": "<p>Warm, gentle and made for your nightly routine.</p>"
+          }
+        },
+        "v3": {
+          "type": "text",
+          "settings": {
+            "icon_name": "award",
+            "title": "[MARKENWERT 3]",
+            "text": "<p>[MARKENWERT 3 DETAIL]</p>"
+          }
+        }
+      },
+      "block_order": [
+        "v1",
+        "v2",
+        "v3"
+      ],
+      "settings": {
+        "heading": "Our values",
+        "columns": 3,
+        "icons_width": 35,
+        "color_scheme": "scheme-2",
+        "color_border": "#B8862F"
+      }
+    },
+    "newsletter": {
+      "type": "section-newsletter",
+      "settings": {
+        "flex_align": "align--middle-center",
+        "title": "Get rituals, offers and early access.",
+        "text": "<p>Join the FADILAL list for evening rituals, offers and early access to new releases.</p>",
+        "button_text": "Sign up",
+        "color_scheme": "scheme-1",
+        "width": "wrapper--narrow"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "right_for_me",
+    "results_heading",
+    "results",
+    "different",
+    "how_to",
+    "guarantee",
+    "ingredients",
+    "ingredients_full",
+    "reviews",
+    "lifestyle",
+    "why_warm",
+    "timeline",
+    "comparison",
+    "faq",
+    "values",
+    "newsletter"
+  ]
+}

@@ -1,0 +1,183 @@
+{%- liquid
+  assign color_scheme = 'color-' | append: section.settings.color_scheme
+  assign highlight = section.settings.highlight_column | plus: 0
+-%}
+
+{%- style -%}
+  #FadilalCompare--{{ section.id }} {
+    --PT: {{ section.settings.padding_top }}px;
+    --PB: {{ section.settings.padding_bottom }}px;
+  }
+  #FadilalCompare--{{ section.id }} .fdl-compare__header { text-align: center; margin: 0 auto 32px; max-width: 720px; }
+  #FadilalCompare--{{ section.id }} .fdl-compare__subheading { margin: 0 0 8px; color: var(--accent); }
+  #FadilalCompare--{{ section.id }} .fdl-compare__title { margin: 0; color: var(--heading); }
+  #FadilalCompare--{{ section.id }} .fdl-compare__text { margin-top: 12px; }
+  #FadilalCompare--{{ section.id }} .fdl-compare__scroll { position: relative; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  #FadilalCompare--{{ section.id }} table { width: 100%; border-collapse: separate; border-spacing: 0; table-layout: fixed; overflow-wrap: break-word; hyphens: auto; }
+  #FadilalCompare--{{ section.id }} th,
+  #FadilalCompare--{{ section.id }} td { padding: 14px 10px; text-align: center; vertical-align: middle; border-bottom: 1px solid var(--border); color: var(--text); font-size: 1rem; line-height: 1.35; }
+  #FadilalCompare--{{ section.id }} th:first-child,
+  #FadilalCompare--{{ section.id }} td:first-child { text-align: left; width: 40%; }
+  #FadilalCompare--{{ section.id }} thead th { color: var(--heading); font-family: var(--FONT-STACK-HEADING, inherit); font-size: 1.15rem; border-bottom-width: 2px; }
+  #FadilalCompare--{{ section.id }} .is-highlight { background: var(--bg-alpha-60, transparent); box-shadow: inset 2px 0 0 var(--accent), inset -2px 0 0 var(--accent); font-weight: 700; }
+  #FadilalCompare--{{ section.id }} thead .is-highlight { box-shadow: inset 2px 0 0 var(--accent), inset -2px 0 0 var(--accent), inset 0 2px 0 var(--accent); }
+  #FadilalCompare--{{ section.id }} tbody tr:last-child .is-highlight { box-shadow: inset 2px 0 0 var(--accent), inset -2px 0 0 var(--accent), inset 0 -2px 0 var(--accent); }
+  #FadilalCompare--{{ section.id }} .fdl-compare__icon { display: inline-flex; width: 26px; height: 26px; align-items: center; justify-content: center; border-radius: 50%; }
+  #FadilalCompare--{{ section.id }} .fdl-compare__icon--yes { background: var(--accent); color: var(--bg); }
+  #FadilalCompare--{{ section.id }} .fdl-compare__icon--no { border: 1px solid var(--border); color: var(--text); opacity: 0.6; }
+  #FadilalCompare--{{ section.id }} .fdl-compare__icon svg { width: 14px; height: 14px; }
+  #FadilalCompare--{{ section.id }} .fdl-compare__sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  @media (max-width: 749px) {
+    #FadilalCompare--{{ section.id }} th,
+    #FadilalCompare--{{ section.id }} td { padding: 12px 4px; font-size: 0.875rem; }
+    #FadilalCompare--{{ section.id }} th:first-child,
+    #FadilalCompare--{{ section.id }} td:first-child { width: 34%; padding-left: 0; }
+    #FadilalCompare--{{ section.id }} thead th { font-size: 0.9375rem; }
+    #FadilalCompare--{{ section.id }} .fdl-compare__icon { width: 22px; height: 22px; }
+  }
+{%- endstyle -%}
+
+<section
+  id="FadilalCompare--{{ section.id }}"
+  class="section-padding {{ color_scheme }}"
+  data-section-id="{{ section.id }}"
+  data-section-type="fadilal-comparison-table"
+>
+  <div class="{{ section.settings.width }}">
+    {%- if section.settings.subheading != blank or section.settings.title != blank or section.settings.text != blank -%}
+      <div class="fdl-compare__header">
+        {%- if section.settings.subheading != blank -%}
+          <p class="fdl-compare__subheading subheading-text">{{ section.settings.subheading | escape }}</p>
+        {%- endif -%}
+        {%- if section.settings.title != blank -%}
+          <h2 class="fdl-compare__title h2">{{ section.settings.title | escape }}</h2>
+        {%- endif -%}
+        {%- if section.settings.text != blank -%}
+          <div class="fdl-compare__text">{{ section.settings.text }}</div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="fdl-compare__scroll">
+        <table>
+          {%- if section.settings.caption != blank -%}
+            <caption class="fdl-compare__sr">{{ section.settings.caption | escape }}</caption>
+          {%- endif -%}
+          <thead>
+            <tr>
+              <th scope="col">{{ section.settings.label_column | escape }}</th>
+              {%- for i in (1..3) -%}
+                {%- liquid
+                  assign key = 'column_' | append: i
+                  assign column_title = section.settings[key]
+                -%}
+                <th scope="col"{% if highlight == i %} class="is-highlight"{% endif %}>{{ column_title | escape }}</th>
+              {%- endfor -%}
+            </tr>
+          </thead>
+          <tbody>
+            {%- for block in section.blocks -%}
+              <tr {{ block.shopify_attributes }}>
+                <th scope="row">{{ block.settings.label | escape }}</th>
+                {%- for i in (1..3) -%}
+                  {%- liquid
+                    assign value_key = 'value_' | append: i
+                    assign text_key = 'text_' | append: i
+                    assign value = block.settings[value_key]
+                    assign value_text = block.settings[text_key]
+                  -%}
+                  <td{% if highlight == i %} class="is-highlight"{% endif %}>
+                    {%- case value -%}
+                      {%- when 'yes' -%}
+                        <span class="fdl-compare__icon fdl-compare__icon--yes" aria-hidden="true">
+                          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg>
+                        </span>
+                        <span class="fdl-compare__sr">{{ section.settings.label_yes | escape }}</span>
+                      {%- when 'no' -%}
+                        <span class="fdl-compare__icon fdl-compare__icon--no" aria-hidden="true">
+                          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4.5 4.5l7 7M11.5 4.5l-7 7"/></svg>
+                        </span>
+                        <span class="fdl-compare__sr">{{ section.settings.label_no | escape }}</span>
+                      {%- else -%}
+                        {{ value_text | escape }}
+                    {%- endcase -%}
+                  </td>
+                {%- endfor -%}
+              </tr>
+            {%- endfor -%}
+          </tbody>
+        </table>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Comparison table",
+  "class": "fadilal-comparison-table",
+  "settings": [
+    { "type": "header", "content": "Text" },
+    { "type": "text", "id": "subheading", "label": "Subheading" },
+    { "type": "text", "id": "title", "label": "Heading", "default": "Why FADILAL?" },
+    { "type": "richtext", "id": "text", "label": "Text" },
+    { "type": "header", "content": "Table" },
+    { "type": "text", "id": "label_column", "label": "First column heading" },
+    { "type": "text", "id": "column_1", "label": "Column 1 heading", "default": "FADILAL" },
+    { "type": "text", "id": "column_2", "label": "Column 2 heading", "default": "Regular lotion" },
+    { "type": "text", "id": "column_3", "label": "Column 3 heading", "default": "Cheap massage candles" },
+    {
+      "type": "select",
+      "id": "highlight_column",
+      "label": "Highlighted column",
+      "default": "1",
+      "options": [
+        { "value": "0", "label": "None" },
+        { "value": "1", "label": "Column 1" },
+        { "value": "2", "label": "Column 2" },
+        { "value": "3", "label": "Column 3" }
+      ]
+    },
+    { "type": "header", "content": "Accessibility" },
+    { "type": "text", "id": "caption", "label": "Table caption", "info": "Read by screen readers only." },
+    { "type": "text", "id": "label_yes", "label": "Screen reader text for check", "default": "Yes" },
+    { "type": "text", "id": "label_no", "label": "Screen reader text for cross", "default": "No" },
+    { "type": "header", "content": "Layout" },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" },
+    {
+      "type": "select",
+      "id": "width",
+      "label": "Width",
+      "default": "wrapper--narrow",
+      "options": [
+        { "value": "wrapper", "label": "Normal" },
+        { "value": "wrapper--narrow", "label": "Narrow" }
+      ]
+    },
+    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 0, "max": 100, "step": 10, "unit": "px", "default": 60 },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 100, "step": 10, "unit": "px", "default": 60 }
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "Row",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Feature", "default": "Feature" },
+        { "type": "select", "id": "value_1", "label": "Column 1", "default": "yes", "options": [ { "value": "yes", "label": "Check" }, { "value": "no", "label": "Cross" }, { "value": "text", "label": "Text" } ] },
+        { "type": "text", "id": "text_1", "label": "Column 1 text", "info": "Shown when Column 1 is set to Text." },
+        { "type": "select", "id": "value_2", "label": "Column 2", "default": "no", "options": [ { "value": "yes", "label": "Check" }, { "value": "no", "label": "Cross" }, { "value": "text", "label": "Text" } ] },
+        { "type": "text", "id": "text_2", "label": "Column 2 text", "info": "Shown when Column 2 is set to Text." },
+        { "type": "select", "id": "value_3", "label": "Column 3", "default": "no", "options": [ { "value": "yes", "label": "Check" }, { "value": "no", "label": "Cross" }, { "value": "text", "label": "Text" } ] },
+        { "type": "text", "id": "text_3", "label": "Column 3 text", "info": "Shown when Column 3 is set to Text." }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Comparison table",
+      "blocks": [ { "type": "row" }, { "type": "row" }, { "type": "row" } ]
+    }
+  ]
+}
+{% endschema %}
