@@ -281,8 +281,8 @@
             "button_link": "/products/kerze-merze",
             "button_color": "btn--primary",
             "button_style": "btn--solid",
-            "bg_color": "#e6edf3",
-            "text_color": "#151515"
+            "bg_color": "#eadfd1",
+            "text_color": "#1f1a17"
           }
         },
         "two": {
@@ -296,8 +296,8 @@
             "button_link": "/products/kerze-merze",
             "button_color": "btn--primary",
             "button_style": "btn--solid",
-            "bg_color": "#e6edf3",
-            "text_color": "#151515"
+            "bg_color": "#eadfd1",
+            "text_color": "#1f1a17"
           }
         },
         "three": {
@@ -311,8 +311,8 @@
             "button_link": "/products/kerze-merze",
             "button_color": "btn--primary",
             "button_style": "btn--solid",
-            "bg_color": "#a9c1d6",
-            "text_color": "#151515"
+            "bg_color": "#c9803a",
+            "text_color": "#1f1a17"
           }
         }
       },
@@ -366,7 +366,7 @@
         "columns": 3,
         "icons_width": 35,
         "color_scheme": "scheme-1",
-        "color_border": "#a9c1d6"
+        "color_border": "#d9cbb9"
       }
     },
     "expert": {

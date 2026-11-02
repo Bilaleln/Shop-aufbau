@@ -49,7 +49,7 @@
       "settings": {
         "sticky_header": false,
         "link_hover_effect": "dot",
-        "highlight_color": "#fff7f2",
+        "highlight_color": "#eadfd1",
         "header_border": true,
         "header_border_color": "",
         "border_opacity": 50,
@@ -68,8 +68,8 @@
         "highlight_item": "",
         "enable_custom_badge": false,
         "custom_badge_text": "15% off",
-        "highlight_item_color": "#de5757",
-        "highlight_item_text_color": "#ffffff",
+        "highlight_item_color": "#c9803a",
+        "highlight_item_text_color": "#1f1a17",
         "header_transparent": false,
         "header_gradient": true
       }
@@ -87,8 +87,8 @@
             "highlight_item": "",
             "enable_custom_badge": false,
             "custom_badge_text": "10% OFF",
-            "highlight_item_color": "#d02e2e",
-            "highlight_item_text_color": "#ffffff",
+            "highlight_item_color": "#c9803a",
+            "highlight_item_text_color": "#1f1a17",
             "padding": false,
             "padding_bottom": 10
           }
