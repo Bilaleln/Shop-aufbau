@@ -131,8 +131,8 @@
             "text": "<p>{{ collection.title }}</p>",
             "size": 125,
             "heading_highlight_type": "italics",
-            "highlight_color": "#eadfd1",
-            "highlight_text_color": "#1f1a17"
+            "highlight_color": "#faf8f6",
+            "highlight_text_color": "#211c1b"
           }
         },
         "template--19703957487894__b79b03d7-c1d3-4dbb-9ffe-9ea405eaae7f-1688426785d37fc177-2": {

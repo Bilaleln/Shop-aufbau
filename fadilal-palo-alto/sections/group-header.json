@@ -49,11 +49,11 @@
       "settings": {
         "sticky_header": false,
         "link_hover_effect": "dot",
-        "highlight_color": "#eadfd1",
+        "highlight_color": "#faf8f6",
         "header_border": true,
         "header_border_color": "",
         "border_opacity": 50,
-        "logo_max_width": 160,
+        "logo_max_width": 170,
         "main-menu": "fadilal-main",
         "main_menu_secondary": "",
         "show_images": false,
@@ -68,10 +68,11 @@
         "highlight_item": "",
         "enable_custom_badge": false,
         "custom_badge_text": "15% off",
-        "highlight_item_color": "#c9803a",
-        "highlight_item_text_color": "#1f1a17",
+        "highlight_item_color": "#e9dad0",
+        "highlight_item_text_color": "#211c1b",
         "header_transparent": false,
-        "header_gradient": true
+        "header_gradient": true,
+        "logo": "shopify://shop_images/Kompaktes_FADILAL-Wortzeichen.png"
       }
     },
     "mobile_menu_CDGjkt": {
@@ -87,8 +88,8 @@
             "highlight_item": "",
             "enable_custom_badge": false,
             "custom_badge_text": "10% OFF",
-            "highlight_item_color": "#c9803a",
-            "highlight_item_text_color": "#1f1a17",
+            "highlight_item_color": "#e9dad0",
+            "highlight_item_text_color": "#211c1b",
             "padding": false,
             "padding_bottom": 10
           }

@@ -1,0 +1,126 @@
+/* FADILAL brand layer: loaded after the theme CSS, only refines existing Palo Alto components. */
+:root {
+  --fdl-ink: #211c1b;
+  --fdl-ink-soft: #756d68;
+  --fdl-accent: #c5a393;
+  --fdl-champagne: #e9dad0;
+  --fdl-surface: #faf8f6;
+  --fdl-line: #e9e4e0;
+  --fdl-radius: 6px;
+}
+
+/* Header */
+.site-header,
+.header__wrapper {
+  border-bottom-color: var(--fdl-line);
+}
+
+.site-header--has-border .site-header__wrapper::before {
+  box-shadow: 0 1px 0 0 var(--fdl-line);
+  opacity: 1;
+}
+
+/* Product information */
+.product__title {
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.product__price--regular {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--fdl-ink);
+}
+
+.product__price--compare {
+  color: var(--fdl-ink-soft);
+  font-weight: 400;
+}
+
+.product__icon__row {
+  gap: 12px;
+  align-items: center;
+}
+
+.product__icon__text {
+  color: var(--fdl-ink);
+}
+
+/* Purchase area */
+.product__submit__add {
+  min-height: 54px;
+  border-radius: var(--fdl-radius);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.product__submit__add[disabled] {
+  background: var(--fdl-line);
+  color: var(--fdl-ink-soft);
+  opacity: 1;
+}
+
+.quantity-selector {
+  border-color: var(--fdl-line);
+  border-radius: var(--fdl-radius);
+}
+
+/* Variant / offer boxes */
+.radio__buttons label {
+  border: 1px solid var(--fdl-line);
+  border-radius: var(--fdl-radius);
+  background: #fff;
+  color: var(--fdl-ink);
+}
+
+.radio__buttons input:checked + label {
+  border-color: var(--fdl-accent);
+  box-shadow: inset 0 0 0 1px var(--fdl-accent);
+  background: var(--fdl-surface);
+}
+
+.radio__buttons input:focus-visible + label {
+  outline: 2px solid var(--fdl-ink);
+  outline-offset: 2px;
+}
+
+/* Accordions (product + FAQ) */
+.product__accordion__title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--fdl-ink);
+}
+
+.accordion__list > li {
+  border-color: var(--fdl-line);
+}
+
+/* Media placeholders stay quiet until real images are added */
+.placeholder-svg--overlayed,
+svg.placeholder-svg-filled {
+  background-color: var(--fdl-surface);
+}
+
+svg.placeholder-svg-filled,
+svg.placeholder-svg-filled path {
+  fill: var(--fdl-champagne);
+}
+
+.placeholder-svg--overlayed::after {
+  opacity: 0;
+}
+
+/* Section headings */
+.section__heading {
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 749px) {
+  .product__title {
+    font-size: clamp(1.75rem, 7vw, 2.25rem);
+  }
+
+  .product__submit__add {
+    min-height: 52px;
+  }
+}

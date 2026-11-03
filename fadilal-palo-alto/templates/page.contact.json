@@ -85,7 +85,7 @@
         "columns": 3,
         "icons_width": 30,
         "color_scheme": "scheme-2",
-        "color_border": "#d9cbb9",
+        "color_border": "#e9e4e0",
         "layout_mobile": "stacked",
         "padding_top": 20,
         "padding_bottom": 20

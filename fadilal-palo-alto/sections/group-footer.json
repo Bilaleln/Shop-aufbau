@@ -9,10 +9,11 @@
           "type": "logo",
           "settings": {
             "alignment": "text-left",
-            "logo_width": 120,
+            "logo_width": 150,
             "show_shop_name": false,
             "text": "<p>FADILAL is body care in candle form. Light it, let it melt, and pour warm oil onto your skin. Warm oil, not hot wax.</p>",
-            "column_width": "30"
+            "column_width": "30",
+            "image": "shopify://shop_images/Kompaktes_FADILAL-Wortzeichen.png"
           }
         },
         "shop": {
