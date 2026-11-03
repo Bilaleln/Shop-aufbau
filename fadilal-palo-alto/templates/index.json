@@ -265,7 +265,8 @@
         "width": "wrapper--narrow",
         "padding_top": 60,
         "padding_bottom": 0
-      }
+      },
+      "disabled": true
     },
     "bundles": {
       "type": "section-promotion-row",
@@ -327,7 +328,8 @@
         "color_scheme": "scheme-1",
         "padding_top": 30,
         "layout": "3"
-      }
+      },
+      "disabled": true
     },
     "benefits": {
       "type": "section-icons-row",
