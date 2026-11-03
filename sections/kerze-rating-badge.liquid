@@ -1,0 +1,93 @@
+{%- comment -%}
+  Kerze – Bewertungs-Badge
+  Kompakte Zeile: 5 Sterne + "4,8/5 (… Bewertungen)".
+  Eigenständig (keine Abhängigkeit zu anderen Assets), alle Werte im Theme-Editor anpassbar.
+{%- endcomment -%}
+{%- liquid
+  assign star_total = section.settings.star_total | default: 5
+  assign rating_num = section.settings.rating_value | replace: ',', '.' | plus: 0
+-%}
+<div class="kerze-rating kerze-rating--{{ section.settings.alignment }}"
+  style="--kr-star:{{ section.settings.star_color }};--kr-star-empty:{{ section.settings.star_empty_color }};--kr-text:{{ section.settings.text_color }};--kr-star-size:{{ section.settings.star_size }}px;--kr-font-size:{{ section.settings.font_size }}px;--kr-gap:{{ section.settings.star_gap }}px;--kr-pt:{{ section.settings.padding_top }}px;--kr-pb:{{ section.settings.padding_bottom }}px;{% if section.settings.bg_color != blank and section.settings.bg_color != 'rgba(0,0,0,0)' %}background:{{ section.settings.bg_color }};{% endif %}">
+  <div class="kerze-rating__inner page-width">
+    {%- if section.settings.link != blank -%}<a class="kerze-rating__row" href="{{ section.settings.link }}">{%- else -%}<div class="kerze-rating__row">{%- endif -%}
+      <span class="kerze-rating__stars" role="img" aria-label="{{ section.settings.rating_value }} von {{ star_total }} Sternen">
+        {%- for i in (1..star_total) -%}
+          {%- liquid
+            assign fill = 100
+            if section.settings.partial_fill
+              assign remaining = rating_num | minus: forloop.index0
+              if remaining >= 1
+                assign fill = 100
+              elsif remaining <= 0
+                assign fill = 0
+              else
+                assign fill = remaining | times: 100 | round
+              endif
+            endif
+          -%}
+          <span class="kerze-rating__star" style="--kr-fill:{{ fill }}%">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.25l2.95 6.3 6.8.78-5.05 4.66 1.36 6.76L12 17.35l-6.06 3.4 1.36-6.76L2.25 9.33l6.8-.78L12 2.25z"/></svg>
+          </span>
+        {%- endfor -%}
+      </span>
+      <span class="kerze-rating__text">
+        {{- section.settings.rating_value }}/{{ star_total -}}
+        {%- if section.settings.review_count != blank %} ({{ section.settings.review_count }} {{ section.settings.review_label }}){% endif -%}
+      </span>
+    {%- if section.settings.link != blank -%}</a>{%- else -%}</div>{%- endif -%}
+  </div>
+</div>
+
+{% stylesheet %}
+.kerze-rating{padding-top:var(--kr-pt);padding-bottom:var(--kr-pb)}
+.kerze-rating__inner{display:flex}
+.kerze-rating--left .kerze-rating__inner{justify-content:flex-start}
+.kerze-rating--center .kerze-rating__inner{justify-content:center}
+.kerze-rating--right .kerze-rating__inner{justify-content:flex-end}
+.kerze-rating__row{display:inline-flex;align-items:center;flex-wrap:wrap;gap:8px;color:var(--kr-text);text-decoration:none;line-height:1.2}
+a.kerze-rating__row:hover .kerze-rating__text{text-decoration:underline;text-underline-offset:3px}
+.kerze-rating__stars{display:inline-flex;align-items:center;gap:var(--kr-gap);flex-shrink:0}
+.kerze-rating__star{position:relative;display:block;width:var(--kr-star-size);height:var(--kr-star-size)}
+.kerze-rating__star svg{display:block;width:100%;height:100%;fill:var(--kr-star-empty)}
+.kerze-rating__star::after{content:"";position:absolute;inset:0;background:var(--kr-star);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2.25l2.95 6.3 6.8.78-5.05 4.66 1.36 6.76L12 17.35l-6.06 3.4 1.36-6.76L2.25 9.33l6.8-.78L12 2.25z'/%3E%3C/svg%3E") center/100% 100% no-repeat;
+          mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2.25l2.95 6.3 6.8.78-5.05 4.66 1.36 6.76L12 17.35l-6.06 3.4 1.36-6.76L2.25 9.33l6.8-.78L12 2.25z'/%3E%3C/svg%3E") center/100% 100% no-repeat;
+  clip-path:inset(0 calc(100% - var(--kr-fill)) 0 0)}
+.kerze-rating__text{font-size:var(--kr-font-size);font-weight:400;letter-spacing:.01em;white-space:nowrap}
+@media (max-width:749px){
+  .kerze-rating__text{font-size:max(12px,calc(var(--kr-font-size) - 1px))}
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Kerze – Bewertungs-Badge",
+  "tag": "section",
+  "class": "section-kerze-rating",
+  "settings": [
+    { "type": "header", "content": "Inhalt" },
+    { "type": "text", "id": "rating_value", "label": "Bewertung", "default": "4,8" },
+    { "type": "range", "id": "star_total", "min": 3, "max": 10, "step": 1, "label": "Anzahl Sterne / Skala", "default": 5 },
+    { "type": "text", "id": "review_count", "label": "Anzahl Bewertungen", "default": "42,3679" },
+    { "type": "text", "id": "review_label", "label": "Bezeichnung", "default": "Bewertungen" },
+    { "type": "url", "id": "link", "label": "Link (optional, z. B. zu den Bewertungen)" },
+    { "type": "checkbox", "id": "partial_fill", "label": "Sterne anteilig füllen (z. B. 4,8 = 4 ⅘ Sterne)", "default": false },
+    { "type": "header", "content": "Design" },
+    { "type": "select", "id": "alignment", "label": "Ausrichtung", "options": [ { "value": "left", "label": "Links" }, { "value": "center", "label": "Mittig" }, { "value": "right", "label": "Rechts" } ], "default": "left" },
+    { "type": "color", "id": "star_color", "label": "Sternfarbe", "default": "#DF8397" },
+    { "type": "color", "id": "star_empty_color", "label": "Sternfarbe (leer)", "default": "#F2D3DA" },
+    { "type": "color", "id": "text_color", "label": "Textfarbe", "default": "#151515" },
+    { "type": "color", "id": "bg_color", "label": "Hintergrund (optional)" },
+    { "type": "range", "id": "star_size", "min": 10, "max": 32, "step": 1, "unit": "px", "label": "Sterngröße", "default": 16 },
+    { "type": "range", "id": "star_gap", "min": 0, "max": 8, "step": 1, "unit": "px", "label": "Abstand zwischen Sternen", "default": 2 },
+    { "type": "range", "id": "font_size", "min": 10, "max": 24, "step": 1, "unit": "px", "label": "Schriftgröße", "default": 14 },
+    { "type": "header", "content": "Abstände" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 80, "step": 2, "unit": "px", "label": "Oben", "default": 8 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 80, "step": 2, "unit": "px", "label": "Unten", "default": 8 }
+  ],
+  "presets": [
+    { "name": "Kerze – Bewertungs-Badge" }
+  ]
+}
+{% endschema %}
