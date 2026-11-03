@@ -265,8 +265,7 @@
         "width": "wrapper--narrow",
         "padding_top": 60,
         "padding_bottom": 0
-      },
-      "disabled": true
+      }
     },
     "bundles": {
       "type": "section-promotion-row",
@@ -277,9 +276,9 @@
             "subheading": "<p>Try the ritual</p>",
             "heading": "<p>1 Candle</p>",
             "heading_size": 140,
-            "description": "[PREIS]",
+            "description": "$45",
             "button_text": "Shop now",
-            "button_link": "/products/kerze-merze",
+            "button_link": "/products/kerze-merze?variant=58097311056252",
             "button_color": "btn--primary",
             "button_style": "btn--solid",
             "bg_color": "#faf8f6",
@@ -289,12 +288,12 @@
         "two": {
           "type": "column",
           "settings": {
-            "subheading": "<p>Save [ERSPARNIS %]</p>",
+            "subheading": "<p>Save 36%</p>",
             "heading": "<p>2 Candles</p>",
             "heading_size": 140,
-            "description": "[PREIS]",
+            "description": "$75",
             "button_text": "Shop now",
-            "button_link": "/products/kerze-merze",
+            "button_link": "/products/kerze-merze?variant=58105849610620",
             "button_color": "btn--primary",
             "button_style": "btn--solid",
             "bg_color": "#faf8f6",
@@ -304,12 +303,12 @@
         "three": {
           "type": "column",
           "settings": {
-            "subheading": "<p>Most popular · Save [ERSPARNIS %]</p>",
+            "subheading": "<p>Most popular · Save 44%</p>",
             "heading": "<p>3 Candles</p>",
             "heading_size": 140,
-            "description": "[PREIS]",
+            "description": "$99",
             "button_text": "Shop now",
-            "button_link": "/products/kerze-merze",
+            "button_link": "/products/kerze-merze?variant=58105849708924",
             "button_color": "btn--primary",
             "button_style": "btn--solid",
             "bg_color": "#e9dad0",
@@ -328,8 +327,7 @@
         "color_scheme": "scheme-1",
         "padding_top": 30,
         "layout": "3"
-      },
-      "disabled": true
+      }
     },
     "benefits": {
       "type": "section-icons-row",
