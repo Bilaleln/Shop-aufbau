@@ -1,0 +1,525 @@
+{
+  "sections": {
+    "hero": {
+      "type": "section-image-with-text",
+      "blocks": {
+        "badge": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "[KUNDENZAHL] women already pour it",
+            "size": 90
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "<p>Body care that comes as a candle</p>",
+            "size": 150,
+            "heading_highlight_type": "italics"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Melts into warm oil, not hot wax. Soft, silky skin in a 10-minute nightly ritual.</p>",
+            "size": 110
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_text": "Shop now",
+            "button_link": "/products/kerze-merze",
+            "button_color": "btn--primary",
+            "button_style": "btn--solid",
+            "button_size": "btn--large"
+          }
+        }
+      },
+      "block_order": [
+        "badge",
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "section_height": "seven-fifty-height",
+        "image_location": "right",
+        "image_width": "wide",
+        "color_scheme": "scheme-1",
+        "section_width": "wrapper--full-padded",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "image": "shopify://shop_images/fadilal-wildrose-lifestyle.webp"
+      }
+    },
+    "lotions": {
+      "type": "section-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "text": "<p>I had ten lotions in my bathroom. None of them felt like this.</p>",
+            "size": 130,
+            "heading_highlight_type": "italics"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Your skin changed. Lotions felt sticky, did nothing, or you simply forgot them. FADILAL turns body care into a warm evening ritual you actually look forward to, so you never skip a night.</p>",
+            "size": 110
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_text": "Discover the ritual",
+            "button_link": "/products/kerze-merze",
+            "button_color": "btn--primary",
+            "button_style": "btn--solid",
+            "button_size": "btn--medium"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "text_position": "center",
+        "color_scheme": "scheme-2",
+        "width": "wrapper--narrow",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "bestsellers": {
+      "type": "section-products-list",
+      "blocks": {
+        "candle": {
+          "type": "product",
+          "settings": {
+            "product": "fadilal-warm-oil-candle",
+            "button_text": "Shop now",
+            "show_second_image": false,
+            "show_circle": false
+          }
+        }
+      },
+      "block_order": [
+        "candle"
+      ],
+      "settings": {
+        "title": "Bestsellers",
+        "button_color": "btn--primary",
+        "button_style": "btn--solid",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "reviews": {
+      "type": "section-testimonials",
+      "blocks": {
+        "r1": {
+          "type": "testimonial",
+          "settings": {
+            "heading": "[REVIEW-HEADLINE 1]",
+            "text": "<p>[ZITAT 1]</p>",
+            "customer_name": "[VORNAME N.]",
+            "subheading": "<p>Verified buyer</p>"
+          }
+        },
+        "r2": {
+          "type": "testimonial",
+          "settings": {
+            "heading": "[REVIEW-HEADLINE 2]",
+            "text": "<p>[ZITAT 2]</p>",
+            "customer_name": "[VORNAME N.]",
+            "subheading": "<p>Verified buyer</p>"
+          }
+        },
+        "r3": {
+          "type": "testimonial",
+          "settings": {
+            "heading": "[REVIEW-HEADLINE 3]",
+            "text": "<p>[ZITAT 3]</p>",
+            "customer_name": "[VORNAME N.]",
+            "subheading": "<p>Verified buyer</p>"
+          }
+        },
+        "r4": {
+          "type": "testimonial",
+          "settings": {
+            "heading": "[REVIEW-HEADLINE 4]",
+            "text": "<p>[ZITAT 4]</p>",
+            "customer_name": "[VORNAME N.]",
+            "subheading": "<p>Verified buyer</p>"
+          }
+        },
+        "r5": {
+          "type": "testimonial",
+          "settings": {
+            "heading": "[REVIEW-HEADLINE 5]",
+            "text": "<p>[ZITAT 5]</p>",
+            "customer_name": "[VORNAME N.]",
+            "subheading": "<p>Verified buyer</p>"
+          }
+        },
+        "r6": {
+          "type": "testimonial",
+          "settings": {
+            "heading": "[REVIEW-HEADLINE 6]",
+            "text": "<p>[ZITAT 6]</p>",
+            "customer_name": "[VORNAME N.]",
+            "subheading": "<p>Verified buyer</p>"
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5",
+        "r6"
+      ],
+      "settings": {
+        "subheading": "Reviews",
+        "title": "[KUNDENZAHL] women. [ANZAHL] 5-star reviews.",
+        "text_alignment": "text-left",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "spotlight": {
+      "type": "section-image-with-text",
+      "blocks": {
+        "sub": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "The difference",
+            "size": 90
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "<p>Warm oil, not hot wax</p>",
+            "size": 140,
+            "heading_highlight_type": "italics"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>FADILAL is made to melt at a low temperature, just above body temperature. What you pour is warm, silky body oil, never hot wax. Always test the warmth with your fingertip first.</p>",
+            "size": 110
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_text": "See how it works",
+            "button_link": "/products/kerze-merze",
+            "button_color": "btn--primary",
+            "button_style": "btn--solid",
+            "button_size": "btn--medium"
+          }
+        }
+      },
+      "block_order": [
+        "sub",
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image_location": "left",
+        "color_scheme": "scheme-2",
+        "image": "shopify://shop_images/fadilal-wildrose-melted-oil.webp"
+      }
+    },
+    "bundle_heading": {
+      "type": "section-text",
+      "blocks": {
+        "sub": {
+          "type": "subheading",
+          "settings": {
+            "text": "<p>Bundle &amp; Save</p>"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "text": "<p>More nights, more savings</p>",
+            "size": 120,
+            "heading_highlight_type": "italics"
+          }
+        }
+      },
+      "block_order": [
+        "sub",
+        "heading"
+      ],
+      "settings": {
+        "text_position": "center",
+        "color_scheme": "scheme-1",
+        "width": "wrapper--narrow",
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "bundles": {
+      "type": "section-promotion-row",
+      "blocks": {
+        "one": {
+          "type": "column",
+          "settings": {
+            "subheading": "<p>Try the ritual</p>",
+            "heading": "<p>1 Candle</p>",
+            "heading_size": 140,
+            "description": "$45",
+            "button_text": "Shop now",
+            "button_link": "/products/kerze-merze?variant=58097311056252",
+            "button_color": "btn--primary",
+            "button_style": "btn--solid",
+            "bg_color": "#faf8f6",
+            "text_color": "#211c1b"
+          }
+        },
+        "two": {
+          "type": "column",
+          "settings": {
+            "subheading": "<p>Save 36%</p>",
+            "heading": "<p>2 Candles</p>",
+            "heading_size": 140,
+            "description": "$75",
+            "button_text": "Shop now",
+            "button_link": "/products/kerze-merze?variant=58105849610620",
+            "button_color": "btn--primary",
+            "button_style": "btn--solid",
+            "bg_color": "#faf8f6",
+            "text_color": "#211c1b"
+          }
+        },
+        "three": {
+          "type": "column",
+          "settings": {
+            "subheading": "<p>Most popular · Save 44%</p>",
+            "heading": "<p>3 Candles</p>",
+            "heading_size": 140,
+            "description": "$99",
+            "button_text": "Shop now",
+            "button_link": "/products/kerze-merze?variant=58105849708924",
+            "button_color": "btn--primary",
+            "button_style": "btn--solid",
+            "bg_color": "#e9dad0",
+            "text_color": "#211c1b"
+          }
+        }
+      },
+      "block_order": [
+        "one",
+        "two",
+        "three"
+      ],
+      "settings": {
+        "layout": "3",
+        "count_up_enabled": false,
+        "height": "350",
+        "color_scheme": "scheme-1",
+        "padding_top": 30
+      }
+    },
+    "benefits": {
+      "type": "section-icons-row",
+      "blocks": {
+        "b1": {
+          "type": "text",
+          "settings": {
+            "icon_name": "plant-based",
+            "title": "Plant-based oils, no paraffin",
+            "text": "<p>Made with plant oils and butters. [INHALTSSTOFFE]</p>"
+          }
+        },
+        "b2": {
+          "type": "text",
+          "settings": {
+            "icon_name": "shield",
+            "title": "Warm, never hot",
+            "text": "<p>Melts just above body temperature into warm oil, not hot wax.</p>"
+          }
+        },
+        "b3": {
+          "type": "text",
+          "settings": {
+            "icon_name": "check",
+            "title": "Soaks in, never greasy",
+            "text": "<p>Pour onto damp skin, massage in and let it absorb. Soft, not sticky.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "columns": 3,
+        "icons_width": 35,
+        "color_scheme": "scheme-1",
+        "color_border": "#e9e4e0"
+      }
+    },
+    "expert": {
+      "type": "section-custom-content",
+      "blocks": {
+        "intro": {
+          "type": "text",
+          "settings": {
+            "subheading": "Expert view",
+            "title": "Why warm oil?",
+            "text": "<p>[EXPERTIN EINLEITUNG]</p>",
+            "button_text": "Shop the candle",
+            "button_link": "/products/kerze-merze",
+            "button_color": "btn--primary",
+            "button_style": "btn--solid"
+          }
+        },
+        "quote": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 0,
+            "text": "<p>[EXPERTIN ZITAT]</p>",
+            "customer_name": "[EXPERTIN NAME]",
+            "subheading": "<p>[EXPERTIN TITEL]</p>"
+          }
+        }
+      },
+      "block_order": [
+        "intro",
+        "quote"
+      ],
+      "settings": {
+        "height": "five-fifty-height",
+        "color_scheme": "scheme-2"
+      }
+    },
+    "statement": {
+      "type": "section-banner-image",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "text": "<p>Taking care of yourself shouldn't feel like a chore.</p>",
+            "size": 150,
+            "heading_highlight_type": "italics"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_1_text": "Start your ritual",
+            "button_1_link": "/products/kerze-merze",
+            "button_1_color": "btn--primary",
+            "button_1_style": "btn--solid",
+            "button_1_size": "btn--large"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "button"
+      ],
+      "settings": {
+        "height": "five-fifty-height",
+        "color_scheme": "scheme-4",
+        "width": "wrapper--full-padded",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "image": "shopify://shop_images/fadilal-campaign-hero-desktop.webp",
+        "image_mobile": "shopify://shop_images/fadilal-campaign-hero-mobile.webp",
+        "text_position": "left",
+        "text_alignment": "left",
+        "mobile_text_position": "top-center",
+        "mobile_text_alignment": "center",
+        "enable_mobile_height": true,
+        "mobile_height": "seven-fifty-height-mobile"
+      }
+    },
+    "social": {
+      "type": "section-social-gallery",
+      "blocks": {
+        "s1": {
+          "type": "image",
+          "settings": {
+            "text": "<p>[@INSTAGRAM HANDLE]</p>",
+            "button_text": "",
+            "image": "shopify://shop_images/fadilal-wildrose-handheld.webp"
+          }
+        },
+        "s2": {
+          "type": "image",
+          "settings": {
+            "text": "<p>[@INSTAGRAM HANDLE]</p>",
+            "button_text": "",
+            "image": "shopify://shop_images/fadilal-wildrose-application.webp"
+          }
+        },
+        "s3": {
+          "type": "image",
+          "settings": {
+            "text": "<p>[@INSTAGRAM HANDLE]</p>",
+            "button_text": "",
+            "image": "shopify://shop_images/fadilal-wildrose-bathroom.webp"
+          }
+        },
+        "s4": {
+          "type": "image",
+          "settings": {
+            "text": "<p>[@INSTAGRAM HANDLE]</p>",
+            "button_text": "",
+            "image": "shopify://shop_images/fadilal-wildrose-ingredients.webp"
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "settings": {
+        "align_heading": "text-center",
+        "subheading": "Share yours with [@INSTAGRAM HANDLE]",
+        "title": "The FADILAL ritual",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "newsletter": {
+      "type": "section-newsletter",
+      "settings": {
+        "flex_align": "align--middle-center",
+        "title": "Get rituals, offers and early access.",
+        "text": "<p>Join the FADILAL list for evening rituals, offers and early access to new releases.</p>",
+        "button_text": "Sign up",
+        "color_scheme": "scheme-2",
+        "width": "wrapper--narrow"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "lotions",
+    "bestsellers",
+    "reviews",
+    "spotlight",
+    "bundle_heading",
+    "bundles",
+    "benefits",
+    "expert",
+    "statement",
+    "social",
+    "newsletter"
+  ]
+}

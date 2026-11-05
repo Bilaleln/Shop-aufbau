@@ -1,0 +1,1316 @@
+[
+ {
+  "name": "t01_hero",
+  "model": "nano-banana-pro",
+  "taskId": "017bf2e5550ea1c8c82e1de759926add",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 88,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black ribbed screw lid, off-white paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle' — reproduce the jar shape, proportions, label layout and typography exactly; never invent other text. Do NOT copy any overlay text, badges, icons or captions from the references. Studio product packshot: the closed FADILAL wild rose candle with its black lid on, standing centered on a clean white seamless background with a very soft natural contact shadow, slight three-quarter front view, label perfectly sharp and legible, minimal composition with generous white space, nothing else in frame. Premium editorial skincare campaign photography, natural soft directional light, realistic natural shadows, true-to-life color, restrained warm tones on a mostly white and soft neutral palette (not orange, not overly beige), shot on a medium-format camera, crisp focus on the label, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_16_00_11.png?v=1793718049"
+   ],
+   "aspect_ratio": "1:1",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "t01_hero.png",
+    "url": "https://tempfile.aiquickdraw.com/models/nano-banana-pro/1793821992768-g1b7ahrhiso.png"
+   }
+  ]
+ },
+ {
+  "name": "a09_detail",
+  "model": "nano-banana-pro",
+  "taskId": "63819b736327f504348f106f306dbc4c",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 33,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. High-end macro detail of the FADILAL candle: amber glass with natural reflections and subtle glass thickness at the shoulder, the off-white textured paper label with the FADILAL wordmark and botanical drawing in crisp focus, the black lid with its fine ribbed edge, shallow depth of field, white background. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_16_00_11.png?v=1793718049"
+   ],
+   "aspect_ratio": "1:1",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "a09_detail.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_747c39d5b1d96426ea2989a8a06aa195.png"
+   }
+  ]
+ },
+ {
+  "name": "a08_ingredients",
+  "model": "nano-banana-pro",
+  "taskId": "f5b22a654618b5dfa0056b151c8f73a8",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 31,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Overhead editorial flat-lay on a white linen surface: in the center the closed FADILAL wild rose candle; around it in small handmade ceramic dishes with balanced spacing: golden beeswax pellets and a small piece of natural honeycomb, white coconut wax flakes, ivory soy wax flakes; a few scattered pale-pink wild rose petals; soft daylight, gentle shadows, clean and minimal. Nothing else. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_16_00_11.png?v=1793718049"
+   ],
+   "aspect_ratio": "1:1",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "a08_ingredients.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_91ac3129df69feda150823d9ab1b0454.png"
+   }
+  ]
+ },
+ {
+  "name": "a04_melting",
+  "model": "nano-banana-pro",
+  "taskId": "53256a45dd1d538ef3d098e1d1182eec",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 37,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Extreme close-up of the lit FADILAL candle without lid in a softly dim evening bathroom: a small realistic calm flame, a wide clear golden melted pool forming around the wick with the pale solid wax rim at the edge, gentle reflections on the amber glass, label partly visible at the bottom of the frame, background a soft creamy blur. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_16_00_11.png?v=1793718049"
+   ],
+   "aspect_ratio": "1:1",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "a04_melting.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_7eb8b1bf6de9d255f42df41b853b56bc.png"
+   }
+  ]
+ },
+ {
+  "name": "a03_handheld",
+  "model": "nano-banana-pro",
+  "taskId": "7f0e9b4849c21ab23184fa7ceb2bfedc",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 47,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Close-up of a woman's hands, about 55 years old, light-medium skin with visible fine lines, natural texture and soft veins, short natural unpolished nails, one thin plain gold ring, cream knit sleeve holding the closed FADILAL wild rose candle at chest height against a bright soft white background, fingers relaxed and anatomically natural (five fingers per hand), label facing the camera, sharp and legible. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_16_00_11.png?v=1793718049"
+   ],
+   "aspect_ratio": "1:1",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "a03_handheld.png",
+    "url": "https://tempfile.aiquickdraw.com/models/nano-banana-pro/1793822134720-4pn8eyswsgg.png"
+   }
+  ]
+ },
+ {
+  "name": "a05_application",
+  "model": "nano-banana-pro",
+  "taskId": "957b9035586692f08a6349e75a771ecd",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 49,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Close-up of a mature woman's forearm and hand, about 55 years old, real skin with fine lines and texture, her other hand's fingertips gently smoothing a thin layer of body oil into the forearm, a subtle satin sheen not wet or greasy, soft daylight; the open unlit FADILAL candle stands softly out of focus in the background on white marble. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_16_00_11.png?v=1793718049"
+   ],
+   "aspect_ratio": "1:1",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "a05_application.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_9981325830dbddf2771abf0b3e8ba91c.png"
+   }
+  ]
+ },
+ {
+  "name": "a02_melted_oil",
+  "model": "nano-banana-pro",
+  "taskId": "16d617db41831fb2832bcfcf836d4d04",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 62,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Close-up three-quarter top view of the FADILAL wild rose candle with the lid removed and NO flame: the entire top surface is a smooth glossy pool of clear golden melted oil with soft amber reflections, the extinguished black wick upright in the center, lid lying beside the jar on pale travertine stone, label visible on the front. Luxury skincare macro photography, calm and clean. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_16_00_11.png?v=1793718049"
+   ],
+   "aspect_ratio": "1:1",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "a02_melted_oil.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_f3383182f0963024a969f0caad7e8185.png"
+   }
+  ]
+ },
+ {
+  "name": "a07_bedroom",
+  "model": "nano-banana-pro",
+  "taskId": "441934e1378079ba8337c708902ff876",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 67,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Peaceful bedroom evening scene: a light oak bedside table with a linen-shade lamp glowing softly, an open book and a glass of water, the lit FADILAL wild rose candle on a small white ceramic saucer, crisp white and oatmeal linen bedding softly out of focus, beautiful natural shadows, calm nighttime self-care mood. No people. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_16_00_11.png?v=1793718049"
+   ],
+   "aspect_ratio": "4:5",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "a07_bedroom.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_61e535d43f8e76d2e5e02f5985535767.png"
+   }
+  ]
+ },
+ {
+  "name": "a06_bathroom",
+  "model": "nano-banana-pro",
+  "taskId": "af70d354ff876a1613eabb9b4d374d4a",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 83,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Elegant lived-in bathroom at dusk: pale stone vanity countertop, neatly folded white towels, a small ceramic dish, a sprig of greenery in a glass; the lit FADILAL wild rose candle stands safely on a small white ceramic tray on the countertop, clearly recognizable, label facing camera; soft evening light from a window plus the gentle candle glow. No people. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_16_00_11.png?v=1793718049"
+   ],
+   "aspect_ratio": "4:5",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "a06_bathroom.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_e894a59156b8373549bde5b5e0723da3.png"
+   }
+  ]
+ },
+ {
+  "name": "a11_evening_woman",
+  "model": "nano-banana-pro",
+  "taskId": "658c01648c56a01bd1e2c17ebc15f997",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 33,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Candid lifestyle portrait of a natural-looking woman about 55 years old with shoulder-length softly tousled ash-brown hair with grey strands, real skin with fine lines and freckles, minimal makeup, small gold stud earrings, wearing a soft cream knit cardigan over an ivory silk camisole sitting on the edge of a white freestanding bathtub in a calm, warmly lit bathroom in the evening, eyes softly lowered, smoothing a little oil onto her forearm with a relaxed smile; the lit FADILAL wild rose candle on a small stool beside her, clearly visible. Natural, unstaged, not glamorous. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_16_00_11.png?v=1793718049"
+   ],
+   "aspect_ratio": "4:5",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "a11_evening_woman.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_a63e8da533731ac6cba6dee15798b08e.png"
+   }
+  ]
+ },
+ {
+  "name": "a10_step4_apply",
+  "model": "nano-banana-pro",
+  "taskId": "18322eaf94275bf9b6e80e1a8ca90999",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 43,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Setting: a white marble bathroom countertop by a window, soft evening daylight from the left, the jar standing on a small round matte white ceramic tray, its black lid lying beside it, folded white towel softly out of focus behind. Step 4: the candle is NOT lit; a woman's hands, about 55 years old, light-medium skin with visible fine lines, natural texture and soft veins, short natural unpolished nails, one thin plain gold ring, cream knit sleeve: one hand holds a small amount of golden oil in the palm while the fingertips of the other hand smooth it onto the back of the hand and wrist, subtle satin sheen; the unlit open jar stands on the tray beside, label facing camera. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_16_00_11.png?v=1793718049"
+   ],
+   "aspect_ratio": "4:5",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "a10_step4_apply.png",
+    "url": "https://tempfile.aiquickdraw.com/models/nano-banana-pro/1793822182185-7kpz71noufb.png"
+   }
+  ]
+ },
+ {
+  "name": "a10_step2_melt",
+  "model": "nano-banana-pro",
+  "taskId": "37236f251e5d89dd320b4f31a1507fbf",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 52,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Setting: a white marble bathroom countertop by a window, soft evening daylight from the left, the jar standing on a small round matte white ceramic tray, its black lid lying beside it, folded white towel softly out of focus behind. Step 2: the lit FADILAL candle burning calmly on the tray, a wide clear golden pool of melted oil has formed across the top, no hands in frame, label facing camera. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_16_00_11.png?v=1793718049"
+   ],
+   "aspect_ratio": "4:5",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "a10_step2_melt.png",
+    "url": "https://tempfile.aiquickdraw.com/models/nano-banana-pro/1793822182245-uvttbe3hzas.png"
+   }
+  ]
+ },
+ {
+  "name": "a10_step1_light",
+  "model": "nano-banana-pro",
+  "taskId": "89d91bde325fa852cd6b8a324311ec65",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 51,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Setting: a white marble bathroom countertop by a window, soft evening daylight from the left, the jar standing on a small round matte white ceramic tray, its black lid lying beside it, folded white towel softly out of focus behind. Step 1: a woman's hands, about 55 years old, light-medium skin with visible fine lines, natural texture and soft veins, short natural unpolished nails, one thin plain gold ring, cream knit sleeve lighting the wick of the open FADILAL candle with a long wooden match, small fresh flame, calm careful gesture, candle stable on the tray, label facing camera. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_16_00_11.png?v=1793718049"
+   ],
+   "aspect_ratio": "4:5",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "a10_step1_light.png",
+    "url": "https://tempfile.aiquickdraw.com/models/nano-banana-pro/1793822181717-32po3qwc2vf.png"
+   }
+  ]
+ },
+ {
+  "name": "a10_step3_test",
+  "model": "nano-banana-pro",
+  "taskId": "532b203836371ee5afc5d6b20b9f8c14",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 52,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Setting: a white marble bathroom countertop by a window, soft evening daylight from the left, the jar standing on a small round matte white ceramic tray, its black lid lying beside it, folded white towel softly out of focus behind. Step 3: the flame has just been extinguished, a thin delicate wisp of smoke above the wick; a woman's hands, about 55 years old, light-medium skin with visible fine lines, natural texture and soft veins, short natural unpolished nails, one thin plain gold ring, cream knit sleeve gently touches the edge of the warm golden oil pool with one fingertip to test the warmth, label facing camera. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_16_00_11.png?v=1793718049"
+   ],
+   "aspect_ratio": "4:5",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "a10_step3_test.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_08d66c69a8e7c7b219e04c39d32ef459.png"
+   }
+  ]
+ },
+ {
+  "name": "a13_hero_wide",
+  "model": "nano-banana-pro",
+  "taskId": "5e0d4ad7680864b988f18b8e4712de99",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 38,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Wide premium campaign photograph: a calm bathroom at dusk, the lit FADILAL wild rose candle on a white ceramic tray on a pale stone ledge in the right third of the frame beside folded white towels and a small glass with a wild rose stem; the left half is soft, uncluttered, bright negative space (a softly lit plaster wall) for a headline; soft evening window light. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_16_00_11.png?v=1793718049"
+   ],
+   "aspect_ratio": "16:9",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "a13_hero_wide.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_9c80acaddda85849323c8901f5238e17.png"
+   }
+  ]
+ },
+ {
+  "name": "a12_guarantee",
+  "model": "nano-banana-pro",
+  "taskId": "e67f66e5275d60cfaeaa371328fad10a",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 48,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Calm elegant still life: the closed FADILAL wild rose candle placed on the left third of a clean white surface against a soft white wall, a single wild rose stem lying in front, soft window light and a long gentle shadow; generous empty space on the right side and top for later typography. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_16_00_11.png?v=1793718049"
+   ],
+   "aspect_ratio": "1:1",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "a12_guarantee.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_500f070441e1f51431d91ebfa2f4ec7b.png"
+   }
+  ]
+ },
+ {
+  "name": "a14_lifestyle",
+  "model": "nano-banana-pro",
+  "taskId": "ce3fe79135138b9f81a7efd496d90957",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 48,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Close intimate editorial composition: the open unlit FADILAL wild rose candle beside a stack of white cotton towels and a small dish with a few pale wild rose petals, on a pale stone surface; in the soft-focus background a woman's bare shoulder and collarbone with a subtle satin glow, wrapped in a white towel; soft morning-to-evening window light, minimal and premium. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_16_00_11.png?v=1793718049"
+   ],
+   "aspect_ratio": "4:5",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "a14_lifestyle.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_833550700d32deaa4d04da5bd8a07647.png"
+   }
+  ]
+ },
+ {
+  "name": "w_bathroom",
+  "model": "nano-banana-pro",
+  "taskId": "0568dc2716b551ce28f0d164abfeb7cf",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 46,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Wide shot of an elegant lived-in bathroom at dusk: pale stone vanity, folded white towels, a small ceramic dish, a sprig of greenery; the lit FADILAL wild rose candle on a small white ceramic tray, clearly recognizable on the right third; soft evening window light. No people. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_16_00_11.png?v=1793718049"
+   ],
+   "aspect_ratio": "16:9",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "w_bathroom.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_6431ac767d0a651f0329fd5bf334ec0d.png"
+   }
+  ]
+ },
+ {
+  "name": "a13_hero_mobile",
+  "model": "nano-banana-pro",
+  "taskId": "dd75775c2d0021fee7a510f43dcf87cd",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 56,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Premium campaign photograph, vertical composition: a calm bathroom at dusk, the lit FADILAL wild rose candle on a white ceramic tray on a pale stone ledge in the lower third of the frame beside folded white towels and a small glass with a wild rose stem; the upper half is soft uncluttered negative space (a softly lit plaster wall); soft evening window light. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_16_00_11.png?v=1793718049"
+   ],
+   "aspect_ratio": "4:5",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "a13_hero_mobile.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_bb5deec70df7d621f1b4e50dba0b1276.png"
+   }
+  ]
+ },
+ {
+  "name": "w_bedroom",
+  "model": "nano-banana-pro",
+  "taskId": "c47091f57a2ce2db01141b66fffa05b4",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 52,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Wide peaceful bedroom evening scene: light oak bedside table on the right third with a softly glowing linen lamp, an open book and the lit FADILAL wild rose candle on a white ceramic saucer; white and oatmeal linen bedding filling the left side softly out of focus; natural shadows. No people. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_16_00_11.png?v=1793718049"
+   ],
+   "aspect_ratio": "16:9",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "w_bedroom.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_316b74cc701a4dd8761183281d47642b.png"
+   }
+  ]
+ },
+ {
+  "name": "w_lifestyle",
+  "model": "nano-banana-pro",
+  "taskId": "2c17e4cadf70f21fb36c8511df68444f",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 67,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Wide close editorial still life: the open unlit FADILAL wild rose candle on a pale stone surface in the right third, beside a stack of white cotton towels and a small dish of pale wild rose petals; left side calm soft negative space with gentle window light. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_16_00_11.png?v=1793718049"
+   ],
+   "aspect_ratio": "16:9",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "w_lifestyle.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_9b435974a2282103e466468c4aa03196.png"
+   }
+  ]
+ },
+ {
+  "name": "w_evening_woman",
+  "model": "nano-banana-pro",
+  "taskId": "6d6a6bdba7217f652fbea99fb82fbfab",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 79,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Wide candid lifestyle photo of a natural-looking woman about 55 years old with shoulder-length softly tousled ash-brown hair with grey strands, real skin with fine lines and freckles, minimal makeup, small gold stud earrings, wearing a soft cream knit cardigan over an ivory silk camisole sitting on the edge of a white freestanding bathtub in a calm warmly lit bathroom in the evening, smoothing a little oil onto her forearm, relaxed; she is in the right half of the frame; the lit FADILAL wild rose candle on a small stool beside her. Natural, unstaged. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_16_00_11.png?v=1793718049"
+   ],
+   "aspect_ratio": "16:9",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "w_evening_woman.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_a400847ef5fc5279d2fc5f2db67f9e8e.png"
+   }
+  ]
+ },
+ {
+  "name": "tv01_hero_orbit",
+  "model": "kling-3.0/video",
+  "taskId": "4cc9217f0624a4448ac90daa5500a0d6",
+  "state": "success",
+  "credits": 90.0,
+  "costTime": 190,
+  "failMsg": null,
+  "input": {
+   "prompt": "Slow, smooth, subtle camera push-in and slight arc around the FADILAL candle on a white seamless background. The jar, lid and label stay perfectly rigid and unchanged; label text remains crisp and identical. Soft natural light, gentle shadow shift. No morphing, no added objects, static product.",
+   "image_urls": [
+    "https://tempfile.aiquickdraw.com/models/nano-banana-pro/1793821992768-g1b7ahrhiso.png"
+   ],
+   "sound": false,
+   "duration": "5",
+   "mode": "pro",
+   "multi_shots": false
+  },
+  "files": [
+   {
+    "path": "tv01_hero_orbit.mp4",
+    "url": "https://tempfile.aiquickdraw.com/k/4cc9217f0624a4448ac90daa5500a0d6_1_1793822295_7370.mp4"
+   }
+  ]
+ },
+ {
+  "name": "k2_light",
+  "model": "nano-banana-pro",
+  "taskId": "1523b3bdd1bd5d007cafb2f0a535f842",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 38,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Vertical shot: a woman's hands, about 55 years old, light-medium skin with visible fine lines, natural texture and soft veins, short natural unpolished nails, one thin plain gold ring, cream knit sleeve holds a long wooden match with a small flame just above the wick of the open unlit FADILAL candle on a white ceramic tray on white marble by a window; careful calm gesture; other hand resting on the counter. Use the additional scene reference image for the setting, lighting and the person's appearance. The label must match the clean packshot reference exactly: spaced capital 'FADILAL' wordmark at top, faint rose line drawing, 'wild rose.' large lowercase serif, 'Massage candle' below, italic 'Melts into a warm skin oil.' and '7 oz · 200 g' at the bottom. Label faces the camera. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://tempfile.aiquickdraw.com/models/nano-banana-pro/1793821992768-g1b7ahrhiso.png",
+    "https://tempfile.aiquickdraw.com/models/nano-banana-pro/1793822181717-32po3qwc2vf.png"
+   ],
+   "aspect_ratio": "9:16",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "k2_light.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_9e363999ba2fd5f7ac48739ad7740470.png"
+   }
+  ]
+ },
+ {
+  "name": "a08_ingredients_v2",
+  "model": "nano-banana-pro",
+  "taskId": "ae27c0200e7b10a064c67b5e6b9b2e3b",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 35,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Overhead editorial flat-lay on white linen: the closed FADILAL wild rose candle in the center, standing upright seen from a high three-quarter angle so the front label is fully readable; around it in small handmade white ceramic dishes: golden beeswax pellets with a small piece of natural honeycomb, white coconut wax flakes, ivory soy wax flakes; a few pale-pink wild rose petals; soft daylight, clean, balanced spacing. The label must match the clean packshot reference exactly: spaced capital 'FADILAL' wordmark at top, faint rose line drawing, 'wild rose.' large lowercase serif, 'Massage candle' below, italic 'Melts into a warm skin oil.' and '7 oz · 200 g' at the bottom. Label faces the camera. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://tempfile.aiquickdraw.com/models/nano-banana-pro/1793821992768-g1b7ahrhiso.png"
+   ],
+   "aspect_ratio": "1:1",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "a08_ingredients_v2.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_257b95890145dd967aa607672a733910.png"
+   }
+  ]
+ },
+ {
+  "name": "a13_hero_mobile_v2",
+  "model": "nano-banana-pro",
+  "taskId": "2dc40923deb0bbd7c29dd3ab8aa7c879",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 32,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Vertical premium campaign photograph: calm bathroom at dusk, the lit FADILAL wild rose candle on a white oval ceramic tray on a pale stone ledge in the lower third, label facing camera and readable, folded white towels and a glass with a wild rose stem beside; the upper half is soft uncluttered negative space (softly lit plaster wall); soft evening window light. Use the additional scene reference image for the setting, lighting and the person's appearance. The label must match the clean packshot reference exactly: spaced capital 'FADILAL' wordmark at top, faint rose line drawing, 'wild rose.' large lowercase serif, 'Massage candle' below, italic 'Melts into a warm skin oil.' and '7 oz · 200 g' at the bottom. Label faces the camera. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://tempfile.aiquickdraw.com/models/nano-banana-pro/1793821992768-g1b7ahrhiso.png",
+    "https://tempfile.aiquickdraw.com/workers/images/image_e894a59156b8373549bde5b5e0723da3.png"
+   ],
+   "aspect_ratio": "4:5",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "a13_hero_mobile_v2.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_9ef2a577ac73eb3b29beecdf375b735e.png"
+   }
+  ]
+ },
+ {
+  "name": "k3_melt",
+  "model": "nano-banana-pro",
+  "taskId": "f5b0f6a26cb8397187e7d4c23c7a800f",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 36,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Vertical macro close-up looking slightly down into the lit FADILAL candle: small calm flame, a clear golden pool of melted oil spreading around the wick, pale solid wax at the rim, soft reflections on amber glass, label visible at the bottom of the frame. Use the additional scene reference image for the setting, lighting and the person's appearance. The label must match the clean packshot reference exactly: spaced capital 'FADILAL' wordmark at top, faint rose line drawing, 'wild rose.' large lowercase serif, 'Massage candle' below, italic 'Melts into a warm skin oil.' and '7 oz · 200 g' at the bottom. Label faces the camera. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://tempfile.aiquickdraw.com/models/nano-banana-pro/1793821992768-g1b7ahrhiso.png",
+    "https://tempfile.aiquickdraw.com/workers/images/image_7eb8b1bf6de9d255f42df41b853b56bc.png"
+   ],
+   "aspect_ratio": "9:16",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "k3_melt.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_fea5060986d85bc103aea81eede5d7c1.png"
+   }
+  ]
+ },
+ {
+  "name": "k1_bath",
+  "model": "nano-banana-pro",
+  "taskId": "6d2e764a0efffd494a5d921d78336add",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 39,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Vertical close-up: the open unlit FADILAL candle (lid lying beside) on a white ceramic tray on a white marble bathroom countertop by a window, folded white towels and a sprig of eucalyptus softly blurred behind, soft evening daylight. Use the additional scene reference image for the setting, lighting and the person's appearance. The label must match the clean packshot reference exactly: spaced capital 'FADILAL' wordmark at top, faint rose line drawing, 'wild rose.' large lowercase serif, 'Massage candle' below, italic 'Melts into a warm skin oil.' and '7 oz · 200 g' at the bottom. Label faces the camera. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://tempfile.aiquickdraw.com/models/nano-banana-pro/1793821992768-g1b7ahrhiso.png",
+    "https://tempfile.aiquickdraw.com/workers/images/image_e894a59156b8373549bde5b5e0723da3.png"
+   ],
+   "aspect_ratio": "9:16",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "k1_bath.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_5c90afccb9865cd60baa6c6be50d5f9c.png"
+   }
+  ]
+ },
+ {
+  "name": "a11_evening_woman_v2",
+  "model": "nano-banana-pro",
+  "taskId": "d8e31924f238bd716388d8aabb184284",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 37,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Candid vertical lifestyle photo of a natural-looking woman about 55 years old with shoulder-length softly tousled ash-brown hair with grey strands, real skin with fine lines and freckles, minimal makeup, small gold stud earrings, wearing a soft cream knit cardigan over an ivory silk camisole sitting on the edge of a white freestanding bathtub in a calm warmly lit bathroom in the evening, smoothing a little oil onto her forearm with a relaxed smile; the lit FADILAL wild rose candle on a small wooden stool in the foreground, label clearly readable. Natural, unstaged. Use the additional scene reference image for the setting, lighting and the person's appearance. The label must match the clean packshot reference exactly: spaced capital 'FADILAL' wordmark at top, faint rose line drawing, 'wild rose.' large lowercase serif, 'Massage candle' below, italic 'Melts into a warm skin oil.' and '7 oz · 200 g' at the bottom. Label faces the camera. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://tempfile.aiquickdraw.com/models/nano-banana-pro/1793821992768-g1b7ahrhiso.png",
+    "https://tempfile.aiquickdraw.com/workers/images/image_a400847ef5fc5279d2fc5f2db67f9e8e.png"
+   ],
+   "aspect_ratio": "4:5",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "a11_evening_woman_v2.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_f2c8aa389b4dd38b03b719b3b2737051.png"
+   }
+  ]
+ },
+ {
+  "name": "k4_lit",
+  "model": "nano-banana-pro",
+  "taskId": "f36ff627de468a839d02215db7061b63",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 36,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Vertical shot: the lit FADILAL candle burning calmly with a wide golden pool of melted oil, on a white ceramic tray on white marble by a window, lid lying beside, no hands. Use the additional scene reference image for the setting, lighting and the person's appearance. The label must match the clean packshot reference exactly: spaced capital 'FADILAL' wordmark at top, faint rose line drawing, 'wild rose.' large lowercase serif, 'Massage candle' below, italic 'Melts into a warm skin oil.' and '7 oz · 200 g' at the bottom. Label faces the camera. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://tempfile.aiquickdraw.com/models/nano-banana-pro/1793821992768-g1b7ahrhiso.png",
+    "https://tempfile.aiquickdraw.com/models/nano-banana-pro/1793822182245-uvttbe3hzas.png"
+   ],
+   "aspect_ratio": "9:16",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "k4_lit.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_58a8fa03184e4c600a9c6bc0d3b49bfd.png"
+   }
+  ]
+ },
+ {
+  "name": "k5_test",
+  "model": "nano-banana-pro",
+  "taskId": "a6a72fb8270df434e62678421b0fed38",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 35,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Vertical shot: the candle flame is out, a thin wisp of smoke rises from the wick; a woman's hands, about 55 years old, light-medium skin with visible fine lines, natural texture and soft veins, short natural unpolished nails, one thin plain gold ring, cream knit sleeve gently touches the edge of the golden oil pool with one fingertip to test the warmth; white ceramic tray on white marble by a window. Use the additional scene reference image for the setting, lighting and the person's appearance. The label must match the clean packshot reference exactly: spaced capital 'FADILAL' wordmark at top, faint rose line drawing, 'wild rose.' large lowercase serif, 'Massage candle' below, italic 'Melts into a warm skin oil.' and '7 oz · 200 g' at the bottom. Label faces the camera. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://tempfile.aiquickdraw.com/models/nano-banana-pro/1793821992768-g1b7ahrhiso.png",
+    "https://tempfile.aiquickdraw.com/workers/images/image_08d66c69a8e7c7b219e04c39d32ef459.png"
+   ],
+   "aspect_ratio": "9:16",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "k5_test.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_9ed2dfba930ee97a93da4c7c90093740.png"
+   }
+  ]
+ },
+ {
+  "name": "k6_apply",
+  "model": "nano-banana-pro",
+  "taskId": "4d474e25ec3b70c6d8a5ca9a5c26d1f3",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 34,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Vertical close-up: a mature woman's forearm, about 55, real skin with fine lines; the fingertips of her other hand gently smoothing a thin satin layer of golden oil onto it; the open unlit FADILAL candle softly out of focus in the background on white marble. Use the additional scene reference image for the setting, lighting and the person's appearance. The label must match the clean packshot reference exactly: spaced capital 'FADILAL' wordmark at top, faint rose line drawing, 'wild rose.' large lowercase serif, 'Massage candle' below, italic 'Melts into a warm skin oil.' and '7 oz · 200 g' at the bottom. Label faces the camera. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://tempfile.aiquickdraw.com/models/nano-banana-pro/1793821992768-g1b7ahrhiso.png",
+    "https://tempfile.aiquickdraw.com/workers/images/image_9981325830dbddf2771abf0b3e8ba91c.png"
+   ],
+   "aspect_ratio": "9:16",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "k6_apply.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_32dad72592fd557dfdef54451faa3943.png"
+   }
+  ]
+ },
+ {
+  "name": "e1_woman",
+  "model": "nano-banana-pro",
+  "taskId": "d2834156f130eec94c33575c50b01965",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 32,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Vertical medium shot of a natural-looking woman about 55 years old with shoulder-length softly tousled ash-brown hair with grey strands, real skin with fine lines and freckles, minimal makeup, small gold stud earrings, wearing a soft cream knit cardigan over an ivory silk camisole standing at a white marble bathroom vanity in the evening, holding the lit FADILAL candle on its ceramic tray in both hands and looking at it with a calm soft smile; warm soft lighting. Use the additional scene reference image for the setting, lighting and the person's appearance. The label must match the clean packshot reference exactly: spaced capital 'FADILAL' wordmark at top, faint rose line drawing, 'wild rose.' large lowercase serif, 'Massage candle' below, italic 'Melts into a warm skin oil.' and '7 oz · 200 g' at the bottom. Label faces the camera. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://tempfile.aiquickdraw.com/models/nano-banana-pro/1793821992768-g1b7ahrhiso.png",
+    "https://tempfile.aiquickdraw.com/workers/images/image_a400847ef5fc5279d2fc5f2db67f9e8e.png"
+   ],
+   "aspect_ratio": "9:16",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "e1_woman.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_9dbda28fd516aa05b85373bc08fe7097.png"
+   }
+  ]
+ },
+ {
+  "name": "u1_show",
+  "model": "nano-banana-pro",
+  "taskId": "402703e5e378077a3d300600e600c3a9",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 37,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Smartphone-style vertical photo in an ordinary bright living room in the evening (sofa, throw blanket, floor lamp): a woman's hands, about 55 years old, light-medium skin with visible fine lines, natural texture and soft veins, short natural unpolished nails, one thin plain gold ring, grey sweatshirt sleeve holding the closed FADILAL candle toward the camera at arm's length so the label is readable; natural casual framing, slight phone-camera look, realistic home light. The label must match the clean packshot reference exactly: spaced capital 'FADILAL' wordmark at top, faint rose line drawing, 'wild rose.' large lowercase serif, 'Massage candle' below, italic 'Melts into a warm skin oil.' and '7 oz · 200 g' at the bottom. Label faces the camera. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://tempfile.aiquickdraw.com/models/nano-banana-pro/1793821992768-g1b7ahrhiso.png"
+   ],
+   "aspect_ratio": "9:16",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "u1_show.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_512cfa00cdc57c7433550ada26bdae2d.png"
+   }
+  ]
+ },
+ {
+  "name": "a13_hero_wide_v2",
+  "model": "nano-banana-pro",
+  "taskId": "b7afb2efb65bd3c22cefffdd520d9317",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 96,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Wide premium campaign photograph: calm bathroom at dusk, the lit FADILAL wild rose candle on a white oval ceramic tray on a pale stone ledge in the right third of the frame, label facing camera and readable, folded white towels and a small glass with a wild rose stem beside; the left half is soft uncluttered bright negative space (softly lit plaster wall) for a headline; soft evening window light. Use the additional scene reference image for the setting, lighting and the person's appearance. The label must match the clean packshot reference exactly: spaced capital 'FADILAL' wordmark at top, faint rose line drawing, 'wild rose.' large lowercase serif, 'Massage candle' below, italic 'Melts into a warm skin oil.' and '7 oz · 200 g' at the bottom. Label faces the camera. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://tempfile.aiquickdraw.com/models/nano-banana-pro/1793821992768-g1b7ahrhiso.png",
+    "https://tempfile.aiquickdraw.com/workers/images/image_e894a59156b8373549bde5b5e0723da3.png"
+   ],
+   "aspect_ratio": "16:9",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "a13_hero_wide_v2.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_33e1c6795170abbf9934e3399b9068fe.png"
+   }
+  ]
+ },
+ {
+  "name": "e2_hands",
+  "model": "nano-banana-pro",
+  "taskId": "513fcdddae1980f5ab6a9c37d94c3c2f",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 57,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Vertical close-up of the same woman's hands and forearm in a cream knit sleeve, slowly smoothing a thin satin layer of oil into her forearm, the lit FADILAL candle glowing softly out of focus behind on the bathroom vanity; warm evening light. Use the additional scene reference image for the setting, lighting and the person's appearance. The label must match the clean packshot reference exactly: spaced capital 'FADILAL' wordmark at top, faint rose line drawing, 'wild rose.' large lowercase serif, 'Massage candle' below, italic 'Melts into a warm skin oil.' and '7 oz · 200 g' at the bottom. Label faces the camera. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://tempfile.aiquickdraw.com/models/nano-banana-pro/1793821992768-g1b7ahrhiso.png",
+    "https://tempfile.aiquickdraw.com/workers/images/image_a400847ef5fc5279d2fc5f2db67f9e8e.png"
+   ],
+   "aspect_ratio": "9:16",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "e2_hands.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_0e53ae51ce6017b1fba73a71f560c274.png"
+   }
+  ]
+ },
+ {
+  "name": "u2_oil",
+  "model": "nano-banana-pro",
+  "taskId": "9c674e150fece53b2122169844b80576",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 41,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Smartphone-style vertical photo looking down at a wooden coffee table in an ordinary living room: the open, unlit FADILAL candle with a glossy golden melted oil surface, lid beside it, a woman's hand in a grey sweatshirt sleeve pointing near (not touching) the jar; casual natural home light, slight phone-camera look. The label must match the clean packshot reference exactly: spaced capital 'FADILAL' wordmark at top, faint rose line drawing, 'wild rose.' large lowercase serif, 'Massage candle' below, italic 'Melts into a warm skin oil.' and '7 oz · 200 g' at the bottom. Label faces the camera. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://tempfile.aiquickdraw.com/models/nano-banana-pro/1793821992768-g1b7ahrhiso.png"
+   ],
+   "aspect_ratio": "9:16",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "u2_oil.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_2855940069c4d14aa7380f2d3deb1e78.png"
+   }
+  ]
+ },
+ {
+  "name": "k7_beauty",
+  "model": "nano-banana-pro",
+  "taskId": "ad31a468032e86ee098d42e537edcbe2",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 95,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Vertical premium beauty shot: the closed FADILAL wild rose candle standing on white marble beside a single wild rose stem and a folded white towel, soft directional window light, gentle shadow, generous clean space above. Use the additional scene reference image for the setting, lighting and the person's appearance. The label must match the clean packshot reference exactly: spaced capital 'FADILAL' wordmark at top, faint rose line drawing, 'wild rose.' large lowercase serif, 'Massage candle' below, italic 'Melts into a warm skin oil.' and '7 oz · 200 g' at the bottom. Label faces the camera. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://tempfile.aiquickdraw.com/models/nano-banana-pro/1793821992768-g1b7ahrhiso.png",
+    "https://tempfile.aiquickdraw.com/workers/images/image_500f070441e1f51431d91ebfa2f4ec7b.png"
+   ],
+   "aspect_ratio": "9:16",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "k7_beauty.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_fc0cd71e613edcdc33756a30ad108f0b.png"
+   }
+  ]
+ },
+ {
+  "name": "e3_glow",
+  "model": "nano-banana-pro",
+  "taskId": "3fd28905ac96e9479eb8dbe82c2b9f53",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 205,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Vertical close-up: the lit FADILAL candle on the edge of a white bathtub in sharp focus, in the softly blurred background the same woman in a cream cardigan sits relaxed with eyes closed; warm calm evening light. Use the additional scene reference image for the setting, lighting and the person's appearance. The label must match the clean packshot reference exactly: spaced capital 'FADILAL' wordmark at top, faint rose line drawing, 'wild rose.' large lowercase serif, 'Massage candle' below, italic 'Melts into a warm skin oil.' and '7 oz · 200 g' at the bottom. Label faces the camera. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://tempfile.aiquickdraw.com/models/nano-banana-pro/1793821992768-g1b7ahrhiso.png",
+    "https://tempfile.aiquickdraw.com/workers/images/image_a400847ef5fc5279d2fc5f2db67f9e8e.png"
+   ],
+   "aspect_ratio": "9:16",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "e3_glow.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_2fde32da1ce297b9ad7629f016891e08.png"
+   }
+  ]
+ },
+ {
+  "name": "u2_oil_v2",
+  "model": "nano-banana-pro",
+  "taskId": "c9bb2589755c1885a5ed8d8140b73d15",
+  "state": "success",
+  "credits": 18.0,
+  "costTime": 40,
+  "failMsg": null,
+  "input": {
+   "prompt": "Use the reference images ONLY as the exact product identity: the FADILAL candle in an amber glass jar with straight sides and rounded shoulders, black screw lid, off-white rounded-rectangle paper label with the thin-serif wordmark 'FADILAL', a faint botanical line drawing, the lowercase serif words 'wild rose.' and 'Massage candle', the small italic line 'Melts into a warm skin oil.' and '7 oz · 200 g'. Reproduce jar shape, proportions, label layout and typography exactly; never invent other text or logos. Do NOT copy any overlay text, badges, icons or captions from the references. The candle is a solid pale cream plant wax with one cotton wick; when melted it becomes a clear golden glossy oil. Smartphone-style vertical photo looking down at a wooden coffee table in an ordinary living room: the open, unlit FADILAL candle whose ENTIRE top surface is fully melted into a clear, glossy, liquid golden oil pool (exactly like the melted-oil scene reference), the extinguished wick in the middle, lid beside it, a woman's hand in a grey sweatshirt sleeve pointing near (not touching) the jar; casual natural home light, slight phone-camera look. The label must match the clean packshot reference exactly: spaced capital 'FADILAL' wordmark at top, faint rose line drawing, 'wild rose.' large lowercase serif, 'Massage candle' below, italic 'Melts into a warm skin oil.' and '7 oz · 200 g' at the bottom. Label faces the camera. Premium editorial skincare campaign photography, soft natural directional light, realistic shadows and reflections, true-to-life color, palette of white, soft warm neutrals and the amber glass (not orange-tinted, not overly beige), medium-format camera look, no text overlays, no watermark.",
+   "image_input": [
+    "https://cdn.shopify.com/s/files/1/0966/3515/8908/files/ChatGPT-Bild3.Nov.2026_15_59_24.png?v=1793718049",
+    "https://tempfile.aiquickdraw.com/models/nano-banana-pro/1793821992768-g1b7ahrhiso.png",
+    "https://tempfile.aiquickdraw.com/workers/images/image_f3383182f0963024a969f0caad7e8185.png"
+   ],
+   "aspect_ratio": "9:16",
+   "resolution": "2K",
+   "output_format": "png"
+  },
+  "files": [
+   {
+    "path": "u2_oil_v2.png",
+    "url": "https://tempfile.aiquickdraw.com/workers/images/image_0c491f8ca3e114a86a9bc6e5a0cbf017.png"
+   }
+  ]
+ },
+ {
+  "name": "v1_c1",
+  "model": "kling-3.0/video",
+  "taskId": "231ea1cca24ad319ec3e35a43a7b1ae0",
+  "state": "success",
+  "credits": 60.6,
+  "costTime": 136,
+  "failMsg": null,
+  "input": {
+   "prompt": "Very slow, smooth push-in toward the open candle on the marble countertop; soft window light shifts gently; everything else stays still. Photorealistic, natural real-time motion. The FADILAL jar, black lid and paper label stay perfectly rigid and unchanged; label text remains identical and legible. No morphing, no extra fingers, no new objects, no text, no camera cuts.",
+   "image_urls": [
+    "https://tempfile.aiquickdraw.com/workers/images/image_5c90afccb9865cd60baa6c6be50d5f9c.png"
+   ],
+   "sound": false,
+   "duration": "3",
+   "mode": "pro",
+   "multi_shots": false
+  },
+  "files": [
+   {
+    "path": "v1_c1.mp4",
+    "url": "https://tempfile.aiquickdraw.com/k/231ea1cca24ad319ec3e35a43a7b1ae0_1_1793890715_7794.mp4"
+   }
+  ]
+ },
+ {
+  "name": "v1_c5",
+  "model": "kling-3.0/video",
+  "taskId": "90b6419843a8ef3da3968d444ed9719b",
+  "state": "success",
+  "credits": 60.6,
+  "costTime": 136,
+  "failMsg": null,
+  "input": {
+   "prompt": "Static camera. The fingertip lightly touches the edge of the warm oil surface, pauses, and lifts away slowly; the thin wisp of smoke drifts upward. Photorealistic, natural real-time motion. The FADILAL jar, black lid and paper label stay perfectly rigid and unchanged; label text remains identical and legible. No morphing, no extra fingers, no new objects, no text, no camera cuts.",
+   "image_urls": [
+    "https://tempfile.aiquickdraw.com/workers/images/image_9ed2dfba930ee97a93da4c7c90093740.png"
+   ],
+   "sound": false,
+   "duration": "3",
+   "mode": "pro",
+   "multi_shots": false
+  },
+  "files": [
+   {
+    "path": "v1_c5.mp4",
+    "url": "https://tempfile.aiquickdraw.com/k/90b6419843a8ef3da3968d444ed9719b_1_1793890716_7973.mp4"
+   }
+  ]
+ },
+ {
+  "name": "v1_c6",
+  "model": "kling-3.0/video",
+  "taskId": "74ad60bd398349eba5e27a39c2f4d10e",
+  "state": "success",
+  "credits": 80.8,
+  "costTime": 136,
+  "failMsg": null,
+  "input": {
+   "prompt": "The fingertips slowly smooth the thin layer of oil along the forearm in one gentle continuous stroke, leaving a soft satin sheen; slow subtle camera drift. Photorealistic, natural real-time motion. The FADILAL jar, black lid and paper label stay perfectly rigid and unchanged; label text remains identical and legible. No morphing, no extra fingers, no new objects, no text, no camera cuts.",
+   "image_urls": [
+    "https://tempfile.aiquickdraw.com/workers/images/image_32dad72592fd557dfdef54451faa3943.png"
+   ],
+   "sound": false,
+   "duration": "4",
+   "mode": "pro",
+   "multi_shots": false
+  },
+  "files": [
+   {
+    "path": "v1_c6.mp4",
+    "url": "https://tempfile.aiquickdraw.com/k/74ad60bd398349eba5e27a39c2f4d10e_1_1793890716_4684.mp4"
+   }
+  ]
+ },
+ {
+  "name": "v1_c2",
+  "model": "kling-3.0/video",
+  "taskId": "9db951da1d12636864c40b3d0324c510",
+  "state": "success",
+  "credits": 80.8,
+  "costTime": 137,
+  "failMsg": null,
+  "input": {
+   "prompt": "The hand calmly brings the burning match to the wick; the wick catches a small steady flame; the hand slowly withdraws the match out of frame. The candle does not move. Photorealistic, natural real-time motion. The FADILAL jar, black lid and paper label stay perfectly rigid and unchanged; label text remains identical and legible. No morphing, no extra fingers, no new objects, no text, no camera cuts.",
+   "image_urls": [
+    "https://tempfile.aiquickdraw.com/workers/images/image_9e363999ba2fd5f7ac48739ad7740470.png"
+   ],
+   "sound": false,
+   "duration": "4",
+   "mode": "pro",
+   "multi_shots": false
+  },
+  "files": [
+   {
+    "path": "v1_c2.mp4",
+    "url": "https://tempfile.aiquickdraw.com/k/9db951da1d12636864c40b3d0324c510_1_1793890717_3505.mp4"
+   }
+  ]
+ },
+ {
+  "name": "v1_c3",
+  "model": "kling-3.0/video",
+  "taskId": "0037d6335a18235ef85ce84e3673d169",
+  "state": "success",
+  "credits": 80.8,
+  "costTime": 152,
+  "failMsg": null,
+  "input": {
+   "prompt": "Macro: the small flame flickers gently while the clear golden melted pool shimmers subtly with reflections; extremely slow push-in. Photorealistic, natural real-time motion. The FADILAL jar, black lid and paper label stay perfectly rigid and unchanged; label text remains identical and legible. No morphing, no extra fingers, no new objects, no text, no camera cuts.",
+   "image_urls": [
+    "https://tempfile.redpandaai.co/kieai/658092/fadilal/k3_melt_crop.png"
+   ],
+   "sound": false,
+   "duration": "4",
+   "mode": "pro",
+   "multi_shots": false
+  },
+  "files": [
+   {
+    "path": "v1_c3.mp4",
+    "url": "https://tempfile.aiquickdraw.com/k/0037d6335a18235ef85ce84e3673d169_1_1793890732_6423.mp4"
+   }
+  ]
+ },
+ {
+  "name": "v1_c4",
+  "model": "kling-3.0/video",
+  "taskId": "da9a88b839899377eb2fb6240bea1701",
+  "state": "success",
+  "credits": 60.6,
+  "costTime": 159,
+  "failMsg": null,
+  "input": {
+   "prompt": "Static camera. After a moment the flame softly goes out and a thin delicate wisp of smoke rises and curls from the wick. Nothing else moves. Photorealistic, natural real-time motion. The FADILAL jar, black lid and paper label stay perfectly rigid and unchanged; label text remains identical and legible. No morphing, no extra fingers, no new objects, no text, no camera cuts.",
+   "image_urls": [
+    "https://tempfile.aiquickdraw.com/workers/images/image_58a8fa03184e4c600a9c6bc0d3b49bfd.png"
+   ],
+   "sound": false,
+   "duration": "3",
+   "mode": "pro",
+   "multi_shots": false
+  },
+  "files": [
+   {
+    "path": "v1_c4.mp4",
+    "url": "https://tempfile.aiquickdraw.com/k/da9a88b839899377eb2fb6240bea1701_1_1793890739_2107.mp4"
+   }
+  ]
+ },
+ {
+  "name": "v2_c3",
+  "model": "kling-3.0/video",
+  "taskId": "2ccfb47465e5cf11d53ae9f0cd38e742",
+  "state": "success",
+  "credits": 101.0,
+  "costTime": 148,
+  "failMsg": null,
+  "input": {
+   "prompt": "The flame flickers softly in sharp focus; behind it the woman rests with eyes closed, breathing calmly; very slow push-in. No speaking. Photorealistic, natural real-time motion. The FADILAL jar, black lid and paper label stay perfectly rigid and unchanged; label text remains identical and legible. No morphing, no extra fingers, no new objects, no text, no camera cuts.",
+   "image_urls": [
+    "https://tempfile.aiquickdraw.com/workers/images/image_2fde32da1ce297b9ad7629f016891e08.png"
+   ],
+   "sound": false,
+   "duration": "5",
+   "mode": "pro",
+   "multi_shots": false
+  },
+  "files": [
+   {
+    "path": "v2_c3.mp4",
+    "url": "https://tempfile.aiquickdraw.com/k/2ccfb47465e5cf11d53ae9f0cd38e742_1_1793890873_2571.mp4"
+   }
+  ]
+ },
+ {
+  "name": "v2_c2",
+  "model": "kling-3.0/video",
+  "taskId": "b817838401033a79c6f0d83a1e78b097",
+  "state": "success",
+  "credits": 80.8,
+  "costTime": 184,
+  "failMsg": null,
+  "input": {
+   "prompt": "Her hand slowly smooths oil along her forearm in a relaxed motion; the candle glow flickers softly in the background; slow drift. Photorealistic, natural real-time motion. The FADILAL jar, black lid and paper label stay perfectly rigid and unchanged; label text remains identical and legible. No morphing, no extra fingers, no new objects, no text, no camera cuts.",
+   "image_urls": [
+    "https://tempfile.aiquickdraw.com/workers/images/image_0e53ae51ce6017b1fba73a71f560c274.png"
+   ],
+   "sound": false,
+   "duration": "4",
+   "mode": "pro",
+   "multi_shots": false
+  },
+  "files": [
+   {
+    "path": "v2_c2.mp4",
+    "url": "https://tempfile.aiquickdraw.com/k/b817838401033a79c6f0d83a1e78b097_1_1793890908_8715.mp4"
+   }
+  ]
+ },
+ {
+  "name": "v1_c7",
+  "model": "kling-3.0/video",
+  "taskId": "33746e652b2f62a1b0a75e20009a8355",
+  "state": "success",
+  "credits": 60.6,
+  "costTime": 168,
+  "failMsg": null,
+  "input": {
+   "prompt": "Slow elegant push-in on the closed candle; soft daylight shifts slightly; the rose leaves barely sway. Photorealistic, natural real-time motion. The FADILAL jar, black lid and paper label stay perfectly rigid and unchanged; label text remains identical and legible. No morphing, no extra fingers, no new objects, no text, no camera cuts.",
+   "image_urls": [
+    "https://tempfile.aiquickdraw.com/workers/images/image_fc0cd71e613edcdc33756a30ad108f0b.png"
+   ],
+   "sound": false,
+   "duration": "3",
+   "mode": "pro",
+   "multi_shots": false
+  },
+  "files": [
+   {
+    "path": "v1_c7.mp4",
+    "url": "https://tempfile.aiquickdraw.com/k/33746e652b2f62a1b0a75e20009a8355_1_1793890893_9453.mp4"
+   }
+  ]
+ },
+ {
+  "name": "v3_c1",
+  "model": "kling-3.0/video",
+  "taskId": "181aa859e9cf2920289bea0003061ad1",
+  "state": "success",
+  "credits": 101.0,
+  "costTime": 159,
+  "failMsg": null,
+  "input": {
+   "prompt": "Handheld smartphone footage with natural slight hand shake: she holds the candle toward the camera and slowly turns it a little so the label catches the light. No speaking, no lip movement. Photorealistic, natural real-time motion. The FADILAL jar, black lid and paper label stay perfectly rigid and unchanged; label text remains identical and legible. No morphing, no extra fingers, no new objects, no text, no camera cuts.",
+   "image_urls": [
+    "https://tempfile.aiquickdraw.com/workers/images/image_512cfa00cdc57c7433550ada26bdae2d.png"
+   ],
+   "sound": false,
+   "duration": "5",
+   "mode": "pro",
+   "multi_shots": false
+  },
+  "files": [
+   {
+    "path": "v3_c1.mp4",
+    "url": "https://tempfile.aiquickdraw.com/k/181aa859e9cf2920289bea0003061ad1_1_1793890893_5861.mp4"
+   }
+  ]
+ },
+ {
+  "name": "v3_c2",
+  "model": "kling-3.0/video",
+  "taskId": "b675dee8c832d0cbcb54ef5f7f52b86b",
+  "state": "success",
+  "credits": 101.0,
+  "costTime": 157,
+  "failMsg": null,
+  "input": {
+   "prompt": "Handheld smartphone footage with natural slight shake: the camera moves a little closer and looks down into the open jar, showing the glossy liquid golden oil surface; her finger points near the jar without touching it. Photorealistic, natural real-time motion. The FADILAL jar, black lid and paper label stay perfectly rigid and unchanged; label text remains identical and legible. No morphing, no extra fingers, no new objects, no text, no camera cuts.",
+   "image_urls": [
+    "https://tempfile.aiquickdraw.com/workers/images/image_0c491f8ca3e114a86a9bc6e5a0cbf017.png"
+   ],
+   "sound": false,
+   "duration": "5",
+   "mode": "pro",
+   "multi_shots": false
+  },
+  "files": [
+   {
+    "path": "v3_c2.mp4",
+    "url": "https://tempfile.aiquickdraw.com/k/b675dee8c832d0cbcb54ef5f7f52b86b_1_1793890903_6811.mp4"
+   }
+  ]
+ },
+ {
+  "name": "v2_c1",
+  "model": "kling-3.0/video",
+  "taskId": "7a07678e7d9f970a2bb40bce6b904c08",
+  "state": "success",
+  "credits": 101.0,
+  "costTime": 158,
+  "failMsg": null,
+  "input": {
+   "prompt": "She calmly places the candle tray on the vanity and looks at the flame with a soft, content smile; gentle natural breathing; slow dolly-in. No speaking. Photorealistic, natural real-time motion. The FADILAL jar, black lid and paper label stay perfectly rigid and unchanged; label text remains identical and legible. No morphing, no extra fingers, no new objects, no text, no camera cuts.",
+   "image_urls": [
+    "https://tempfile.aiquickdraw.com/workers/images/image_9dbda28fd516aa05b85373bc08fe7097.png"
+   ],
+   "sound": false,
+   "duration": "5",
+   "mode": "pro",
+   "multi_shots": false
+  },
+  "files": [
+   {
+    "path": "v2_c1.mp4",
+    "url": "https://tempfile.aiquickdraw.com/k/7a07678e7d9f970a2bb40bce6b904c08_1_1793890882_4373.mp4"
+   }
+  ]
+ }
+]
